@@ -23,6 +23,7 @@ twitter_username: agiliqdotcom
 github_username:  agiliq
 
 permalink: /:year/:month/:day/:title/
+paginate: 25
 
 # Build settings
 markdown: kramdown
