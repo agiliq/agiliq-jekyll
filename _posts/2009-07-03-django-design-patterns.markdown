@@ -19,7 +19,7 @@ for us. For us it is a ~pattern of work~ sense.
 At this point this is just a lot of brain dump from us.
 
 The latest sources are always available from
-http://github.com/uswaretech/django-design-patterns/tree/master
+http://github.com/agiliq/django-design-patterns/tree/master
 and latest html from http://djangodesignpatterns.uswaretech.net/
 
 -------
@@ -27,7 +27,7 @@ and latest html from http://djangodesignpatterns.uswaretech.net/
 Please leave errata, feedback, critique as comments here.
 
 -----------
-This is still very much a work in progress, released in the spirit of release early, release often. [Click here](http://djangodesignpatterns.uswaretech.net/) to get it, or [fork it on Github](http://github.com/uswaretech/django-design-patterns/tree/master)
+This is still very much a work in progress, released in the spirit of release early, release often. [Click here](http://djangodesignpatterns.uswaretech.net/) to get it, or [fork it on Github](http://github.com/agiliq/django-design-patterns/tree/master)
 
 
 

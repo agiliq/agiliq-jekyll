@@ -20,6 +20,6 @@ This is still very much a work in progress, released in the spirit of release ea
 
 In Other news
 
-* We have slightly updated the [Django design patterns](http://github.com/uswaretech/django-design-patterns/tree/master), though not the public website.
+* We have slightly updated the [Django design patterns](http://github.com/agiliq/django-design-patterns/tree/master), though not the public website.
 * [cyrildoussin](http://github.com/cyrildoussin) has done a lot of changes to Socialauth and made it much better.  [You can get it here](http://github.com/cyrildoussin/Django-Socialauth) . Thank! We will be merging this soon.
 

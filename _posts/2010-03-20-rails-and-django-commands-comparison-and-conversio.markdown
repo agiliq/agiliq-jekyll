@@ -7,15 +7,15 @@ author: shabda
 ---
 The most commonly used Rails commands and their Django equivalents
 
-Rails                   | Django                         
+Rails                   | Django
 -------------------------|--------------------
-rails console            | manage.py shell                   
-rails server             | manage.py runserver                  
-rake                     | None                              
-rails generate           | None                              
-rails dbconsole          | manage.py dbshell                 
-rails app_name           | django-admin.py startproject/manage.py startapp            
-rake db:create           | manage.py syncdb      
+rails console            | manage.py shell
+rails server             | manage.py runserver
+rake                     | None
+rails generate           | None
+rails dbconsole          | manage.py dbshell
+rails app_name           | django-admin.py startproject/manage.py startapp
+rake db:create           | manage.py syncdb
 
 
 The salient points to note are,
@@ -31,7 +31,7 @@ Similarly there is no equivalent to `manage.py createsuperuser` in rails.
 
 [http://docs.djangoproject.com/en/dev/ref/django-admin/](http://docs.djangoproject.com/en/dev/ref/django-admin/)
 [http://guides.rails.info/command_line.html](http://guides.rails.info/command_line.html)
-[http://github.com/uswaretech/Acts-as-Django/blob/master/commands.markdown](http://github.com/uswaretech/Acts-as-Django/blob/master/commands.markdown)
+[http://github.com/agiliq/Acts-as-Django/blob/master/commands.markdown](http://github.com/agiliq/Acts-as-Django/blob/master/commands.markdown)
 
 
 

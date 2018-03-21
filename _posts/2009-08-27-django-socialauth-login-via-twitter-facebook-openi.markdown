@@ -5,10 +5,10 @@ date:   2009-08-27 14:50:33+05:30
 categories: yahoo
 author: shabda
 ---
-TL;DR version: Here is an app to allow logging in via twitter, facebook, openid, yahoo, google, which should work transparently with Django authentication system. (@login_required, User and other infrastructure work as expected.) [Demo](http://socialauth.uswaretech.net/) and [Code](http://github.com/uswaretech/Django-Socialauth/tree/master).Longer version follow:
+TL;DR version: Here is an app to allow logging in via twitter, facebook, openid, yahoo, google, which should work transparently with Django authentication system. (@login_required, User and other infrastructure work as expected.) [Demo](http://socialauth.uswaretech.net/) and [Code](http://github.com/agiliq/Django-Socialauth/tree/master).Longer version follow:
 
 -----------------------
-We are releasing our new app. [**Django-Socialauth**](http://github.com/uswaretech/Django-Socialauth/tree/master). This app makes it awfully easy,
+We are releasing our new app. [**Django-Socialauth**](http://github.com/agiliq/Django-Socialauth/tree/master). This app makes it awfully easy,
 to allow users to login your site using Yahoo/Google/Twitter/Facebook/Openid. A demo is available [here](http://socialauth.uswaretech.net/).
 
 This is released under an [Attribution Assurance License](http://www.opensource.org/licenses/attribution.php). A copy of the same is
@@ -59,19 +59,19 @@ The API Keys are available from
 #### How it works.
 
 Openid: Users need to provide their openid providers. Talk to the providers and
-login.  
-Yahoo: Yahoo is an openid provider. Talk to Yahoo endpoints. (Endpoint: http://yahoo.com)  
-Google: Google is a provider. Talk to them. (Endpoint: https://www.google.com/accounts/o8/id)  
-Facebook: Facebook connect provides authentication framework.  
+login.
+Yahoo: Yahoo is an openid provider. Talk to Yahoo endpoints. (Endpoint: http://yahoo.com)
+Google: Google is a provider. Talk to them. (Endpoint: https://www.google.com/accounts/o8/id)
+Facebook: Facebook connect provides authentication framework.
 Twitter: We use Twitter Oauth for authentication. In theory, Oauth shouldn't be
 used for authentication. (It is an autorisation framework, not an authentication one),
 In practice it works pretty well. Once you have an access_token, and a name, essentially
-authenticated.  
+authenticated.
 
 References
 
 0. [Demo of app](http://socialauth.uswaretech.net/)
-0. [Code for app](http://github.com/uswaretech/Django-Socialauth/tree/master)
+0. [Code for app](http://github.com/agiliq/Django-Socialauth/tree/master)
 1. [http://openid.net/developers/](http://openid.net/developers/)
 2. [http://developer.yahoo.com/openid/](http://developer.yahoo.com/openid/)
 3. [http://code.google.com/apis/accounts/docs/OpenID.html](http://code.google.com/apis/accounts/docs/OpenID.html)
@@ -95,13 +95,13 @@ will work as expected.
 
 Urls
 ---------
-    
-    /login/ Login page. Has all the login options  
-    /openid_login/ AND /openid_login/done/  
-    /yahoo_login/ AND /yahoo_login/done/  
-    /gmail_login/ AND /gmail_login/done/  
-    /twitter_login/ AND /twitter_login/done/  
-    /facebook_login/done/ We dont have a start url here, as the starting tokens are  
+
+    /login/ Login page. Has all the login options
+    /openid_login/ AND /openid_login/done/
+    /yahoo_login/ AND /yahoo_login/done/
+    /gmail_login/ AND /gmail_login/done/
+    /twitter_login/ AND /twitter_login/done/
+    /facebook_login/done/ We dont have a start url here, as the starting tokens are
     set in a popup, as per FB Connect recommendations.
 
 Implementation

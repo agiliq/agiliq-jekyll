@@ -7,7 +7,7 @@ author: shabda
 ---
 ### twitter ready version:
 
-We have released a [Django forum](http://uswaretech.com/forum/) application, with some cool features not in any other Django based forum. [You can get it here](http://github.com/uswaretech/Dinette) or [see it in action](http://uswaretech.com/forum/). 
+We have released a [Django forum](http://uswaretech.com/forum/) application, with some cool features not in any other Django based forum. [You can get it here](http://github.com/agiliq/Dinette) or [see it in action](http://uswaretech.com/forum/).
 
 ### blog version
 
@@ -17,12 +17,12 @@ Without further ado here is a list of features. It is available on [uswaretech.c
 
 *  Based on, inspired by and ripped from [PunBB](http://punbb.informer.com/). (Thanks!)
 *  PunBB like 3 phased hierarchy [Forum]->Subforum->Topic->Post
-*  Tightly integrated with [Socialauth](http://github.com/uswaretech/Django-Socialauth). (Screenshots)
+*  Tightly integrated with [Socialauth](http://github.com/agiliq/Django-Socialauth). (Screenshots)
 *  [Gravatar](http://www.gravatar.com/) support
 *  Moderation features (Close, stikify, make announcement etc.)
 *  Ajax based posting
 
-We are starting our forums based on this app, so we plan to be supporting and developing this for foreseeable future. [Fork this on Github](http://github.com/uswaretech/Dinette) or [check this out now](http://uswaretech.com/forum/).
+We are starting our forums based on this app, so we plan to be supporting and developing this for foreseeable future. [Fork this on Github](http://github.com/agiliq/Dinette) or [check this out now](http://uswaretech.com/forum/).
 
 <a name="screenshots"></a>
 ### Screenshots

@@ -21,15 +21,15 @@ The steps are.
 7. View function is called. It talks to models to do business logic, and renders the templates.
 8. The response middleware is applied, and response is sent back to the users.
 
-This misses a lot of important steps (Exception middleware, request_context populating, ...) but is a basic high level overview. 
+This misses a lot of important steps (Exception middleware, request_context populating, ...) but is a basic high level overview.
 
 Resources
 
 * [django/core/handlers/base.py](http://code.djangoproject.com/browser/django/trunk/django/core/handlers/base.py)
 * [django/core/handlers/wsgi.py](http://code.djangoproject.com/browser/django/trunk/django/core/handlers/wsgi.py)
-* [.dia and other files for the image](http://github.com/uswaretech/Django-Request-Response/tree/master)
+* [.dia and other files for the image](http://github.com/agiliq/Django-Request-Response/tree/master)
 
 ---------------------
-Do you [twitter](http://twitter.com/uswaretech)? Do you [Github](http://github.com/uswaretech)? Find us there.
+Do you [twitter](http://twitter.com/uswaretech)? Do you [Github](http://github.com/agiliq)? Find us there.
 
 

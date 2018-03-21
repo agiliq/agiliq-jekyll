@@ -7,7 +7,7 @@ author: shabda
 ---
 Summary:
 How to integrate a non Django database system in your Django code, using Wordpress
-as example. [The completed code is available at github](http://github.com/uswaretech/django-wordpress) or you can [see some screnshots](#screenshots_wp)
+as example. [The completed code is available at github](http://github.com/agiliq/django-wordpress) or you can [see some screnshots](#screenshots_wp)
 
 ------------------------------
 
@@ -17,7 +17,7 @@ make moving to a Django based app a bad decision
 for us, and not in the spirit of "best tools for the job".
 
 We moved the other way, and decided to use [Django to admin the
-Wordpress database](http://github.com/uswaretech/django-wordpress). The completed code is available on [Github](http://github.com/uswaretech/django-wordpress)
+Wordpress database](http://github.com/agiliq/django-wordpress). The completed code is available on [Github](http://github.com/agiliq/django-wordpress)
 
 It is not too hard, with the the builtin Django commands. Django provides the
 [`inspectdb`](http://www.djangobook.com/en/1.0/chapter16/) command which allows you to build your models.py from an existing
@@ -40,7 +40,7 @@ systems.
         DATABASE_PASSWORD = ''         # Not used with sqlite3.
         DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
         DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
-    
+
 ##### Get the initial models.py
 
 
@@ -75,19 +75,19 @@ b. Django attributes are generally named without the table name part. Eg
         content = models.TextField()
 
 Wordpress is explicit here and includes the table prefix with attributes.
-        
+
     mysql> desc wp_comments;
     +----------------------+---------------------+------+-----+---------------------+----------------+
     | Field                | Type                | Null | Key | Default             | Extra          |
     +----------------------+---------------------+------+-----+---------------------+----------------+
-    | comment_ID           | bigint(20) unsigned | NO   | PRI | NULL                | auto_increment | 
-    | comment_post_ID      | bigint(20) unsigned | NO   | MUL | 0                   |                | 
-    | comment_author       | tinytext            | NO   |     | NULL                |                | 
-    | comment_author_email | varchar(100)        | NO   |     |                     |                | 
+    | comment_ID           | bigint(20) unsigned | NO   | PRI | NULL                | auto_increment |
+    | comment_post_ID      | bigint(20) unsigned | NO   | MUL | 0                   |                |
+    | comment_author       | tinytext            | NO   |     | NULL                |                |
+    | comment_author_email | varchar(100)        | NO   |     |                     |                |
 
     .....
-    
-    
+
+
 I believe this is due to the way you would generally be using the code. In Django you would do
 `comment.author` where being explicit doesn't add any value, while in Wordpress, you would use,
 `select comment_author, post_title ... from wp_comment, wp_post ... where join`, where being explicit
@@ -105,7 +105,7 @@ This means Django creates all ForeignKeys as IntegerFields.
 
 Modify them to use ForeignKey instead. Also add `__unicode__`, to your classes.
 
-Add an `admin.py` to register all your classes. 
+Add an `admin.py` to register all your classes.
 
 And you are done! Now you can access, and work with your Wordpress data inside Django
 and Django admin.
@@ -127,15 +127,15 @@ So you can see that there is nothing Wordpress specific we need too do here.
 
 
     Add ModelAdmin to generally used models.
-    
+
 ##### Allows accessing attributes via the Django style names.
 
 
 If you override `__getattr__`, you can access
 the attributes via other names. Eg in the current setup you need to do `comment.comment_content`, `comment.comment_author` etc,
 while we would like to do `comment.content`  and `comment.author` as a shortcut.
-    
-    class WordPressModel(object):    
+
+    class WordPressModel(object):
         def __getattr__(self, v):
             if v in self.__dict__:
                 return self.__dict__[v]

@@ -9,7 +9,7 @@ One of the new and most awaited features with Django 1.1 was aggregation. As usu
 Django comes with a very [comprehensive documentation](http://docs.djangoproject.com/en/dev/topics/db/aggregation/) for this. Here, I have tried to
 put this in how-to form.
 
-<a href="#howtos">Jump to howtos</a> or <a href="http://github.com/uswaretech/Shiny-New-Django-1.1/tree/master">Get source on Github</a>.
+<a href="#howtos">Jump to howtos</a> or <a href="http://github.com/agiliq/Shiny-New-Django-1.1/tree/master">Get source on Github</a>.
 
 Essentially, aggregations are nothing but a way to perform an operation on group of rows. In databases,
 they are represented by operators as `sum`, `avg` etc.
@@ -38,36 +38,36 @@ a HRMS application. We will use this to see how to use aggreagtion to solve
 some common problems.
 
     from django.db import models
-    
+
     class Department(models.Model):
         dept_name = models.CharField(max_length = 100)
         established_on = models.DateField()
-        
+
         def __unicode__(self):
             return self.dept_name
-        
+
     class Level(models.Model):
         level_name = models.CharField(max_length = 100)
         pay_min = models.PositiveIntegerField()
         pay_max = models.PositiveIntegerField()
-        
+
         def __unicode__(self):
             return self.level_name
-        
+
     class Employee(models.Model):
         emp_name = models.CharField(max_length = 100)
         department = models.ForeignKey(Department)
         level = models.ForeignKey(Level)
         reports_to = models.ForeignKey('self', null=True, blank=True)
-        
+
         pay = models.PositiveIntegerField()
         joined_on = models.DateField()
-        
+
     class Leave(models.Model):
         employee = models.ForeignKey(Employee)
         leave_day = models.DateField()
-        
-        
+
+
     """
     #Populate DB, so we can do some meaningful queries.
     #Create Dept, Levels manually.
@@ -88,7 +88,7 @@ some common problems.
         emp.joined_on = emp.department.established_on + timedelta(days = random.randint(0, 200))
         emp.save()
     """
-    
+
     """
     employees = list(Employees.objects.all())
     for i in range(100):
@@ -96,7 +96,7 @@ some common problems.
         leave = Leave(employee = employee)
         leave.leave_day = date.today() - timedelta(days = random.randint(0, 365))
         leave.save()
-        
+
     """
 
 
@@ -139,7 +139,7 @@ If you are only interested in name of department and employee count for it, you 
 The sql is
 
     SELECT "hrms_department"."dept_name", COUNT("hrms_employee"."id") AS "employee__count" FROM "hrms_department" LEFT OUTER JOIN "hrms_employee" ON ("hrms_department"."id" = "hrms_employee"."department_id") GROUP BY "hrms_department"."dept_name"
-    
+
 #### Find the total number of employees, for a specific department.
 
 Here you could use either of `.annotate` or `.aggregate`,
@@ -156,33 +156,33 @@ This time, we can not annotate either Department model, or the Level model, as w
 need to `group by` both department and level. So we will annotate on Employee
 
     Employee.objects.values('department__dept_name', 'level__level_name').annotate(Count('id'))
-    
+
 This leads to the sql,
 
     SELECT "hrms_department"."dept_name", "hrms_level"."level_name", COUNT("hrms_employee"."id") AS "id__count" FROM "hrms_employee" INNER JOIN "hrms_department" ON ("hrms_employee"."department_id" = "hrms_department"."id") INNER JOIN "hrms_level" ON ("hrms_employee"."level_id" = "hrms_level"."id") GROUP BY "hrms_department"."dept_name", "hrms_level"."level_name
-    
+
 #### Which combination of Employee and Deparments employes the most people
 
 We can order on the annotated fields, so the last query is modified to,
 
     Employee.objects.values('department__dept_name', 'level__level_name').annotate(employee_count = Count('id')).order_by('-employee_count')[:1]
-    
+
 #### Which employee name is the most common.
 
 We can want to `group by emp_name`, so `emp_name` is added to values. After that we order on the annotated field
 and get the first element, to get the most common name.
 
 `Employee.objects.values('emp_name').annotate(name_count=Count('id')).order_by('-name_count')[:1]`
- 
- 
+
+
 ------------
 This was a overview of how django annotations work. These remove a whole class of queries for which
 you had to use custom sql queries in the past.
- 
+
 -----------
 ###Resources
 
-1. [Source on Github](http://github.com/uswaretech/Shiny-New-Django-1.1/tree/master)
+1. [Source on Github](http://github.com/agiliq/Shiny-New-Django-1.1/tree/master)
 2. [sqlite file for this model to test](http://dl.getdropbox.com/u/271935/djaggregations/bata.db)
 3. [Aggregation on Django docs](http://docs.djangoproject.com/en/dev/topics/db/aggregation/)
 
