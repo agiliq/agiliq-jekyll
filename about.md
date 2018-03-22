@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Agiliq
+Agiliq: We build amazing apps using using modern tools.
