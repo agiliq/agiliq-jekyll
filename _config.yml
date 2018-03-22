@@ -22,7 +22,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: agiliqdotcom
 github_username:  agiliq
 
-permalink: /:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
 paginate: 25
 
 # Build settings
