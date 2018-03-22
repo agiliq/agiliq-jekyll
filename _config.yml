@@ -28,7 +28,7 @@ paginate: 25
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
+theme: jekyll-theme-midnight
 plugins:
   - jekyll-feed
 
