@@ -5,7 +5,7 @@ date:   2008-05-12 12:33:21+05:30
 categories: Uncategorized
 author: shabda
 ---
-If you would have read my [Popularizing Django](http://www.42topics.com/blog/2008/05/popularizing-django-or-reusable-apps-considered-harmful/) post, you might know that I consider building a killer **packaged** app to be the best way to popularize Django. This is a post about what that app must be.
+If you would have read my [Popularizing Django](http://www.agiliq.com/blog/2008/05/popularizing-django-or-reusable-apps-considered-harmful/) post, you might know that I consider building a killer **packaged** app to be the best way to popularize Django. This is a post about what that app must be.
 
 For PHP it was Wordpress and PhpBB. Both were free, very easy to install and came with every thing packaged. If you have followed the history of either you must know that they have always been plagued by security problems.
 Assertion: Most users, even programmers, value ease of use and install over technical superiority. Case in point, Windows vs Linux.

@@ -208,5 +208,5 @@ journalism](http://www.medill.northwestern.edu/admissions/programmers.html).
 
 -----------------------------------------------
 
-This was Adrian's interview, the last in django-interviews series. But we have a lot of interesting things coming up, so [stay tuned](http://42topics.com/blog/feed/).
+This was Adrian's interview, the last in django-interviews series. But we have a lot of interesting things coming up, so [stay tuned](http://www.agiliq.com/blog/feed/).
 

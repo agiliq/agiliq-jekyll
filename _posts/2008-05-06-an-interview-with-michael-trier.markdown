@@ -6,7 +6,7 @@ categories: marketing
 author: shabda
 ---
 <img src="http://www.agiliq.com/blog/wp-content/uploads/2008/05/mtrier-small.jpg" alt="" title="mtrier-small" width="154" height="205" class="right frame" />
-[Michael Trier](http://blog.michaeltrier.com/) is  a long time Django user and evangelist. He has worked with a number of technologies including Rails and .net. His insights on marketing Django to traditionally *Enterprisy* areas were extremely informative. He produces <acronym title="This Week in Django">TWiD</acronym>, along with [Brian Rosner](http://oebfare.com/) which is great to keep abreast of the latest happenings in the Django community. He graciously agreed to be interviewed by the [42topics blog](http://42topics.com/blog/).
+[Michael Trier](http://blog.michaeltrier.com/) is  a long time Django user and evangelist. He has worked with a number of technologies including Rails and .net. His insights on marketing Django to traditionally *Enterprisy* areas were extremely informative. He produces <acronym title="This Week in Django">TWiD</acronym>, along with [Brian Rosner](http://oebfare.com/) which is great to keep abreast of the latest happenings in the Django community. He graciously agreed to be interviewed by the [42topics blog](http://www.agiliq.com/blog/).
 
 --------------------------------------
 
@@ -105,6 +105,6 @@ Finally one more thing, spend some time in [IRC](irc://irc.freenode.com/). IRC i
 
 This was the interview of Michael Trier. This week I am not going to any more interview, but stay tuned for next week, we have even more Django interviews coming.
 
-And of course, the [42topics](http://42topics.com/) is live now. And we have a [Django](http://42topics.com/django/) section. ([How 42topics works](http://42topics.com/blog/how-42topics-works/)?)
+And of course, the [42topics](http://www.agiliq.com/) is live now. And we have a [Django](http://www.agiliq.com/django/) section. ([How 42topics works](http://www.agiliq.com/blog/how-42topics-works/)?)
 So join now, and lets get rolling.
 

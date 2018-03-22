@@ -82,5 +82,5 @@ Two things which used to bug me but no more.
 1. You cannot extend Models - Well now you can if you use queryset-refactor, or [soon](http://groups.google.com/group/django-users/browse_thread/thread/6a275999abab2e66) can if you are on trunc.
 2. Url configuration using regexes. - [Now they have two problems.](http://regex.info/blog/2006-09-15/247) joke notwithstanding, mapping URLs to views is one problem where regexes fit the problem beautifully. With less that 50 lines of code, you can manage a large number of views, and Url patterns.
 
-[Now stay tuned for Five things I love about Django](http://42topics.com/blog/feed/)
+[Now stay tuned for Five things I love about Django](http://www.agiliq.com/blog/feed/)
 

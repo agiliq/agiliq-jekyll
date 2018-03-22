@@ -62,9 +62,9 @@ This will give the webmasters the peace of mind to focus their energies on one w
 Here is to a better internet.
 
 --------------------------------------
-If you liked this, you might also like [Parable of the Captcha](http://42topics.com/blog/2008/04/parable-of-the-captcha-the-futility-of-fighting-automated-spam-with-automated-methods/) or [Parable of the Nofollow](http://42topics.com/blog/2008/04/parable-of-the-nofollow/). The name is of course stolen from [Parable of the Lost Sheep](http://en.wikipedia.org/wiki/Parable_of_the_Lost_Sheep)
+If you liked this, you might also like [Parable of the Captcha](http://www.agiliq.com/blog/2008/04/parable-of-the-captcha-the-futility-of-fighting-automated-spam-with-automated-methods/) or [Parable of the Nofollow](http://www.agiliq.com/blog/2008/04/parable-of-the-nofollow/). The name is of course stolen from [Parable of the Lost Sheep](http://en.wikipedia.org/wiki/Parable_of_the_Lost_Sheep)
 
-Oh and yes, [42topics](http://www.42topics.com/) is live now. Did you know we have an [SEO](http://www.42topics.com/SEO/) section, and that you can [create a topic](http://42topics.com/createtopic/) about topics you care about?
+Oh and yes, [42topics](http://www.agiliq.com/) is live now. Did you know we have an [SEO](http://www.agiliq.com/SEO/) section, and that you can [create a topic](http://www.agiliq.com/createtopic/) about topics you care about?
 
 ?
 

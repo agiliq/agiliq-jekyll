@@ -126,7 +126,7 @@ lot of companies that'll jump on the chance to "give back."
 **Jacob:** If you don't read the [Django community aggregator](http://www.djangoproject.com/community/) you really should: there are some incredibly smart people blogging about Django and you'll learn something new from all of them.
 
 ---------------------
-This was the interview of [Jacob Kaplan-Moss](http://www.jacobian.org/). We have a few more Django interviews coming, before we close this series of Django interviews, so [stay tuned](http://42topics.com/blog/feed/).
+This was the interview of [Jacob Kaplan-Moss](http://www.jacobian.org/). We have a few more Django interviews coming, before we close this series of Django interviews, so [stay tuned](http://www.agiliq.com/blog/feed/).
 
 ).
 

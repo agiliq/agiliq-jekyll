@@ -9,5 +9,5 @@ With launch of Google Appengine, there has never been a better time to start a s
 
 The original source for this was written by [Nathan](http://odio.us/plan/) and was in Perl. Of course we needed a [web2.0](http://en.wikipedia.org/wiki/Snake_oil) logo for such a marvelous piece of code. This comes from [web2.0 logo generator](http://h-master.net/web2.0/index.php).
 
-The source for this is available [here](http://www.42topics.com/dumps/startuppitch/startuppitch.zip)
+The source for this is available [here](http://www.agiliq.com/dumps/startuppitch/startuppitch.zip)
 

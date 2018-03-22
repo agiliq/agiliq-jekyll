@@ -33,7 +33,7 @@ I wanted to run a forum. [PhpBB](http://www.phpbb.com/) was free, and seemed mos
 
 ### So how to popularize Django.
 
-In my [interview of James Bennett](http://42topics.com/blog/2008/04/interview-with-james-bennett-django-release-manager/), I asked what is Django's killer app. And he said there need not be a Killer app for Django, reusable apps will do. I guess I will have to disagree. Even internet needed a [killer app](http://en.wikipedia.org/wiki/Webmail) to get breakthrough popularity. Let's see what a Killer app gives you.
+In my [interview of James Bennett](http://www.agiliq.com/blog/2008/04/interview-with-james-bennett-django-release-manager/), I asked what is Django's killer app. And he said there need not be a Killer app for Django, reusable apps will do. I guess I will have to disagree. Even internet needed a [killer app](http://en.wikipedia.org/wiki/Webmail) to get breakthrough popularity. Let's see what a Killer app gives you.
 
 1. It fills a big niche, so people are forced to learn your language/framework.
 2. It forces the Hosting company to support your language/framework.
@@ -52,5 +52,5 @@ And installing the PackagedApp must be no more than the number of steps needed i
 
 -----------------------------------
 
-Do yo use [Django](http://42topics.com/Django/)? Do you [program](http://42topics.com/programming/)? Find things which YOU will love reading at [42topics.com](http://42topics.com/register/).
+Do yo use [Django](http://www.agiliq.com/Django/)? Do you [program](http://www.agiliq.com/programming/)? Find things which YOU will love reading at [42topics.com](http://www.agiliq.com/register/).
 

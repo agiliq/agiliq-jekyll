@@ -7,8 +7,8 @@ author: shabda
 ---
 I have posted two Tutorials for Using Django with Appengine.
 
-- [For people who do not know Django](http://www.42topics.com/dumps/django/docs.html)
-- [For people who already know Django](http://www.42topics.com/dumps/appengine/doc.html)  see [what we build in this tutorial](http://blogango.appspot.com/)
+- [For people who do not know Django](http://www.agiliq.com/dumps/django/docs.html)
+- [For people who already know Django](http://www.agiliq.com/dumps/appengine/doc.html)  see [what we build in this tutorial](http://blogango.appspot.com/)
 
 And here a few good links about the topic.
 
