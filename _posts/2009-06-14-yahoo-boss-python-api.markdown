@@ -12,18 +12,18 @@ Yahoo has a search api with generous limits, [BOSS](http://developer.yahoo.com/s
 ### Usage
 
     Usage is mostly compatible with bingapi
-    
+
     In [2]: from bingapi import bossapi
-    
+
     In [3]: api = bossapi.Boss('<appid>')
-    
+
     In [4]: api.do_web_search('Uswaretech')
     Out[4]: ....
-    
+
     In [5]: api.do_news_search('salsa')
     Out[5]: ...
-    
-    In [6]: api.do_siteexplorer_search('http://uswaretech.com')
+
+    In [6]: api.do_siteexplorer_search('http://www.agiliq.com')
     Out[6]: .....
 
 

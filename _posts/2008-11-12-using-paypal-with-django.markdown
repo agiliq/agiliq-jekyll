@@ -24,7 +24,7 @@ Now you can do the requests to Paypal very simply by sending requests, (it is ju
 Before you can make requests to Paypal, servers you need to get API credentials. While developing your app, you of course, do not want to use actual Paypal money. Paypal makes available a sandbox where
 you can use virtual money before you go live.
 
-1. Go to [developer.paypal.com](http://developer.paypal.com/) and request a new sandbox API credentials. 
+1. Go to [developer.paypal.com](http://developer.paypal.com/) and request a new sandbox API credentials.
 2. (Optionally)Read `https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/howto_api_reference` to understand how does the Paypal NVP api works.
 3. We would two pages. [a] View 1: Where we do SetExpressCheckout and show a link to Paypal. [b] View 2: Where we do GetExpressCheckoutDetails, get the user's details, get a confirm from user. On a confirmation from user
 we post to the same page and do a DoExpressCheckoutPayment.
@@ -32,7 +32,7 @@ we post to the same page and do a DoExpressCheckoutPayment.
 [Totally untested code ahead. I am copying and simplifying from one of our applications.]
 
 	#view 1
-	
+
 	def veiw1(request):
 	        ...........
 		pp = paypal.PayPal()
@@ -42,10 +42,10 @@ we post to the same page and do a DoExpressCheckoutPayment.
 		return render_to_response('template1.html', payload, RequestContext(request))
 
 In the template send user to `{{ paypal_url }}` when they want to pay.
-	
+
 	#View 2
 	#View 2 would be called after Paypal redirects after user authorises the transfer.
-	
+
 	def view2(request):
 		token = request.GET.get('token', '')
 		pp = paypal.PayPal()
@@ -64,7 +64,7 @@ In the template send user to `{{ paypal_url }}` when they want to pay.
 				pass
 				#We have been paid. DO things like, enable subsciprion, ship goods etc.
 				return HttpResponseRedirect(payment_done_url)
-	
+
 Here in template2.html, we show the user/transaction details, and a on user's confirmation do a post to the same url. This should help you get started with integrating Paypal with Django.
 
 Resources.
@@ -73,7 +73,7 @@ Resources.
 2. [Paypal developer documentation](http://developer.paypal.com/)
 
 -----------------------
-Need to build a Paypal enabled webapp? [We can help](http://uswaretech.com/contact/)
+Need to build a Paypal enabled webapp? [We can help](http://www.agiliq.com/contact/)
 
 
 

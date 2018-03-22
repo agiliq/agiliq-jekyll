@@ -7,7 +7,7 @@ author: piyush
 ---
 ### Part 1: Webpage and the Umans
 
-<img class="left" src="http://uswaretech.com/blog/wp-content/uploads/2008/04/rel_nof.jpg" alt="" title="rel_nof" width="240" height="180" class="alignnone size-medium wp-image-26" />
+<img class="left" src="http://www.agiliq.com/blog/wp-content/uploads/2008/04/rel_nof.jpg" alt="" title="rel_nof" width="240" height="180" class="alignnone size-medium wp-image-26" />
 In a time not so long ago, and not so far off existed a country called `Theweb`. It was a well populated place, popluated with upstanding citizens who called themselves `Webpage`, and lived together in harmony.
 
 Each Webpage [knew](http://en.wikipedia.org/wiki/Hyperlink) some other web pages in Theweb, and though well of them. You could ask a Webpage if they knew another Webpage, and they always replied truthfully.

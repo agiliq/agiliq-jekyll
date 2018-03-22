@@ -11,18 +11,18 @@ author: shabda
 		name = forms.CharField()
 		age = forms.IntegerField()
 		resume = forms.FileField()
-		
-Just this code gives you 
+
+Just this code gives you
 
 1. A form which knows how to render itself as Html.
 2. A form which knows how to validate data on the server side.
 3. A form which knows how to show the relevant errors.
 
-However think of this scenario, 
+However think of this scenario,
 
 You need to customise your form depending on values in the Database.
 
-What you want to do is 
+What you want to do is
 
 	class EmployeeForm(forms.Form):
 		name = forms.CharField()
@@ -30,7 +30,7 @@ What you want to do is
 		#....
 		#....
 		#....
-		
+
 You can do this without resorting to any black magic. Here is the code to do so,
 
 
@@ -40,7 +40,7 @@ You can do this without resorting to any black magic. Here is the code to do so,
 			'BooleanField':forms.BooleanField(required = False),
 			'URLField': forms.URLField(), 'EmailField': forms.EmailField()
 			}
-			
+
 	class EmployeeFieldModel(models.Model):
 	    "Model for employee form fields for a specific Job board."
 	    employee = models.ForeignKey(Employee)
@@ -69,12 +69,12 @@ You can do this without resorting to any black magic. Here is the code to do so,
 	get_employee_form(employee)
 
 
-PS. A similar techniques works for Dynamic models.  
+PS. A similar techniques works for Dynamic models.
 PPS. Yes I have worked with Oracle. Yes, all my data models start with Employee and Departments.
 
 -------------
 
-Want to build an [Web Application](http://uswaretech.com/). Talk to [Usware](http://uswaretech.com/contact/)
-		
+Want to build an [Web Application](http://www.agiliq.com/). Talk to [Usware](http://www.agiliq.com/contact/)
+
 
 

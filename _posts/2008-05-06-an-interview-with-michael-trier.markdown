@@ -5,7 +5,7 @@ date:   2008-05-06 17:34:45+05:30
 categories: marketing
 author: shabda
 ---
-<img src="http://uswaretech.com/blog/wp-content/uploads/2008/05/mtrier-small.jpg" alt="" title="mtrier-small" width="154" height="205" class="right frame" />
+<img src="http://www.agiliq.com/blog/wp-content/uploads/2008/05/mtrier-small.jpg" alt="" title="mtrier-small" width="154" height="205" class="right frame" />
 [Michael Trier](http://blog.michaeltrier.com/) is  a long time Django user and evangelist. He has worked with a number of technologies including Rails and .net. His insights on marketing Django to traditionally *Enterprisy* areas were extremely informative. He produces <acronym title="This Week in Django">TWiD</acronym>, along with [Brian Rosner](http://oebfare.com/) which is great to keep abreast of the latest happenings in the Django community. He graciously agreed to be interviewed by the [42topics blog](http://42topics.com/blog/).
 
 --------------------------------------
@@ -46,7 +46,7 @@ As far as GAE itself is concerned, I'm kind of on the fence on the real value th
 
 **Shabda:** Your TWiD has been a great help for people to keep track of all the happenings in the community. Would you like to share some interesting tidbits you have learned with TWiD, and point to the more interesting ones?
 
-<img src="http://uswaretech.com/blog/wp-content/uploads/2008/05/twid_small.png" alt="" title="twid_small" width="150" height="150" class="right" />
+<img src="http://www.agiliq.com/blog/wp-content/uploads/2008/05/twid_small.png" alt="" title="twid_small" width="150" height="150" class="right" />
 **Michael:** Thank you, I'm glad that people find it helpful.  I think one of the interesting things is the amount of work that goes into it.   A lot of people are surprised because neither Brian nor I are very professional, so when we're on the mic it sounds like we're just sitting there talking about whatever.  The reality is that it takes quite a bit of work in finding the stuff we want to discuss, attempting to understand enough about the topics to at least sound somewhat intelligent on them, and then there is the recording and post-production.
 As far as actual topics the [two](http://blog.michaeltrier.com/2008/4/22/this-week-in-django-19-2008-04-20) [recent](http://blog.michaeltrier.com/2008/4/28/this-week-in-django-20-2008-04-27) episodes on Internationalisation have been a great learning experience for me personally.  Going into it, I really didn't even know enough about it to know what questions to ask. Thankfully [Malcolm Tredinnick](http://pointy-stick.com/blog/) put the whole thing together.  He's been a huge help to the show.
 Another show that was fascinating for me was the one on [GeoDjango](http://code.djangoproject.com/wiki/GeoDjango) with [Matthew Wensing](http://djangopeople.net/wensing/).  It's a fascinating topic and I hope to put together more shows on that subject.

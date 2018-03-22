@@ -9,7 +9,7 @@ Thanks to awesome [django community](http://www.djangoproject.com/community/), t
 
 These packages get updated quite often and if you use it often like we do, you'd have possibly realized the need to manage these packages better.
 
-Thankfully, all python ever needs is the source, and all you need to do is to place the source in the python path. 
+Thankfully, all python ever needs is the source, and all you need to do is to place the source in the python path.
 
 Most projects use Distributed Version Control Systems like Mercurial and Git, and they come locally with the entire history of the source which provides a lot of control to use any version of the code. For code that we use often, like django packages, using the source from a version control system seems to be the best way to manage.
 
@@ -28,15 +28,15 @@ Thats it. `django_registration` is now on the python path, courtesy of symbollic
 You now have the latest version of the source in the folder `~/django_registration`, which you can check, and modify. With an editor/IDE that has _go to source_ option, you can browse the source by using a simple short cut.(which may not have been simple if the code were is some egg file in a less well known folder)
 
 Because of cloning of the mercurial repository, you now have access to all the revisions of the application. So you can easily update, or change to other versions.
-    
+
 To update to a newer version when one exists:
 
 	$ hg pull -u
-    
+
 To move to any particular revision:
 
 	$ hg update -r200
-    
+
 To check the tags:
 
 	$ hg tags
@@ -54,7 +54,7 @@ If you want to update to a recent release, say 0.7,
 
      $	hg update v0.7
 	7 files updated, 0 files merged, 0 files removed, 0 files unresolved
-	
+
 The same is also applicable while dealing with SVN repositories; alebit some of the revision changes go thro the network to the central server.
 
 In order to install and work with [django trunk](http://code.djangoproject.com/svn/django/trunk/), check out the trunk and add a symlink, as before
@@ -62,7 +62,7 @@ In order to install and work with [django trunk](http://code.djangoproject.com/s
 	$ svn co http://code.djangoproject.com/svn/django/trunk/ django-trunk
 	$ cd django-trunk/django
 	$ sudo ln -fs . /usr/lib/python2.6/dist-packages/django-extensions
-    
+
 You will now be able to access the latest version of django:
 
 	$ python
@@ -97,8 +97,8 @@ To use any other version of django you can do some SVN manipulation, as followin
 Setuptools distribution adds to the python standard library [Distutils](http://docs.python.org/distutils/) module, by adding a lot of functionality, among others that stores the package meta data like the version, location of download. If you perform
 
 	easy_install django
-	
-after installing it by source as above, `easy_install` again downloads the latest released version of django 1.02, listed in the Python Package Index, as it hasn't been informed of django installation. 
+
+after installing it by source as above, `easy_install` again downloads the latest released version of django 1.02, listed in the Python Package Index, as it hasn't been informed of django installation.
 
 If you are not going to use `easy_install` at all, this isn't a problem; but it is good to also update setup tools that a version of this application exists, if you at all need. You can then use the `pkg_resources` module installed with setup tools distibution, to query to find all the installed applications, from python.
 
@@ -109,7 +109,7 @@ If the application contains a `setup.py` file, you could manually inform setup t
 ### The workflow
 
 To install packages, in a way with high control following needs to be done:
-	
+
 	* Checkout the repository
 	* Add a symbollic link to the repository
 	* Update setup tools of this installation.
@@ -141,5 +141,5 @@ Most often the requirement will be just to update the package into the latest ve
 But if you seem to be changing of the versions too often, for compatibility between different environments, you might want to using [virtualenv](http://pypi.python.org/pypi/virtualenv), that isolates a python working environment. [virtualenvwrapper](http://pypi.python.org/pypi/virtualenvwrapper) adds a bash wrapper to use virtualenv conviniently.
 
 <hr />
-Do you also want your app development managed well? [Look us up](http://uswaretech.com/contact/)
+Do you also want your app development managed well? [Look us up](http://www.agiliq.com/contact/)
 

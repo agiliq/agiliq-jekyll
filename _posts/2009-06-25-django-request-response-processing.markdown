@@ -5,9 +5,9 @@ date:   2009-06-25 09:59:56+05:30
 categories: django
 author: shabda
 ---
-Have you wondered the steps a users request goes through before being responded to by Django? The answer lies in reading `django.core.handlers.base` and `django.core.handlers.wsgi`. Here is a diagram explaining what happens. ([Click to enlarge](http://uswaretech.com/blog/wp-content/uploads/2009/06/django_request_response_lifecycle.png).)
+Have you wondered the steps a users request goes through before being responded to by Django? The answer lies in reading `django.core.handlers.base` and `django.core.handlers.wsgi`. Here is a diagram explaining what happens. ([Click to enlarge](http://www.agiliq.com/blog/wp-content/uploads/2009/06/django_request_response_lifecycle.png).)
 
-<a href="http://uswaretech.com/blog/wp-content/uploads/2009/06/django_request_response_lifecycle.png"><img src="http://uswaretech.com/blog/wp-content/uploads/2009/06/django_request_response_lifecycle-300x207.png" alt="" title="django_request_response_lifecycle" width="300" height="207" class="alignnone size-medium wp-image-587" /></a>
+<a href="http://www.agiliq.com/blog/wp-content/uploads/2009/06/django_request_response_lifecycle.png"><img src="http://www.agiliq.com/blog/wp-content/uploads/2009/06/django_request_response_lifecycle-300x207.png" alt="" title="django_request_response_lifecycle" width="300" height="207" class="alignnone size-medium wp-image-587" /></a>
 
 The steps are.
 (With Apache/Mod_wsgi, similar steps for other setup.)

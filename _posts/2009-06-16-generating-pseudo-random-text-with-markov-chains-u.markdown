@@ -39,18 +39,18 @@ To see a sample output, we take the text of _My man jeeves_ by Wodehouse from
 [Project Gutenberg](http://www.gutenberg.org/etext/8164), and see a sample output.
 
     In [1]: file_ = open('/home/shabda/jeeves.txt')
-    
+
     In [2]: import markovgen
-    
+
     In [3]: markov = markovgen.Markov(file_)
-    
+
     In [4]: markov.generate_markov_text()
     Out[4]: 'Can you put a few years of your twin-brother Alfred,
     who was apt to rally round a bit. I should strongly advocate
     the blue with milk'
 
 
-[The files you need to run this are <a href='http://uswaretech.com/blog/wp-content/uploads/2009/06/jeeves.txt'>jeeves.txt</a> and <a href='http://uswaretech.com/blog/wp-content/uploads/2009/06/markovgenpy.txt'>markovgen.py</a>]
+[The files you need to run this are <a href='http://www.agiliq.com/blog/wp-content/uploads/2009/06/jeeves.txt'>jeeves.txt</a> and <a href='http://www.agiliq.com/blog/wp-content/uploads/2009/06/markovgenpy.txt'>markovgen.py</a>]
 
 
 
@@ -79,11 +79,11 @@ This gives us a corpus like,
      ('slow', 'jumps'): ['over'],
      ('the', 'brown'): ['fox', 'fox'],
      ('who', 'is'): ['slow', 'dead.']}
- 
+
  Now if we start with "brown fox", the next word can be "jumps" or "who". If we
  choose "jumps", then the current state is "fox jumps" and next word is over,
  and so on.
- 
+
 ### Hints
 
 * The larger text we choose, the more choices are there at each transition, and
@@ -96,8 +96,8 @@ and a better random text.
 
 ### Resources
 
-* <a href='http://uswaretech.com/blog/wp-content/uploads/2009/06/jeeves.txt'>jeeves.txt</a>
-* <a href='http://uswaretech.com/blog/wp-content/uploads/2009/06/markovgenpy.txt'>markovgen.py</a>
+* <a href='http://www.agiliq.com/blog/wp-content/uploads/2009/06/jeeves.txt'>jeeves.txt</a>
+* <a href='http://www.agiliq.com/blog/wp-content/uploads/2009/06/markovgenpy.txt'>markovgen.py</a>
 * [Online markov text generator](http://www.yisongyue.com/shaney/)
 * [Twitter markov script](http://www.yaymukund.com/twittov/)
 

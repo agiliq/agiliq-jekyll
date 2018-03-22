@@ -5,7 +5,7 @@ date:   2008-04-27 11:54:11+05:30
 categories: interviews
 author: shabda
 ---
-<img src="http://uswaretech.com/blog/wp-content/uploads/2008/04/james_photo-20080210.jpg" alt="" title="james_photo-20080210" width="250" height="188" class="frame right" />
+<img src="http://www.agiliq.com/blog/wp-content/uploads/2008/04/james_photo-20080210.jpg" alt="" title="james_photo-20080210" width="250" height="188" class="frame right" />
 [James Bennett](http://www.b-list.org/about/) is the release manager of Django, and a long time contributor. He works on [Ellington](http://www.ellingtoncms.com/), a <acronym title="content management system">CMS</acronym> designed for news organizations. His book, [Practical Django Projects](http://www.amazon.com/Practical-Django-Projects-Pratical/dp/1590599969 ), is being published by Apress, and is scheduled to hit bookshelves in June 2008. He graciously agreed to be interviewed at the 42topics.com blog. His blog, The B-List, can be found [here](http://www.b-list.org/).
 
 **Shabda**: Would you tell something about yourself, how did you get started with Django, and what other OSS projects are you involved with?
@@ -79,7 +79,7 @@ I like to view this as the phase where we build up momentum until eventually Dja
 
 **Shabda**: Everyone is pretty excited about your [coming book](http://www.amazon.com/Practical-Django-Projects-Pratical/dp/1590599969). When can we have it in book stores? Would you give a brief overviews of what's in it?
 
-<img src="http://uswaretech.com/blog/wp-content/uploads/2008/04/practical_django_proj.jpg" alt="" title="practical_django_proj" width="240" height="240" class="right" />
+<img src="http://www.agiliq.com/blog/wp-content/uploads/2008/04/practical_django_proj.jpg" alt="" title="practical_django_proj" width="240" height="240" class="right" />
 **James**: The book will, I think (and hope) be shipping around the end of June.
 It's very much a hands-on introduction to Django: walking through building three applications, picking up progressively more advanced bits of Django as you go, and seeing some best practices in action.
 So you start out with just simple stuff, using the contrib apps and learning the basics of getting Django running. Then you do some simple customizations of admin templates, then start building some models and views, then on into building full-on applications.

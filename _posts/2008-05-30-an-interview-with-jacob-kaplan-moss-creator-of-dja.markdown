@@ -5,7 +5,7 @@ date:   2008-05-30 12:03:18+05:30
 categories: python
 author: shabda
 ---
-<img src="http://uswaretech.com/blog/wp-content/uploads/2008/05/jacob_headshot2.png" alt="Jacob Kaplan-Moss" title="jacob_headshot2" width="225" height="232" class="right frame" />
+<img src="http://www.agiliq.com/blog/wp-content/uploads/2008/05/jacob_headshot2.png" alt="Jacob Kaplan-Moss" title="jacob_headshot2" width="225" height="232" class="right frame" />
 [Jacob Kaplan-Moss](http://djangopeople.net/jacobian/) is the co-creator of Django along with Adrian Holovaty, as well as the author of [the Django Book](http://www.amazon.com/Definitive-Guide-Django-Development-Right/dp/1590597257). He has been involved with Django since before it was called Django. He is currently employed at Whiskey Media where his job is hacking at Django. He blogs on [Jacobian.org](http://www.jacobian.org/). He graciously agreed to be interviewed at the 42topics blog.
 
 --------------------------------

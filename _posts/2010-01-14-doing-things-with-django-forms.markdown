@@ -12,7 +12,7 @@ Forms are one of the best features of Django. (After models, admin, url routing 
 
 Prob. You want to show a form, validate it and display it.
 
-Ans. Create a simple form. 
+Ans. Create a simple form.
 
     class UserForm(forms.Form):
         username = forms.CharField()
@@ -31,12 +31,12 @@ Ans. Create a form with an custom `__init__`.
     class UserForm(forms.Form):
         username = forms.CharField()
         plan = forms.ModelChoiceField(queryset = Plan.objects.none())
-        
+
         def __init__(self, subdomain, *args, **kwargs):
             self.default_username = default_username
             super(UserForm, self).__init__(*args, **kwargs)
             self.fields['plan'].queryset = Plan.objects.filter(subdomain = subdomain)
-            
+
 Here in the `__init__` we are overriding the default queryset on field `plan`. Any of the attributes can similarly be overridden.
 
 However the `self.fields` is populated only after `super(UserForm, self).__init__(*args, **kwargs)` is called.
@@ -49,25 +49,25 @@ Ans. Create a form with a custom .save()
 
     class UserForm(forms.Form):
         username = forms.CharField()
-        
+
         def save(self):
             data = self.cleaned_data
             user = User.objects.create(username = data['username'])
             #create a profile
             UserProfile.objects.create(user = user, ...some more data...)
-            
+
 You could have called this method anything, but this is generally called save, to maintain similarity with `ModelForm`
-            
-    
+
+
 4.
 
 Prob. You need to create a form with fields which have custom validations.
 
 Ans. Create a form with custom clean_fieldname
-    
+
     class UserForm(forms.Form):
         username = forms.CharField()
-        
+
         def clean_username(self):
             data = self.cleaned_data
             try:
@@ -75,9 +75,9 @@ Ans. Create a form with custom clean_fieldname
             except User.DoesNotExist:
                 return data['username']
             raise forms.ValidationError('This username is already taken.')
-            
+
 Here we can validate that the usernames are not repeated.
-            
+
 
 5.
 
@@ -87,15 +87,15 @@ Ans. Create a field with a .clean
 
     class UserForm(forms.Form):
         username = forms.CharField()
-        
+
         password1 = forms.PasswordField()
         password2 = forms.PasswordField()
-        
+
         def clean(self):
             data = self.cleaned_data
             if "password1" in data and "password2" in data and data["password1"] != data["password2"]:
                 raise forms.ValudationError("Passwords must be same")
-            
+
 
 
 
@@ -114,26 +114,26 @@ Create a form dynamically
                 username = forms.CharField()
                 fields = user.get_profile().all_field()
                 #Use field to find what to show.
-                
-[This post provides much more details](http://uswaretech.com/blog/2008/10/dynamic-forms-with-django/)
+
+[This post provides much more details](http://www.agiliq.com/blog/2008/10/dynamic-forms-with-django/)
 
 
 7.
 
 Prob. You need to create a Html form which writes to multiple Django models.
 
-Ans. Django forms are not a one to one mapping to Html forms. 
+Ans. Django forms are not a one to one mapping to Html forms.
 
     #in forms.py
     class UserForm(forms.ModelForm):
         class Meta:
             model = User
             fields = ["username", "email"]
-            
+
     class UserProfileForm(forms.ModelForm):
         class Meta:
             model = UserProfile
-    
+
     #in views.py
     def add_user(request):
         ...
@@ -147,7 +147,7 @@ Ans. Django forms are not a one to one mapping to Html forms.
                 profile.save()
                 ....
         ...
-        
+
     #in template
     <form method="post">
         {{ uform.as_p }}
@@ -168,12 +168,12 @@ a. If you want a datagrid style ui, use formset.
     forms = formset_factory(UserForm, extra = 4)
     #
 [Formsets are described much more comprehensively here](http://docs.djangoproject.com/en/dev/topics/forms/formsets/)
-    
-    
+
+
 b. If you do not need a datagrid style ui, use `prefix` argument to forms.
 
     Eg. you have a survey app, and you want a page with all questions from that survey displayed.
-    
+
     #IN views.py
     def survey(request, survey_slug)
         ...

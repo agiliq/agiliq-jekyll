@@ -10,12 +10,12 @@ What is EC2
 
 Unless you have been living on Mars these last few years, you are sure to have heard of [EC2](http://aws.amazon.com/ec2/). Amazon's cloud offering,
 it offers infinite scalability. Using EC2, you can bring up any number of machines online at minutes notice, and after
-you are done with them, bring them down. 
+you are done with them, bring them down.
 
 How does EC2 work?
 -----------------------
 
-A EC2 machine is nothing but a bare machine. An [Amazon Machine Image](http://aws.amazon.com/ec2/instance-types/) (AMI) is a machine bundled as an Image, with preconfigured software which you can 
+A EC2 machine is nothing but a bare machine. An [Amazon Machine Image](http://aws.amazon.com/ec2/instance-types/) (AMI) is a machine bundled as an Image, with preconfigured software which you can
 start at moments notice. We will take a AMI with a basic Ubuntu installed, and install Django with Mysql and Apache there.
 
 The prerequisites
@@ -37,7 +37,7 @@ My public dns was ec2-75-101-203-97.compute-1.amazonaws.com, my private key is s
 
 	..........
 
-	root@domU-12-31-39-02-BC-E1:~# 
+	root@domU-12-31-39-02-BC-E1:~#
 
 Fine, we are in our brand new EC2 server now! Ok, we do not want to work as root, create a new user and give sudo rights to it.
 
@@ -47,27 +47,27 @@ Fine, we are in our brand new EC2 server now! Ok, we do not want to work as root
 	Adding new user `shabda' (1000) with group `shabda' ...
 	Creating home directory `/home/shabda' ...
 	Copying files from `/etc/skel' ...
-	Enter new UNIX password: 
-	Retype new UNIX password: 
+	Enter new UNIX password:
+	Retype new UNIX password:
 	passwd: password updated successfully
 	Changing the user information for shabda
 	Enter the new value, or press ENTER for the default
-		Full Name []: 
-		Room Number []: 
-		Work Phone []: 
-		Home Phone []: 
-		Other []: 
+		Full Name []:
+		Room Number []:
+		Work Phone []:
+		Home Phone []:
+		Other []:
 	Is the information correct? [y/N] y
-	root@domU-12-31-39-02-BC-E1:~# visudo	
+	root@domU-12-31-39-02-BC-E1:~# visudo
 
 Ok, so we created a new user and gave the new user shabda sudo rights. Logout and login as shabda.
 
 
 	shabda@shabda-laptop:~$ ssh shabda@ec2-75-101-203-97.compute-1.amazonaws.com
-	shabda@ec2-75-101-203-97.compute-1.amazonaws.com's password: 
+	shabda@ec2-75-101-203-97.compute-1.amazonaws.com's password:
 
 	...
-	shabda@domU-12-31-39-02-BC-E1:~$ 
+	shabda@domU-12-31-39-02-BC-E1:~$
 
 Ok we are logged in as shabda. Let us install mysql, apache, mod_python, django and associated libraries.
 
@@ -83,11 +83,11 @@ Ok we are logged in as shabda. Let us install mysql, apache, mod_python, django 
 Fine, seems like we are done. Lets start a python interpretor and see id we can import Django
 
 	shabda@domU-12-31-39-02-BC-E1:~/Django-1.0.2-final$ python
-	Python 2.5.2 (r252:60911, Apr  8 2008, 21:47:16) 
+	Python 2.5.2 (r252:60911, Apr  8 2008, 21:47:16)
 	[GCC 4.2.3 (Ubuntu 4.2.3-2ubuntu7)] on linux2
 	Type "help", "copyright", "credits" or "license" for more information.
 	&gt;&gt;&gt; import django
-	&gt;&gt;&gt; 
+	&gt;&gt;&gt;
 	shabda@domU-12-31-39-02-BC-E1:~$ django-admin.py startproject testproject
 	shabda@domU-12-31-39-02-BC-E1:~$ cd testproject
 	shabda@domU-12-31-39-02-BC-E1:~/testproject$ python manage.py validate
@@ -99,7 +99,7 @@ Ok we have django running. Lets checkout something , so apt-get subversion.
 
 Ok we can run our site on the dev server, lets configure Apache to serve our content.
 
-	shabda@domU-12-31-39-02-BC-E1:~$ sudo vim /etc/apache2/httpd.conf 
+	shabda@domU-12-31-39-02-BC-E1:~$ sudo vim /etc/apache2/httpd.conf
 
 	<location>
 	    SetHandler python-program
@@ -121,7 +121,7 @@ Ok we can run our site on the dev server, lets configure Apache to serve our con
 	</location>
 
 
-	
+
 
 Check ec2-75-101-203-97.compute-1.amazonaws.com, you get a "Congratulations on your first Django-powered page." page
 
@@ -135,14 +135,14 @@ Lets create a database now.
 	mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'shabda8'@'localhost' IDENTIFIED BY 'some_pass' WITH GRANT OPTION;
 
 	shabda@domU-12-31-39-02-BC-E1:~/testproject$ mysql -u shabda8 -p
-	Enter password: 
+	Enter password:
 	Welcome to the MySQL monitor.  Commands end with ; or \g.
 	Your MySQL connection id is 17
 	Server version: 5.0.51a-3ubuntu5 (Ubuntu)
 
 	Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
 
-	mysql&gt; 
+	mysql&gt;
 
 Ok we have a database. Lets checkout a reusable django app in our project directory.
 
@@ -156,7 +156,7 @@ Oh and we are done. Navigate to the public url of your instance and you should s
 
 
 Hmm, we want to test how well does our site perform. We are going to use the awesome benchmarking tool called ab.
-ab is Apache Benchmark tool, it comes installed with Apache Httpd server. However to benchmark we need to bring up another instance, as 
+ab is Apache Benchmark tool, it comes installed with Apache Httpd server. However to benchmark we need to bring up another instance, as
 running the server and benchmarking tool on same server gives wrong result.
 
 Ok so we bring up another server, login and run the ab tool. Here is the ouput.
@@ -221,11 +221,11 @@ Ok so we bring up another server, login and run the ab tool. Here is the ouput.
 150+ requests per second. (This page does about 10 database queries). Not bad for an unoptimized server with even DEBUG = True, eh?
 
 We still have a lot to do to make this server production ready. If you bring down this instance, all you data is lost.
-So you need to get an [EBS](http://aws.amazon.com/ebs/) volume and attach it to your instance. You also want to backup your data on [S2](http://aws.amazon.com/s2/). But more about those 
+So you need to get an [EBS](http://aws.amazon.com/ebs/) volume and attach it to your instance. You also want to backup your data on [S2](http://aws.amazon.com/s2/). But more about those
 in another post.
 
 -------------------------------------------
-Want [Usware](http://uswaretech.com/) to build a high performance web application for you? [Click here](http://uswaretech.com/contact/) to contact us.
+Want [Usware](http://www.agiliq.com/) to build a high performance web application for you? [Click here](http://www.agiliq.com/contact/) to contact us.
 
 
 

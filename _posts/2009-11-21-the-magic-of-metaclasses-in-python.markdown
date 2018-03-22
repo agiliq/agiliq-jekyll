@@ -15,50 +15,50 @@ very beautiful declarative models. Without further ado, here is a very simple (a
     class Z(type):
         def __new__(cls, name, bases, attrs, ):
             print cls, name, bases, attrs
-            
+
     class A(object):
         __metaclass__ = Z
-        
-        
+
+
     print A
     print A()
-    
-    
+
+
 Running this gives this output.
 
-    shabda@shabda-laptop ~/docs> python testmetaclass.py 
+    shabda@shabda-laptop ~/docs> python testmetaclass.py
     <class '__main__.Z'> A (<type 'object'>,) {'__module__': '__main__', '__metaclass__': <class '__main__.Z'>}
     None
     Traceback (most recent call last):
       File "testmetaclass.py", line 14, in <module>
         print A()
     TypeError: 'NoneType' object is not callable
-    
+
 Let what happened,
 
 1. `print cls, name, bases, attrs` got executed, even though we are not creating `Z` or calling it anywhere.
 2. `print A` printed `None`
 3. `print A()` failed with a traceback
 
-Lets try a slightly modified file,http://uswaretech.com/blog/2009/11/the-magic-of-metaclasses-in-python/
+Lets try a slightly modified file,http://www.agiliq.com/blog/2009/11/the-magic-of-metaclasses-in-python/
 
     class Z(type):
         def __new__(cls, name, bases, attrs, ):
             return str
-            
+
     class A(object):
         __metaclass__ = Z
-        
+
 This gives me,
-        
-        
+
+
     print A
     print A('Hello')
 
-    shabda@shabda-laptop ~/docs> python testmetaclass.py 
+    shabda@shabda-laptop ~/docs> python testmetaclass.py
     <type 'str'>
     Hello
-    shabda@shabda-laptop ~/docs> 
+    shabda@shabda-laptop ~/docs>
 
 The output suggests that `A` is behaving like `str`. This should lead us to a few conclusions,
 
@@ -84,7 +84,7 @@ This is the first in the series of `short and sweet` Django posts we are going t
 
 -----
 
-We build *Amazing We Apps*. [Talk to us](http://uswaretech.com/contact/) or email us at sales@uswaretech.com .
+We build *Amazing We Apps*. [Talk to us](http://www.agiliq.com/contact/) or email us at sales@uswaretech.com .
 
 
 

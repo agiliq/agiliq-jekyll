@@ -151,9 +151,9 @@ It is highly debatable whether this is a good idea :), but it is too convenient 
 <a name="screenshots_wp" />
 Here are some screenshots.
 
-<img alt="" src="http://uswaretech.com/dump/screenshots/screenshot_010.png" title="Wordpress django admin" class="alignnone" width="600" />
+<img alt="" src="http://www.agiliq.com/dump/screenshots/screenshot_010.png" title="Wordpress django admin" class="alignnone" width="600" />
 
-<img alt="" src="http://uswaretech.com/dump/screenshots/screenshot_011.png" title="Wordpress django admin" class="alignnone" width="600" />
+<img alt="" src="http://www.agiliq.com/dump/screenshots/screenshot_011.png" title="Wordpress django admin" class="alignnone" width="600" />
 
 
 

@@ -5,7 +5,7 @@ date:   2009-03-31 19:54:33+05:30
 categories: ecommerce
 author: lakshman
 ---
-<a href="http://authorize.net/" target="_blank">Authorize.net</a> has a user base of over 200k merchants making it the largest <a class="zem_slink" title="Payment gateway" rel="wikipedia" href="http://en.wikipedia.org/wiki/Payment_gateway">payment gateway</a> service provider. Most e-commerce solutions already integrate with Authorize.net, including our favorite e-commerce store <a href="http://www.satchmoproject.com/" target="_blank">Satchmo</a>, developed in django, that <a href="http://uswaretech.com/blog/2009/03/create-your-own-online-store-in-few-hours-using-satchmo-django/">we have covered earlier.</a>
+<a href="http://authorize.net/" target="_blank">Authorize.net</a> has a user base of over 200k merchants making it the largest <a class="zem_slink" title="Payment gateway" rel="wikipedia" href="http://en.wikipedia.org/wiki/Payment_gateway">payment gateway</a> service provider. Most e-commerce solutions already integrate with Authorize.net, including our favorite e-commerce store <a href="http://www.satchmoproject.com/" target="_blank">Satchmo</a>, developed in django, that <a href="http://www.agiliq.com/blog/2009/03/create-your-own-online-store-in-few-hours-using-satchmo-django/">we have covered earlier.</a>
 
 However, many shopping portals still require custom development. The robust <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST API</a> Authorize.net offers (AIM and SIM) allows for integration with e-commerce merchants' websites.
 
@@ -20,7 +20,7 @@ Thus a merchant can perform, based on his business need, one of the following:
 	<li>Using the SIM API obtain Authorization confirmation on Authorize.net and perform the checkout and display the recipt on the merchant's site</li>
 	<li>Using AIM API, perform the entire checkout process on merchant's site</li>
 </ol>
-The third option above is interesting. The Authorize.net's SIM provides the flexibility to checkout on merchant's site for transactions, even without SSL, for the cost of a round trip of http handshakes, just like the <a href="http://uswaretech.com/blog/2008/11/using-paypal-with-django/">Paypal's Express Checkout API</a>.
+The third option above is interesting. The Authorize.net's SIM provides the flexibility to checkout on merchant's site for transactions, even without SSL, for the cost of a round trip of http handshakes, just like the <a href="http://www.agiliq.com/blog/2008/11/using-paypal-with-django/">Paypal's Express Checkout API</a>.
 
 Typically, users return back to the merchant site and where the receipt is displayed (case 2) or confirm at the merchant site (case 3). Lets examine the workflow for such a scenario.
 <ul>
@@ -42,17 +42,17 @@ The integration essentially involves, sending a list of hidden fields in a form 
 `x_fp_hash` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The fingerprint
 
 `x_fp_timestamp`
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 UTC time in seconds since epoch
 
 `x_fp_sequence`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Invoice number, or a random number
 
 `x_login` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Login ID of merchant, provided by Authorize.net
 
 `x_show_form` &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-TRUE, to show form 
+TRUE, to show form
 
 `x_amount` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Amount of the transaction
 <ul>
@@ -108,5 +108,5 @@ The following view code should indicate how you should go about doing it:
             <span style="font-weight: bold; color: rgb(0, 112, 32);">pass</span></pre>
 </div>
 <hr />
-Looking to develop an e-commerce website? We offer services. [Get in touch](http://uswaretech.com/contact).
+Looking to develop an e-commerce website? We offer services. [Get in touch](http://www.agiliq.com/contact).
 

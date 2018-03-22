@@ -5,7 +5,7 @@ date:   2009-03-09 23:49:56+05:30
 categories: algorithms
 author: lakshman
 ---
-Update: keywords2.txt is Pride and Prejudice from Project Gutenberg. <a href='http://uswaretech.com/blog/wp-content/uploads/2009/03/keywords2.txt'>Attached for convenience.</a>
+Update: keywords2.txt is Pride and Prejudice from Project Gutenberg. <a href='http://www.agiliq.com/blog/wp-content/uploads/2009/03/keywords2.txt'>Attached for convenience.</a>
 
 -------------
 
@@ -119,6 +119,6 @@ Here is some sample output.
 --------------------------------
 
 Need to build a web app which does more than read from a database? Contact us at sales@uswaretech.com, to discuss further.
-			  
-		 
+
+
 

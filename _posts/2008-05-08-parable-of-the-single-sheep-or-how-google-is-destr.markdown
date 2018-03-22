@@ -10,7 +10,7 @@ This is a [parable](http://en.wikipedia.org/wiki/Parable) in two parts. <a href=
 <a name="story"></a>
 ### The Story
 
-<img src="http://uswaretech.com/blog/wp-content/uploads/2008/05/sheep.jpg" alt="" title="sheep" width="132" height="126" class="left" />
+<img src="http://www.agiliq.com/blog/wp-content/uploads/2008/05/sheep.jpg" alt="" title="sheep" width="132" height="126" class="left" />
 Long ago was the kingdom of Foobr, a kingdom mostly of shepherds, who grazed their sheep under the benevolent but watchful eyes of their King Oggle. There were all types of shepherds in the kingdom, some had only a few sheep, and some had a few hundreds. The sheep too were of all types and varieties, some gave a ton of wool, and some only a few bales.
 
 <blockquote class="right">
@@ -21,7 +21,7 @@ What <del>man</del> webmaster of you, having an hundred <del>sheep</del> sites, 
 
 For a long time the kingdom, and its economy based on wool prospered well. It was not a very efficient marketplace, though, as the shepherds who had more sheep grazed more of the common fodder and pastures, and these shepherds got rich. The shepherds who had a single but more productive sheep could only make so much wool!
 
-<img src="http://uswaretech.com/blog/wp-content/uploads/2008/05/crown.jpg" alt="" title="crown" width="113" height="123" class="right" />
+<img src="http://www.agiliq.com/blog/wp-content/uploads/2008/05/crown.jpg" alt="" title="crown" width="113" height="123" class="right" />
 The king though of himself as hard but fair. "Ah! I need to overcome this inefficiency in my kingdom. I need to reward those who use resources judiciously, and punish those who have a lot of inefficient sheep." he thought. He asked his Sages to get to work to determine which sheep were inefficient, and needed to be killed! "This will increase the efficiency in my kingdom, and make  the kingdom happier overall."
 
 The sages worked hard, analyzed millions of records and found out that red sheep were less efficient than other sheep. "If we kill all the red sheep, the efficiency of the kingdom will go up by 10% and in two years the production by 5%." The king was duly impressed and ordered all the red sheep killed. As promised, the efficiency increased by 10% overnight!

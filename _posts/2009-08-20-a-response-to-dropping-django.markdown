@@ -19,7 +19,7 @@ the urls for a simple app by,
     ...     ('^add/', 'add'),
     ...     ('delete/', 'delete', ('hard/', 'delete_hard'))
     ...     )
-    
+
 Guess what, urls.py is *just a python module which excepts a variable names urlpatterns*.
 
 Which means it is very easy to write a function which converts this nested structure to flat, structure.
@@ -28,11 +28,11 @@ Here is a quick attempt at that,
     def merge(url):
         full_url=[]
         for i, el in enumerate(url):
-            if i%2==0:    
+            if i%2==0:
                 full_url.append(el)
         full_url = ''.join(full_url)
         return full_url
-        
+
     def combineflatten(seq):
         items= tuple(item for item in seq if not isinstance(item, tuple))
         yield items
@@ -40,7 +40,7 @@ Here is a quick attempt at that,
                 if isinstance(item, tuple):
                     for yielded in combineflatten(item):
                         yield items+yielded
-                        
+
     def generate_flat_urls(tree_urls):
         """
         >>> tree_urls = ('', 'list',
@@ -48,7 +48,7 @@ Here is a quick attempt at that,
         ...     ('^add/', 'add'),
         ...     ('delete/', 'delete', ('delete/', 'delete_hard'))
         ...     )
-    
+
         >>> generate_flat_urls(tree_urls)
         [('^$', 'list'), ('^edit/$', 'edit'), ('^edit/auto/$', 'edit_auto'), ('^^add/$', 'add'), ('^delete/$', 'delete'), ('^delete/delete/$', 'delete_hard')]
         """
@@ -62,17 +62,17 @@ With this you can use hierarchical urls in urls.py as,
         ('^add/', 'add'),
         ('delete/', 'delete', ('delete/', 'delete_hard'))
         )
-        
+
     flat_urls = generate_flat_urls(tree_urls)
-    
+
     urlpatterns = patterns('app.views',
     **flat_urls
     )
-    
+
 #### No support for per user, per resource authorisation.
 
 If you want to do this in a almost no-touching-the-existing-code way, replace all your `render_to_response` with,
-    
+
     def render_with_auth_check(request, payload, request_context, *args, **kwrags):
         for el in payload.itervalues():
             try:
@@ -82,7 +82,7 @@ If you want to do this in a almost no-touching-the-existing-code way, replace al
             except ValueError:
                 pass #Not all objects have check_auth
         return render_to_response(request, payload, request_context, *args, **kwrags)
-        
+
 And enable this middleware,
 
     class AuthFailHandlerMiddleware:
@@ -90,7 +90,7 @@ And enable this middleware,
             if type(exception) == AuthFailException:
                 return render_to_response('accounts/login/', {}, RequestContext(request))
 
-        
+
 This assumes that all resources which are authorisation protected have a `.check_auth`,
 but I cant see any way round that in any other way as well.
 
@@ -105,7 +105,7 @@ A different, and more robust way would be to write custom managers for all resou
                     raise AuthFailException
             except ValueError:
                 pass #Not all objects have check_auth
-                
+
         ...
 
 #### The Django templating language is too constrained.
@@ -116,12 +116,12 @@ and convenience to *people who would be using it*, I never understood this argum
 If you are using sqlalchemy with Django you lose the admin, what do you lose if you use Jinja?
 
 In particular what do you lose by replacing `render_to_response` with this,
-    
+
     def render_jinja_to_response(template_name, payload):
         #This should probably go in settings.py
         from jinja2 import Environment
         env = Environment(loader=PackageLoader('app', 'templates'))
-        
+
         template = env.get_template(template_name)
         response = template.render(**payload)
         return HttpResponse(response)
@@ -162,5 +162,5 @@ post was to answer them. For Django to develop the best way, we need more of the
 of "What is wrong with Django" posts, not less, so my thanks to the original author. :)
 
 --------
-Do you want to build **Amazing Web Apps**? [We can help](http://uswaretech.com/contact/).
+Do you want to build **Amazing Web Apps**? [We can help](http://www.agiliq.com/contact/).
 

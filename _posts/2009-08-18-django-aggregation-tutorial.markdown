@@ -187,7 +187,7 @@ you had to use custom sql queries in the past.
 3. [Aggregation on Django docs](http://docs.djangoproject.com/en/dev/topics/db/aggregation/)
 
 --------------------
-Want to build a Django app? [Talk to us](http://uswaretech.com/contact/)
+Want to build a Django app? [Talk to us](http://www.agiliq.com/contact/)
 
 
 

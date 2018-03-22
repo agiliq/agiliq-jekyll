@@ -5,13 +5,13 @@ date:   2008-05-10 20:27:49+05:30
 categories: startup
 author: shabda
 ---
-This is an article in the **Five Startup Ideas** series at [the 42topics blog](http://42topics.com/). In his essay, [Ideas for Startups](http://www.paulgraham.com/ideas.html), Paul Graham argues that ideas are not a critical factor for success of startups. Although I do not believe that ideas are worthless, as many people do, I believe that they are not any where near as important as execution. So to prove my point, I am giving away 5 startup ideas in next five days. All of them describe a problem, its solution, the technology involved, the competition and market size. If you are not a hacker, and want to build any of these things may I suggest [Uswaretech](http://uswaretech.com/).
+This is an article in the **Five Startup Ideas** series at [the 42topics blog](http://42topics.com/). In his essay, [Ideas for Startups](http://www.paulgraham.com/ideas.html), Paul Graham argues that ideas are not a critical factor for success of startups. Although I do not believe that ideas are worthless, as many people do, I believe that they are not any where near as important as execution. So to prove my point, I am giving away 5 startup ideas in next five days. All of them describe a problem, its solution, the technology involved, the competition and market size. If you are not a hacker, and want to build any of these things may I suggest [Uswaretech](http://www.agiliq.com/).
 
 -----------------------
 
 ### Title:
 
-<img src="http://uswaretech.com/blog/wp-content/uploads/2008/05/photo-adwords.jpg" alt="" title="photo-adwords" width="264" height="204" class="right" />
+<img src="http://www.agiliq.com/blog/wp-content/uploads/2008/05/photo-adwords.jpg" alt="" title="photo-adwords" width="264" height="204" class="right" />
 An automated Adwords optimizer
 
 ### The problem:

@@ -7,11 +7,11 @@ author: shabda
 ---
 Note: We are not maintaining these apps anymore.
 
-We have updated the [Django popular stories widget](http://uswaretech.com/blog/2009/02/django-popular-stories-widget/), which powers the widget in the side bar. [It is now on Github](http://github.com/agiliq/django-buzz).
+We have updated the [Django popular stories widget](http://www.agiliq.com/blog/2009/02/django-popular-stories-widget/), which powers the widget in the side bar. [It is now on Github](http://github.com/agiliq/django-buzz).
 
 Earlier the code used was hardcoded to only find Django stories, but now you can create arbitary topics from admin.
 
-Get the code and create the widgets on your servers, (or let us know, and we will create it here if it is interesting). We created three we want to track. [Databases](http://uswaretech.com/pystories/databases/), [Python](http://uswaretech.com/pystories/python/) and [Javascript](http://uswaretech.com/pystories/javascript/)
+Get the code and create the widgets on your servers, (or let us know, and we will create it here if it is interesting). We created three we want to track. [Databases](http://www.agiliq.com/pystories/databases/), [Python](http://www.agiliq.com/pystories/python/) and [Javascript](http://www.agiliq.com/pystories/javascript/)
 
 
 -----------------
