@@ -23,23 +23,53 @@ twitter_username: agiliqdotcom
 github_username:  agiliq
 
 permalink: /blog/:year/:month/:day/:title/
-paginate: 25
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Theme settings
+doks:
+    baseurl: /
+    color_theme: green
+    header:
+        logo:
+            text: Agiliq
+            image:
+        nav:
+            - item_name: Blog
+              item_url: '/blog/'
+            - item_name: About Us
+              item_url: '/about/'
+            - item_name: Contact
+              item_url: '/contact/'
+    footer:
+        content:
+            logo:
+                text: Agiliq
+                image:
+            copyright: Copyright &copy; 2010-2018,  Agiliq <br>All rights reserved.
+        social_list:
+            - network_name: facebook
+              profile_url: 'https://facebook.com/agiliq'
+            - network_name: twitter
+              profile_url: 'https://twitter.com/agiliqdotcom'
+            - network_name: github
+              profile_url: 'https://github.com/agiliq'
+    google_analytics:
+        tracking_code: # Add your Google Analytics tracking code to activate Google Analytics
+    comments:
+        disqus_forum_shortname: # Add your disqus forum shortname to activate comments
+
+# SASS settings
+sass:
+    sass_dir: ./doks-theme/_sass
+    style: :compressed
+
+# Jekyll settings
+layouts_dir: ./doks-theme/_layouts
+includes_dir: ./doks-theme/_includes
+exclude: [ 'README.md', 'CHANGELOG.md' ]
+permalink: /blog/:year/:month/:day/:title/
