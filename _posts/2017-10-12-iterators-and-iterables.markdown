@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Iterators and Iterables"
 date:   2017-10-12 11:36:19+05:30
 categories: python
@@ -45,7 +45,7 @@ Class B is an iterator because it has method next().
 
 You can do:
 
-	a_instance = A()	
+	a_instance = A()
 	a_iter = iter(a_instance)
 
 `a_instance` is an iterable because it has method \_\_iter\_\_. Calling built-in iter() on the iterable `a_instance` internally called a_instance.\_\_iter\_\_(). a_instance.\_\_iter\_\_() returned an iterator which is an instance of class B.

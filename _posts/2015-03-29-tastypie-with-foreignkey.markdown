@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Tastypie with ForeignKey"
 date:   2015-03-29 13:06:51+05:30
 categories: django-tastypie
@@ -100,12 +100,12 @@ This will return resource_uri of ExpenseCategory by default
 
 #### Using full=True
 
-Probably you want to see the name and description of category in the response 
+Probably you want to see the name and description of category in the response
 
 Make the following modification
 
 	category = fields.ForeignKey(ExpenseCategoryResource, attribute='category', null=True, full=True)
-	
+
 Try the GET endpoint again
 
 	http://localhost:8000/api/expense/?username=sheryl&api_key=1a23&format=json
@@ -179,7 +179,7 @@ Also the new expense would have got associated with the newly created ExpenseCat
 
 If you have full=True on FK resource then a database call will happen for each FK of each row.
 
-eg: 
+eg:
 
 	category = fields.ForeignKey(ExpenseCategoryResource, attribute='category', null=True, full=True)
 

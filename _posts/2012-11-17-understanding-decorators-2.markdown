@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Understanding decorators"
 date:   2012-11-17 14:43:53+05:30
 categories: Function as objects
@@ -26,7 +26,7 @@ Let's first write a class.
 
 Let's create an instance of this class.
 
-    >>> obj = A(5)    
+    >>> obj = A(5)
     >>> print obj.a
     5                 #output
 
@@ -35,7 +35,7 @@ Let's write a function that takes an object, increase the value of instance vari
     >>> def func(some_obj):
     ...     some_obj.a = some_obj.a + 10
     ...     return some_obj
-    ... 
+    ...
 
 In function **func**, our assumption is that we will always pass it an object as argument and this object will have an instance variable 'a'.
 
@@ -53,7 +53,7 @@ Let's write a function that prints something.
 
     >>> def hello_world():
     ...     print "Hello World"
-    ...  
+    ...
 
 Use this function.
 
@@ -90,8 +90,8 @@ Let's use function **use_hello_world**.
 
 ####What happened here?
 1. hello_world is the name of the first function we wrote.
-2. We wanted to see how to pass around functions. 
-3. We wrote another function named **use_hello_world**. use_hello_world expects one argument. 
+2. We wanted to see how to pass around functions.
+3. We wrote another function named **use_hello_world**. use_hello_world expects one argument.
 4. use_hello_world has three lines in its body.
 5. The first two lines of use_hello_world are just print staments.
 6. Third line of use_hello_world used the argument that it recieved. Notice the **parenthesis** after **some_func**. So. assumption with use_hello_world is that the argument that will be passed to it will be a function.
@@ -110,7 +110,7 @@ Also functions can be returned from another function. Let's see it.
     ...         print "Hello Duniya"
     ...     print "A function can be returned from a function"
     ...     return say_hello
-    ... 
+    ...
 
 ####What happens in function **some_func**?
 1. First line is a print statement
@@ -146,7 +146,7 @@ Let's first write a function without decorator.
 
     >>> def divide(numerator, denominator):
     ...     return numerator/denominator
-    ... 
+    ...
 
 Let's use this function few times.
 
@@ -184,12 +184,12 @@ Let's write a decorator. We will go through every line of the decorator once we 
 3. We defined a function named **decorate**. It is a decorator as well but we will keep calling it as function for sometime.
 4. This function named decorate expects one argument to be passed to it as we can see from the signature of decorate.
 5. The argument that we pass to this function decorate will be captured in the variable function_to_be_decorated.
-6. The argument passed to decorate must be a function itself. (The assumption for a decorator is that we will pass a function as argument to it). 
+6. The argument passed to decorate must be a function itself. (The assumption for a decorator is that we will pass a function as argument to it).
 7. Since a function will be passed as an argument to decorate, **function_to_be_decorated** will refer to that passed function.
 8. We define a function named **another_function** inside decorate.
 9. The purpose of writing this decorator is to help us fix function divide().
 10. So the signature of **another_function** must match the signature of **divide**. Since divide has two parameters, so another_function must also have two parameters. We have named those parameters num and den.
-11. Ignore the body of another_function for now, we will come to it very soon. 
+11. Ignore the body of another_function for now, we will come to it very soon.
 12. At the end we return function named another_function from decorate. So we see that a decorator also returns a function. And it returns the same function that it defined inside itself. So here we defined another_function inside our decorator decorate and returned that same function from the decorator.
 13. Read the first point again and verify that everything we said about decorators is true.
 
@@ -215,14 +215,14 @@ Using new divide.
     2                                 #output
 
 ####Explanation:
-1. Now divide refers to another_function. 
+1. Now divide refers to another_function.
 2. So, calling divide actually calls another_function.
 3. another_function has parameters num and den.
 4. Passing the arguments, assigns 4 to num and 2 to den.
 5. We check if den equals 0. Here, den did not equal 0. So, we reach else part of another_function.
 6. In else part, we use function_to_be_decorated. But, remember function_to_be_decorated refers to older/actual version of divide.
 7. The arguments recieved in another_function i.e num and den are passed as it is to function_to_be_decorated i.e actual version of divide.
-8. So, 4 and 2 are passed to function_to_be_decorated i.e to old divide. 
+8. So, 4 and 2 are passed to function_to_be_decorated i.e to old divide.
 9. In old divide 4 gets assigned to variable numerator and 2 gets assigned to variable denominator.
 10. And the actual version of divide just divides the numerator by denominator and returns it.
 11. We get the value returned from function_to_be_decorated i.e old divide into varaible result and return it from function another_function.
@@ -291,7 +291,7 @@ Let's write one more decorator. This decorator needs to check that the denominat
     ...             print "Denominator <= Numerator. So call actual function"
     ...             return function(num, den)
     ...     return check_den_less_than_num
-    ... 
+    ...
 
 We wrote the decorator keeping in mind that this decorator has to be applied to a function which expects two arguments. So the function defined inside decorator i.e check_den_less_than_num should also take two arguments and then it should make proper check and based on that it should call the actual function. We have some print statements to see what happens at different stages.
 
@@ -300,7 +300,7 @@ Let's rewrite function divide applying the above written decorator to it.
     >>> @decorate_den_less_than_num
     ... def divide(numerator, denominator):
     ...     return numerator/denominator
-    ... 
+    ...
     Decorator to check denominator less than numerator applied     #output
 
 ####Why we got the output "Decorator to che............ applied" ?

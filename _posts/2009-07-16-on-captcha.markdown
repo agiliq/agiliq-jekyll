@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "On Captcha"
 date:   2009-07-16 14:05:35+05:30
 categories: tips

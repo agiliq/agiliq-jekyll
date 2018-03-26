@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Process and Threads for Beginners"
 date:   2013-09-11 12:33:39+05:30
 categories: process
@@ -12,7 +12,7 @@ We will cover this post in following sequence:
 
 ###Process and multiprocessing
 
-A process is an executable instance of a program. 
+A process is an executable instance of a program.
 
 ####Example:
 You write a java program and save it as **abcd.java** and run it with **java abcd**. While this program is executing it is a process. File **abcd.java** is not a process, but when it's executing it is a process.
@@ -30,7 +30,7 @@ The way to find all the executing process in a UNIX system is:
 Open a file in `vim` on a terminal.
 
     vim threads.txt
-    
+
 Open another terminal and find vim processes.
 
     ps aux | grep vim
@@ -42,7 +42,7 @@ If you close vim on first terminal and try to find the vim processes again, you 
 Now start two instances of vim on two separate terminals:
 
     vim abcd.txt
-    vim efgh.txt 
+    vim efgh.txt
 
 Check all the vim processes again using `ps aux | grep vim`, and this time you will find that two vim processes are running on the system.
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Starting Android app developement: From zero to app"
 date:   2011-02-06 17:30:21+05:30
 categories: java
@@ -17,7 +17,7 @@ and [code on github](https://github.com/agiliq/TaxCalculatorAndroid) here.
 
 Setting up
 ---------------
-1. Install Java and Eclipse 
+1. Install Java and Eclipse
 2. Install Android SDK and add ons.
 3. Instal ADT for eclipse.
 4. Create a Android project from within Eclipse.
@@ -73,19 +73,19 @@ and implement the `onClick`.
 You can get the fields you declared in XML this way:
 
 	(EditText)findViewById(R.id.income);
-	
+
 And the values from them as,
 
 	income.getText().toString();
-	
+
 Now we can get the values and parse them as `int` via `Integer.parseInt`, and calculate tax via normal Java semantics.
 
 Once we have the tax, the UI can be updated via:
 
 	tax.setText(""+tax);
-	
-	
-[Your final Java code will look like this.](https://github.com/agiliq/TaxCalculatorAndroid/blob/master/src/com/agiliq/taxcalc/TaxCalculator.java) 
+
+
+[Your final Java code will look like this.](https://github.com/agiliq/TaxCalculatorAndroid/blob/master/src/com/agiliq/taxcalc/TaxCalculator.java)
 
 Bridging XML and Java
 ----------------------------

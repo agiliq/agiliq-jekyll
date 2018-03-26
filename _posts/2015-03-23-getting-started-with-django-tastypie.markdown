@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Getting started with Django tastypie"
 date:   2015-03-23 17:40:53+05:30
 categories: django-tastypie
@@ -521,7 +521,7 @@ Make a POST request now with Sheryl's api_key.
 Verify that the latest expense instance gets associated with Sheryl. You can also verify it by seeing that this object gets returned in GET expense list endpoint.
 
 	http://localhost:8000/api/expense/?format=json&username=sheryl&api_key=1a23
-	
+
 Sixth commit at this point
 
 	git checkout 17b932

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Getting started with webapp2 and GAE"
 date:   2017-09-04 12:45:27+05:30
 categories: appengine
@@ -60,7 +60,7 @@ Let's write some code now. Create a file main.py with following content
 
 	if __name__ == '__main__':
 		main()
-		
+
 We need a yaml file called app.yaml which tells to app engine about runtime environment and other provisioning information. Add a file app.yaml at same level as main.py with following content.
 
 	runtime: python27

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Metaclass in Python"
 date:   2012-07-02 08:11:46+05:30
 categories: Metaclass
@@ -17,11 +17,11 @@ Let's see a little bit about normal Objects in Python.
 
     >>> class A(object):
     ...     pass
-    ... 
+    ...
 
-We created a class named A. A extends from class object (Here by object we mean class named object from which all new style classes extend). 
+We created a class named A. A extends from class object (Here by object we mean class named object from which all new style classes extend).
 
-Hereafter if we use lowercase 'o' in object, it means we want to refer to the class named object. If we use an Object with uppercase 'O', we mean an instance of some class i.e an instance created by calling the class. 
+Hereafter if we use lowercase 'o' in object, it means we want to refer to the class named object. If we use an Object with uppercase 'O', we mean an instance of some class i.e an instance created by calling the class.
 
 Let's create an instance of A.
 
@@ -53,13 +53,13 @@ Let's check type of obj now.
 
 Output tells that class of obj is A which means that obj is an instance of A.
 
-As we know, A is a class. 
+As we know, A is a class.
 But **is A an Object?** In other words, is A an instance of something? Let's try finding out using type().
 
     >>> type(A)
     <type 'type'>                                  #output
 
-We passed a class, class A, as an argument to type(). Since type() executed successfully and did not raise any error, it confirms A is an Object. It means even **classes are Objects** in Python. 
+We passed a class, class A, as an argument to type(). Since type() executed successfully and did not raise any error, it confirms A is an Object. It means even **classes are Objects** in Python.
 
 Actually, everything is an Object in Python. Classes are Objects, Functions are Objects, Methods are Objects, Literals are Objects. Anything you can define in Python is an Object.
 
@@ -73,12 +73,12 @@ We can verify this by passing anything we can define in Python as an argument to
 
     >>> def met(arg):
     ...     return arg
-    ... 
+    ...
     >>> type(met)
     <type 'function'>                             #functions are Objects
 
 ###What is a Metaclass?
-We verified that classes are Objects in Python. But Object mean instance. So, a **class must be an instance of some other class** i.e class itself must be an instance of some other class. 
+We verified that classes are Objects in Python. But Object mean instance. So, a **class must be an instance of some other class** i.e class itself must be an instance of some other class.
 
 In our example, **class A must be an instance of some other class**. Let's assume the name of that class is SomeClass. SomeClass is a metaclass. So, **the class of a class is known as Metaclass**. Might be a little confusing, Keep reading, it will be clear with the explanation to follow.
 
@@ -92,14 +92,14 @@ Output means that A is an instance of a class named type. In other words, class 
 
 obj was an instance of A and we created it like "obj=A()".
 
-A is an instance of type. So, under the hood, A would have got created something like "A=type()". 
+A is an instance of type. So, under the hood, A would have got created something like "A=type()".
 This call to class type for creating class A was taken care by the interepreter when interpreter saw the class definition for A. Actually, call to class type is a little different than this, some arguments are also passed while calling type which we will see soon.
 
 A is a class. And A's class is type. So, here **type is a metaclass because it is a class of a class**.
 
 ###Earlier we said that type() is a builtin function. Now we are saying that type is a class. How?
 * Yes, there is a built-in function named type() in Python as well as there is a class named type in Python.
-* How the interpreter interprets it depends on how we use it. 
+* How the interpreter interprets it depends on how we use it.
 * If we pass a single argument to type(), it is interpreted as a function and we get the class of the passed argument.
 * type is also a class and it can be used to create instance. Infact it must have been used to create class A as we described in last to last paragraph, though it was used under the hood. Since it was used under the hood, we could not see how class type was used to create class A.
 Instances of class type turn out to be classes. eg: A is an instance of class type but it is a class as well.
@@ -107,8 +107,8 @@ Instances of class type turn out to be classes. eg: A is an instance of class ty
 
 Till here we know that type is the metaclass used for creating class A. Remember **type is the default metaclass** which is used to create classes. We can override this default behaviour. We can specify an attribute named `__metaclass__` on the class we want to be created  and the required class will be created using the metaclass that we specify. If you understood that type is the default metaclass that was used here, you need not worry about other metaclass stuff that we wrote in this para, it will be clear with next few lines.
 
-####Before we go further, a para about `__new__`. 
-We know that instance of a class is created by calling that class. Calling that class in turns calls the \_\_new\_\_ method of that class where actual instance creation happens. As we know, a class is an instance of the metaclass. So a class must be getting created by calling the metaclass which in turn would be invoking \_\_new\_\_ of the metaclass where actual class creation would be happening. 
+####Before we go further, a para about `__new__`.
+We know that instance of a class is created by calling that class. Calling that class in turns calls the \_\_new\_\_ method of that class where actual instance creation happens. As we know, a class is an instance of the metaclass. So a class must be getting created by calling the metaclass which in turn would be invoking \_\_new\_\_ of the metaclass where actual class creation would be happening.
 
 ###How was class A created?
 * Interpreter sees the class definition which was class A in our case.
@@ -120,9 +120,9 @@ So for our case, class A must have got created inside \_\_new\_\_ of class type.
 Three arguments are :
     * name : This will be the name of the class that needs to be created. For our case, it would be string 'A'.
     * bases : it is a tuple containing all the bases for the class that needs to be created. For our case, it would be a tuple containing only one class which is class object. So, it is (object,)
-    * attrs : It is a dictionary containing all the attributes defined for the class plus one additional key which is \_\_module\_\_. Here we did not define any attribute for A, so dictionary will only have one key value pair. So, attrs is {'\_\_module\_\_':'\_\_main\_\_'}  
+    * attrs : It is a dictionary containing all the attributes defined for the class plus one additional key which is \_\_module\_\_. Here we did not define any attribute for A, so dictionary will only have one key value pair. So, attrs is {'\_\_module\_\_':'\_\_main\_\_'}
 
-So, for creating class A, interpreter would have made the following call under the hood on seeing the class definition of A. 
+So, for creating class A, interpreter would have made the following call under the hood on seeing the class definition of A.
 
 type('A', (object,), {'\_\_module\_\_':'\_\_main\_\_'})
 
@@ -137,10 +137,10 @@ In the previous section we saw that class type was used under the hood to create
 
     >>> A=type('A', (object,), {})
 
-We called class type and pass it the required arguments to create a class. Pay attention that we passed three arguments to type. 
+We called class type and pass it the required arguments to create a class. Pay attention that we passed three arguments to type.
 
-* First argument is a string which is the name we want for the class. 
-* Second argument is a tuple containing the base classes we want for our class. Since we wanted to create a new style class, we want our class to extend from object and hence tuple contains object. If you want your class to extend from some more classes, you can add those classes to the tuple. 
+* First argument is a string which is the name we want for the class.
+* Second argument is a tuple containing the base classes we want for our class. Since we wanted to create a new style class, we want our class to extend from object and hence tuple contains object. If you want your class to extend from some more classes, you can add those classes to the tuple.
 * Third argument is a dictionary containing the attributes that we want to set on the class. Here we did not want to set any attribute on the class, so dictionary is empty.
 
 
@@ -151,7 +151,7 @@ However, interpreter takes care of adding one key value pair to this dictionary 
 A = type('A', (object,) {'\_\_module\_\_' : '\_\_main\_\_'})
 
 ####Why three arguments need to be passed when calling class type?
-class type has a method \_\_new\_\_ where actual class creation happens. But method \_\_new\_\_ of class type has been defined to expect four arguments. 
+class type has a method \_\_new\_\_ where actual class creation happens. But method \_\_new\_\_ of class type has been defined to expect four arguments.
 
 As you must be knowing, \_\_new\_\_ receives all the arguments passed while calling the class plus one extra argument, which is the class itself, as the first argument. In total, \_\_new\_\_ of type expects four arguments to be passed to it, so we need to call class type passing it three arguments. One extra argument will be added by the interpreter and hence four arguments will be passed to \_\_new\_\_ of class type.
 
@@ -175,7 +175,7 @@ Till here we only talked about the default metaclass type. Let's write our own M
 * class type is the default metaclass used for class creation.
 * Metaclass is just a class which has the capability to create a class. Like a normal class has the capability to create an instance of that class, similarly Metaclass has the capability to create a class. The created class is an instance of Metaclass.
 * Remember, a class is an instance of Metaclass. So we can treat a class similar to how we treat an instance and in that case don't get confused.
-* Since type is the default metaclass which knows how to create a class, so if we want to write a metaclass we must extend class type. 
+* Since type is the default metaclass which knows how to create a class, so if we want to write a metaclass we must extend class type.
 
 
 Let's write the Metaclass named MyMeta.
@@ -183,7 +183,7 @@ Let's write the Metaclass named MyMeta.
     >>> class MyMeta(type):
     ...     def __new__(cls, name, bases, attrs):
     ...         return super(MyMeta, cls).__new__(cls, name, bases, attrs)
-    ... 
+    ...
 
 Name of our metaclass is MyMeta.
 
@@ -199,7 +199,7 @@ Let's use the metaclass we wrote to create some class.
 
     >>> class B(object):
     ...     __metaclass__ = MyMeta
-    ... 
+    ...
 
 We defined a class named B and set an attribute `__metaclass__` on this class. Attribute \_\_metaclass\_\_ was set as MyMeta, the metaclass we just wrote.
 
@@ -224,7 +224,7 @@ Internally interpreter makes the following call.
 
 This is the reason our metaclass should extend from type. So that we could use \_\_new\_\_ of superclass i.e \_\_new\_\_ of type in the overridden \_\_new\_\_ . We want to use \_\_new\_\_ of type for actual class creation because it already knows how to do it and we don't need to bother about how actual class creation works at low level.
 
-We return this created instance of MyMeta i.e class B from \_\_new\_\_ of MyMeta. 
+We return this created instance of MyMeta i.e class B from \_\_new\_\_ of MyMeta.
 
 We can print everything inside \_\_new\_\_ of MyMeta to verify what all is received by \_\_new\_\_ of MyMeta for creating class B.
 
@@ -236,13 +236,13 @@ Let's redefine MyMeta.
     ...         print "name is", name
     ...         print "attrs is", attrs
     ...         return type.__new__(cls, name, bases, attrs)
-    ... 
+    ...
 
 Let's again define class B and set its \_\_metaclass\_\_ as MyMeta.
 
     >>> class B(object):
     ...     __metaclass__ = MyMeta
-    ...     
+    ...
     cls is <class '__main__.MyMeta'>                                                 #output
     name is B                                                                        #output
     attrs is {'__module__': '__main__', '__metaclass__': <class '__main__.MyMeta'>}  #output
@@ -292,7 +292,7 @@ Next comes the metaclass that will be used to create the class.
     ...                 del attrs[each_attr]
     ...         print "Attributes after deleting non allowed attributes", attrs
     ...         return type.__new__(cls, name, bases, attrs)
-    ... 
+    ...
 
 ###What all happens in this metaclass?
 1. First line prints the dictionary that we get in \_\_new\_\_. If we don't make any manipulation in this dictionary, all the keys defined in this dictionary will be available as attributes on the class that is created using this metaclass.
@@ -310,11 +310,11 @@ Let's use the metaclass that we just wrote to create some class.
         first = 1
         second = 2
         third = 3
-    ...     
+    ...
     Given attributes are {'__module__': '__main__', '__metaclass__': <class '__main__.Meta'>, 'second': 2, 'third': 3, 'first': 1}                  #output
     Attributes after deleting non allowed attributes {'__module__': '__main__', '__metaclass__': <class '__main__.Meta'>, 'second': 2, 'first': 1}  #output
 
-We tried setting three attributes on class C. 
+We tried setting three attributes on class C.
 
 Compare the two lines of output. In the second line of output, it can be seen that key named 'third' has been removed. So when we passed this dictionary during actual class creation, key 'third' was not present in attrs and hence attribute 'third' will not be available on class C.
 

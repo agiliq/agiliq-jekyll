@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Real world usage of __iter__ and next"
 date:   2017-10-18 10:53:28+05:30
 categories: python
@@ -47,7 +47,7 @@ We wrote an iterable called xrange_2. And wrote an iterator called xrange_iterat
 
 Here values from 0 to 4 weren't stored in the memory simultaneously but instead were transient.
 
-#### Allowing looping over any arbitrary object 
+#### Allowing looping over any arbitrary object
 
 Assume there is a class which encapsulates a list and encapsulates several other things too. We want the elements of list to be retrieved when a user loops over the instance of this class.
 

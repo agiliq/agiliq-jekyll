@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Yahoo BOSS python api"
 date:   2009-06-14 21:47:51+05:30
 categories: yahoo

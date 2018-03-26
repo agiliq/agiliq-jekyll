@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "How not knowing encoding can trip you"
 date:   2014-12-08 16:47:52+05:30
 categories: python

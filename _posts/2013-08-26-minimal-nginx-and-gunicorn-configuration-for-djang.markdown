@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Minimal Nginx and Gunicorn configuration for Django projects"
 date:   2013-08-26 18:05:50+05:30
 categories: nginx
@@ -73,7 +73,7 @@ Runserver and verify that you can access
     http://localhost:8000/some_app/home
     http://localhost:8000/other_app/home
 
-First url should have a red background and the second one should have a blue background. 
+First url should have a red background and the second one should have a blue background.
 
 This project uses some static resources, you should check our post on [serving static file](http://agiliq.com/blog/2013/03/serving-static-files-in-django/) if you are confused about serving static files during development.
 
@@ -81,7 +81,7 @@ This project uses some static resources, you should check our post on [serving s
 
 Stop the Django development server.
 
-Make sure you have gunicorn installed, else install it with 
+Make sure you have gunicorn installed, else install it with
 
     pip install gunicorn
 
@@ -181,9 +181,9 @@ We don't need any change for gunicorn and can run it in the same way:
 Create file `/etc/nginx/sites-enabled/example` on the server and add content:
 
     server {
-      listen 80; 
+      listen 80;
       server_name pythoninternals.com;
-      location / { 
+      location / {
         proxy_pass http://127.0.0.1:8001;
       }
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "How to use pep8.py to write better Django code"
 date:   2012-02-03 11:30:01+05:30
 categories: screencasts

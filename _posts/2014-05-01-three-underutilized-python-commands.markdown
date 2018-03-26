@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Three underutilized python commands"
 date:   2014-05-01 17:05:18+05:30
 categories: Python

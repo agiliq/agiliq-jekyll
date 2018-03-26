@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Test Driven Development in Python "
 date:   2012-05-02 20:41:12+05:30
 categories: Development
@@ -11,7 +11,7 @@ author: anoop
 
 It is your choice to select any of these methodology, while developing a software. You can either develop based on a test driven process or the recover from a fiasco with tests.
 
-Test driven development, as the name suggests, is development based on tests. Tests for core features are written prior to the implementation for the expected output, and then necessary modules are written to satisfy the needs define the 
+Test driven development, as the name suggests, is development based on tests. Tests for core features are written prior to the implementation for the expected output, and then necessary modules are written to satisfy the needs define the
 
 
 ----------
@@ -27,7 +27,7 @@ Test driven development, as the name suggests, is development based on tests. Te
  - tends to result in extensible architectures
  - instant feedback
  - future development won't break existing features.
- 
+
 
 
 ----------
@@ -39,9 +39,9 @@ Test driven development, as the name suggests, is development based on tests. Te
  - Write tests for the use case Run it
  - (make sure it fails and fails
  - miserably) Write code and implement
- - the required functionality with relevant level of detail 
+ - the required functionality with relevant level of detail
  - Run the test
- - Write test for addition features 
+ - Write test for addition features
  - Run all test Watch it succeed. Have a cup of coffee !
 
 

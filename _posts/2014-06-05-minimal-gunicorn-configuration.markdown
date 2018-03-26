@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Minimal Gunicorn configuration"
 date:   2014-06-05 11:17:33+05:30
 categories: gunicorn
@@ -7,7 +7,7 @@ author: akshar
 ---
 <a href="http://gunicorn.org/" target="_blank">Gunicorn</a> is an http server written in Python. It is a WSGI compliant server and can serve web applications which are compliant with WSGI. <a href="http://agiliq.com/blog/2013/07/basics-wsgi/" target="_blank">This would help</a> if you aren't comfortable with WSGI.
 
-We will serve a basic web application using Gunicorn. And see the minimal and must configuration settings you should set while using gunicorn. We will specify the configuration variables in an external file and will direct gunicorn to use that configuration file. 
+We will serve a basic web application using Gunicorn. And see the minimal and must configuration settings you should set while using gunicorn. We will specify the configuration variables in an external file and will direct gunicorn to use that configuration file.
 
 ### Web application
 
@@ -17,7 +17,7 @@ We are working in directory /tmp and have activated a virtual environment called
 
 Let's write the web application which we will serve using gunicorn.
 
-    (PythonEnv)/tmp $ vim web_application.py 
+    (PythonEnv)/tmp $ vim web_application.py
 
     #web_application.py
     def application(environ, start_response):
@@ -80,7 +80,7 @@ Open another terminal and **ls**. You'll see that a file callled gunicorn_pid is
 #### Make it daemonized
 
 Add the following to gunicorn_cfg.py
-    
+
     daemon = True
 
 Run gunicorn
@@ -91,7 +91,7 @@ Gunicorn is running as a daemon now. Make sure you can access `http://localhost:
 
 Check process id of gunicorn
 
-    (PythonEnv)/tmp $ cat gunicorn_pid 
+    (PythonEnv)/tmp $ cat gunicorn_pid
     19558
 
 Kill existing gunicorn process and restart gunicorn.

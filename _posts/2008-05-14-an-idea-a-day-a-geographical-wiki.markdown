@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "An idea a day - A geographical wiki"
 date:   2008-05-14 21:10:22+05:30
 categories: startup

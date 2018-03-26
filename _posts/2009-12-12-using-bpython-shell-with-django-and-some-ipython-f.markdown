@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Using bpython shell with django (and some Ipython features you should know)"
 date:   2009-12-12 22:47:37+05:30
 categories: tutorial
@@ -11,7 +11,7 @@ author: lakshman
 
 says the [bpython](http://bpython-interpreter.org/) home page. It provides syntax highlighting, auto completion, auto-indentation and such stuff.
 
-Unlike [iPython](http://ipython.scipy.org/moin/), which implements then entire shell functions and emulates the standard python shell, and adds enhancements, bpython just adds features on top of the existing python shell functionality, using the curses module. 
+Unlike [iPython](http://ipython.scipy.org/moin/), which implements then entire shell functions and emulates the standard python shell, and adds enhancements, bpython just adds features on top of the existing python shell functionality, using the curses module.
 
 <img src="http://i.imgur.com/cqky1.png" alt="bpython" />
 
@@ -27,14 +27,14 @@ In fact did you know, you could get to ipython shell within any arbitrary place 
 
     from IPython.Shell import IPShellEmbed
     ipython = IPShellEmbed()
- 
+
 and then call ipython() anywhere within your view, model, forms and you will be dropped to the shell. Its [like ipdb.set_trace()](http://aymanh.com/python-debugging-techniques) only better (unless you want to step through, that is).
 
 ###The Python readline bug
 
 The Python version 2.6.4 (the version that is shipped with Ubuntu 9.10), introduced a [readline bug](http://bugs.python.org/issue5833) that adds spaces after tab completion. This bug also affects the Ipython, as it uses the same readline module. If you spend a lot of time on the shell (if you use python, you must, right?), it is very annoying to backspace after each tab, all the time.
 
-Although the bug got fixed pretty soon, it hasn't yet made it to any release that ubuntu updates to. There are ways to workaround this problem, by fixing it at the python level and at the Ipython level, many of them are discussed on the corresponding [Ipython bug](https://bugs.launchpad.net/ipython/+bug/470824) 
+Although the bug got fixed pretty soon, it hasn't yet made it to any release that ubuntu updates to. There are ways to workaround this problem, by fixing it at the python level and at the Ipython level, many of them are discussed on the corresponding [Ipython bug](https://bugs.launchpad.net/ipython/+bug/470824)
 
 ###Using bpython with django
 

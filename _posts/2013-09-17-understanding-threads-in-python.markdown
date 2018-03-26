@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Understanding Threads in Python"
 date:   2013-09-17 23:53:01+05:30
 categories: threads
@@ -54,7 +54,7 @@ You need to create a class which subclasses Thread:
 
     class GetUrlThread(Thread):
         def __init__(self, url):
-            self.url = url 
+            self.url = url
             super(GetUrlThread, self).__init__()
 
         def run(self):
@@ -121,7 +121,7 @@ Read [wikipedia example](http://en.wikipedia.org/wiki/Race_condition#Example) to
             global some_var
             read_value = some_var
             print "some_var in %s is %d" % (self.name, read_value)
-            some_var = read_value + 1 
+            some_var = read_value + 1
             print "some_var in %s after increment is %d" % (self.name, some_var)
 
     def use_increment_thread():

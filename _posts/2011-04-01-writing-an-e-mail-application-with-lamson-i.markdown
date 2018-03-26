@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: default
 title:  "Writing an e-mail application with Lamson - I"
 date:   2011-04-01 09:08:15
 author:   thejaswi
 categories:   e-mail
---- 
+---
 Shabda suggested we open a Off late, we\'ve been slightly busy with a \'lot\' of new developments
 on our end and we\'ve not been able to devote attention to the blog. In
 these busy periods, we tend to forget things faster. One such thing that
@@ -59,10 +59,10 @@ But we are not going to discuss this very deeply. We\'ll just use a
 Now let\'s create a lamson app named `ticket-creator` that will house
 the e-mail application.:
 
-    $ lamson gen -project ticket-creator                                                                                                                                                        
-    $ cd ticket-creator                                                                                                                                                                         
-    $ ls ticket-creator                                                                                                                                                                         
-    app  config  logs  muttrc  README  run  tests                                                                                                                                               
+    $ lamson gen -project ticket-creator
+    $ cd ticket-creator
+    $ ls ticket-creator
+    app  config  logs  muttrc  README  run  tests
 
 Lamson creates files for us to make code organization very easy. Let us
 next look at the functionality of the files:

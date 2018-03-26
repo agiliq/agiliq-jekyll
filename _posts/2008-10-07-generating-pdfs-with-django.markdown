@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Generating PDFs with Django "
 date:   2008-10-07 23:01:17+05:30
 categories: tips
@@ -30,7 +30,7 @@ If your web app creates report chances are you also want this report in PDF form
 This suffers from two problems,
 
 1. You are laying out your PDF using Python, which means if you later want to change the design of the PDF you need to change the Python code.
-2. Most of the time you already have the report in Html, form, writing the same PDF via ReportLab is error prone. 
+2. Most of the time you already have the report in Html, form, writing the same PDF via ReportLab is error prone.
 
 Both these problems can be cleanly solved using Pisa, a Html2Pdf library. We proceed as,
 
@@ -51,7 +51,7 @@ Here is some example code.
 		if as_pdf:
 			return payload
 		return render_to_response('app/template.html', payload, RequestContext(request))
-		
+
 	def pdf_view(request):
 		payload = html_view(request, as_pdf = True)
 		file_data = render_to_string('app/template.pdf', payload, RequestContext(request))
@@ -62,7 +62,7 @@ Here is some example code.
 		response['Content-Disposition'] = 'attachment; filename=coupon.pdf'
 		return response
 
-		
-		
-	
+
+
+
 

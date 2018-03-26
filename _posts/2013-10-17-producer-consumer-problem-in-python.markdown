@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Producer-consumer problem in Python"
 date:   2013-10-17 10:46:37+05:30
 categories: threads
@@ -7,7 +7,7 @@ author: akshar
 ---
 We will solve Producer Consumer problem in Python using Python threads. This problem is nowhere as hard as they make it sound in colleges.
 
-This blog will make more sense if you have some idea about [Producer Consumer problem](http://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem). 
+This blog will make more sense if you have some idea about [Producer Consumer problem](http://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem).
 
 Why care about Producer Consumer problem:
 
@@ -55,10 +55,10 @@ In first iteration, we will not put fixed-size constraint on queue. We will make
     from threading import Thread, Lock
     import time
     import random
-     
+
     queue = []
     lock = Lock()
-     
+
     class ProducerThread(Thread):
         def run(self):
             nums = range(5) #Will create the list [0, 1, 2, 3, 4]
@@ -67,11 +67,11 @@ In first iteration, we will not put fixed-size constraint on queue. We will make
                 num = random.choice(nums) #Selects a random number from list [0, 1, 2, 3, 4]
                 lock.acquire()
                 queue.append(num)
-                print "Produced", num 
+                print "Produced", num
                 lock.release()
                 time.sleep(random.random())
-     
-     
+
+
     class ConsumerThread(Thread):
         def run(self):
             global queue
@@ -80,11 +80,11 @@ In first iteration, we will not put fixed-size constraint on queue. We will make
                 if not queue:
                     print "Nothing in queue, but consumer will try to consume"
                 num = queue.pop(0)
-                print "Consumed", num 
+                print "Consumed", num
                 lock.release()
                 time.sleep(random.random())
-     
-     
+
+
     ProducerThread().start()
     ConsumerThread().start()
 
@@ -107,7 +107,7 @@ Sample output:
         num = queue.pop(0)
     IndexError: pop from empty list
 
-####Explanation: 
+####Explanation:
 
 * We started one producer thread(hereafter referred as producer) and one consumer thread(hereafter referred as consumer).
 * Producer keeps on adding to the queue and consumer keeps on removing from the queue.
@@ -123,7 +123,7 @@ When there was nothing in the queue, consumer should have stopped running and wa
 
 ### About Condition
 
-* Condition object allows one or more threads to wait until notified by another thread. Taken from [here](http://docs.python.org/2/library/threading.html#condition-objects). 
+* Condition object allows one or more threads to wait until notified by another thread. Taken from [here](http://docs.python.org/2/library/threading.html#condition-objects).
 
 And this is exactly what we want. We want consumer to wait when the queue is empty and resume only when it gets notified by the producer. Producer should notify only after it adds something to the queue. So after notification from producer, we can be sure that queue is not empty and hence no error can crop if consumer consumes.
 
@@ -150,7 +150,7 @@ Let's rewrite our Consumer and Producer code:
                     condition.wait()
                     print "Producer added something to queue and notified the consumer"
                 num = queue.pop(0)
-                print "Consumed", num 
+                print "Consumed", num
                 condition.release()
                 time.sleep(random.random())
 
@@ -164,7 +164,7 @@ Let's rewrite Producer code:
                 condition.acquire()
                 num = random.choice(nums)
                 queue.append(num)
-                print "Produced", num 
+                print "Produced", num
                 condition.notify()
                 condition.release()
                 time.sleep(random.random())
@@ -227,11 +227,11 @@ Final program looks like:
     from threading import Thread, Condition
     import time
     import random
-     
+
     queue = []
     MAX_NUM = 10
     condition = Condition()
-     
+
     class ProducerThread(Thread):
         def run(self):
             nums = range(5)
@@ -248,8 +248,8 @@ Final program looks like:
                 condition.notify()
                 condition.release()
                 time.sleep(random.random())
-     
-     
+
+
     class ConsumerThread(Thread):
         def run(self):
             global queue
@@ -264,8 +264,8 @@ Final program looks like:
                 condition.notify()
                 condition.release()
                 time.sleep(random.random())
-     
-     
+
+
     ProducerThread().start()
     ConsumerThread().start()
 
@@ -300,9 +300,9 @@ Updated program:
     import time
     import random
     from Queue import Queue
-     
+
     queue = Queue(10)
-     
+
     class ProducerThread(Thread):
         def run(self):
             nums = range(5)
@@ -312,8 +312,8 @@ Updated program:
                 queue.put(num)
                 print "Produced", num
                 time.sleep(random.random())
-     
-     
+
+
     class ConsumerThread(Thread):
         def run(self):
             global queue
@@ -322,8 +322,8 @@ Updated program:
                 queue.task_done()
                 print "Consumed", num
                 time.sleep(random.random())
-     
-     
+
+
     ProducerThread().start()
     ConsumerThread().start()
 

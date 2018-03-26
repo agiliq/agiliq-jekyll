@@ -1,13 +1,13 @@
 ---
-layout: post
+layout: default
 title:  "The Unfuddle Tutorial"
 date:   2010-12-04 20:55:21+05:30
 categories: tips
 author: shabda
 ---
-[Unfuddle](http://unfuddle.com/) is the tool we use for our non open source development. 
-I have found it to be the best tool for Software Project management, in particular 
-I think it is superior to Basecamp and Assembla. 
+[Unfuddle](http://unfuddle.com/) is the tool we use for our non open source development.
+I have found it to be the best tool for Software Project management, in particular
+I think it is superior to Basecamp and Assembla.
 
 When you start using Unfuddle, the number of things can seem overwhelming. This tutorial should help you *Unfuddle the Unfuddle*.
 
@@ -25,7 +25,7 @@ Unfuddle has,
 * Messages: A broadcast for all `user`s.
 * Notebook: A wiki for storing documentation.
 * Repository: Git or SVN for storing the code.
-* Ticket Report: Reports about the 
+* Ticket Report: Reports about the
 
 ## The tips
 
@@ -39,8 +39,8 @@ When we start a project we create project reports with every `user` ticket queue
 
 #### Manage cognitive overload
 
-People should have less than 10 tickets in their queue. More than this leads to a paradox of choice, 
-with making it hard to decide to work on. 5 is a good number of open tickets per person, with proving choices on what to work on next, 
+People should have less than 10 tickets in their queue. More than this leads to a paradox of choice,
+with making it hard to decide to work on. 5 is a good number of open tickets per person, with proving choices on what to work on next,
 without being overwhelming.
 
 #### Prefer Unfuddle messages to email.
@@ -64,7 +64,7 @@ This will automatically attach this commit to the given tickets, making it easie
 #### Get all stakeholders on board.
 
 Your project probably has many people who are acuustomed to keeping things on email. For them using a tool like Unfuddle would be a big change.
-You need to get them on board to use Unfuddle. 
+You need to get them on board to use Unfuddle.
 
 
 -------------------------------

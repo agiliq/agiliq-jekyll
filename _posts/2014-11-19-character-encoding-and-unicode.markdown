@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Character encoding and Unicode"
 date:   2014-11-19 13:45:15+05:30
 categories: encoding
@@ -108,7 +108,7 @@ Check the content of both file using xxd.
 So, the same character when encoded with different encoding schemes, give different binary representation.
 
 In `xxd` output, you only need to see the bits after ":". Initial "0000000" do not concern us.
-	
+
 #### Magic with **cat**
 
 If you use Windows, you'll have to use **type** instead of **cat**.
@@ -141,7 +141,7 @@ Terminal reads the binary content of file. In Latin-5, *10101010* is mapped to f
 Cat on ordinal_utf8.txt
 
 	$ cat ordinal_utf8.txt
-	Âª	
+	Âª
 
 Why did output of ordinal_utf8.txt change? As we know, binary content of ordinal_utf8.txt is *11000010 10101010*. It is 2 bytes. Our terminal encoding is set to Latin-5. In Latin-5, *11000010*(first byte) is mapped to character *Â* and *10101010*(second byte) is mapped to character *ª*. And that's what our output shows.
 

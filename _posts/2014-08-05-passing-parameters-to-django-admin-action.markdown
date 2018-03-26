@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Passing parameters to Django admin action"
 date:   2014-08-05 21:03:06+05:30
 categories: django

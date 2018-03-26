@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Building Chrome Extensions"
 date:   2015-03-04 11:40:38+05:30
 categories: google
@@ -7,7 +7,7 @@ author: karambir
 ---
 In this blog post, we will look at how to build a chrome extension that can work with multiple online services. Specifically we will see how to update Trello web pages with relevant content from Google Drive. For a particular Trello board, we will update trello cards with data from Google Drive document.
 
-Google Chrome extensions are nothing but some html, js files linked together that are running behind the scenes. Before starting out, we need to make sure that *Developer mode* is checked in `chrome://extensions/`. 
+Google Chrome extensions are nothing but some html, js files linked together that are running behind the scenes. Before starting out, we need to make sure that *Developer mode* is checked in `chrome://extensions/`.
 
 Chrome extensions work by telling chrome about our html, js files using a Manifest.json. It will have some meta data like name, description, icon images and more important information like permissions our extension needs, files to load in background. A simple Manifest.json can look like this:
 
@@ -130,7 +130,7 @@ Here we are doing the oauth2 and getting Access token from Google. For this we h
 + Then, we are calling function *getAccessToken* to get the access token. This is done behind the scenes.
 + At last, we are saving the access token using `chrome.storage.sync.set'.
 
-Once we have the access token, we can make calls to Google Drive from our content scripts to get data and fill in our trello web pages using simple javascript. From our manifest, we can see that we added pattern match for our content scripts. So our scripts will be loaded on all trello web pages automatically and we can use document.onload to make the changes. 
+Once we have the access token, we can make calls to Google Drive from our content scripts to get data and fill in our trello web pages using simple javascript. From our manifest, we can see that we added pattern match for our content scripts. So our scripts will be loaded on all trello web pages automatically and we can use document.onload to make the changes.
 
 Also we can add one more thing to our extension. When a user clicks our extension, we can explicitly call our content script again from our background page to update data. We will use chrome browser action onClicked event to send a message to our content script like this:
 
@@ -153,7 +153,7 @@ _trelloupdater.js_
           "Authorization": "Bearer " + access_token
         }
       }).done(function (sheetXml) {
-        
+
           //Update Trello board cards with data "sheetXml"
           $('.list-card-title').each(function() {
             var originalCard = this.text.trim().split(' ');
@@ -186,7 +186,7 @@ _trelloupdater.js_
       var trelloApi = "https://api.trello.com/1/";
       var trelloBoardId = "";
 
-      if (document.URL.indexOf(tData.board)!=-1) { 
+      if (document.URL.indexOf(tData.board)!=-1) {
         page = "board";
         console.log("Board Page found to sync");
         getGoogleData(tData.GoogleAccess, tData.sheet); //send sheet id and access token for Google Sheets api

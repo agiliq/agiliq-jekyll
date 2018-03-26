@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Django-buzz"
 date:   2009-12-13 04:01:42+05:30
 categories: Uncategorized

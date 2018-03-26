@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Writing jQuery plugins using Coffeescript"
 date:   2012-01-06 11:54:11+05:30
 categories: coffeescript
@@ -13,7 +13,7 @@ Here is the plugin in its entirety.
 
     $ = jQuery
     $.fn.zebraTable = (options) ->
-        defaults = 
+        defaults =
             evenColor: '#ccc'
             oddColor : '#eee'
 
@@ -51,7 +51,7 @@ Lets look at the compiled Javascript output
       };
 
     }).call(this);
-    
+
 And you can call it like this.
 
     $(function() {

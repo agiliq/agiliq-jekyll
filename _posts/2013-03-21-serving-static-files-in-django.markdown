@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Serving static files in Django"
 date:   2013-03-21 10:30:01+05:30
 categories: static
@@ -52,13 +52,13 @@ Check the contents of test_project/settings.py. Search for all the lines which c
     STATICFILES_DIRS = (
     )
 
-    STATICFILES_FINDERS = ( 
+    STATICFILES_FINDERS = (
         'django.contrib.staticfiles.finders.FileSystemFinder',
         'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
     )
 
-    INSTALLED_APPS = ( 
+    INSTALLED_APPS = (
         ....
         ....
         'django.contrib.staticfiles',
@@ -87,7 +87,7 @@ Adding **templates** directory to TEMPLATE_DIRS require following changes for me
 
     PROJECT_DIR = os.path.dirname(__file__)
 
-    TEMPLATE_DIRS = ( 
+    TEMPLATE_DIRS = (
         os.path.join(PROJECT_DIR, '../templates'),
     )
 
@@ -173,19 +173,19 @@ Refresh home page of some_app. You should see that the background of this page b
 *   For now, forget about STATIC_ROOT and STATICFILES_DIRS. Even if you comment it or delete it from settings, your project will continue to work as it is working currently.
 *   We need 'django.contrib.staticfiles' in our INSTALLED_APPS if we want Django's default server to serve static files.
 *   By Django's default server, we mean **python manage.py runserver**, that's provided with Django.
-*   Django's default server will serve the static files at STATIC_URL. Notice that STATIC_URL is set to '/static/'. 
+*   Django's default server will serve the static files at STATIC_URL. Notice that STATIC_URL is set to '/static/'.
 
     That's why we have our static file, ie stylesheet, getting served at `http://127.0.0.1:8000/static/styles.css`. If you try to get it at `http://127.0.0.1:8000/static_changed/styles.css`, you will not be able to, you will get a 404 instead.
 
     If you want to get the stylesheet at `http://127.0.0.1:8000/static_changed/styles.css`, make STATIC_URL='/static_changed/'. Go ahead make this change and check. With this change, static files will get served at /static_changed/.
-    
-    This change was only to illustrate what is the purpose of STATIC_URL. Change it back to its default, i.e STATIC_URL='/static/'. 
+
+    This change was only to illustrate what is the purpose of STATIC_URL. Change it back to its default, i.e STATIC_URL='/static/'.
 
 *   Next question is how does Django know from where to read the static files or where to find the static files. That's where STATICFILES_FINDERS comes into picture.
 
     Check that we have two entries in STATICFILES_FINDERS, i.e 'django.contrib.staticfiles.finders.FileSystemFinder' and 'django.contrib.staticfiles.finders.AppDirectoriesFinder'. You can ignore FileSystemFinder for now, if you wish you can go ahead and comment the FileSystemFinder line.
 
-    Appdirectoriesfinder tells Django to look into static/ subdirectory of each app in INSTALLED_APPS while looking for static files. Remember, we have styles.css under static/ subdirectory of some_app. That's why Django was able to find it and it got served properly by Django server. 
+    Appdirectoriesfinder tells Django to look into static/ subdirectory of each app in INSTALLED_APPS while looking for static files. Remember, we have styles.css under static/ subdirectory of some_app. That's why Django was able to find it and it got served properly by Django server.
 
     If you change the name of this subdirectory from 'static/' to something else, your static resources will not be served. Go ahead, try it.
 
@@ -300,7 +300,7 @@ Now see both the html pages, we have created.
 You will find that the background of both pages is shown as red now. It depends on what order you have the apps listed in INSTALLED_APPS. If some_app appears before other_app in INSTALLED_APPS, both the pages will have red background. If other_app appears before some_app, both the pages will have blue background. In my INSTALLED_APPS, some_app appears before other_app, so both pages have red background for me.
 
 ####Why this happened:
-Both these pages try to access a static file named styles.css. Django tries to find this file in the static/ subdirectory of each app listed in INSTALLED_APPS. Once it finds it in static/ subdirectory of some_app, it serves it and does not try to find it in static/ subdirectory of other_app. Since, static/styles.css for some_app says that the background should be red, so the background is shown red for both of these pages. 
+Both these pages try to access a static file named styles.css. Django tries to find this file in the static/ subdirectory of each app listed in INSTALLED_APPS. Once it finds it in static/ subdirectory of some_app, it serves it and does not try to find it in static/ subdirectory of other_app. Since, static/styles.css for some_app says that the background should be red, so the background is shown red for both of these pages.
 
 ####How do we prevent it:
 So, we want to name stylesheet in both apps as styles.css. For this, we need one extra level of directory inside static/ subdirectory of each app. Let's do the following
@@ -343,7 +343,7 @@ Now see both the html pages again
 
 `http://127.0.0.1:8000/other_app/home`
 
-You should find red background for some_app and blue background for other_app. 
+You should find red background for some_app and blue background for other_app.
 
 ####What happened here
 * Template of some_app references `http://127.0.0.1:8000/static/some_app/styles.css`.
@@ -382,7 +382,7 @@ So, we want to make h1 as italic across entire project.
 
 Django is still not aware about this file and will not serve it. For making Django aware about this file we need to add the directory containing this file to STATICFILES_DIRS. So edit test_project/settings.py and add the required directory to STATICFILES_DIRS.
 
-    STATICFILES_DIRS = ( 
+    STATICFILES_DIRS = (
         os.path.join(PROJECT_DIR, '../project_static'),
     )
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "How to build a Facebook app in Django"
 date:   2009-02-20 14:05:14+05:30
 categories: facebook

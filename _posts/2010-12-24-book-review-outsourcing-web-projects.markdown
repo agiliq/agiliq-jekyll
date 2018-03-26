@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Book Review: Outsourcing Web Projects."
 date:   2010-12-24 14:43:40+05:30
 categories: reviews
@@ -18,8 +18,8 @@ It starts with these chapters.
 * How to Find the Perfect Outsourcing Partner.
 * How to Get the Best Price for your Project.
 * How to Get it All on Paper.
-* How to Keep the Project on Track. 
-* How to Turn your Vendor into a Long-term Partner.   
+* How to Keep the Project on Track.
+* How to Turn your Vendor into a Long-term Partner.
 
 
 
@@ -60,7 +60,7 @@ best price for you from these vendors.
 
 * Prove again that you are a non painful client.
 * Use info you have gained from talking to multiple vendors to see if any of the vendors will
-sweeten the deal.  
+sweeten the deal.
 
 
 

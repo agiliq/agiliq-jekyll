@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Exploring Authorize.net Payment Gateway Options and integrating it with django"
 date:   2009-03-31 19:54:33+05:30
 categories: ecommerce

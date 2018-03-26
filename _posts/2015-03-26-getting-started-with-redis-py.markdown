@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Getting started with redis-py"
 date:   2015-03-26 17:43:25+05:30
 categories: redis

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Not exactly, not exactly tim the enchanter"
 date:   2012-11-07 11:30:00+05:30
 categories: forms

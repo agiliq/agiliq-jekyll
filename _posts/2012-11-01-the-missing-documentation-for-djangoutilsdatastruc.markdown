@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "The missing documentation for django.utils.datastructures"
 date:   2012-11-01 00:00:00
 author:   thejaswi

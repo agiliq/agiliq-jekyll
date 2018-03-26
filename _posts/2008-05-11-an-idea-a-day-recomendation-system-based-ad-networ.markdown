@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "An idea a day - Recomendation system based ad network"
 date:   2008-05-11 20:40:51+05:30
 categories: startup

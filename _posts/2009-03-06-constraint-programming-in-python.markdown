@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Constraint programming in Python"
 date:   2009-03-06 18:47:53+05:30
 categories: algorithms
@@ -8,18 +8,18 @@ author: shabda
 Imagine this, you want to solve a problem, the algorithm for which you do not know. You just know the problem.
 
 
-From wikipedia,  
+From wikipedia,
     `Constraints differ from the common primitives of imperative programming languages in that they do not specify a step or sequence of steps to execute, but rather the properties of a solution to be found.`
 
 
 
-Assume that there exists an alternate world where you only need to specify the problem, the computer will find out 
+Assume that there exists an alternate world where you only need to specify the problem, the computer will find out
 an algorithm to find it, even better if could you write it in Python.
 
 Stop assuming it hapens every day, and this is the magic of constraint programming.
 
 Example to solve  a + b = 5, a*b=6, don't explain algebra, just tell the relations between variables. Here is the complete program.
-	
+
 	from constraint import *
 	problem = Problem()
 	problem.addVariable('a', range(5))

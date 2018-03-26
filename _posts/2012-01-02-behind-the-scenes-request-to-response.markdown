@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Request to Response
 date:   2012-01-02 18:00:00
 author:   thejaswi

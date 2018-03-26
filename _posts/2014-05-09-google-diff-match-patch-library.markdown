@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Google diff match patch library"
 date:   2014-05-09 16:29:34+05:30
 categories: google
@@ -23,8 +23,8 @@ Moving forward we will import diff_match_patch
 
 Let us consider using two strings, we will name it as `old_string` and `new_string`
 
-    import diff_match_patch    
-    
+    import diff_match_patch
+
     old_string = """I'm selfish, impatient and a little insecure. I make mistakes,
     I am out of control and at times hard to handle. But if you can't handle me at my worst,
     then you sure as hell don't deserve me at my best."""
@@ -36,8 +36,8 @@ Let us consider using two strings, we will name it as `old_string` and `new_stri
 
 Now, we will create an object of `diff_match_patch` and call `diff_main(old_string, new_string)`
 
-    import diff_match_patch    
-    
+    import diff_match_patch
+
     old_string = """I'm selfish, impatient and a little insecure. I make mistakes,
     I am out of control and at times hard to handle. But if you can't handle me at my worst,
     then you sure as hell don't deserve me at my best."""
@@ -74,15 +74,15 @@ Now variable `diffs` contains
 Now it looks better, let us see what these tuples contains:
 
 * The first element specifies if it is an insertion (1), a deletion (-1) or an equality (0).
-* The second element specifies the affected text. 
+* The second element specifies the affected text.
 
 To convert these array of tuples to HTML.We use `diff_prettyHtml(diffs)`.
 
-    html = diff_obj.diff_prettyHtml(diffs) 
+    html = diff_obj.diff_prettyHtml(diffs)
 
 There you are, we can now see the differences in old and new text.
 
-** <span>I\'m selfish, impatient and a little </span><del style="background:#ffe6e6;">in</del><span>secure. I </span><ins style="background:#e6ffe6;">don\'t </ins>   
+** <span>I\'m selfish, impatient and a little </span><del style="background:#ffe6e6;">in</del><span>secure. I </span><ins style="background:#e6ffe6;">don\'t </ins>
 <span>make mistakes,&para;<br>I am out of control and at times hard to handle</span><ins style="background:#e6ffe6;"> difficult things</ins><span>. But if you can\'t
 handle me at my worst,&para;<br>then you sure as hell don\'t deserve me at my best.</span> **
 
@@ -112,14 +112,14 @@ We will write a method to see these changes side by side.
                         .replace("<", "&lt;")
                         .replace(">", "&gt;")
                         .replace("\n", "<br>"))
-    
+
                 if flag == self.DIFF_DELETE:
                     html.append("""<del style=\"background:#ffe6e6;
                         \">%s</del>""" % text)
                 elif flag == self.DIFF_EQUAL:
                     html.append("<span>%s</span>" % text)
             return "".join(html)
-    
+
         def new_content(self, diffs):
             """
             Returns HTML representation of 'insertions'
@@ -142,8 +142,8 @@ We will write a method to see these changes side by side.
     result = diff_obj.diff_main(old_string, new_string)
     diff_obj.diff_cleanupSemantic(result)
 
-    old_record = diff_obj.old_content(result) 
-    new_record = diff_obj.new_content(result) 
+    old_record = diff_obj.old_content(result)
+    new_record = diff_obj.new_content(result)
 
 
 Here is the output for the above code:

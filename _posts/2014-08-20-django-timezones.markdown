@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Django timezones"
 date:   2014-08-20 10:30:01+05:30
 categories: django
@@ -202,7 +202,7 @@ Save the article. Check the value of publish_date saved in db.
 	>>> article = Article.objects.get()
 	>>> article.publish_date
 	datetime.datetime(2014, 7, 29, 16, 13, 28, tzinfo=<UTC>)
-	
+
 So Django tells that publish_date is a timezone aware object with publish_date being shown as 4:13 PM, UTC. This is a bug, we will see an implication of this bug soon. When I submitted the form, I submitted with the assumption that I am submitting time in India timezone. I expect publish_date to say 4:13 PM, India time(hereafter referred as IST). Or it should say 10:43 AM, UTC. We will see how such scenario should be handled and fix this bug later on in this post.
 
 ##### Check how is it saved in db.
@@ -264,7 +264,7 @@ Django has a concept of <a href="https://docs.djangoproject.com/en/1.6/topics/i1
 
 Default timezone is the timezone defined by settings.TIME_ZONE.
 
-Django documentation says, current timezone is the timezone used for rendering. It has an additional purpose and it can fix our buggy scenario. 
+Django documentation says, current timezone is the timezone used for rendering. It has an additional purpose and it can fix our buggy scenario.
 
 ##### Additional purpose
 

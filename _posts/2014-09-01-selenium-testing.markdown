@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Introduction to functional testing with Selenium in Django"
 date:   2014-09-01 15:40:00+05:30
 categories: functional-testing

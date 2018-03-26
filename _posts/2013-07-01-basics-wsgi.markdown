@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Basics of WSGI"
 date:   2013-07-01 11:45:22+05:30
 categories: python
@@ -57,7 +57,7 @@ Whenever a request comes, Web Server running on port 8051 will call the Web Appl
 
 Web Application code details.
 
-* To interact with WSGI Web Server, Web Application needs to be WSGI compliant as well. 
+* To interact with WSGI Web Server, Web Application needs to be WSGI compliant as well.
 * Server will call it with two arguments. So, **it must accept two arguments**. This is one condition for `application` to be WSGI compliant.
 * First argument passed to it will be a variable containing various information about the request. In our example, we used it to read the request path.
 * Second argument passed to it will be a callable. **`application` must use this callable** to notify the server of the status of response and for setting various headers. This is second condition for `application` to be WSGI compliant.

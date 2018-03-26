@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Moving home"
 date:   2010-06-08 20:29:46+05:30
 categories: about

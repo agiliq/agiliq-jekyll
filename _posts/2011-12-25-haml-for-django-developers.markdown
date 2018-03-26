@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Haml for Django developers"
 date:   2011-12-25 11:54:11+05:30
 categories: django
@@ -20,16 +20,16 @@ Lets look at some templates from [Django tutorial](https://docs.djangoproject.co
         {% endfor %}
         </ul>
     {% endif %}
-    
-    
+
+
 Here is this template converted to Haml
 
     -if latest_poll_list
-     %ul 
-      -for poll in latest_poll_list 
+     %ul
+      -for poll in latest_poll_list
         %li
-            %a{'href':'/polls/{{ poll.id }}'}= poll.question 
-    
+            %a{'href':'/polls/{{ poll.id }}'}= poll.question
+
 You can see that this lost a lot of noise from the Django template. Being a Django programmer,
 significant whitespace is very pleasing.
 

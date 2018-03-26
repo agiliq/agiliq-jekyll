@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Create your own online store in few hours using satchmo (django)"
 date:   2009-03-26 09:58:11+05:30
 categories: satchmo
@@ -22,7 +22,7 @@ In this blog post we will discuss very basic things about satchmo like how to in
 
 ## Installing satchmo
 
-Please note below 
+Please note below
 
 1. Installation instructions are applicable to the latest version of satchmo  which is available in the trunk.
 2. We assume that python setuptools has already been installed on your system.
@@ -40,8 +40,8 @@ Just follow the below 5 steps to install various dependencies of satchmo.
 #### install django-threaded-multihost
 Go to  : http://banjo.assembla.com/spaces/threaded_multihost/documents. Download latest .tar.gz file and follow below steps
 
-    8  tar xvzf django-threaded-multihost-1.3-0.tar.gz  
-    9) cd django-threaded-multihost-1.3-0 
+    8  tar xvzf django-threaded-multihost-1.3-0.tar.gz
+    9) cd django-threaded-multihost-1.3-0
     10) python setup.py install
 
 if you get any error as below
@@ -62,9 +62,9 @@ Next install django-app-plugins app by following below steps.
 
     11) svn checkout http://django-app-plugins.googlecode.com/svn/trunk/ django-app-plugins-read-only
     12) cd /path/to/your/site-packages/dir (usually it is /usr/lib/python2.X/site-packages/)
-    13) ln -s /path/to/django-app-plugins-read-only/app_plugins  . 
+    13) ln -s /path/to/django-app-plugins-read-only/app_plugins  .
 
-12) Installing an app means placing an app on  python path so that django can find it 
+12) Installing an app means placing an app on  python path so that django can find it
 #### How do we do it?
 13) By convention any directory which is in  /usr/lib/python2.X/site-packages/ is on python path.Because of this we are creating a symlink from the sitepackges directory to the directory where we checkedout the latest version of django-app-plugins.Symlinking is more efficient that copying entire directory under sitepackages.
 
@@ -76,7 +76,7 @@ Install Sorl thumbnail app for generating thumbnails from images
 
 14,15,16  We followed similar approach as that of above  to install sorl-thumbnail application.
 
-Optional dependencies 
+Optional dependencies
 
     17) easy_install elementtree
     18) easy_install docutils
@@ -86,7 +86,7 @@ The above are all dependencies which are required for the satchmo.
 
 #### Now we will see how to create our own custom store using satchmo
 
-create new django project 
+create new django project
 
     19) django-admin.py startproject customstore
 
@@ -115,11 +115,11 @@ Go to your project
 copy settings.py and localsetting.py from the sample project which is provided along with satchmo.
 
     cp  ......../satchmo-trunk/satchmo/projects/base/settings.py  ........../customstore/settings.py
-    cp  ......../satchmo-trunk/satchmo/projects/base/local_settings.py  ........../customstore/local_settings.py  
+    cp  ......../satchmo-trunk/satchmo/projects/base/local_settings.py  ........../customstore/local_settings.py
 
 #### Edit customstore/settings.py
 1. Change the Django_project name from 'satchmo'  to 'satchmo_store'.In previous versions project is called as "satchmo" but now it being called as "satchmo_store"
-    
+
 2. In installed apps if you find an app called "satchmo" rename it to "satchmo_store" .
 
 #### Edit customstore/local_settings.py
@@ -127,12 +127,12 @@ copy settings.py and localsetting.py from the sample project which is provided a
 
     DATABASE_NAME = 'satchmostore' #Name of the database which you create.Please refer to an additional note for mysql users at the end
     DATABASE_PASSWORD = 'welcome'
-    DATABASE_USER = 'operations' 
+    DATABASE_USER = 'operations'
 
 The characters which are being transferred  from database server to client should be in UTF-8.if your database is MYSQL you need to add
 the following in local_settings.py.
 
-    DATABASE_OPTIONS = { "init_command": 'SET NAMES "utf8"' ,  "init_command":'SET storage_engine=INNODB' , } 
+    DATABASE_OPTIONS = { "init_command": 'SET NAMES "utf8"' ,  "init_command":'SET storage_engine=INNODB' , }
 
 The above command also sets INNODB as storage engine for database tables. we need to use INNODB instead of ISAM to support transactions.
 Uncomment SECRET_KEY and provide some value
@@ -140,17 +140,17 @@ Uncomment SECRET_KEY and provide some value
     SECRET_KEY = 'asdf'
 
 if you are using MYSQL  please note that you need to create database in UTF-8 character set as follows
- 
-     create database satchmostore  CHARACTER SET UTF-8 
+
+     create database satchmostore  CHARACTER SET UTF-8
 
 #### Edit urls.py
 Copy paste the below code in the urls.py
 
     from django.conf.urls.defaults import *
     from django.conf.urls.defaults import *
-    from satchmo_store.urls import urlpatterns 
+    from satchmo_store.urls import urlpatterns
 
-if you have any other addtional urls you need to add at the end of urls.py as 
+if you have any other addtional urls you need to add at the end of urls.py as
 
     urlpatterns += patterns('',.......)
 
@@ -187,7 +187,7 @@ You can delete all the data which is provided by satchmo by running the below co
 
     30) python manage.py delete_all_dbs
 
-You can see all the intial settings and configuration details at 
+You can see all the intial settings and configuration details at
 
 31) [http://localhost:8000/settings](http://localhost:8000/settings)
 
@@ -196,7 +196,7 @@ YOu can see the admin interface by entering the below url
 32) [http://localhost:8000/admin](http://localhost:8000/admin)
 
 ##Satchmo Customization:
-Satchmo has powerfull customization mechanism using which you can tune the store to suit your business needs.The below are basic customizations which you can 
+Satchmo has powerfull customization mechanism using which you can tune the store to suit your business needs.The below are basic customizations which you can
 do.Please refer to documentation for more complex customizations and features.
 
 ####To add new products and category etc
@@ -243,7 +243,7 @@ In addition to above you can do various other customizations like
 
 More details at satchmo documentation [http://www.satchmoproject.com/docs/svn/index.html](http://www.satchmoproject.com/docs/svn/index.html)
 
-And important details related to above customizations in the next blog post.        
+And important details related to above customizations in the next blog post.
 
 Stay Tuned.
 
@@ -255,7 +255,6 @@ Stay Tuned.
 
 
 
-  
 
 
 
@@ -265,7 +264,6 @@ Stay Tuned.
 
 
 
- 
 
 
 
@@ -276,13 +274,9 @@ Stay Tuned.
 
 
 
-      
-    
-     
 
 
 
- 
 
 
 
@@ -290,20 +284,16 @@ Stay Tuned.
 
 
 
-    
 
 
 
 
 
-     
 
 
 
- 
 
 
-  
 
 
 
@@ -321,7 +311,6 @@ Stay Tuned.
 
 
 
-   
 
 
 
@@ -330,7 +319,18 @@ Stay Tuned.
 
 
 
-     
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "When and how to use Django ListView"
 date:   2017-12-29 11:36:39+05:30
 categories: django

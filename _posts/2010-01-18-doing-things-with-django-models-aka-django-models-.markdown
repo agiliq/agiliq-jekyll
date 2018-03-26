@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Doing things with Django models - aka - Django models tutorial"
 date:   2010-01-18 11:30:17+05:30
 categories: models
@@ -15,24 +15,24 @@ you would do that in Django.
 
 
     from django.db import models
-    
+
     class Employee(models.Model):
         name = models.CharField(max_length = 100)
         department = models.ForeignKey("Department")
-        
+
     class Department(models.Model):
         name = models.CharField(max_length = 100)
-        
+
     class EmployeeHistory(models.Model):
         employee = models.OneToOneField(Employee)
         date_joined = models.DateField()
         marital_status = models.BooleanField()
-        
+
     class Contactor(models.Model):
         name = models.CharField(max_length = 100)
         departments = models.ManyToManyField(Department)
-    
-    
+
+
 Let's see the type of relationship we created here.
 
 An `Employee` has a Many-to-one relationship with `Department`, (i.e. One department will have many
@@ -56,58 +56,58 @@ needed with a given model, it is useful to separate them via a one-to-one field.
 
     Employee.objects.get(pk = someval)
     Employee.objects.get(name= someval)
-    
+
 ##### Given an department get all employees.
-    
+
     department.employee_set.all()
-    
+
 The `department` gets an attribute name `<FKClass>_set`.
-    
+
 Given an employee, get all colleagues.
 
     employee.department.employee_set.objects.all()
-    
+
 To get siblings, get parents, and get all children.
 
 Given an department, get number of employees.
 
     department.employee_set.all().count()
-    
+
 
 Ok so the HR department bosses are happy with what they see, and ask you to track this data,
 who is the manager of each employee, who is the HOD of each department and when did each employee took leave.
 
 
     from django.db import models
-    
+
     class Employee(models.Model):
         name = models.CharField(max_length = 100)
         manager = models.ForeignKey("self", blank = True, null = True)
         department = models.ForeignKey("Department")
-        
+
     class Department(models.Model):
         hod = models.ForeignKey("Employee")
         name = models.CharField(max_length = 100)
-        
+
     class EmployeeHistory(models.Model):
         employee = models.OneToOneField(Employee)
         date_joined = models.DateField()
         marital_status = models.BooleanField()
-        
+
     class Contactors(models.Model):
         name = models.CharField(max_length = 100)
         departments = models.ManyToManyField(Department)
-        
-    
+
+
     class EmployeeLeave(models.Model):
         leave_taken = models.DateField()
         employee = models.ForeignKey(Employee)
-        
+
 So we now have new fields `hod = models.OneToOneField("Employee")` in department and
 `manager = models.ForeignKey("self", blank = True, null = True)` and a new model `EmployeeLeave`. Let su see
 the new realtions,
 
-As one `Department` will have one `Employee` as hod, and `Employee` can head at max one `Department`, we have a one to one relationship  
+As one `Department` will have one `Employee` as hod, and `Employee` can head at max one `Department`, we have a one to one relationship
 As many `Employee` will report to another `Employee`, so we have a FK on `Employee`, referencing `self`.
 As `Employee` will take many `EmployeeLeave`, `EmployeeLeave` has a FK to `Epployee`
 
@@ -129,13 +129,13 @@ Get a list of all HODs.
     employees = [department.hod for department in departments]
 
 Get a list of all departments a contractor works for.
-    
+
     contractor.department_set.all()
-    
+
 Get a list of all contractor who work for a department.
 
     department.contractor_set.all()
-    
+
 Note that each side of a many to many relationship get a Manager.
 
 List of all managers in a given department.
@@ -145,20 +145,20 @@ List of all managers in a given department.
 List of all leaves taken in a given department.
 
     EmployeeLeave.objects.filter(employee__department = department)
-    
+
 None that we used double underscores `__` to do a filtering on a field across Entities.
 
 List of all employees which joined a given department this year.
-    
+
     Employee.objects.filter(department = department, employment_history__date_joined__gte=start_of_year, )
-    
+
 Note that we used a double underscore `__` twice, first to go across entities, and then to define the type of filter(`__gte`).
 Also we specified two filter conditions, so they were `ANDed` together.
 
 List all employees which either report too a given employee, or joined before him.
 
     Employee.objects.filter(Q(manager = employee)|Q(employee_history__date_joined__lt = employee.employee_history.date_joined))
-    
+
 Note the new construct `Q`, they are used to specify complex boolean operations. Here we used the `|` (or operator) to specify or condition.
 
 -----

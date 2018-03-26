@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Seven reasons why you should switch to Vim"
 date:   2010-11-03 16:16:15+05:30
 categories: vim
@@ -43,7 +43,7 @@ Its very easy to write custom snippets in case you need them.
 
 This one is not django specific, but it can save a lot of time spent debugging typos or silly mistakes.
 
-[PyFlakes](https://github.com/kevinw/pyflakes-vim) detects errors in your python code and highlights the 
+[PyFlakes](https://github.com/kevinw/pyflakes-vim) detects errors in your python code and highlights the
 offending lines so you can easily rectify them.
 
 4. Git integration with fugitive
@@ -51,7 +51,7 @@ offending lines so you can easily rectify them.
 
 [Fugitive](https://github.com/tpope/vim-fugitive) is a git plugin for vim.
 
-This one integrates seamlessly with my workflow. You can add/reset files, commit them, view diff, blame, logs all 
+This one integrates seamlessly with my workflow. You can add/reset files, commit them, view diff, blame, logs all
 within vim!
 
 5. Auto-completion using pysmell

@@ -1,14 +1,14 @@
 ---
-layout: post
+layout: default
 title:  "__new__() in python"
 date:   2012-06-10 10:30:02+05:30
 categories: __new__
 author: akshar
 ---
-Lately I started looking into Django code and wish to write about internals of Django. I started with Django models and will be writing about it soon. 
+Lately I started looking into Django code and wish to write about internals of Django. I started with Django models and will be writing about it soon.
 For understanding how Django models work, I had to understand what metaclasses are and how metaclasses work. Metaclasses use method "\_\_new\_\_" and so I looked at what "\_\_new\_\_" does.
 
-###As \_\_new\_\_ is a static method, we will see a lttle bit about static methods and then \_\_new\_\_ in detail. 
+###As \_\_new\_\_ is a static method, we will see a lttle bit about static methods and then \_\_new\_\_ in detail.
 1. Understanding static methods.
 
 2. Understanding method "\_\_new\_\_" of any class. We will see how to override method \_\_new\_\_ in a class.
@@ -61,7 +61,7 @@ Let's see static method now.
        ...:     @staticmethod
        ...:     def met(a, b):
        ...:         print a,b
-       ...: 
+       ...:
 
 ####What does *@staticmethod* above the method definition do?
 Its a *decorator* which changes a method to static method. It means the method is no longer an instance method, which means that the method does not expect its first argument to be an instance. So, for our method definition, the method does not expect its first argument to be an instance of B.
@@ -91,7 +91,7 @@ First let's see a little bit about *\_\_init\_\_*
        ....:         print "init gets called"
        ....:         print "self is", self
        ....:         self.a, self.b = a,b
-       ....: 
+       ....:
 
 In \_\_init\_\_, we print something as we enter the method which is to validate that \_\_init\_\_ has been called. Then we print the first argument which is self and then we perform some assignments. \_\_init\_\_ is an instance method and expects the first argument to be an instance.
 
@@ -122,7 +122,7 @@ class A extends from object(Here we mean the class named object) i.e subclasses 
 So, \_\_new\_\_ receives all the arguments that we pass while calling the class. Also, it receives one extra argument. This extra argument is the class whose instance need to be created and it will be received as first argument by \_\_new\_\_.
 
 So, signature of \_\_new\_\_ could be written as:
-    
+
     __new__(cls, *args, **kwargs)
 
 Let's see an example.
@@ -132,7 +132,7 @@ Let's see an example.
        ....:         print cls
        ....:         print "args is", args
        ....:         print "kwargs is", kwargs
-       ....: 
+       ....:
 
 Here we override \_\_new\_\_ that we inherit from the superclass. We are printing all the arguments that this method receives so that we can check what gets passed to \_\_new\_\_.
 Let's try to create an instance of A by calling the class.
@@ -144,7 +144,7 @@ Let's try to create an instance of A by calling the class.
 
 As we mentioned earlier, \_\_new\_\_ gets called when we call the class. As is apparent from the output \_\_new\_\_ was called and it printed three lines of output.
 
-First line of output prints the first argument received by \_\_new\_\_. As we can see, it is  *class A* itself. **We tried to create an instance of A and \_\_new\_\_ of A received class A itself as the first argument.** 
+First line of output prints the first argument received by \_\_new\_\_. As we can see, it is  *class A* itself. **We tried to create an instance of A and \_\_new\_\_ of A received class A itself as the first argument.**
 This is what we meant when we said "\_\_new\_\_ receives the class whose instance need to be created as the first argument". Now go back to the section "Method signature of \_\_new\_\_" and read it again.
 
 While calling the class we did not pass any arguments. So our output shows that args and kwargs did not receive anything.
@@ -186,7 +186,7 @@ Let's combine \_\_new\_\_ and \_\_init\_\_.
        ....:         print "init gets called"
        ....:         print "self is", self
        ....:         self.a, self.b = a, b
-       ....: 
+       ....:
 
 Let's try to create an instance of A.
 
@@ -252,13 +252,13 @@ Let's see our final example.
 
     In [60]: class B(object):
        ....:     pass
-       ....: 
+       ....:
 
     In [61]: class A(object):
        ....:     def __new__(cls, *args, **kwargs):
        ....:         new_instance = object.__new__(B, *args, **kwargs)
        ....:         return new_instance
-       ....: 
+       ....:
 
 Pay attention to first line of A's new. Instead of passing *cls* as the first argument to *object.\_\_new\_\_*, we pass *class B* as first argument.
 Let's see what happens in such case.
@@ -268,7 +268,7 @@ Let's see what happens in such case.
     In [63]: print a
     <__main__.B object at 0x7f912c036750>                    #Output. Tried creating an instance of A but got an instance of B
 
-We tried to create an instance of A. But when we printed it, we realise that an instance of B has been created. 
+We tried to create an instance of A. But when we printed it, we realise that an instance of B has been created.
 
 This happened because we passed *class B* as the first argument to *object.\_\_new\_\_*. This shows that whatever class we pass to superclass' \_\_new\_\_, an instance of that class will be created.
 
@@ -284,7 +284,7 @@ We can make that single line change in A's \_\_new\_\_ and our code will behave 
        ....:     def __new__(cls, *args, **kwargs):
        ....:         new_instance = object.__new__(cls, *args, **kwargs)
        ....:         return new_instance
-       ....:   
+       ....:
 
     In [65]: a=A()
 

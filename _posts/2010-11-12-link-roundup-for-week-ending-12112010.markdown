@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Link Roundup for week ending 12/11/2010"
 date:   2010-11-12 11:30:01
 author:   thejaswi

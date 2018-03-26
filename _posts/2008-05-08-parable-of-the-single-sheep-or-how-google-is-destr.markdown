@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Parable of the single sheep - Or How Google is destroying the internet, and nobody seems to know."
 date:   2008-05-08 22:01:53+05:30
 categories: search

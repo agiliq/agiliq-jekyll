@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Django aggregation tutorial"
 date:   2009-08-18 18:08:29+05:30
 categories: aggreagtion

@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: default
 title:  "Book review: The Principles of Successful Freelancing"
 date:   2010-12-25 13:21:21+05:30
 categories: reviews
 author: shabda
 ---
-[The Principles of Successful Freelancing](http://www.sitepoint.com/books/freelancer1/) 
+[The Principles of Successful Freelancing](http://www.sitepoint.com/books/freelancer1/)
 is book I read after [The Principles of
 Project Management](http://agiliq.com/blog/2010/12/book-review-the-principles-of-project-management/).
 
@@ -62,7 +62,7 @@ Advice on selling your services. Advice on overcoming fear of selling, creating 
 ### Give Great Service
 
 Why and how to provide great service. How to keep communications open and prompt
-without them taking your personal life. 
+without them taking your personal life.
 
 Money quote:  it’s an undisputed fact that it is far easier and cheaper to retain an existing
 client than it is to attract a new one.

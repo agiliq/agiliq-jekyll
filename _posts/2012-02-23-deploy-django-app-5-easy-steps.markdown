@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Deploy Django App in 5 Easy Steps"
 date:   2012-02-23 04:59:50+05:30
 categories: vps
@@ -12,16 +12,16 @@ your [django](www.djangoproject.com) app, GREAT!! We shall get your app, up and 
 
     $ ssh root@{your_ip}
 
-    # apt-get update  
+    # apt-get update
 
     # apt-get upgrade
 
     # apt-get dist-upgrade
 
     # dpkg-reconfigure tzdata #choose your time zone
-        
+
 ### 2. Setup Users and Permissions:
- 
+
     # useradd agiliq
 
     # mkdir /home/agiliq
@@ -34,26 +34,26 @@ your [django](www.djangoproject.com) app, GREAT!! We shall get your app, up and 
 
     # visudo #lets give sudo access to the user agiliq
 
-		root     ALL=(ALL) ALL 
-		agiliq   ALL=(ALL) ALL 
-		
+		root     ALL=(ALL) ALL
+		agiliq   ALL=(ALL) ALL
+
     # su agiliq # switch from root to agiliq
-        
+
 ### 3. Install necessary stuff and create a dev environment:
 
-	$ sudo apt-get install python-pip git mysql-client mysql-server  
+	$ sudo apt-get install python-pip git mysql-client mysql-server
 
 	$ python-mysqldb nginx emacs(you might choose vim or stick to default vi/nano)
 
 	$ pip install virtualenv #please refer to documentation of virtualenv
 
-	$ virtualenv projhq # creates a project directory, 
+	$ virtualenv projhq # creates a project directory,
 
 	$ cd projhq
 
 	$ projhq source /bin/activate
 
-	(projhq)$ pip install django gunicorn 
+	(projhq)$ pip install django gunicorn
 
 
 ### 4. Deploy some code for test
@@ -70,8 +70,8 @@ you may clone this polls application for the sake of testing
         $ cd /etc/nginx/sites-enabled/
         $ touch nginx.conf
 
-and inside the file place the following snippet, make sure to change your 
-servername, username and static files directory. 
+and inside the file place the following snippet, make sure to change your
+servername, username and static files directory.
 
 	server {
     		listen 80;
@@ -89,8 +89,8 @@ servername, username and static files directory.
 
 ##### ii)gunicorn configuration
 
-cd into project directory/app 
-touch gunicorn_cfg.py 
+cd into project directory/app
+touch gunicorn_cfg.py
 place the following snippet:
 
 
@@ -119,9 +119,9 @@ and place the following snippet in some file(i name start.sh):
 
 Few checks if you have missed them:
 
-#####  create mysql db: 
+#####  create mysql db:
 
-       create a database with the name matching your settings.py 
+       create a database with the name matching your settings.py
 
 ##### Start nginx:
 
@@ -129,9 +129,9 @@ Few checks if you have missed them:
 
 ##### Start server:
 
-	go to scripts directory: 
+	go to scripts directory:
 	chmod +x start.sh(only for the first time)
-	bash start.sh 
+	bash start.sh
 
 The above post was a general introduction of how you can begin using lightweight yet scalable tools, in the next post we shall be talking about tools as [fabric](http://docs.fabfile.org/en/1.4.0/index.html), [supervisor](http://pypi.python.org/pypi/supervisor) and [Monit](http://pypi.python.org/pypi/MonitManager), which makes things far easier and more secure. Experienced admins can point out flaws in the approach and suggest improvements.
 
@@ -145,7 +145,7 @@ The above post was a general introduction of how you can begin using lightweight
 
 
 
-    
+
 
 
 

@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: default
 title:  "Importing your old comments to Disqus site"
 date:   2015-01-16 19:42:08+05:30
 categories: Disqus
 author: Rakesh
 ---
-In one of my latest [blogpost](http://agiliq.com/blog/2014/11/disqus-and-disqus-sso/) on disqus I covered topics on integrating Disqus to the website and disqus SSO. In this post, I will let you know how to migrate the older comments to Disqus. 
+In one of my latest [blogpost](http://agiliq.com/blog/2014/11/disqus-and-disqus-sso/) on disqus I covered topics on integrating Disqus to the website and disqus SSO. In this post, I will let you know how to migrate the older comments to Disqus.
 
 If you sneak peek in to the alluring features of disqus you may make your mind to migrate your custom commenting system on your blog to use disqus commenting system. The threaded comments and replies, powerful moderation and admin tools, RSS options and many more features come in as battaries included with Disqus which makes the commenting more interactive and easy to deal with.
 
@@ -81,15 +81,15 @@ As recommended by the Disqus we need some points to keep in mind while creating 
 3. Each "item" tag can parent an infinite number of "wp:comment" tags.
 4. There is a minimum character requirement for each comment message, which is 3 characters.
 
-Every item is supposed to be a comment on the site. As I am not using the SSO in the site, we can remove the <dsq:remote>. The link specifies the site url to the specific post. In my case I happened to find some encoding issues with the <content> which does take the whole body of the post so I preferred removing it from the WXR file and it worked fine. 
+Every item is supposed to be a comment on the site. As I am not using the SSO in the site, we can remove the <dsq:remote>. The link specifies the site url to the specific post. In my case I happened to find some encoding issues with the <content> which does take the whole body of the post so I preferred removing it from the WXR file and it worked fine.
 
 The script appears to be in the below manner. I accessed my comment model to get the comment data. And then I created the xml file in the format prescribed by Disqus. I skipped some tags which ought to mess up encryption issues. But beware, try to create as the disqus prescribes for the easy flow. The script looks like the following way.
 
     from mysite.models import Comment
     from django.contrib.sites.models import Site
-     
+
     site = Site.objects.all()[0]
-     
+
     comments = Comment.objects.all()
     xml_data_header = """<?xml version="1.0" encoding="UTF-8"?>
                     <rss version="2.0"
@@ -133,7 +133,7 @@ The script appears to be in the below manner. I accessed my comment model to get
                         )
         # xml_data_all += xml_data
         file_dis.write(xml_data)
-     
+
     file_dis.write(xml_data_footer)
     file_dis.close()
 
@@ -146,7 +146,7 @@ Once you run the above script the resultant will be a "disqus.xml" file. An exam
                   xmlns:dc="http://purl.org/dc/elements/1.1/"
                   xmlns:wp="http://wordpress.org/export/1.0/"
                 >
-                      <channel>                  
+                      <channel>
                         <item>
                           <title>Google Appengine - First Impressions</title>
                           <link>http://agiliq.com/blog/2008/04/google-appengine-first-impressions/</link>
@@ -173,7 +173,7 @@ Once we are done with creating the WXR schema we should import it to the disqus 
 2.Importing the WXR file to Disqus site.
 ------------------------------------
 
-To attain the second part you need to have a disqus account and a disqus site available for you. You can get to know more about creating a disqus site in the linked [blogpost](http://agiliq.com/blog/2014/11/disqus-and-disqus-sso/) 
+To attain the second part you need to have a disqus account and a disqus site available for you. You can get to know more about creating a disqus site in the linked [blogpost](http://agiliq.com/blog/2014/11/disqus-and-disqus-sso/)
 
 Once you are done with the creation of disqus site go to the settings which can be accessible on admin panel. There appears the settings page, click on the discussion on the right top panel. Click "import" tab and there appears the different types of import formats that disqus supports. Select generic(WXR) and click on browse. Upload the disqus.xml file and once the process get completed it shows up if there are any errors in the uploaded file. If there are any errors, the process of importing comments will be kept on hold. If the comments are successfully imported it takes some time to get those comments reflected in your site.
 

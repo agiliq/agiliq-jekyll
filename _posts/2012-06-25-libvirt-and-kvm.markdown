@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  Libvirt and KVM
 date:   2012-06-25 00:00:00
 author:   thejaswi
@@ -90,7 +90,7 @@ Installing software on ubuntu is fairly easy thanks to apt-get.
     (virtualization shell) works fine:
 
         $ virsh
-        virsh # 
+        virsh #
 
 -   Now, you may create your guest VM in either of the two ways
     specified below, through the CLI tool (virsh) or the graphical

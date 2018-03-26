@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Migrating django app from MySQL to Postgres"
 date:   2014-05-27 13:28:50+05:30
 categories: mysqltopostgres
@@ -25,7 +25,7 @@ Let's assume that you have a django app running with MySQL and you want to conve
 
 
 2) Create Postgres database:
-   
+
     postgres@agiliq-Inspiron-N5010:~$ psql
     psql (9.1.11)
     Type "help" for help.
@@ -66,7 +66,7 @@ Update the above configuration file with appropriate database credentials for bo
 
 The above command will transfer the data from `MySQL` database to `Postgres`.
 
-Note: 
+Note:
 
 * The above command may raise some `Integrity` errors, but no worries it can be fixed. :)
 * You can also include or exclude some tables check this [Here](https://github.com/philipsoutham/py-mysql2pgsql)

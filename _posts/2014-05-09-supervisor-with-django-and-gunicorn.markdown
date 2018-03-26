@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Supervisor with Django and Gunicorn"
 date:   2014-05-09 10:40:13+05:30
 categories: supervisor
@@ -66,7 +66,7 @@ The problem with this approach is, gunicorn might die at any moment and you will
 
 Kill this gunicorn process, we will let supervisor handle gunicorn hereafter.
 
-    (PythonEnv)/tmp/testproj $ cat /tmp/gunicorn.pid 
+    (PythonEnv)/tmp/testproj $ cat /tmp/gunicorn.pid
     19363
     (PythonEnv)/tmp/testproj $ kill -9 19363
 
@@ -80,7 +80,7 @@ With this, you should have a `echo_supervisord_conf` command available. Get a st
 
     echo_supervisord_conf > ./supervisord.conf
 
- 
+
 With this, your directory structure should look like:
 
 
@@ -98,7 +98,7 @@ You can remove most of the sections of this supervisor configuration file if you
     [supervisord]
     logfile=/tmp/supervisord.log ; (main log file;default $CWD/supervisord.log)
     logfile_maxbytes=50MB        ; (max main logfile bytes b4 rotation;default 50MB)
-    logfile_backups=10           ; (num of main logfile rotation backups;default 10) 
+    logfile_backups=10           ; (num of main logfile rotation backups;default 10)
     loglevel=info                ; (log level;default info; others: debug,warn,trace)
     pidfile=/tmp/supervisord.pid ; (supervisord pidfile;default supervisord.pid)
     nodaemon=true               ; (start in foreground if true;default false)
@@ -164,7 +164,7 @@ Supervisor also provides a client using which you can see currently managed proc
 
 You need to restart supervisor to see these changes taking effect. Kill the existing supervisor process by checking its id from supervisor pid file. Notice that you have a `pidfile` option under your `supervisord` section, which tells the file which stores process id of supervisor.
 
-    (PythonEnv)/tmp/testproj $ cat /tmp/supervisord.pid 
+    (PythonEnv)/tmp/testproj $ cat /tmp/supervisord.pid
     9820
     (PythonEnv)/tmp/testproj $ kill -9 9820
 
@@ -172,11 +172,11 @@ This killed the exising supervisor process.
 
 Also, you need to kill the running gunicorn process. Else supervisor will fail to start another gunicorn process because the current gunicorn process has already occupied port 8000.
 
-    (PythonEnv)/tmp/testproj $ cat /tmp/gunicorn.pid 
+    (PythonEnv)/tmp/testproj $ cat /tmp/gunicorn.pid
     9824
     (PythonEnv)/tmp/testproj $ kill -9 9824
 
-Run `supervisord` again 
+Run `supervisord` again
 
     (PythonEnv)/tmp/testproj $ supervisord
 
@@ -208,13 +208,13 @@ supervisorctl provides a host of other functionalities too. Use command `help` o
 
 You have a running gunicorn process. Kill it.
 
-    (PythonEnv)/tmp/testproj $ cat /tmp/gunicorn.pid 
+    (PythonEnv)/tmp/testproj $ cat /tmp/gunicorn.pid
     10137
     (PythonEnv)/tmp/testproj $ kill -9 10137
 
 Now gunicorn should be killed and you should not be able to access `/admin/`. But you will be able to access it, try it. Surprised? Check the pid of gunicorn now.
 
-    (PythonEnv)/tmp/testproj $ cat /tmp/gunicorn.pid 
+    (PythonEnv)/tmp/testproj $ cat /tmp/gunicorn.pid
     10301
 
 So, somehow a new gunicorn process was created as soon as we killed gunicorn, and the process id for that gunicorn process was written in /tmp/gunicorn.pid.

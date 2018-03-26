@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: default
 title:  "Coffeescript for Python programmers"
 date:   2011-12-24 11:54:11+05:30
 categories: coffeescript
 author: shabda
 ---
-I just learnt Coffeescript, and as a Python programmer loved being able to write Javascript in a Python like language. Coffeescript is inspired by 
+I just learnt Coffeescript, and as a Python programmer loved being able to write Javascript in a Python like language. Coffeescript is inspired by
 Python/Ruby and is very close to these languages. Writing Coffeescript and reading the compiled Javascript also improved my understanding of Javascript.
 Without much ado here is translation of some Python code to Coffeescript to get you started.
 
@@ -23,13 +23,13 @@ Setting scope is done via whitespaces.
 
 	if i == 10:
 		foo()
-	
-	
+
+
 	Coffeescript
 
 	if i == 10
 		foo()
-	
+
 
 No semicolons
 
@@ -91,19 +91,19 @@ Defining a function
 
 	def double(x):
 		return 2 * x
-	
-	Coffeescript	
 
-	double = (x) -> 
+	Coffeescript
+
+	double = (x) ->
 		2 * x
-	
-	
 
 
-Here is a larger [python script](https://github.com/shabda/humanhash-coffeescript/blob/master/humanhash.py) converted to [Coffeescript](https://github.com/shabda/humanhash-coffeescript/blob/master/humanhash.coffee). 
 
 
-You will see that they are very similar and if you know Python learning (and loving) Coffeescript won't take you a long time. Excited? 
+Here is a larger [python script](https://github.com/shabda/humanhash-coffeescript/blob/master/humanhash.py) converted to [Coffeescript](https://github.com/shabda/humanhash-coffeescript/blob/master/humanhash.coffee).
+
+
+You will see that they are very similar and if you know Python learning (and loving) Coffeescript won't take you a long time. Excited?
 [Get started here](http://coffeescript.org/).
 
 ----

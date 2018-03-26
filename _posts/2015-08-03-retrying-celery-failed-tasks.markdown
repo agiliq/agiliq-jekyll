@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Retrying celery failed tasks"
 date:   2015-08-03 10:53:19+05:30
 categories: celery
@@ -23,7 +23,7 @@ I do not want to miss any tweet by a user, and so any failed task must be retrie
 	def fetch_tweets(token_details):
 		# token_details is user specific User token that needs to be passed to Twitter
 		try:
-			resp = make_twitter_call()	
+			resp = make_twitter_call()
 			# Till 180 calls to Twitter, we will get `resp`
 			# process result
 		except TwitterException:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Better Python package management using source and version control systems"
 date:   2009-06-24 22:16:13+05:30
 categories: python

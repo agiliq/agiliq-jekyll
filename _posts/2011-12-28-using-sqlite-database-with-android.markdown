@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Using SQLite Database with Android"
 date:   2011-12-28 11:30:00+05:30
 categories: java
@@ -39,7 +39,7 @@ To create the database create a class with name **BabyNamesDBHelper** which exte
 
 	// SQL query string for creating DATABASE_TABLE
 	static final String CREATE_DATABASE_TABLE_1 =
-			"create table " + DATABASE_TABLE_1 + " (" + COMMON_NAME_ROWID + 
+			"create table " + DATABASE_TABLE_1 + " (" + COMMON_NAME_ROWID +
 			" integer primary key autoincrement, " + COMMON_NAME_COUNT +
 			" text not null, " + COMMON_NAME + " text not null);";
 
@@ -54,7 +54,7 @@ To create the database create a class with name **BabyNamesDBHelper** which exte
 Now we have to create a table - **common_names** in "baby_names_database". For that we need to execute the SQL command for creating the table using SQLiteDatabase.execSQL() in onCreate(). Here is the code for this.
 
         static final String CREATE_DATABASE_TABLE_1 =
-			"create table " + DATABASE_TABLE_1 + " (" + COMMON_NAME_ROWID + 
+			"create table " + DATABASE_TABLE_1 + " (" + COMMON_NAME_ROWID +
 			" integer primary key autoincrement, " + COMMON_NAME_COUNT +
 			" text not null, " + COMMON_NAME + " text not null);";
         @Override
@@ -68,13 +68,13 @@ Now we have to create a table - **common_names** in "baby_names_database". For t
 We can insert data into database using
 
         ContentValues initialValues = new ContentValues();
-        
+
         initialValues.put(COMMON_NAME_COUNT, '424516');
         initialValues.put(COMMON_NAME, 'andrew');
-        
+
         db.insert(DATABASE_TABLE_1, null, initialValues);
 
- 
+
 
 Now create a class with name CommonNamesAdapter where we will define the necessary functions that are required to interact with common_names table in the database. Some important implemented functions are...
 
@@ -114,7 +114,7 @@ When ever we click on Common Names button in the first screen-shot, Activity in 
 					c,
 					new String[] {c.getColumnName(1)},
 					new int[] {R.id.commonName});
-			setListAdapter(adapter);		
+			setListAdapter(adapter);
 		}
 	}
 

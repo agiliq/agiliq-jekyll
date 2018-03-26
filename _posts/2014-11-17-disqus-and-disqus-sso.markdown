@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Disqus and Disqus SSO"
 date:   2014-11-17 20:00:29+05:30
 categories: Disqus
@@ -38,7 +38,7 @@ eg.
     DISQUS_WEBSITE_SHORTNAME = "mydjangoapp"
 
 Disqus SSO
------------------ 
+-----------------
 
 Commenting on a thread requires a person to log in with their social accounts. It would be an extra step for the people to log in again for commenting after logging in to the app. To abate this fatigue of logging in again we can use the "single sign on".
 
@@ -58,7 +58,7 @@ The first part to start using it is creating a Remote Domain which can be used a
 
 Once the message is generated the following script need to be used in the page where we want the Disqus to show up.
 
-    var disqus_config = function () 
+    var disqus_config = function ()
     {
         // The generated payload which authenticates users with Disqus
         this.page.remote_auth_s3 = '<message> <hmac> <timestamp>';
@@ -70,7 +70,7 @@ In Django we can accomplish this by registering a simple tag with function to ge
 Firstly, we should access the value of the DISQUS_SECRET key from the settings. In the next step we should create a json packet of the data attributes, i.e 'id', 'username', 'email'. Then we should encode the json packet to base64 and we should generate a time stamp for signing the message. To pass the secret key and the user details we should generate the HMAC signature. Thus acquired HMAC signature should be returned as a script tag to insert the SSO message. At the end the function appears as in the following code. Check out the [Disqus SSO Example](https://gist.github.com/krvc/9afc17db9eb8d01b7655)
 
 
-The template tag should be used in the place where we want the Disqus comments to appear. 
+The template tag should be used in the place where we want the Disqus comments to appear.
 
 And that ends up the process of adding SSO to Disqus.
 

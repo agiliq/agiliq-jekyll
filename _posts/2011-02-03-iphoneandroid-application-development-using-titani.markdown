@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "iPhone and Android application development using Titanium"
 date:   2011-02-03 20:52:06+05:30
 categories: mobile applications
@@ -7,7 +7,7 @@ author: dheeru
 ---
 [Titanium Mobile](http://www.appcelerator.com/products/titanium-mobile-application-development/) is [Appcelerator's](http://www.appcelerator.com/) development platform for developing cross-platform native mobile applications. In this article we will be introducing you to installation and developing applications using Titanium.
 
-## Installation 
+## Installation
 
 Follow the steps mentioned [here](http://guides.appcelerator.com/en/getting_started.html#installing_titanium), to install Titanium and the corresponding sdks for your developement platform
 
@@ -56,12 +56,12 @@ Check more properties of textfield in [Titanium Text Field API](http://developer
 	});
 	win.add(button); // add button to the current window
 Check more properties of button in [Titanium Button API](http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.Button-object)
-	
+
 #### Submiting Form Data
 
 Form submission has to be handled via 'click' event listner on button
 
-	button.addEventListener('click', function() { 
+	button.addEventListener('click', function() {
 		var field_value = text_field.value;
 	});
 
@@ -79,7 +79,7 @@ Accessing database and saving data to database is mentioned in the next section.
     var db = Titanium.Database.open('db_name');
 
 'open' returns a reference to the opened database. If the database doesn't yet exist, 'open' creates the database.
-	
+
 
 #### Executing SQL queries
 
@@ -100,7 +100,7 @@ Id of last inserted row is the value of 'lastInsertRowId' property on the databa
 #### Selecting and looping over the data from table
 
     var rows = db.execute('select * from table_name');
-	
+
     while (rows.isValidRow()) {
         // check below on how to access field values of a row
 	    rows.next();

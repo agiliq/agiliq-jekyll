@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Using subdomains with Django"
 date:   2008-10-10 20:31:57+05:30
 categories: tips
@@ -22,7 +22,7 @@ Getting the current subdomain is ridiculously easy.
 
 	bits = urlparse.urlsplit(request.META['HTTP_HOST'])[0].split('.')
 	bits[0]
-	
+
 now bits[0] is you subdomain.
 
 However if you are using subdomains you are probably going to be needing this,
@@ -30,7 +30,7 @@ However if you are using subdomains you are probably going to be needing this,
 1. In all your views.
 2. In all your templates.
 
-So you need to expose the subdomains using 
+So you need to expose the subdomains using
 
 1. A [Middleware](http://docs.djangoproject.com/en/dev/topics/http/middleware/) for all requests.
 2. A [request context](http://docs.djangoproject.com/en/dev/ref/templates/api/) for all templates.
@@ -42,20 +42,20 @@ The code to expose subdomains for all requests via a middleware is,
 	import urlparse
 
 	class GetSubdomainMiddleware:
-	    
+
 	    def process_request(self, request):
 		bits = urlparse.urlsplit(request.META['HTTP_HOST'])[0].split('.')
 		if not( len(bits) == 3):
 		    pass#Todo Raise an exception etc
 		request.subdomain = bits[0]
-		
+
 The way to populate subdomain in all templates is similar
 
 	def populate_board(request):
 	    "Populate the board in the template"
 	    return {'board':request.subdomain}#request.subdomain has been populated via the Middleware.
-	    
-And now you need to edit you settings.py file to add `TEMPLATE_CONTEXT_PROCESSORS` and `MIDDLEWARE_CLASSES` to include your Middleware and context processor. 
+
+And now you need to edit you settings.py file to add `TEMPLATE_CONTEXT_PROCESSORS` and `MIDDLEWARE_CLASSES` to include your Middleware and context processor.
 
 You are almost ready to go, however your cookies will not work across sub domains. To
 make your cookies work across subdomains, add this line to your settings.py

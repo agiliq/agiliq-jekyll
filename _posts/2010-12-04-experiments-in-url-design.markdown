@@ -1,12 +1,12 @@
 ---
-layout: post
+layout: default
 title:  "Experiments in URL design."
 date:   2010-12-04 15:41:47+05:30
 categories: apps
 author: shabda
 ---
 Keeping url structure sane plays a major role in user experience, by making it easy to go to specific pages
-and navigate the site. Some real world urls and how they could have been better follow.   
+and navigate the site. Some real world urls and how they could have been better follow.
 
 ----------------------
 
@@ -25,7 +25,7 @@ and navigate the site. Some real world urls and how they could have been better 
 * Hard for users to select the correct page from a url bar dropdown
 * Bad for SEO
 
-#### Neutral: 
+#### Neutral:
 
 * Easy to guess next and previous pages.
 
@@ -72,7 +72,7 @@ and navigate the site. Some real world urls and how they could have been better 
 
 * Quite good, but still includes some unneeded info.
 
-#### What I would like 
+#### What I would like
 
 * http://www.linkedin.com/shabda/
 * http://www.reddit.com/india
@@ -95,8 +95,8 @@ and navigate the site. Some real world urls and how they could have been better 
 
 #### The Good
 
-* No unneeded info is included in the urls. 
-* Each part of the url can be removed to get the logical page for it. 
+* No unneeded info is included in the urls.
+* Each part of the url can be removed to get the logical page for it.
 Eg. [0](http://code.google.com/appengine/docs/whatisgoogleappengine.html) [1](http://code.google.com/appengine/docs/), [2](http://code.google.com/appengine/), 3[http://code.google.com/]
 
 ----------------------

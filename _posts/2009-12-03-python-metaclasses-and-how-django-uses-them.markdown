@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Python metaclasses and how Django uses them"
 date:   2009-12-03 23:59:48+05:30
 categories: tutorial
@@ -11,11 +11,11 @@ author: shabda
 
 ----
 [Edit]
-Some reactions,  
-[http://twitter.com/jaideep2588/status/6295483833](http://twitter.com/jaideep2588/status/6295483833)  
+Some reactions,
+[http://twitter.com/jaideep2588/status/6295483833](http://twitter.com/jaideep2588/status/6295483833)
 [http://twitter.com/kunalbharati/status/6296572939](http://twitter.com/kunalbharati/status/6296572939)
 
-And the talk images, [http://twitpic.com/rxhn7](http://twitpic.com/rxhn7)  
+And the talk images, [http://twitpic.com/rxhn7](http://twitpic.com/rxhn7)
 
 ------------
 [You should follow us on twitter](http://twitter.com/uswaretech) and [Subscribe to our blog](http://feeds.feedburner.com/uswarearticles)

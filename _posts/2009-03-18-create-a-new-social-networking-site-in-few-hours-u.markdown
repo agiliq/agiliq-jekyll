@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Create a new social networking site in few hours using pinax platform (django)."
 date:   2009-03-18 17:03:20+05:30
 categories: pinax
@@ -111,7 +111,7 @@ More details about installation,deployment at
     PythonHandler myprojectname.deploy.modpython
     SetEnv DJANGO_SETTINGS_MODULE complete_project.settings
     PythonDebug On
-    PythonPath "['path to directory which contains your project (created in step3)','path to pinax project which     you   
+    PythonPath "['path to directory which contains your project (created in step3)','path to pinax project which     you
     made in step 3"] + sys.path"
     <Location>
 
@@ -122,12 +122,12 @@ More details about installation,deployment at
 Have you every used pinax? if yes then please let us know your experience on pinax in comments.And also point me out if there are any corrections or mistakes in the above article.
 
 ### Update (Installation of pinax 0.5.1 stable version)
-After 3rd step you should do the following 
+After 3rd step you should do the following
 
-    4.cd myprojectname 
-    5.change PINAX_ROOT in manage.py 
-    PINAX_ROOT =  'â€œpath to pinax directory which was created in step 1'   
-    6.change ROOT_URLCONF in settings.py     
+    4.cd myprojectname
+    5.change PINAX_ROOT in manage.py
+    PINAX_ROOT =  'â€œpath to pinax directory which was created in step 1'
+    6.change ROOT_URLCONF in settings.py
      ROOT_URLCONF = 'For ROOTURLCONF please change it from completeproject.urls to urls'.
     7. continue from  step 12  of above installation (whch is for trunk).
 

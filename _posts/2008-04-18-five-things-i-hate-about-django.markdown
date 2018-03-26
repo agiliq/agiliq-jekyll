@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Five Things I Hate About Django."
 date:   2008-04-18 11:48:38+05:30
 categories: python

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "What, when and how of AngularJS configuration blocks"
 date:   2017-04-27 17:15:03+05:30
 categories: angularjs
@@ -36,7 +36,7 @@ In this post, we will try answering the following:
 
 ### Configuration blocks
 
-In configuration blocks, we can inject any provider. 
+In configuration blocks, we can inject any provider.
 
 	angular
 		.module("home")

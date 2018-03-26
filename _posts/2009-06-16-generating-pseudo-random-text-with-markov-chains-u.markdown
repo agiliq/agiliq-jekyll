@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Generating pseudo random text with Markov chains using Python"
 date:   2009-06-16 11:54:11+05:30
 categories: algorithms

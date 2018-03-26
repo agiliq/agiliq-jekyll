@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "AngularJS injectors internals"
 date:   2017-04-25 20:34:49+05:30
 categories: angularjs
@@ -131,7 +131,7 @@ This injector is stored as a data attribute on the element which has ng-app. You
 
 So this injector remains reachable and usable after boostrap process too.
 
-Controller functions are executed using <a href="https://github.com/angular/angular.js/blob/v1.5.x/src/auto/injector.js#L862" target="_blank">`.invoke()`</a> of this injector. Injected service names are resolved as objects inside <a href="https://github.com/angular/angular.js/blob/v1.5.x/src/auto/injector.js#L835" target="_blank">function injectionArgs()</a>. 
+Controller functions are executed using <a href="https://github.com/angular/angular.js/blob/v1.5.x/src/auto/injector.js#L862" target="_blank">`.invoke()`</a> of this injector. Injected service names are resolved as objects inside <a href="https://github.com/angular/angular.js/blob/v1.5.x/src/auto/injector.js#L835" target="_blank">function injectionArgs()</a>.
 
 ##### How the service names are resolved to proper objects
 

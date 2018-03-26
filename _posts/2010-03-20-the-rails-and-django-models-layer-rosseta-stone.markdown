@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "The Rails and Django models layer Rosseta stone"
 date:   2010-03-20 16:12:50+05:30
 categories: rails

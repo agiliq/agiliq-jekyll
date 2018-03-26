@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Setting up your system to start with Django development on Ubuntu:"
 date:   2011-07-01 22:30:00+05:30
 categories: mysql
@@ -17,7 +17,7 @@ This will install Python on your machine.
 	sudo apt-get install mysql-server
 
 While installing mysql, you will be prompted to enter a password which you will require when you try to use mysql. Give a password.
-This should install mysql on your system. 
+This should install mysql on your system.
 To check whether mysql is properly installed or not, give this command from the terminal:
 
 	mysql -u root -p

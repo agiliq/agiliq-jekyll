@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Understanding decorators"
 date:   2009-06-23 19:34:57+05:30
 categories: python
@@ -17,32 +17,32 @@ the decorator syntax `@decorator` is nothing but `foo = bar(foo)`, where both
 
 Let us see some decorators in action.
 
-    
+
     In [1]: def good_function():
        ...:     print 'I am a good function'
-       ...:     
-       ...:     
-    
+       ...:
+       ...:
+
     In [2]: def decorator(orig_func):
        ...:     def bad_func():
        ...:         print 'I am a bad function'
        ...:     return bad_func
-       ...: 
-    
+       ...:
+
     In [3]: good_function = decorator(good_function)
-        
+
     In [4]: good_function()
     I am a bad function
-    
+
     In [5]: @decorator
        ....: def good_function2():
        ....:     print 'I am a good function'
-       ....:     
-       ....:     
-    
+       ....:
+       ....:
+
     In [6]: good_function2()
     I am a bad function
-    
+
 So you can see that the decorated function depended only on the value of the
 function returned by the decorator.
 
@@ -57,15 +57,15 @@ actual decorator which may be useful.
                     else:
                             return orig_func(val)
             return temp_func
-    
+
     @is_val_positive_deco
     def sqrt(val):
             import math
             return math.pow(val, (1.0/2))
-            
+
     print sqrt(-1)
     print sqrt(4)
-    
+
 Here we defined an decorator `is_val_positive_deco` which will make functions
 return 0, if the argument passed is negative. We can use this decorator to guard
 against MathErrors.
@@ -82,18 +82,18 @@ Lets see one,
             def __init__(self, orig_func):
                     self.orig_func = orig_func
                     print 'started logging: %s' % orig_func.__name__
-                    
+
             def __call__(self,  *args, **kwargs):
                     print 'args: %s' % args
                     print 'kwargs:%s'% kwargs
                     return self.orig_func(*args, **kwargs)
-                    
-    @LogArgumentsDecorator		
+
+    @LogArgumentsDecorator
     def sum_of_squares(a, b):
             return a*a + b*b
-    
+
     print sum_of_squares(3, b=4)
-    
+
 This outputs,
 
     started logging: sum_of_squares
@@ -104,13 +104,13 @@ This outputs,
 
 Lets see what happens when we do,
 
-    @LogArgumentsDecorator		
+    @LogArgumentsDecorator
     def sum_of_squares(a, b):
 
 This is equivalent to
 
     sum_of_squares = LogArgumentsDecorator(sum_of_squares)
-    
+
 At this point, we created a new LogArgumentsDecorator object, so
 `LogArgumentsDecorator.__init__(self, sum_of_squares)` gets called. Hence
 `print 'started logging: %s' % orig_func.__name__` line is executed.
@@ -126,13 +126,13 @@ anyway) Django's login_required decorator as a class based decorator.
     class LoginRequiredDecorator(object):
 	def __init__(self, orig_func):
 		self.orig_func = orig_func
-	
+
 	def __call__(self, request, *args, **kwargs):
 		if request.user.is_authenticated():
 			self.orig_func(request, *args, **kwargs)
 		else:
 			return HttpResponseRedirect(reverse('...'))
-                        
+
 
 Similar to above, it takes the view function, during `__init__`. When the request
 comes, `__call__` makes sure that user is authenticated, and takes action

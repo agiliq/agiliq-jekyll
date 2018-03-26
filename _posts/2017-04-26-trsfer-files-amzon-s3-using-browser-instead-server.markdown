@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: default
 title: "Transfer files to amazon s3 using browser instead of server"
 date: 2017-04-26 02:29:55+05:30
 draft: true
 ---
-So basically when we try to upload a file to amazon s3, we will do it in a regular way of 
+So basically when we try to upload a file to amazon s3, we will do it in a regular way of
 
 1. Getting the file from frontend
 2. Passing it to server
@@ -60,7 +60,7 @@ Hope all the above requirements are already installed and your django site is up
 You need to copy your **AWS_ACCESS_KEY_ID**, **AWS_SECRET_ACCESS_KEY**, **S3_BUCKET_NAME** in to your settings.py file
 
 **project/views.py**
-	
+
 	from django.views import View
 	from django.conf import settings
 	from django.http import HttpResponse
@@ -183,9 +183,9 @@ You need to copy your **AWS_ACCESS_KEY_ID**, **AWS_SECRET_ACCESS_KEY**, **S3_BUC
 So from the above js code we are making two ajax calls, one is for generating the signed request with below response data
 
 	{
-		signed_request: "https://xxxxxxxx.s3.amazonaws.com/videos/xxxxxx…EKQLHA%2F20170425%2Fus-east-1%2Fs3%2Faws4_request", 
-		url: "https://xxxxxxx.s3.amazonaws.com/videos/shivaagiliq/FunnyCat.mp4", 
-		s3_key: "videos/shivaagiliq/FunnyCat.mp4", 
+		signed_request: "https://xxxxxxxx.s3.amazonaws.com/videos/xxxxxx…EKQLHA%2F20170425%2Fus-east-1%2Fs3%2Faws4_request",
+		url: "https://xxxxxxx.s3.amazonaws.com/videos/shivaagiliq/FunnyCat.mp4",
+		s3_key: "videos/shivaagiliq/FunnyCat.mp4",
 		status: "ok"
 	}
 

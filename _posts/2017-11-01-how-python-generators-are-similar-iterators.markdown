@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "How Python generators are similar to iterators"
 date:   2017-11-01 11:29:47+05:30
 categories: python

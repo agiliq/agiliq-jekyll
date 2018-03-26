@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Jobs"
 date:   2011-03-15 05:22:12
 author:   shabda

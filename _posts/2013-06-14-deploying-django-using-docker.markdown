@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Deploying django using docker"
 date:   2013-06-14 19:16:51+05:30
 categories: docker

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Writing an e-mail application with Lamson - II"
 date:   2011-04-05 03:14:10
 author:   thejaswi
@@ -51,18 +51,18 @@ In the `app/handlers/unfuddle.py`, the handler code would be as below:
            if ticket["summary"] == message.base["Subject"]:
                _, content = h.request("%(url)s/projects/%(id)s/tickets/%(ticket_id)s/comments.json"
                                         %({"url": UNFUDDLE_API_URL, "id": proj["id"], "ticket_id": ticket["id"]}),
-                                      method="POST", 
-                                      body="""{"comment": {"body": "%(body)s" } }""" 
+                                      method="POST",
+                                      body="""{"comment": {"body": "%(body)s" } }"""
                                         %{"body": message.body().replace('"','\"')},
-                                     headers={"Accept": "application/json", 
+                                     headers={"Accept": "application/json",
                                               "Content-Type": "application/json"})
                return START
-       _, content = h.request("%(url)s/projects/%(id)s/tickets.json" %({"url": UNFUDDLE_API_URL, "id": proj["id"]}), 
+       _, content = h.request("%(url)s/projects/%(id)s/tickets.json" %({"url": UNFUDDLE_API_URL, "id": proj["id"]}),
                               method="POST",
                               body="""{"ticket": {"summary": "", "description": "", "priority": "3"} }"""
-                                 %({"summary": message.base["Subject"].replace('"', '\"'), 
+                                 %({"summary": message.base["Subject"].replace('"', '\"'),
                                     "description": message.body().replace('"', '\"') }),
-                           headers={"Accept": "application/json", 
+                           headers={"Accept": "application/json",
                                     "Content-Type": "application/json"})
        return START
 

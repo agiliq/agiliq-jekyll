@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Link roundup 8"
 date:   2010-12-31 06:29:44
 author:   thejaswi

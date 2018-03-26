@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "An idea a day - Remotely hosted Analytics solution"
 date:   2008-05-12 20:52:39+05:30
 categories: startup

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "How to use jsTree"
 date:   2011-10-12 16:30:00+05:30
 categories: Treeview
@@ -12,14 +12,14 @@ To show a TreeView (hierarchical view of information) structure in a Web page.
 
 I came across this problem when i was required to develop a web application which allows its users to store contacts and their related information(name, email, phone). The contacts would go into a folder and any folder can have any number of subfolders and any subfolder can have any number of contacts. Also, the folder structure can be nested as many levels deep as the user wants. So, how do you show the folder structure in a Web Page?
 
-You might encounter a lot of similar situation. 
+You might encounter a lot of similar situation.
 
 ###For the problem stated above, What we need is a Treeview structure.
-1. Display the first level folders(say Level 1 folder). 
+1. Display the first level folders(say Level 1 folder).
 
 2. User expands a Level 1 folder, expand and show all the subfolders within it.
 
-3. User expands one of the subfolder(Level 2 folder), expand and show all the subfolders(Level 3 folder) within this subfolder and so on.   
+3. User expands one of the subfolder(Level 2 folder), expand and show all the subfolders(Level 3 folder) within this subfolder and so on.
 
 While searching for the solution to this problem scenario, i came across jsTree.
 
@@ -56,7 +56,7 @@ Let's name the html page as try_jstree.html . Initially the page is:
             <div id="treeViewDiv">
             </div>
         </body>
-    </html> 
+    </html>
 
 Since jsTree is a jquery plugin, it requires jquery to be included in the page before we can use jsTree. So, we downloaded jquery.js and put it in the folder containing the html(try_jstree.html) file. Then we need to download jsTree(named jquery.jstree.js) and we put it in the same folder. Some folders (themes, docs etc.) comes while downloading jsTree. Put all these folders in our working folder.
 
@@ -73,7 +73,7 @@ Now, include jquery.js and jquery.jstree.js in the file so that we can use them.
             </script>
             <script>
                 $(document).ready(function(){
-                    
+
                 });
             </script>
         </head>
@@ -87,7 +87,7 @@ We have our second commit at this point.(commit 4c7c7233ccb4d0e2e463375af9c57937
 
 Next we need to select the div where the tree will be displayed. We use jquery selector for it. On the selected element we call jstree() and need to pass the required values.
 
-Here, we will be using json data to populate our tree. 
+Here, we will be using json data to populate our tree.
 
 ####So, the fields needed by jstree() in such case are:
 1. json_data - This is an object.
@@ -106,7 +106,7 @@ Hence at this point our code looks like:
                 $(document).ready(function(){
                     $("#treeViewDiv").jstree({
                         "json_data" : {
-                            
+
                         },
                         "plugins" : []
                     });
@@ -230,7 +230,7 @@ Check you page now.
 You should be seeing a Treeview structure in your page. The screenshot for what your page should look like is [here](http://agiliq.com/dumps/images/20121231/jstree.png).
 We have our fifth commit at this point(commit 5276b111ee250220a7d422fe86142f16bb45a1cc).
 
-Next we want to add some additional information(fields) about each object, so that we can operate on those fields. The additional information is stored as field "metadata". "metadata" is again an object containing key-value pairs for the additional information. So, the structure of "metadata" would be 
+Next we want to add some additional information(fields) about each object, so that we can operate on those fields. The additional information is stored as field "metadata". "metadata" is again an object containing key-value pairs for the additional information. So, the structure of "metadata" would be
 
     "metadata":{}
 
@@ -282,7 +282,7 @@ Similarly for all the objects, and our code would look like
 
 At this point we have our sixth commit(commit 8bad3a8688c1e848fee4cda99d82f2e369d87f92).
 
-Next we need to attach handler to events(Our event would be selection of any element in the Tree structure, and our handler should take us to the "href" for that element). 
+Next we need to attach handler to events(Our event would be selection of any element in the Tree structure, and our handler should take us to the "href" for that element).
 
 We accomplish this using bind(), similar to how we use in jquery script. The event we are concerned with is "select_node.jstree". So, the bind() function would look like:
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Getting started with Celery and Redis"
 date:   2015-07-06 10:54:44+05:30
 categories: redis
@@ -106,7 +106,7 @@ Change your file celery_blog.py, so it looks like:
 
 ##### Explanation of code
 
-We need a celery instace for proper celery setup. We created a celery instance called **app**. 
+We need a celery instace for proper celery setup. We created a celery instance called **app**.
 
 Quoting celery docs from <a href="http://celery.readthedocs.org/en/latest/getting-started/first-steps-with-celery.html#application" target="_blank">here</a>.
 
@@ -128,7 +128,7 @@ When we say "fetch_url.delay(url)", the code is serialized and put in the messag
 
 Unlike last execution of your script, you will not see any output on "python celery_blog.py" terminal. It is because the actual work of hitting the url isn't being done by your script anymore, it will be done by celery.
 
-Switch to the terminal where "celery worker" is running. You would see output lines like 
+Switch to the terminal where "celery worker" is running. You would see output lines like
 
 	[2015-07-05 12:57:44,705: INFO/Worker-2] Starting new HTTPS connection (1): facebook.com
 	[2015-07-05 12:57:44,711: INFO/Worker-4] Starting new HTTPS connection (1): twitter.com

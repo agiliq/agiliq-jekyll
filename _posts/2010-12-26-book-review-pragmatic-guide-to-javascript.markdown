@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Book Review: Pragmatic Guide to JavaScript"
 date:   2010-12-26 11:40:11+05:30
 categories: reviews
@@ -56,7 +56,7 @@ Tasks around making mashups using Twitter and Flickr API. Also has discussion an
 common JS frameworks.
 
 This chapter has sub-chapter on debugging JavaScript using Firebug and other browser specific tools. This is
-the best text I have read on debugging JavaScript, and if you are working with browser specific JS bugs, 
+the best text I have read on debugging JavaScript, and if you are working with browser specific JS bugs,
 this chapter is a must read.
 
 -------------------------------

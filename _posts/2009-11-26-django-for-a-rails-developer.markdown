@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Django for a Rails Developer"
 date:   2009-11-26 20:12:21+05:30
 categories: python
@@ -132,7 +132,7 @@ Why then does a Django project have so less number of files? It has got to do wi
 
 even after including this, the number of files is still less than the rails project.
 
-Lets break it down and relate both the frameworks. 
+Lets break it down and relate both the frameworks.
 
 <table width='100%' border='1px'>
 	<thead>
@@ -229,7 +229,7 @@ Missing pieces in Django (for a rails developer)
 		<li>Generate commands</li>
 		<li>Migrations</li>
 	</ul>
-	
+
 and what is Django is providing by default? Sorry no extra files in the project; but you will get an authentication system and Django's killer feature, admin, just by modifying your 'INSTALLED_APPS' in your settings. It is similar to the plugins feature in Rails, Django's philosophy of resusable apps helps you in getting any particular functionality into your project.
 
 Following is a list of what I like in Django (and associated apps):
@@ -241,12 +241,12 @@ Following is a list of what I like in Django (and associated apps):
 <li><a href="http://code.google.com/p/django-command-extensions/">django-command-extensions</a></li>
 <li><a href="http://haystacksearch.org/">Search the Django way</a></li>
 
-Following are the questions that I keep getting, 
+Following are the questions that I keep getting,
  <li>When a project will almost have a application why creating project & app has to be two different steps?</li>
 <li>Why not create a 'templates' directoy and a 'base.html' either in project's directory or in the apps's directory, because creating the same templates directory and same base.html for every project is not DRY :) ?</li>
 <li> Why serving static files in development has to be a additional setup, as no developer wants to setup a server for serving static files, I am aware of 'django.static.serve' but still that is an additional setup, why not create a sample media directory and a url for the same in urls.py ?</li>
 
-let me know via comments, if you have any answers 
+let me know via comments, if you have any answers
 
 program used for listing the files in a directory
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Deploying Django apps on Heroku
 date:   2012-02-04 00:00:01
 author:   shabda
@@ -20,7 +20,7 @@ details and making this step-by-step.
     other required Django libraries.
 4.  Confirm that you have all the required libraries and you can run
     your code locally using `manage.py runserver`.
-5.  
+5.
 
     Create a requirement.txt by using
 
@@ -65,7 +65,7 @@ details and making this step-by-step.
 
 13. Run this command. :
 
-        heroku create --stack cedar    
+        heroku create --stack cedar
 
 This will create a new Heroku app and create a new remote in your git
 repo.

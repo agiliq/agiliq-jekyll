@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Django emacs setup"
 date:   2010-12-26 23:11:25
 author:   thejaswi
@@ -79,9 +79,9 @@ them below line by line:
 
     (defun build-tags ()
       (interactive)
-      (call-process-shell-command 
+      (call-process-shell-command
           "find ~/django_projects/ -name '*.py' -print \" \
-          "|xargs etags -o ~/TAGS" 
+          "|xargs etags -o ~/TAGS"
           nil (get-buffer-create "Etags Compile") 1)
       )
     (defalias 'etb 'build-tags)

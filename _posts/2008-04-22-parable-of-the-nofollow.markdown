@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Parable of the nofollow"
 date:   2008-04-22 14:05:47+05:30
 categories: search

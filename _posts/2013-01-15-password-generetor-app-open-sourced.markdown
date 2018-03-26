@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Password Generator App: Open Sourced"
 date:   2013-01-15 11:30:00+05:30
 categories: open-source
@@ -11,10 +11,10 @@ We are open sourcing a few tools we developed recently. Here is the second one.
 
 [Password Generator Chrome Extension](https://github.com/agiliq/forgot-me-password)
 
-[Install it from chrome webstore](https://chrome.google.com/webstore/detail/password-generator/nnjgaeekiplalipomfgacalgehhcckbp)   
-Here are the docs  
+[Install it from chrome webstore](https://chrome.google.com/webstore/detail/password-generator/nnjgaeekiplalipomfgacalgehhcckbp)
+Here are the docs
 
-### Summary 
+### Summary
 
 A completely client side password generator.
 
@@ -28,7 +28,7 @@ I want to use a unique password for each website. However, I don't want to use l
 
 I use a simple passwording scheme. I have one master password. For each site, I append the first two letters of the domain to master password and use that as the site password. This is sub-optimal as its easy to understand this scheme, if say two of my passwords are leaked.
 
-I want to algorithmically generate the password on the client side, with a chrome app. 
+I want to algorithmically generate the password on the client side, with a chrome app.
 
 ### How does it work?
 

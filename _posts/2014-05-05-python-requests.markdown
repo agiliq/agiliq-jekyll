@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Python-requests"
 date:   2014-05-05 15:28:08+05:30
 categories: python
@@ -96,7 +96,7 @@ Response object 'r' helps to get all the information we need from the object.
 
 * To make a POST request:
 
-    
+
     r = requests.post("http://httpbin.org/post")
 
 We can use the other HTTP request types: PUT, DELETE, HEAD and OPTIONS in the same way:

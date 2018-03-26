@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Easy client side form validations for Django: Django Parsley"
 date:   2013-02-07 11:30:00+05:30
 categories: django

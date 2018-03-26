@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Web development companies working with Django"
 date:   2009-03-09 11:54:11+05:30
 categories: business
@@ -19,7 +19,7 @@ At Agiliq, we work with some of the best web development agencies. I wanted a li
 11. [Tarams](http://www.tarams.com/) Bangalore, India
 12. [Cubedroot](http://www.cubedroute.com/) Ireland
 
-And of course [Agiliq](http://www.agiliq.com/) 
+And of course [Agiliq](http://www.agiliq.com/)
 
 Additions:
 
@@ -29,7 +29,7 @@ Additions:
 4. [Digital Eternal](http://www.digitaleternal.com/) Malaysia
 5. [Revolution Systems](http://www.revsys.com/) Lawrence, Kansas, USA
 6. [Setaris](http://www.setaris.com/) New York City, NY, USA
-7. [CodeScale]( http://www.codescale.net/)  Czech Republic and Slovak Republic 
+7. [CodeScale]( http://www.codescale.net/)  Czech Republic and Slovak Republic
 8. [Tivix](http://tivix.com/) San Francisco, CA, USA
 9. [Eldarion](http://eldarion.com/) USA
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Common testing scenarios for Django app."
 date:   2013-04-28 20:33:38+05:30
 categories: testing
@@ -87,7 +87,7 @@ Tests use a database. Since sqlite is faster than mysql or postgresql, we would 
          }
     }
 
-Running the test. 
+Running the test.
 
     python manage.py test blog --settings=testcases.test_settings
 
@@ -109,7 +109,7 @@ Running the test.
 
     FAILED (errors=1)
 
-Because we have not written the view yet. We didn't have to go to browser to check if this url works, our test does it for us. 
+Because we have not written the view yet. We didn't have to go to browser to check if this url works, our test does it for us.
 
 We should test every url we want available in our project. So, that if some url breaks our test would tell that to us immediately.
 
@@ -181,7 +181,7 @@ This test is not much useful now. We will see how `response.context` becomes use
         response = self.c.get(reverse('entry_create'))
         self.assertEqual(response.status_code, 200)
 
-Run the test. We know it will fail because we have not written the view or the url yet. 
+Run the test. We know it will fail because we have not written the view or the url yet.
 
     python manage.py test blog --settings=testcases.test_settings
 
@@ -212,7 +212,7 @@ Need to add following in `blog/urls.py`
 
 Adding a modelform. This will be used in create view.
 
-    class BlogEntryForm(ModelForm):                                                                          
+    class BlogEntryForm(ModelForm):
         class Meta:
             model = BlogEntry
 
@@ -227,7 +227,7 @@ Adding the view
                 form.save()
         return render(request, "blog/entry_create.html", {'form': form})
 
-Make sure to create the template. And then run the test. 
+Make sure to create the template. And then run the test.
 
 You will still see an error.
 
@@ -364,7 +364,7 @@ Writing the test:
         response = self.c.get(reverse("entries_page", args=[1,]))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['entries']), 10)
-        
+
         #access second page
         response = self.c.get(reverse("entries_page", args=[2,]))
         self.assertEqual(response.status_code, 200)

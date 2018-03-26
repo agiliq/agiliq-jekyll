@@ -1,12 +1,12 @@
 ---
-layout: post
+layout: default
 title:  "Getting started with PhoneGap using Xcode for Mobile app development"
 date:   2011-02-06 21:48:33+05:30
 categories: android
 author: shabda
 ---
 This is next in the series of apps I am building using various mobile technologies.
-It is the same app as build using Java for Android for calculating the Tax payable (in India). You can 
+It is the same app as build using Java for Android for calculating the Tax payable (in India). You can
 get the code for [Objective-C](https://github.com/agiliq/TaxCalculatorIndia), [Java-Android](https://github.com/agiliq/TaxCalculatorAndroid), and [PhoneGap](https://github.com/agiliq/TaxCalculatorPhoneGap).
 
 
@@ -16,13 +16,13 @@ First the impressions
 [Phonegap](http://www.phonegap.com/) was the easiest to work with among the Objective-C, Java and PhoneGap, by far.
 I created the app as easily as
 
-Step 1. Write the app and test it in Browser using the Chrome developer tools. 
+Step 1. Write the app and test it in Browser using the Chrome developer tools.
 Step 2. Start a project in Xcode.
 Step 3. Copy the HTML and CSS files to project directory and export to simulator.
 
 The experience was very good, (After spending time with Obj-C and Java), as I could use a Chrome console as a repl,
 something which I sorely missed.
-	
+
 The exported app does *look* native, with controls which look coming from browser. But with some CSS you can go
 a long way here.
 
@@ -60,11 +60,11 @@ You can layout your UI using the common HTML elements. Here is a snippet from th
 	 	</label>
 	 	<input type="number"  placeholder=0 id="housing_interest"></input>
 	</div>
-	
+
 These are standard HTML5 elements. Note that we were able to use HTML5 only elements like
 
 	type="number"  placeholder=0
-	
+
 which set the keyboard type and placeholder which you can do via `android:inputType` or editing in Interface Builder.
 
 Code the code
@@ -85,17 +85,17 @@ for UI manipulation. Here is what the code looks like.
 			}
 			.....
 				var tax = calculateTax(income, investment, infra_investment, housing_interest, medical_premium);
-				console.log(""+tax);			
+				console.log(""+tax);
 				calculated_tax  = $("#calculated_tax");
 				calculated_tax.html(tax);
 	        });
 
 			function getTax(taxableIncome){
 			.....
-			
+
 [Full listing here](https://github.com/agiliq/TaxCalculatorPhoneGap/blob/master/www/index.html)
 
-Put on iPhone 
+Put on iPhone
 --------------------
 Once you like what you see in chrome, you can put this code on simulator. Build and run from Xcode and you are done.
 

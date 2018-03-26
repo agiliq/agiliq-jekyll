@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "I am so starving: Web app in python frameworks."
 date:   2010-11-07 21:27:44+05:30
 categories: python
@@ -18,7 +18,7 @@ who have posted a public status with the text "so starving".
 
 This idea came from reading [Onion](http://www.theonion.com/articles/i-am-so-starving-vs-i-am-so-starving,11541/).
 
-We have the same app in these frameworks.  
+We have the same app in these frameworks.
 
 ### Microframeworks:
 

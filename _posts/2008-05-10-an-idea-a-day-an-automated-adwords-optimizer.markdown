@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "An idea a day - An automated Adwords optimizer"
 date:   2008-05-10 20:27:49+05:30
 categories: startup

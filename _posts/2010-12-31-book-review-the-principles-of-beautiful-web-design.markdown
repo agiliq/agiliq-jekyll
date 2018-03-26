@@ -1,14 +1,14 @@
 ---
-layout: post
+layout: default
 title:  "Book Review: The Principles Of Beautiful Web Design"
 date:   2010-12-31 18:41:18+05:30
 categories: reviews
 author: saikiran
 ---
-This is a good book for anyone who's just starting out in web design, especially those with a creative slant than a technical one. It  is all about principles of design, layout ideas, color theory, textures, typography. 
+This is a good book for anyone who's just starting out in web design, especially those with a creative slant than a technical one. It  is all about principles of design, layout ideas, color theory, textures, typography.
 
 ### Information Architecture
-Importance of information architecture (IA) is explained, like how to take the requirements before starting the design process and how to start the design process. 
+Importance of information architecture (IA) is explained, like how to take the requirements before starting the design process and how to start the design process.
 Unfortunately most of the clients do not provide enough information for design process.
 
 ### Grid system

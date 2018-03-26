@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "An idea a day - Alternative to GAE"
 date:   2008-05-13 20:55:39+05:30
 categories: startup

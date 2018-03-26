@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Getting started with Titanium development for Android and Iphone"
 date:   2011-02-08 11:54:11+05:30
 categories: iphone
@@ -12,13 +12,13 @@ use [Titanium Mobile](http://www.appcelerator.com/products/titanium-mobile-appli
 
 Installing Titanium
 ------------------------
-[Download and install](http://www.appcelerator.com/products/download/) the fairly small Titanium from their sites. Once you download and start it, 
+[Download and install](http://www.appcelerator.com/products/download/) the fairly small Titanium from their sites. Once you download and start it,
 it will download and install more components. You can then create a new project from their UI.
 
 Layout the Layout
 ---------------------
 You can add UI widgets and lay them out using Javascript. You need to use Titanium's API, to create
-the UI. 
+the UI.
 
 Titanium execution starts in app.js. We will modify this file to add the layout code.
 
@@ -33,7 +33,7 @@ You can add a label like this
 		height: 'auto',
 		top: 5
 	});
-	
+
 
 
 Similarly you can create a Button and TextInput as
@@ -43,20 +43,20 @@ Similarly you can create a Button and TextInput as
 	....
 	}
 	);
-	
+
 	Titanium.UI.createButton({
 		...[Options]
 	})
-	
-Create a window as `Titanium.UI.createWindow({})`. and add these Items to it via `window.add`. Your widgets have been added to the UI, and should show up, in the simulator. [Here is what mine looks like](http://skitch.com/shabda/rpue1/ios-simulator). [You can get the code for the layout at here](https://github.com/agiliq/TaxCalculatorTitanium/blob/master/Resources/app.js). 
+
+Create a window as `Titanium.UI.createWindow({})`. and add these Items to it via `window.add`. Your widgets have been added to the UI, and should show up, in the simulator. [Here is what mine looks like](http://skitch.com/shabda/rpue1/ios-simulator). [You can get the code for the layout at here](https://github.com/agiliq/TaxCalculatorTitanium/blob/master/Resources/app.js).
 
 Code the code
 ---------------------
-We now need to add the code to handle button clicks, calculate the tax, and update the UI with the tax. Since our code for this is going to be 
+We now need to add the code to handle button clicks, calculate the tax, and update the UI with the tax. Since our code for this is going to be
 Javascript, we can easily reuse the tax calculation parts from our Phonegap app.
 
 
-	
+
 	function getTax(taxableIncome){
 	    var taxOnThisSlab;
 	    if (taxableIncome < 160000) {
@@ -72,9 +72,9 @@ Javascript, we can easily reuse the tax calculation parts from our Phonegap app.
 		investment = Math.max(0, Math.min(investment, 100000));
 		 ///More code to calculate the tax
 		//....
-		
+
 	}
-	
+
 Now we add a `EventListener` to the Button we added and this is used to calculate the tax and update the Label for showing the text.
 
 	calculateTaxBut.addEventListener("click", function(){
@@ -84,13 +84,13 @@ Now we add a `EventListener` to the Button we added and this is used to calculat
 		//.....
 		var tax = calculateTax(income, investment, infra_investment, housing_interest, medical_premium);
 		calculated_tax.text = ""+tax;
-	
+
     });
 
 
 And we are done
 -------------------
-Overall, the experience with Titanium was **OK**. The Titanium developer UI could have been better, the UI 
+Overall, the experience with Titanium was **OK**. The Titanium developer UI could have been better, the UI
 is Unintuitive. Building for Android is very slow. Lunch button in their developer UI seems to stop working at random intervals.
 However the promise of building native apps is very alluring, and I would be working more with Titanium.
 

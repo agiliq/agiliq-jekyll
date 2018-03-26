@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Developing android applications from command line
 date:   2012-03-20 01:00:00
 author:   thejaswi
@@ -87,7 +87,7 @@ After running the above command, an android project should have got
 successfully created. Check if everything\'s as expected:
 
     $ cd android_proj/
-    $ ls src/com/example/TestProjActivity.java 
+    $ ls src/com/example/TestProjActivity.java
     src/com/example/TestProjActivity.java
 
 **(BONUS)** Installing and creating a Phonegap app
