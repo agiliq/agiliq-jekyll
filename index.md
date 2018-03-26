@@ -23,12 +23,6 @@ buttons:
       url: 'https://github.com/agiliq'
       external_url: true
 
-# Author box
-author:
-    title: About Author
-    title_url: '#'
-    external_url: true
-    description: Author description
 
 # Grid navigation
 grid_navigation:
@@ -38,6 +32,12 @@ grid_navigation:
       url: '/blog/'
 
     - title: Our Books
+      excerpt: Read about books on Django Admin, ORM, APIs using DRF and more.
+      cta: Read the Books
+      url: 'https://books.agiliq.com/'
+      external_url: true
+
+    - title: Newsletter
       excerpt: Read about books on Django Admin, ORM, APIs using DRF and more.
       cta: Read the Books
       url: '/books/'

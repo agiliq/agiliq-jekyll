@@ -59,8 +59,12 @@ doks:
               profile_url: 'https://twitter.com/agiliqdotcom'
             - network_name: github
               profile_url: 'https://github.com/agiliq'
+            - network_name: stackoverflow
+              profile_url: https://stackoverflow.com/users/121793/agiliq
+
     google_analytics:
         tracking_code: "UA-367368-15"
+
     comments:
         disqus_forum_shortname: # Add your disqus forum shortname to activate comments
 
