@@ -4,8 +4,8 @@ layout: homepage
 keywords:
 
 # Hero section
-title: Project name
-description: Project description
+title: Agiliq
+description: We build amazing apps using modern tools.
 buttons:
     - content: Button
       url: '#'
@@ -24,10 +24,15 @@ author:
 
 # Grid navigation
 grid_navigation:
-    - title: Grid navigation
-      excerpt: Section description
+    - title: Blog
+      excerpt: Read about Django, Python, Postgres, Pandas and more.
       cta: Read more
-      url: '#'
+      url: '/blog/'
+
+    - title: Our Books
+      excerpt: Read about books on Django Admin, ORM, APIs using DRF and more.
+      cta: Read the Books
+      url: '/books/'
 ---
 
 
