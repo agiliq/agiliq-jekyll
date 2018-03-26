@@ -17,8 +17,8 @@ title: Agiliq
 email: hello@agiliq.com
 description: >- # this means to ignore newlines until "baseurl:"
   Agiliq builds amazing apps using modern tools.
-baseurl: "" # the subpath of your site, e.g. /blog. Don;'t keep the trailing slash'
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog. Don;'t keep the trailing /'
+url: "https://agiliq.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: agiliqdotcom
 github_username:  agiliq
 
