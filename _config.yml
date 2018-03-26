@@ -24,7 +24,7 @@ github_username:  agiliq
 show_excerpts: false
 excerpt_separator: <!--more-->
 
-permalink: /blog/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:title/
 
 # Build settings
 markdown: kramdown
