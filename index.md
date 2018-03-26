@@ -38,9 +38,9 @@ grid_navigation:
       external_url: true
 
     - title: Newsletter
-      excerpt: Read about books on Django Admin, ORM, APIs using DRF and more.
-      cta: Read the Books
-      url: '/books/'
+      excerpt: Subsribe to keep up with the latest in world of Python, Django and data analytics. Get three python books right away.
+      cta: Subscribe
+      url: '/newsletter/'
 ---
 
 
