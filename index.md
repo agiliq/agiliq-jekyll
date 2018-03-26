@@ -5,14 +5,22 @@ keywords:
 
 # Hero section
 title: Agiliq
-description: We build amazing apps using modern tools.
+description: >
+  Agiliq is an app development studio building web and mobile apps.
+
+  We develop custom, bespoke web and mobile apps using Django, Python, Postgres angular and other modern tools. We primarily work with startups, small businesses and other agencies.
+
+  We love building amazing apps. We have done it in the past. We are doing it right now, and we can do it for you.
+
+  Interested? Contact us today.
+
 buttons:
-    - content: Button
-      url: '#'
+    - content: Contact Us
+      url: '/contact/'
       external_url: false
     - icon: github
-      content: Button with icon
-      url: '#'
+      content: Open Source
+      url: 'https://github.com/agiliq'
       external_url: true
 
 # Author box
