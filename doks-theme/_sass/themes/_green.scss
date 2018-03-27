@@ -27,6 +27,9 @@
 	.section--darker-theme-color-bg {
 		background-color: darken($color-theme-green, 3%);
 	}
+	.section--lighter-theme-color-bg {
+		background-color: darken($color-theme-green, 0%);
+	}
 }
 
 /* ----- Page nav ----- */

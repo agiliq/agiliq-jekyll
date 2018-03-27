@@ -31,17 +31,21 @@ books:
       This is a book about doing things with Django admin. It takes the form of about forty questions and common tasks with Django admin we answer.
     url: 'http://books.agiliq.com/projects/django-admin-cookbook/en/latest/'
     external_url: true
+    cta: Read the book
 
   - title: Django ORM Cookbook
     description: >
       Django ORM Cookbook is a book about doing things with Django ORM and Django models. Django is a “MTV” (Model-Template-View) framework – This book provides a deep dive into the M part.
     url: 'http://books.agiliq.com/projects/django-orm-cookbook/en/latest/'
     external_url: true
+    cta: Read the book
 
   - title: Building APIs with Django and Django Rest Framework
-    description: Building APIs with Django and DRF takes over where the Django tutorials stop. In the Django tutorials, you built a regular Django polls app. We will rebuild an API for a similar app.
+    description: >
+      Building APIs with Django and DRF takes over where the Django tutorials stop. In the Django tutorials, you built a regular Django polls app. We will rebuild an API for a similar app.
     url: 'http://books.agiliq.com/projects/django-api-polls-tutorial/en/latest/'
     external_url: true
+    cta: Read the book
 
 # Grid navigation
 grid_navigation:
