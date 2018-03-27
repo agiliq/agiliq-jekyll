@@ -32,6 +32,7 @@ books:
     url: 'http://books.agiliq.com/projects/django-admin-cookbook/en/latest/'
     external_url: true
     cta: Read the book
+    cover_image: '/assets/images/dac-book-cover.jpg'
 
   - title: Django ORM Cookbook
     description: >
@@ -39,6 +40,7 @@ books:
     url: 'http://books.agiliq.com/projects/django-orm-cookbook/en/latest/'
     external_url: true
     cta: Read the book
+    cover_image: '/assets/images/doc-book-cover.jpg'
 
   - title: Building APIs with Django and Django Rest Framework
     description: >
@@ -46,6 +48,7 @@ books:
     url: 'http://books.agiliq.com/projects/django-api-polls-tutorial/en/latest/'
     external_url: true
     cta: Read the book
+    cover_image: '/assets/images/bawdadrf-book-cover.jpg'
 
 # Grid navigation
 grid_navigation:
