@@ -29,6 +29,7 @@ excerpt_separator: <!--more-->
 markdown: kramdown
 plugins:
   - jekyll-feed
+    - jekyll-redirect-from
 
 # Theme settings
 doks:

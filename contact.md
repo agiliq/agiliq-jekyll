@@ -2,6 +2,7 @@
 layout: default
 title: Contact
 permalink: /contact/
+redirect_from: "/contactus/"
 ---
 
 Email us: <strong><a href="mailto:hello@agiliq.com">hello@agiliq.com</a></strong>
