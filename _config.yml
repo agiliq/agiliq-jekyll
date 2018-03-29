@@ -24,7 +24,6 @@ github_username:  agiliq
 show_excerpts: false
 excerpt_separator: <!--more-->
 
-permalink: /blog/:year/:month/:title/
 
 # Build settings
 markdown: kramdown
@@ -77,4 +76,4 @@ sass:
 layouts_dir: ./doks-theme/_layouts
 includes_dir: ./doks-theme/_includes
 exclude: [ 'README.md', 'CHANGELOG.md' ]
-permalink: /blog/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:title/
