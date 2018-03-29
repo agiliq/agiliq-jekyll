@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Real world usage of __iter__ and next"
 date:   2017-10-18 10:53:28+05:30
 categories: python

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "__new__() in python"
 date:   2012-06-10 10:30:02+05:30
 categories: __new__

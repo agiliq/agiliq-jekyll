@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "An idea a day - An automated Adwords optimizer"
 date:   2008-05-10 20:27:49+05:30
 categories: startup

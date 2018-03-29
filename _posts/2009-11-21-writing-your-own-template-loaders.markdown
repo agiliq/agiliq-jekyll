@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Writing your own template loaders"
 date:   2009-11-21 17:11:17+05:30
 categories: tutorial

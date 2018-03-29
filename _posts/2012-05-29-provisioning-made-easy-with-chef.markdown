@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Provisioning Made Easy With Chef"
 date:   2012-05-29 13:30:00+05:30
 categories: provisioning

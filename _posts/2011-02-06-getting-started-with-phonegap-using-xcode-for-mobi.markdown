@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Getting started with PhoneGap using Xcode for Mobile app development"
 date:   2011-02-06 21:48:33+05:30
 categories: android

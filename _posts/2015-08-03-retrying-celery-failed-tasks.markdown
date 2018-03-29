@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Retrying celery failed tasks"
 date:   2015-08-03 10:53:19+05:30
 categories: celery

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Django design patterns"
 date:   2009-07-03 19:41:46+05:30
 categories: book

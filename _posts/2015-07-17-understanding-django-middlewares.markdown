@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Understanding Django Middlewares"
 date:   2015-07-17 14:26:11+05:30
 categories: middlewares

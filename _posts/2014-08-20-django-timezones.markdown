@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Django timezones"
 date:   2014-08-20 10:30:01+05:30
 categories: django

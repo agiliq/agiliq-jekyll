@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Python metaclasses and how Django uses them"
 date:   2009-12-03 23:59:48+05:30
 categories: tutorial

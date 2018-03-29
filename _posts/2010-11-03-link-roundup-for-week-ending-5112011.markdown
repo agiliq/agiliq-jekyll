@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Link Roundup for week ending 5/11/2011"
 date:   2010-11-03 05:50:11
 author:   thejaswi

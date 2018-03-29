@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Todo List App: Open Sourced"
 date:   2013-01-14 11:30:00+05:30
 categories: open-source

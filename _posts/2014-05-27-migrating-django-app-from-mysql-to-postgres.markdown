@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Migrating django app from MySQL to Postgres"
 date:   2014-05-27 13:28:50+05:30
 categories: mysqltopostgres

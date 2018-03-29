@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Generating PDFs with Django "
 date:   2008-10-07 23:01:17+05:30
 categories: tips

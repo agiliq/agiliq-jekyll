@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Starting Android app developement: From zero to app"
 date:   2011-02-06 17:30:21+05:30
 categories: java

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Writing an e-mail application with Lamson - I"
 date:   2011-04-01 09:08:15
 author:   thejaswi

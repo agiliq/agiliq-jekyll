@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Profiling Django Middlewares"
 date:   2015-07-17 15:19:47+05:30
 categories: middlewares

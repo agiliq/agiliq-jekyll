@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Minimal Gunicorn configuration"
 date:   2014-06-05 11:17:33+05:30
 categories: gunicorn

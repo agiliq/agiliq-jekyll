@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "When and how to use Django TemplateView"
 date:   2017-12-29 11:30:27+05:30
 categories: django

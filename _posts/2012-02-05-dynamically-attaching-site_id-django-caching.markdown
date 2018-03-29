@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  " Dynamically attaching SITE_ID to Django Caching"
 date:   2012-02-05 23:56:52+05:30
 categories: SITE_ID prefix

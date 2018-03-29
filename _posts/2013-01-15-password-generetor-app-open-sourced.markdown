@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Password Generator App: Open Sourced"
 date:   2013-01-15 11:30:00+05:30
 categories: open-source

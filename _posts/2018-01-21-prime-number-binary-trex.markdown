@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Finding a prime number whose binary representation is a giraffe (or a T-Rex)"
 date:   2018-01-21 19:41:32+05:30
 categories: [python, fun]

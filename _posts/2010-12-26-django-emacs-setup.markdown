@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Django emacs setup"
 date:   2010-12-26 23:11:25
 author:   thejaswi

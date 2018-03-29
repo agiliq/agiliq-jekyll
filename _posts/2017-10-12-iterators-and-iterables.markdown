@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Iterators and Iterables"
 date:   2017-10-12 11:36:19+05:30
 categories: python

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Deploy Django App in 5 Easy Steps"
 date:   2012-02-23 04:59:50+05:30
 categories: vps

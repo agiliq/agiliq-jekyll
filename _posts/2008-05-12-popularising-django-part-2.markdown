@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Popularising Django - Part 2"
 date:   2008-05-12 12:33:21+05:30
 categories: Uncategorized

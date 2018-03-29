@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: "From HTML Form to Storage"
 date:   2011-09-21 17:00:00
 author:   thejaswi

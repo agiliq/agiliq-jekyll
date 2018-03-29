@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Process and Threads for Beginners"
 date:   2013-09-11 12:33:39+05:30
 categories: process

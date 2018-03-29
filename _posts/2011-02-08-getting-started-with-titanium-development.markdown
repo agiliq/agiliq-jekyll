@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Getting started with Titanium development for Android and Iphone"
 date:   2011-02-08 11:54:11+05:30
 categories: iphone

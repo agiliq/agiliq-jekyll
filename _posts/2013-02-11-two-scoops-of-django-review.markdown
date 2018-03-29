@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Two Scoops of Django: Review"
 date:   2013-02-11 11:30:00+05:30
 categories: book

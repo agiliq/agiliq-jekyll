@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Marketing lessons from Google"
 date:   2008-04-21 14:01:36+05:30
 categories: marketing

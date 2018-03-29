@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Django quiz"
 date:   2009-12-03 21:56:31+05:30
 categories: django

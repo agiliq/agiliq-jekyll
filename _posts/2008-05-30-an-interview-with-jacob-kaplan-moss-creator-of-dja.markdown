@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "An Interview with Jacob Kaplan-Moss - Creator of Django"
 date:   2008-05-30 12:03:18+05:30
 categories: python

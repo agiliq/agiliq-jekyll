@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Book Review: Outsourcing Web Projects."
 date:   2010-12-24 14:43:40+05:30
 categories: reviews

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Understanding Threads in Python"
 date:   2013-09-17 23:53:01+05:30
 categories: threads

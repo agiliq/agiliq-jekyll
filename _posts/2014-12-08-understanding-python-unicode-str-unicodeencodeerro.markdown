@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Understanding Python unicode, str, UnicodeEncodeError and UnicodeDecodeError"
 date:   2014-12-08 15:43:30+05:30
 categories: python

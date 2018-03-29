@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Method decorators in Python"
 date:   2014-07-15 19:46:08+05:30
 categories: python

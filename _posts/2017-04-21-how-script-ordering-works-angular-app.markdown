@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "How script ordering works in an Angular app"
 date:   2017-04-21 20:32:17+05:30
 categories: angularjs

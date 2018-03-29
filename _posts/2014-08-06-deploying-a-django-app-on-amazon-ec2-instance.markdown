@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Deploying a Django app on Amazon EC2 instance."
 date:   2014-08-06 20:38:22+05:30
 categories: Django app deployment

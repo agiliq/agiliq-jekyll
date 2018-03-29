@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Advanced functional testing with Selenium in Django"
 date:   2014-09-02 15:17:48+05:30
 categories: functional-testing

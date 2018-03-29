@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Doing things with Django models - aka - Django models tutorial"
 date:   2010-01-18 11:30:17+05:30
 categories: models

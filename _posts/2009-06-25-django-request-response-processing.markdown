@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Django Request Response processing"
 date:   2009-06-25 09:59:56+05:30
 categories: django

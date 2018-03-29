@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Create your own online store in few hours using satchmo (django)"
 date:   2009-03-26 09:58:11+05:30
 categories: satchmo

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Haml for Django developers"
 date:   2011-12-25 11:54:11+05:30
 categories: django

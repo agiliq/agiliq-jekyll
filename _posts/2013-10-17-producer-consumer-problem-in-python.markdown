@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Producer-consumer problem in Python"
 date:   2013-10-17 10:46:37+05:30
 categories: threads

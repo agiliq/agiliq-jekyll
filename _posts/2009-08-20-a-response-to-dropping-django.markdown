@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "A response to Dropping Django"
 date:   2009-08-20 17:28:37+05:30
 categories: rambling

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Basics of WSGI"
 date:   2013-07-01 11:45:22+05:30
 categories: python

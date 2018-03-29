@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Using subdomains with Django"
 date:   2008-10-10 20:31:57+05:30
 categories: tips

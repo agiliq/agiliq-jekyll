@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title: Deploying Django apps on Heroku
 date:   2012-02-04 00:00:01
 author:   shabda

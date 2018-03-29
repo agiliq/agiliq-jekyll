@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Importing wordpress"
 date:   2010-10-28 00:51:32+05:30
 categories: wordpress

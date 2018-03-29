@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Constraint programming in Python"
 date:   2009-03-06 18:47:53+05:30
 categories: algorithms

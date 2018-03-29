@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Remote debugging - debugging pesky server only bugs"
 date:   2009-07-02 23:37:02+05:30
 categories: django

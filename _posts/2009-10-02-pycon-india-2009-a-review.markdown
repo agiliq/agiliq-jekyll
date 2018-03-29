@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Pycon India 2009 : A Review"
 date:   2009-10-02 22:54:41+05:30
 categories: Uncategorized

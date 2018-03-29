@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Django-subdomains - Easily create subscription based subdomains enabled webapps"
 date:   2009-03-11 16:29:02+05:30
 categories: products

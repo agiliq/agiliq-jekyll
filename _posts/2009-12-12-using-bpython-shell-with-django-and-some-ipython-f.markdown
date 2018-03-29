@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Using bpython shell with django (and some Ipython features you should know)"
 date:   2009-12-12 22:47:37+05:30
 categories: tutorial

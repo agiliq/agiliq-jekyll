@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Uswaretech whitepapers"
 date:   2009-03-11 16:45:26+05:30
 categories: Uncategorized

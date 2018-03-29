@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Book Review: The Principles Of Beautiful Web Design"
 date:   2010-12-31 18:41:18+05:30
 categories: reviews

@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  Libvirt and KVM
 date:   2012-06-25 00:00:00
 author:   thejaswi

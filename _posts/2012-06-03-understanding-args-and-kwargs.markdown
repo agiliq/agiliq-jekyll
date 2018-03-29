@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Understanding '*', '*args', '**' and '**kwargs'"
 date:   2012-06-03 10:30:02+05:30
 categories: kwargs

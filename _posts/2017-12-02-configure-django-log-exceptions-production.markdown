@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Configure Django to log exceptions in production"
 date:   2017-12-02 08:19:18+05:30
 categories: django

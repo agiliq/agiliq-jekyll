@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "An interview with Michael Trier"
 date:   2008-05-06 17:34:45+05:30
 categories: marketing

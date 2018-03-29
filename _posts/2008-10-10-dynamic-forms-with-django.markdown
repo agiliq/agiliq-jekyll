@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Dynamic forms with Django"
 date:   2008-10-10 19:46:05+05:30
 categories: forms

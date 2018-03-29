@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Adventures in advanced Django ORM with HyperLogLog"
 date:   2017-12-11 22:54:38+05:30
 categories: django

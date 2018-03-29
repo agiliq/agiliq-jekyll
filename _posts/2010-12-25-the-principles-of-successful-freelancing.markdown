@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Book review: The Principles of Successful Freelancing"
 date:   2010-12-25 13:21:21+05:30
 categories: reviews

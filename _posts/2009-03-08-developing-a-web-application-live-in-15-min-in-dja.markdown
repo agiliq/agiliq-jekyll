@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  " Developing a Web Application Live in 15 min, in django framework"
 date:   2009-03-08 16:43:08+05:30
 categories: presentations

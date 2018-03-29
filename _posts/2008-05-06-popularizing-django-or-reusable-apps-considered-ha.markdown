@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Popularizing Django -- Or Reusable apps considered harmful."
 date:   2008-05-06 10:44:54+05:30
 categories: marketing

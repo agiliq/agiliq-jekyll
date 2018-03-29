@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 title:  "Setting up your system to start with Django development on Ubuntu:"
 date:   2011-07-01 22:30:00+05:30
 categories: mysql
