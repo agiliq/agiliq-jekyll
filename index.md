@@ -57,6 +57,7 @@ clients:
       "We have been working with Agiliq Solutions as an IT partner for the past year, and we are delighted with their performance. They are both extremely capable and extremely professional. When our goals and directions are unclear or when they see a better solution, they are quick to let us know. Then, once we have agreed on specifics and timing, they get it done within budget and on schedule. We look forward to continuing to work with them in the years to come."
     logo:
     head_shot:
+    url: "https://govbuddy.com"
 
   - company_name: Humble Advisors
     name: "Lane Campbell"
@@ -64,6 +65,7 @@ clients:
       "Shabda has been a reliable provider for Django programming since our first project with this language. I would recommend Agiliq for any size project; Shabda has assembled a team unlike any other in the industry."
     logo:
     head_shot:
+    url: "https://lanecampbell.com/"
 
   - company_name:
     name: "Colby Palmer"
@@ -71,6 +73,7 @@ clients:
       "Collaborating with Agiliq enabled us to build a scalable, effective app and thanks to their good advice we managed to avoid some pitfalls that could have cost valuable hours later in the development process."
     head_shot:
     logo:
+    url: "https://www.colbypalmer.com/"
 
   - company_name: "Buzzvote, LLC"
     name: Bruce Spector
@@ -79,14 +82,8 @@ clients:
     head_shot:
     logo:
     head_shot:
+    url: "https://www.buzzvote.com/"
 
-  - company_name: "Buzzvote, LLC"
-    name: Bruce Spector
-    testimonial: >
-      "The Agiliq team did a superb job of executing the development of the BuzzVote website on schedule and budget."
-    head_shot:
-    logo:
-    head_shot:
 
   - company_name: "iServiceGlobe"
     name: Srtini Katta
@@ -95,18 +92,24 @@ clients:
     head_shot:
     logo:
     head_shot:
+    url: "https://www.iServiceGlobe.com/"
 
   - company_name: "Suggestar, Inc"
     name: "Suggestar Founders"
     testimonial: >
       "The folks at Agiliq have been integral to us and they clearly show the same passion and drive for our product as we do. We are very proud to be working alongside a team of true experts who understand all aspects of our projects and execute with quality results."
+    url: "https://www.Suggestar.com/"
 
   - company_name: "Gogetter 247"
     name: "David Brady"
-    tetsimonial: >
+    testimonial: >
       "Shabda and his team at Agiliq have been superb partners on a very complicated django project featuring celery, redis, django templates, REST APIs, Stripe integration, push notifications, and more. Shabda is easy to work with and he has made excellent recommendations on how to solve different problems from both a process and technology perspectives. I have been extremely impressed with the technical proficiency, teamwork, and communication from Shabda and his team. I look forward to a long relationship with Shabda and Agiliq. "
     logo:
     head_shot:
+    url: "https://www.gogetter247.com/"
+
+
+
 
 
 
