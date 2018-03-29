@@ -18,16 +18,17 @@ So what is an over clause?
 
 An over clause is of this format
 
-``` {.sourceCode .sql}
+```sql
 SELECT depname, empno, salary,
   avg(salary)
     OVER (PARTITION BY depname)
 FROM empsalary;
 ```
 
+
 Compare this to a similar GROUP BY statement
 
-``` {.sourceCode .sql}
+```sql
 SELECT depname, avg(salary)
 FROM empsalary
 GROUP BY depname;
@@ -55,7 +56,7 @@ We will use the Django ORM with the Window expression to to some
 analysis on the most prolific committers to Django. To do this we will
 export the commiter names and time of commit to a csv.
 
-``` {.sourceCode .bash}
+```bash
 git log  --no-merges --date=iso --pretty=format:'%h|%an|%aI' > commits.iso.csv
 ```
 
@@ -68,7 +69,7 @@ With some light data wrangling using Pandas, we transform this to a per
 author, per year data and import to Postgres. Our table structure looks
 like this.
 
-``` {.sourceCode .sql}
+```sql
 experiments=# \d commits_by_year;
    Table "public.commits_by_year"
     Column     |  Type   | Modifiers
@@ -81,7 +82,7 @@ experiments=# \d commits_by_year;
 
 We define a model to interact with this table.
 
-``` {.sourceCode .python3}
+```python
 from django.db import models
 
 
@@ -98,14 +99,14 @@ Lets quickly test if our data is imported. [You can get a csv from
 here](https://github.com/shabda/experiments/blob/master/data/commits_by_year.csv),
 and import to Postgres to follow along.
 
-``` {.sourceCode .python3}
+```python
 In [2]: Committer.objects.all().count()
 Out[2]: 2318
 ```
 
 Let us setup our environment and get the imports we need.
 
-``` {.sourceCode .python3}
+```python
 ## Some ORM imports which we are going to need
 
 from django.db.models import Avg, F, Window
@@ -123,7 +124,7 @@ def as_table(values_queryset):
 
 Lets quickly look at the data we have.
 
-``` {.sourceCode .python3}
+```python
 as_table(Committer.objects.all().values(
   "author", "commit_year", "commits_count"
 ))
@@ -287,7 +288,7 @@ We will now use the Window expression to get the contributors ranked by
 number of commits, within each year. We will go over the code in detail,
 but lets look at the queryset and results.
 
-``` {.sourceCode .python3}
+```python
 # Find out who have been the most prolific contributors
 # in the years 2010-2017
 
@@ -487,7 +488,7 @@ as_table(commiters_with_rank)
 </div>
 Lets look a the the ORM code in more detail here.
 
-``` {.sourceCode .python3}
+```python
 # We are creating the Window function part of our SQL query here
 dense_rank_by_year = Window(
     # We want to get the Rank with no gaps
@@ -517,7 +518,7 @@ as_table(commiters_with_rank)
 Now lets try getting the average commits per commiter for each year
 along with the other data.
 
-``` {.sourceCode .python3}
+```python
 avg_commits_per_year = Window(
     # We want the average of commits per committer, with each partition
     expression=Avg("commits_count"),
@@ -716,7 +717,7 @@ This gives us
 </div>
 You could try other Window functions such as CumeDist, Rank or Ntile.
 
-``` {.sourceCode .python3}
+```python
 from django.db.models.functions import CumeDist
 cumedist_by_year = Window(
     expression=CumeDist(),
@@ -741,7 +742,7 @@ other fields too. We will partition on author to find out how their
 contributions have changed over the years using the Lag window
 expression.
 
-``` {.sourceCode .python3}
+```python
 from django.db.models.functions import Lag
 from django.db.models import Value
 commits_in_previous_year = Window(

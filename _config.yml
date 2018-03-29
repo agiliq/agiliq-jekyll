@@ -27,9 +27,16 @@ excerpt_separator: <!--more-->
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 plugins:
   - jekyll-feed
     - jekyll-redirect-from
+
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 
 # Theme settings
 doks:
