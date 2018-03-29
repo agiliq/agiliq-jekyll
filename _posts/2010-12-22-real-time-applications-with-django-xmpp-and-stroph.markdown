@@ -3,7 +3,7 @@ layout: default
 title:  "Real time applications with Django, XMPP and StropheJS"
 date:   2010-12-22 02:00:47
 author:   Javed
-categories:   xmpp
+categories:  xmpp
 ---
 
 Introduction:
