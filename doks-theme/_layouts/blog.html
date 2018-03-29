@@ -20,7 +20,9 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
-        <span class="post-meta">Written on {{ post.date | date: date_format }} by {{ post.author }}</span>
+        <span class="post-meta">Written on {{ post.date | date: date_format }} by
+            <a href="{{ site.baseurl}}/author/#{{post.author|slugize}}">{{ post.author }}</a>
+        </span>
         <span class="post-categories">
           under
           {% if post %}
