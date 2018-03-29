@@ -130,7 +130,10 @@
 											<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="nav-grid__item">
 												<div class="nav-grid__content" data-mh>
 													<h2 class="nav-grid__title">{{ item.name }}, {{ item.company_name }}</h2>
-													<p>{{ item.testimonial }}</p>
+													<p>{{ item.testimonial|truncatewords: 50 }}</p>
+													{% if item.logo %}
+														<img src="{{ item.logo }}" class="media-object" />
+													{% endif %}
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">
 													{{ item.url }}

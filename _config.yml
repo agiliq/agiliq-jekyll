@@ -66,8 +66,7 @@ doks:
         tracking_code: "UA-367368-15"
 
     comments:
-        disqus_forum_shortname: # Add your disqus forum shortname to activate comments
-
+        disqus_forum_shortname: "disqusagiliq"
 # SASS settings
 sass:
     sass_dir: ./doks-theme/_sass
