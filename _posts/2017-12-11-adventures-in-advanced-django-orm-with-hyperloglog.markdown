@@ -5,6 +5,8 @@ title:  "Adventures in advanced Django ORM with HyperLogLog"
 date:   2017-12-11 22:54:38+05:30
 categories: django
 author: shabda
+featured: true
+featured_excerpt: Counting distinct object is a common operation. Most databases and Django make its simple. But can we do quickly? Is Django ORM upto the task? Find out in this post.
 ---
 
 Counting distinct object is a common operation. Most databases and Django make its quite simple to do so. Given appropriate tables or models you would be doing something like

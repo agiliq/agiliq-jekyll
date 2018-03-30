@@ -6,6 +6,8 @@ date:   2017-12-06 05:22:38
 modified:   2017-12-06 16:52:38+05:30
 author:   shabda
 categories:   django
+featured: true
+featured_excerpt: Window expressions, which allows adding an OVER clause to querysets. This makes certain analytics queries possible in Django ORM. Find how in this post.
 ---
 
 Django 2.0 was [released

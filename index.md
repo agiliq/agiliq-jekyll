@@ -123,14 +123,14 @@ apps:
     - name: Django-Parsley
       logo:
       description: Django-Parsley is the easiest way to add client side form validations to Django
-      screenshot: assets/images/parsley-screenshot.png
+      screenshot: /assets/images/parsley-screenshot.png
       cta: "More Info"
       url: https://github.com/agiliq/Django-parsley
 
     - name: Django-Graphos
       logo:
       description: Vizbi allows you to build beautiful data visualizations. Use a visual editor or code in Python or R.
-      screenshot: assets/images/graphos-screenshot.png
+      screenshot: /assets/images/graphos-screenshot.png
       cta: "More Info"
 
 
@@ -138,7 +138,7 @@ apps:
       logo:
       description: >
         Govbuddy is the comprehensive guide to California legislatures. You can find detailed, up-to-date information on both California's state legislature and its state Congressional Delegation - all in one place.
-      screenshot: "assets/images/govbuddy-screenshot.png"
+      screenshot: "/assets/images/govbuddy-screenshot.png"
       cta: "View Site"
       url: "https://www.govbuddy.com"
 
