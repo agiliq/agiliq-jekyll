@@ -7,7 +7,7 @@
 	.hero-subheader {
 		background-color: $color-theme-green;
 	    background-repeat: repeat;
-	    background-image: url(http://localhost:4000/doks-theme/assets/images/09.jpg);
+	    background-image: url('/doks-theme/assets/images/09.jpg');
 	}
 }
 
@@ -35,7 +35,7 @@
 	.section--gradient4-theme-color-bg {
 		background-color: darken($color-theme-green, 0%);
 		background-repeat: repeat;
-	    background-image: url(http://localhost:4000/doks-theme/assets/images/04.jpg);
+	    background-image: url('/doks-theme/assets/images/04.jpg');
 	}
 }
 
