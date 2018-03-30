@@ -1,0 +1,30 @@
+.hero-subheader {
+    color: #ffffff;
+
+}
+
+.green .hero-subheader {
+    background: linear-gradient(114.1501577486589deg, rgba(46, 174, 209,1) 4.929614181438999%,rgba(80, 25, 168,1) 97.83889468196037%);
+}
+
+
+.site-header {
+    border-bottom: 1px solid rgba(213, 225, 241, 0.15);
+}
+
+.site-header__logo {
+    color: #ffffff;
+    
+    &:hover, &:focus, &:active {
+        color: #ffffff;
+        opacity: 0.9;
+    }
+}
+
+.site-header__nav {
+    color: #ffffff;
+}
+
+.site-header__nav a:hover, .site-header__nav a:focus, .site-header__nav a:active {
+    border-color: #ffffff;
+}

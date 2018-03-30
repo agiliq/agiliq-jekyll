@@ -2,3 +2,5 @@
 _sites/
 _site/
 .DS_Store
+gems
+.sass-cache
