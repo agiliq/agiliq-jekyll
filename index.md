@@ -14,6 +14,12 @@ description: >
 
   Interested? Contact us today.
 
+contact:
+  phone: xxx
+  email: xxxx
+  address: >
+    "Blah, Blah"
+
 buttons:
     - content: Contact Us
       url: '/contact/'
@@ -23,7 +29,7 @@ buttons:
       url: 'https://github.com/agiliq'
       external_url: true
 
-
+books_title: "We love writing books to share our knowledge. If you use Django, these are a must read."
 books:
   - title: Django Admin Cookbook
     description: >
@@ -50,6 +56,7 @@ books:
     cta: Read the book
     cover_image: '/assets/images/bawdadrf-book-cover.jpg'
 
+clients_text: "We will let our clients speak about our work."
 clients:
   - company_name: "Capitol Enquiry"
     name: "Bruce Campbell"
@@ -142,6 +149,12 @@ apps:
       cta: "View Site"
       url: "https://www.govbuddy.com"
 
+footer_links:
+  - text: "Our Books"
+    url: "http://books.agiliq.com"
+
+  - text: "Our Apps"
+    url: "http://apps.agiliq.com"
 
 
 # Grid navigation
