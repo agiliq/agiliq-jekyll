@@ -51,7 +51,7 @@ books:
     cover_image: '/assets/images/bawdadrf-book-cover.jpg'
 
 clients:
-  - company_name: "Govbuddy"
+  - company_name: "Capitol Enquiry"
     name: "Bruce Campbell"
     testimonial: >
       "We have been working with Agiliq Solutions as an IT partner for the past year, and we are delighted with their performance. They are both extremely capable and extremely professional. When our goals and directions are unclear or when they see a better solution, they are quick to let us know. Then, once we have agreed on specifics and timing, they get it done within budget and on schedule. We look forward to continuing to work with them in the years to come."
@@ -108,6 +108,40 @@ clients:
     logo:
     head_shot:
     url: "https://lanecampbell.com/"
+
+apps:
+  title: >
+    We love working with smart people to build wonderful things. Some of these have been built for clients, and some are open sourced.
+  apps_list:
+    - name: Vizbi
+      logo:
+      description: Vizbi allows you to build beautiful data visualizations. Use a visual editor or code in Python or R.
+      screenshot: "/assets/images/vizbi-screenshot.png"
+      cta: "View Site"
+      url: "https://www.vizbi.com"
+
+    - name: Django-Parsley
+      logo:
+      description: Django-Parsley is the easiest way to add client side form validations to Django
+      screenshot: assets/images/parsley-screenshot.png
+      cta: "More Info"
+      url: https://github.com/agiliq/Django-parsley
+
+    - name: Django-Graphos
+      logo:
+      description: Vizbi allows you to build beautiful data visualizations. Use a visual editor or code in Python or R.
+      screenshot: assets/images/graphos-screenshot.png
+      cta: "More Info"
+
+
+    - name: Govbuddy
+      logo:
+      description: >
+        Govbuddy is the comprehensive guide to California legislatures. You can find detailed, up-to-date information on both California's state legislature and its state Congressional Delegation - all in one place.
+      screenshot: "assets/images/govbuddy-screenshot.png"
+      cta: "View Site"
+      url: "https://www.govbuddy.com"
+
 
 
 # Grid navigation
