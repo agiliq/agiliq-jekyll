@@ -29,14 +29,25 @@ excerpt_separator: <!--more-->
 markdown: kramdown
 highlighter: rouge
 plugins:
+  - jekyll-archives
   - jekyll-feed
-    - jekyll-redirect-from
+  - jekyll-redirect-from
 
 
 kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
+
+jekyll-archives:
+  enabled: "all"
+  layout: 'default'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 
 # Theme settings
 doks:
