@@ -6,6 +6,8 @@
 .green {
 	.hero-subheader {
 		background-color: $color-theme-green;
+	    background-repeat: repeat;
+	    background-image: url(http://localhost:4000/doks-theme/assets/images/09.jpg);
 	}
 }
 
