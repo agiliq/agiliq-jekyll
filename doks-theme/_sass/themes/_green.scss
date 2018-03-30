@@ -32,6 +32,11 @@
 	.section--lighter-theme-color-bg {
 		background-color: darken($color-theme-green, 0%);
 	}
+	.section--gradient4-theme-color-bg {
+		background-color: darken($color-theme-green, 0%);
+		background-repeat: repeat;
+	    background-image: url(http://localhost:4000/doks-theme/assets/images/04.jpg);
+	}
 }
 
 /* ----- Page nav ----- */
