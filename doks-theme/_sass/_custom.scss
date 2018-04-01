@@ -29,3 +29,11 @@
 .site-header__nav a:hover, .site-header__nav a:focus, .site-header__nav a:active {
     border-color: #ffffff;
 }
+
+.btn-grad {
+    background: linear-gradient(to right, #F45C43 0%, #EB3349 100%);     
+}
+.btn-grad:hover { 
+    background: #f6d000;
+    color: #fff ;
+}
