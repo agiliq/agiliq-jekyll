@@ -167,7 +167,7 @@ While pickling, we ensure data is populated, then use `self.__dict__` to get que
 
 On a related note, `{**self.__dict__, DJANGO_VERSION_PICKLE_KEY: get_version()}`, shows why you should move to Python 3. This syntax for merging dictionaries doesn't work in Python2.
 
-### Implemnting `__repr__`
+### Implementing `__repr__`
 
 The code for `__repr__`, look like this
 
