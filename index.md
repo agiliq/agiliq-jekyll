@@ -21,9 +21,11 @@ contact:
     "Blah, Blah"
 
 buttons:
-    - content: Contact Us
+    - content: 'Contact Us '
       url: '/contact/'
       external_url: false
+      icon: envelope
+      
     - icon: github
       content: Open Source
       url: 'https://github.com/agiliq'

@@ -23,9 +23,10 @@
 										{{ button.content }}
 									</a>
 									{% else %}
-									<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ button.url }}" class="btn btn--dark btn--rounded btn--w-icon">
-										{% if button.icon %}<i class="icon icon--{{ button.icon }}"></i>{% endif %}
+									<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ button.url }}" class="btn btn-grad btn--dark btn--rounded btn--w-icon">
+										
 										{{ button.content }}
+								    <span class="icon ic-envelope"></span>
 									</a>
 									{% endif %}
 								{% endfor %}

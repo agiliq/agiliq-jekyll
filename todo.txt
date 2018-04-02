@@ -1,7 +1,7 @@
 Things to do
 
-- Gradients
-- Add a contact icon to contacts us buton.
+//- Gradients
+//- Add a contact icon to contacts us buton.
 - Make the contact button stand out (Different color?)
 - Sticky buttons to top (Contact, OPen Source)
 - Add intro text to each set of blocks.
