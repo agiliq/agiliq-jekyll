@@ -34,7 +34,7 @@ Query and related classes implement the following methods to get the properies w
 
 We will look at how Django 2.0 does it.
 
-### Implemnting `__getitem__`
+### Implementing `__getitem__`
 
 The code looks like this:
 
@@ -71,7 +71,7 @@ There is a lot going on here, but each `if` block is straightforward.
 - In second block, if `_result_cache` is filled, aka the queryset has been evaluated, we return the slice from the cache and skip hitting the db again.
 - If the  `_result_cache` is not filled, we `qs.query.set_limits(start, stop)` which sets the limit and offset in sql.
 
-### Implemnting `__iter__`
+### Implementing `__iter__`
 
 ``` python
 def __iter__(self):
@@ -98,7 +98,7 @@ class FlatValuesListIterable(BaseIterable):
             yield row[0]
 ```
 
-### Implemnting `__and__` and `__or__`
+### Implementing `__and__` and `__or__`
 
 The code looks like this:
 
@@ -117,7 +117,7 @@ def __and__(self, other):
 
 We d some sanity checks on the querysets, return early if one of the querysets is empty then apply SQL or using `combined.query.combine(other.query, sql.AND)`. The `__or__` is essentially same except the SQL is changed using `combined.query.combine(other.query, sql.OR)`
 
-### Implemnting `__bool__`
+### Implementing `__bool__`
 
 The code looks like this:
 
@@ -132,7 +132,7 @@ Pretty straightforward, `_fetch_all()` ensures that the queryset is evaluated,
 and `_result_cache` is filled. We then return the boolean equivalent of `_result_cache`, which means if there are any records, you will get a `True`.
 
 
-### Implemnting `__getstate__` and `__setstate__`
+### Implementing `__getstate__` and `__setstate__`
 
 `__getstate__` and `__setstate__` look like this:
 
