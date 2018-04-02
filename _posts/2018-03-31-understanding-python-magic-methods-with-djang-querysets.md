@@ -73,7 +73,119 @@ There is a lot going on here, but each `if` block is straightforward.
 
 ### Implemnting `__iter__`
 
+``` python
+    def __iter__(self):
+        # ...
+        self._fetch_all()
+        return iter(self._result_cache)
+```
+
+Pretty strightforward, we populate the data then use builtin `iter` to return an iterator.
+
+It is also instructive to look at `FlatValuesListIterable.__iter__` which uses `yeild` to implment `__iter__`.
+
+``` python
+class FlatValuesListIterable(BaseIterable):
+    """
+    Iterable returned by QuerySet.values_list(flat=True) that yields single
+    values.
+    """
+
+    def __iter__(self):
+        queryset = self.queryset
+        compiler = queryset.query.get_compiler(queryset.db)
+        for row in compiler.results_iter(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size):
+            yield row[0]
+```
+
 ### Implemnting `__and__` and `__or__`
+
+The code looks like this:
+
+```python
+    def __and__(self, other):
+        self._merge_sanity_check(other)
+        if isinstance(other, EmptyQuerySet):
+            return other
+        if isinstance(self, EmptyQuerySet):
+            return self
+        combined = self._chain()
+        combined._merge_known_related_objects(other)
+        combined.query.combine(other.query, sql.AND)
+        return combined
+```
+
+We d some sanity checks on the querysets, return early if one of the querysets is empty then apply SQL or using `combined.query.combine(other.query, sql.AND)`. The `__or__` is essentially same except the SQL is changed using `combined.query.combine(other.query, sql.OR)`
+
 ### Implemnting `__bool__`
+
+The code looks like this:
+
+```python
+
+    def __bool__(self):
+        self._fetch_all()
+        return bool(self._result_cache)
+```
+
+Pretty straightforward, `_fetch_all()` ensures that the queryset is evaluated,
+and `_result_cache` is filled. We then return the boolean equivalent of `_result_cache`, which means if there are any records, you will get a `True`.
+
+
 ### Implemnting `__getstate__` and `__setstate__`
+
+`__getstate__` and `__setstate__` look like this:
+
+```python
+    def __getstate__(self):
+        # Force the cache to be fully populated.
+        self._fetch_all()
+        return {**self.__dict__, DJANGO_VERSION_PICKLE_KEY: get_version()}
+
+    def __setstate__(self, state):
+        msg = None
+        pickled_version = state.get(DJANGO_VERSION_PICKLE_KEY)
+        if pickled_version:
+            current_version = get_version()
+            if current_version != pickled_version:
+                msg = (
+                    "Pickled queryset instance's Django version %s does not "
+                    "match the current version %s." % (pickled_version, current_version)
+                )
+        else:
+            msg = "Pickled queryset instance's Django version is not specified."
+
+        if msg:
+            warnings.warn(msg, RuntimeWarning, stacklevel=2)
+
+        self.__dict__.update(state)
+
+```
+
+While pickling, we ensure data is populated, then use `self.__dict__` to get queryset representation, and return it along with Django version. While unpickling,
+`__setstate__` ensures that a warning is raised when pickled querysets are used across Django versions.
+
+On a related note, `{**self.__dict__, DJANGO_VERSION_PICKLE_KEY: get_version()}`, shows why you should move to Python 3. This syntax for merging dictionaries doesn't work in Python2.
+
 ### Implemnting `__repr__`
+
+The code for `__repr__`, look like this
+
+```python
+
+def __repr__(self):
+        data = list(self[:REPR_OUTPUT_SIZE + 1])
+        if len(data) > REPR_OUTPUT_SIZE:
+            data[-1] = "...(remaining elements truncated)..."
+        return '<%s %r>' % (self.__class__.__name__, data)
+```
+
+This is straightforward, but has a few nice tricks worth looking at.
+
+`self[:REPR_OUTPUT_SIZE + 1]` does slicing, which because we implemented `__getitem__`, does `... limit ... offset ...` query.
+
+`REPR_OUTPUT_SIZE` ensures that we don't pull in the wholeyset to display data, but pulls up `REPR_OUTPUT_SIZE + 1` records. On next line `len(data) > REPR_OUTPUT_SIZE` allows us the check if there were more records without hitting the DB.
+
+### Final thoughts
+
+Magic, dunder methods provide a clean straightforward way to provide a clean api to your classes. Unlike their name, they don;t have any hidden magic and should be used where irt makes sense.
