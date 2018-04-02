@@ -20,6 +20,7 @@ contact:
   address: >
     "Blah, Blah"
 
+
 buttons:
     - content: 'Contact Us '
       url: '/contact/'
@@ -106,21 +107,22 @@ clients:
     testimonial: >
       "Collaborating with Agiliq enabled us to build a scalable, effective app and thanks to their good advice we managed to avoid some pitfalls that could have cost valuable hours later in the development process."
     head_shot:
-    logo:
-    url: "https://www.colbypalmer.com/"
+    logo: "/assets/images/colby-palmer.png"
+    url: "http://www.colbypalmer.com/"
 
 
   - company_name: Humble Advisors
     name: "Lane Campbell"
     testimonial: >
       "Shabda has been a reliable provider for Django programming since our first project with this language. I would recommend Agiliq for any size project; Shabda has assembled a team unlike any other in the industry."
-    logo:
+    logo: "/assets/images/lane-campbell.png"
     head_shot:
     url: "https://lanecampbell.com/"
 
 apps:
+ # old title: > "We love working with smart people to build wonderful things. Some of these have been built for clients, and some are open sourced."
   title: >
-    We love working with smart people to build wonderful things. Some of these have been built for clients, and some are open sourced.
+    We love working with smart people to build wonderful things.
   apps_list:
     - name: Vizbi
       logo:
