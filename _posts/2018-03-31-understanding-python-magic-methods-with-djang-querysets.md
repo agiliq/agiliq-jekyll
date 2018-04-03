@@ -3,7 +3,7 @@ layout: default
 comments: true
 title:  "Understanding python magic methods by reading Django queryset source code."
 date:   2018-01-21 19:41:32+05:30
-categories: [python, django, tutorial]
+categories: [python, django, tutorial, django-internals]
 author: shabda
 ---
 
