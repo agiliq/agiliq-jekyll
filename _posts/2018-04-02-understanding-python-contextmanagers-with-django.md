@@ -1,7 +1,7 @@
 ---
 layout: default
 comments: true
-title:  "Understanding Python contextmanagers by reading Django source code"
+title:  "Understanding Python context managers by reading Django source code"
 date:   2018-04-02
 categories: [python, django, tutorial, django-internals]
 author: shabda
