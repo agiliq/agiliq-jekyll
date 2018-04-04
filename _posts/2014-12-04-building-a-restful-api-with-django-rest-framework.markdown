@@ -6,7 +6,16 @@ date:   2014-12-04 21:26:02+05:30
 categories: API, django
 author: Rakesh
 ---
-API's turned to be the heart of every application in our time. With the rise of social media, API's are being developed at a faster pace and gaining a lot of attention. Gone are the days where RPC architectures like CORBA and XML-RPC are used to enable the exchange of information and REST has taken its place making its mark in getting the things pretty straight forward.
+
+<div class="callout callout--info">
+    If you are building APIs with Django and DRF, you should read our API book.
+    It is updated for Django 2.0+ and Python 3.6+. This book starts where the Django tutorials stop. In the Django tutorials, you built a regular Django polls app. In this book you will build an API for a similar app.
+    <strong>
+        <a href="https://books.agiliq.com/projects/django-api-polls-tutorial/en/latest/" target="_blank">Building APIs with Django and Django Rest Framework</a>
+    </strong>
+</div>
+
+APIs turned to be the heart of every application in our time. With the rise of social media, APIs are being developed at a faster pace and gaining a lot of attention. Gone are the days where RPC architectures like CORBA and XML-RPC are used to enable the exchange of information and REST has taken its place making its mark in getting the things pretty straight forward.
 
 We use APIs in our everyday life. Take an instance booking a ticket for a movie through some website. Here is the process that takes place in the background. When dealing with the payment for the ticket, the website connects to the bank and sends your credit card details to the remote application and it gets verified. And once, the payment is confirmed by the remote application, it sends a confirmation response to the movie booking website to issue the tickets. The payment stuff turned possible here as the bank facilitates an API through which a website can connect to it and deal with the payments which resulted us an effective and seamless transaction.
 
