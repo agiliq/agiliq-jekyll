@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Doing things with Django forms"
 date:   2010-01-14 17:56:18+05:30

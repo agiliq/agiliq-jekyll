@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Getting started with Django tastypie"
 date:   2015-03-23 17:40:53+05:30

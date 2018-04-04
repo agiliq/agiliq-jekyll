@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Using a Postman http client for efficient HTTP testing"
 date:   2014-09-08 16:05:43+05:30

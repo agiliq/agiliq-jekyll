@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Django quiz"
 date:   2009-12-03 21:56:31+05:30

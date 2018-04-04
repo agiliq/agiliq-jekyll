@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Using Appengine with Django, why it is pretty much unusable"
 date:   2008-04-09 15:02:36+05:30

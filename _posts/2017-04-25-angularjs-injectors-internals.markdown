@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "AngularJS injectors internals"
 date:   2017-04-25 20:34:49+05:30

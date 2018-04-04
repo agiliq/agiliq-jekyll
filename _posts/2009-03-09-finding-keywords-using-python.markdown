@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Finding keywords using Python"
 date:   2009-03-09 23:49:56+05:30

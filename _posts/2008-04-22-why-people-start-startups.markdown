@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Why people start startups."
 date:   2008-04-22 10:34:47+05:30

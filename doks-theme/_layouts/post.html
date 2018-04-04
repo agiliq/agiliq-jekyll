@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{{ content }}
+
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+<div class="callout callout--success">
+    Thank you for reading the Agiliq blog. This article was writen by {{ page.author }} on {{ page.date | date: date_format }} in
+        {% for category in page.categories %}
+          <a href="{{ site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+      {% unless forloop.last %},&nbsp;{% endunless %}
+      {% endfor %}.
+    <br />
+    You can <a href="/feed.xml" class="btn">subscribe ⚛</a>, <a href="https://books.agiliq.com/">read our books 📖</a> or <a href="/contact/">contact us ✉</a>
+</div>
+

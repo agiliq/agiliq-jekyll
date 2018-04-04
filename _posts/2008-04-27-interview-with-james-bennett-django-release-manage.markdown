@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Interview with James Bennett - Django release manager"
 date:   2008-04-27 11:54:11+05:30

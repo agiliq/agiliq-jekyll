@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Getting started with webapp2 and GAE"
 date:   2017-09-04 12:45:27+05:30

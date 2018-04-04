@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Book review: The Principles of Project Management"
 date:   2010-12-24 23:59:12+05:30

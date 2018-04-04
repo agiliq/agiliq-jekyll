@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Importing your old comments to Disqus site"
 date:   2015-01-16 19:42:08+05:30

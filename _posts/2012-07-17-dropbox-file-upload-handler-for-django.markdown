@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title: "Dropbox file upload handler for django"
 date:   2012-07-17 00:00:00

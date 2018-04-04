@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  Introduction to Python Workshop on February 15th, 2013
 date:   2013-02-08 00:00:00

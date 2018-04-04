@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "How we built a Twitter Application"
 date:   2009-02-19 13:50:52+05:30

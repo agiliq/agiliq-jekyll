@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:	"Dissecting Phonegap\'s architecture"
 date:   2012-09-06 00:00:00

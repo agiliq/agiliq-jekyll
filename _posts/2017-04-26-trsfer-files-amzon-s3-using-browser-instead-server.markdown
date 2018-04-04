@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title: "Transfer files to amazon s3 using browser instead of server"
 date: 2017-04-26 02:29:55+05:30

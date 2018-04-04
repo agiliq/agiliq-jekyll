@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Django for a Rails Developer"
 date:   2009-11-26 20:12:21+05:30

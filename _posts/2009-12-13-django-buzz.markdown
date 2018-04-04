@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Django-buzz"
 date:   2009-12-13 04:01:42+05:30

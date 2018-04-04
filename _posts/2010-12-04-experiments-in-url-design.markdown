@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Experiments in URL design."
 date:   2010-12-04 15:41:47+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Google diff match patch library"
 date:   2014-05-09 16:29:34+05:30

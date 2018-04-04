@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Book Review: Pragmatic Guide to JavaScript"
 date:   2010-12-26 11:40:11+05:30

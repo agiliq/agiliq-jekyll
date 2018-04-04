@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Iterators and Iterables"
 date:   2017-10-12 11:36:19+05:30

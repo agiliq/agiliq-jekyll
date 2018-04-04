@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Comparison of mobile app frameworks: Iphone, Java, Phonegap and Titanium"
 date:   2011-02-08 23:59:16+05:30

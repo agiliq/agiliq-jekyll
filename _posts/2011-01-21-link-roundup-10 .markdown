@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Link roundup 10"
 date:   2011-01-21 04:55:19

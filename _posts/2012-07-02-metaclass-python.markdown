@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Metaclass in Python"
 date:   2012-07-02 08:11:46+05:30

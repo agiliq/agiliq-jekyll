@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Beginning python"
 date:   2009-09-18 17:16:43+05:30

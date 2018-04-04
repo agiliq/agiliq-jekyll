@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Python Wrapper on Bing API"
 date:   2009-06-10 12:09:33+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Seven reasons why you should switch to Vim"
 date:   2010-11-03 16:16:15+05:30

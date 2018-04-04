@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title: "Django 2.0 Window expressions tutorial"
 date:   2017-12-06 05:22:38

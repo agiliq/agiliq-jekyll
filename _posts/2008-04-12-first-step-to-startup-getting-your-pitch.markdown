@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "First step to startup - Getting your pitch"
 date:   2008-04-12 12:41:54+05:30

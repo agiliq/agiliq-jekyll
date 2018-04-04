@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Android Fragments 101"
 date:   2013-01-01 11:30:00+05:30

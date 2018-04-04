@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "What, when and how of AngularJS configuration blocks"
 date:   2017-04-27 17:15:03+05:30

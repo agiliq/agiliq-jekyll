@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "The Unfuddle Tutorial"
 date:   2010-12-04 20:55:21+05:30

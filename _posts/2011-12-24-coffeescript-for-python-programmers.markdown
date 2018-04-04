@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Coffeescript for Python programmers"
 date:   2011-12-24 11:54:11+05:30

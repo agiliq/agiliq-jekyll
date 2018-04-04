@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Character encoding and Unicode"
 date:   2014-11-19 13:45:15+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Understanding decorators"
 date:   2009-06-23 19:34:57+05:30

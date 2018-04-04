@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Django backward relationship lookup"
 date:   2014-04-28 10:30:01+05:30

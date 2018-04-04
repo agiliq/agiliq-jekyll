@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Google Appengine - First Impressions"
 date:   2008-04-09 14:32:57+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Django-SocialAuth - Login via twitter, facebook, openid, yahoo, google using a single app."
 date:   2009-08-27 14:50:33+05:30

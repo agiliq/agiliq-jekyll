@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "State pattern with UI Code"
 date:   2013-10-14 16:39:27+05:30

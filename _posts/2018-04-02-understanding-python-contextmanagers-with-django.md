@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Understanding Python context managers by reading Django source code"
 date:   2018-04-02

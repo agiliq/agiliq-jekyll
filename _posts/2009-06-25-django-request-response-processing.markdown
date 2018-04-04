@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Django Request Response processing"
 date:   2009-06-25 09:59:56+05:30

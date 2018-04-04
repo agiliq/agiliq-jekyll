@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title: "Jobs"
 date:   2011-03-15 05:22:12

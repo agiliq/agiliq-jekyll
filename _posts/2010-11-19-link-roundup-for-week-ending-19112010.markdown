@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Link Roundup for week ending 19/11/2010"
 date:   2010-11-19 05:52:48

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Django with Mysql and Apache on EC2"
 date:   2009-03-06 13:48:17+05:30

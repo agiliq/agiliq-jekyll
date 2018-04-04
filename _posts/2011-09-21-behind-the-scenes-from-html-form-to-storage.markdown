@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title: "From HTML Form to Storage"
 date:   2011-09-21 17:00:00

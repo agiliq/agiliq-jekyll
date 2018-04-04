@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Common testing scenarios for Django app."
 date:   2013-04-28 20:33:38+05:30

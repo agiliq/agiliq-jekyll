@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Understanding python magic methods by reading Django queryset source code."
 date:   2018-01-21 19:41:32+05:30

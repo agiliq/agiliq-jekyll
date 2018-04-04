@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "How performant is your Python web application"
 date:   2017-11-15 12:26:01+05:30

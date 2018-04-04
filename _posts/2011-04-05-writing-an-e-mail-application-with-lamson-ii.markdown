@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Writing an e-mail application with Lamson - II"
 date:   2011-04-05 03:14:10

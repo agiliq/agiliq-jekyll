@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Disqus and Disqus SSO"
 date:   2014-11-17 20:00:29+05:30

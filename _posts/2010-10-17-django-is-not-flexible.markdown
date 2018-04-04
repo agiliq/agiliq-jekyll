@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Django is not flexible"
 date:   2010-10-17 20:47:46+05:30

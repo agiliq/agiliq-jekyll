@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Building Chrome Extensions"
 date:   2015-03-04 11:40:38+05:30

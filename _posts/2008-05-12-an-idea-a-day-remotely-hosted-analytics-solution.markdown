@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "An idea a day - Remotely hosted Analytics solution"
 date:   2008-05-12 20:52:39+05:30

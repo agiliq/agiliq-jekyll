@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Getting started with python scrapy"
 date:   2016-04-02 21:04:43+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "On Captcha"
 date:   2009-07-16 14:05:35+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Self-testing fabfile using docker"
 date:   2013-06-28 18:57:35+05:30

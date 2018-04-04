@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Real time applications with Django, XMPP and StropheJS"
 date:   2010-12-22 02:00:47

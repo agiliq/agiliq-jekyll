@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "The magic of metaclasses in Python"
 date:   2009-11-21 18:07:59+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Minimal Nginx and Gunicorn configuration for Django projects"
 date:   2013-08-26 18:05:50+05:30

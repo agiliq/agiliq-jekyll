@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Book review: The Principles of Successful Freelancing"
 date:   2010-12-25 13:21:21+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Getting trending Github projects via YQL"
 date:   2010-10-25 01:57:33+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Writing thread-safe django - get_or_create"
 date:   2013-08-21 19:34:24+05:30

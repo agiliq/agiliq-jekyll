@@ -4,13 +4,13 @@ layout: homepage
 keywords:
 
 # Hero section
-title: Agiliq – App development with Python, Django and more
+title: Agiliq – Webapp and API development with Python, Django and more
 description: >
-  Agiliq is an app development studio building web apps.
+  We build scalabale and maintainable webapps and APIs.
 
-  We develop custom, bespoke web and mobile apps using Django, Python, Postgres, Angular and other modern tools. We primarily work with startups, small businesses and other agencies.
+  We develop custom, bespoke webapps and mobile backends using Django, Python, Postgres, Angular and other modern tools.
 
-  We love building amazing apps. We have done it in the past. We are doing it right now, and we can do it for you.
+  We love building amazing apps. We have been doing it since 2009. We are doing it right now, and we can do it for you.
 
   Interested? Contact us today.
 
@@ -26,7 +26,7 @@ buttons:
       url: '/contact/'
       external_url: false
       icon: envelope
-      
+
     - icon: github
       content: Open Source
       url: 'https://github.com/agiliq'
@@ -155,22 +155,22 @@ apps:
 
 footer_links:
   - text: "Our Books"
-    url: "http://books.agiliq.com"
+    url: "https://books.agiliq.com"
 
   - text: "Our Apps"
-    url: "http://apps.agiliq.com"
+    url: "https://apps.agiliq.com"
 
 
 # Grid navigation
 grid_navigation:
     - title: Blog
       excerpt: Read about Django, Python, Postgres, Pandas and more.
-      cta: Read more
+      cta: Read the blog
       url: '/blog/'
 
     - title: Our Books
       excerpt: Read about books on Django Admin, ORM, APIs using DRF and more.
-      cta: Read the Books
+      cta: Read the books
       url: 'https://books.agiliq.com/'
       external_url: true
 

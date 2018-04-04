@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "iPhone and Android application development using Titanium"
 date:   2011-02-03 20:52:06+05:30

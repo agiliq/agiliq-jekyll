@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "How and why to use pyflakes to write better Python"
 date:   2012-02-02 11:30:01+05:30

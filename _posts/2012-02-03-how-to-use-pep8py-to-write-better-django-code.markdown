@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "How to use pep8.py to write better Django code"
 date:   2012-02-03 11:30:01+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Web development companies working with Django"
 date:   2009-03-09 11:54:11+05:30

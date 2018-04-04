@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title: Developing android applications from command line
 date:   2012-03-20 01:00:00

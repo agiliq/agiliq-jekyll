@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Rails and Django commands : comparison  and conversion"
 date:   2010-03-20 18:35:30+05:30

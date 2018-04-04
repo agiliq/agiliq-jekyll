@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Python-requests"
 date:   2014-05-05 15:28:08+05:30

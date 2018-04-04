@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Using Paypal with Django"
 date:   2008-11-12 01:40:22+05:30

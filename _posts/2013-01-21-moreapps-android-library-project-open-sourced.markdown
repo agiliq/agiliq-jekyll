@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "MoreApps - Android Library Project: Open Sourced"
 date:   2013-01-21 11:30:00+05:30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Using Ubuntu cloud images in KVM"
 date:   2012-07-16 00:00:00

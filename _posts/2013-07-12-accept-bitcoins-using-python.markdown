@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Accept bitcoins using python"
 date:   2013-07-12 18:32:44+05:30

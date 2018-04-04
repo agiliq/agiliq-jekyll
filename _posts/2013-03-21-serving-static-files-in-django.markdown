@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Serving static files in Django"
 date:   2013-03-21 10:30:01+05:30

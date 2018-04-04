@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Heroku Django S3 for serving Media files"
 date:   2014-06-05 08:17:35+05:30

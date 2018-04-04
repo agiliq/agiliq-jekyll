@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Two Django+Appengine Tutorials"
 date:   2008-04-11 01:06:13+05:30

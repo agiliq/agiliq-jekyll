@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Writing jQuery plugins using Coffeescript"
 date:   2012-01-06 11:54:11+05:30

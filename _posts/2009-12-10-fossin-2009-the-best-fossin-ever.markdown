@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Foss.in 2009: The best foss.in. Ever. "
 date:   2009-12-10 23:58:31+05:30

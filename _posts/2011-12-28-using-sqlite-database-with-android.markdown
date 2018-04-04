@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Using SQLite Database with Android"
 date:   2011-12-28 11:30:00+05:30

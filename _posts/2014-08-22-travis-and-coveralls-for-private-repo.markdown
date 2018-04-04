@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Travis and coveralls for private repo"
 date:   2014-08-22 12:59:46+05:30

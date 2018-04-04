@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Test Driven Development in Python "
 date:   2012-05-02 20:41:12+05:30

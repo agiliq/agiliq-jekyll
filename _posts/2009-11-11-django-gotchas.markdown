@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "Django gotchas "
 date:   2009-11-11 18:57:25+05:30

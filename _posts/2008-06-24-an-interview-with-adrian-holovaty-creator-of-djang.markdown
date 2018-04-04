@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 comments: true
 title:  "An Interview with Adrian Holovaty - Creator of Django"
 date:   2008-06-24 03:36:06+05:30
