@@ -8,15 +8,11 @@ author: shabda
 ---
 First the definition from [Wolfram](http://mathworld.wolfram.com/MarkovChain.html)
 
-<blockquote>
-A Markov chain is collection of random variables {X_t} (where the index t runs through 0, 1, ...) having the property that, given the present, the future is conditionally independent of the past.
-</blockquote>
+> A Markov chain is collection of random variables {X_t} (where the index t runs through 0, 1, ...) having the property that, given the present, the future is conditionally independent of the past.
 
 [Wikipedia](http://en.wikipedia.org/wiki/Transition_probabilities) is a little clearer
 
-<blockquote>
- ...Markov chain is a stochastic process with markov property ... [Which means] state changes are probabilistic, and future state depend on current state only.
-</blockquote>
+> ...Markov chain is a stochastic process with markov property ... [Which means] state changes are probabilistic, and future state depend on current state only.
 
 Markov chains have various uses, but now let's see how it can be used to generate
 gibberish, which might look legit.
