@@ -180,10 +180,15 @@
 									{% for item in page.apps.apps_list %}
 										<div class="col-sm-6">
 											<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="nav-grid__item">
-												<div class="nav-grid__content" data-mh>
-													<h2 class="nav-grid__title">{{ item.name }}</h2>
-													<p>{{ item.description }}</p>
-													<img src="{{ item.screenshot }}" class="media-object" />
+												<div class="" data-mh>
+												<img src="{{ item.screenshot }}" class="media-object" />
+												<div class="card-description">
+                                                        <h5 class="book-title">{{ item.name | truncate: 30}}</h5>
+                                                        <p>{{ item.description | truncate: 150 }}</p>
+                                                    </div>	
+													<!-- <h2 class="nav-grid__title">{{ item.name }}</h2>
+													<p>{{ item.description }}</p> -->
+													
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">
 													{{ item.cta }}

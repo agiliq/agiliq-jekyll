@@ -107,7 +107,7 @@ clients:
     testimonial: >
       "Collaborating with Agiliq enabled us to build a scalable, effective app and thanks to their good advice we managed to avoid some pitfalls that could have cost valuable hours later in the development process."
     head_shot:
-    logo: "/assets/images/colby-palmer.png"
+    logo: "/assets/images/colby-palmer.PNG"
     url: "http://www.colbypalmer.com/"
 
 
@@ -115,7 +115,7 @@ clients:
     name: "Lane Campbell"
     testimonial: >
       "Shabda has been a reliable provider for Django programming since our first project with this language. I would recommend Agiliq for any size project; Shabda has assembled a team unlike any other in the industry."
-    logo: "/assets/images/lane-campbell.png"
+    logo: "/assets/images/lane-campbell.PNG"
     head_shot:
     url: "https://lanecampbell.com/"
 
