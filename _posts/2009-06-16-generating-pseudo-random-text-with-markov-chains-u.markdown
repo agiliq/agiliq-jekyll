@@ -3,7 +3,7 @@ layout: default
 comments: true
 title:  "Generating pseudo random text with Markov chains using Python"
 date:   2009-06-16 11:54:11+05:30
-categories: algorithms
+categories: algorithms, python
 author: shabda
 ---
 First the definition from [Wolfram](http://mathworld.wolfram.com/MarkovChain.html)
@@ -51,7 +51,7 @@ To see a sample output, we take the text of _My man jeeves_ by Wodehouse from
     the blue with milk'
 
 
-[The files you need to run this are <a href='http://www.agiliq.com/blog/wp-content/uploads/2009/06/jeeves.txt'>jeeves.txt</a> and <a href='http://www.agiliq.com/blog/wp-content/uploads/2009/06/markovgenpy.txt'>markovgen.py</a>]
+[The files you need to run this are [jeeves.txt](/assets/code/jeeves.txt) and [markovgen.py](/assets/code/markovgen.py)]
 
 
 
@@ -97,8 +97,8 @@ and a better random text.
 
 ### Resources
 
-* <a href='http://www.agiliq.com/blog/wp-content/uploads/2009/06/jeeves.txt'>jeeves.txt</a>
-* <a href='http://www.agiliq.com/blog/wp-content/uploads/2009/06/markovgenpy.txt'>markovgen.py</a>
+* [jeeves.txt](/assets/code/jeeves.txt)
+* [markovgen.py](/assets/code/markovgen.py)
 * [Online markov text generator](http://www.yisongyue.com/shaney/)
 * [Twitter markov script](http://www.yaymukund.com/twittov/)
 

@@ -3,7 +3,7 @@ layout: default
 comments: true
 title:  "How to use jsTree"
 date:   2011-10-12 16:30:00+05:30
-categories: Treeview
+categories: Treeview, javascript
 author: akshar
 ---
 Using jsTree
