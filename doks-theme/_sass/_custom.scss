@@ -133,6 +133,7 @@
         transform: skewY(-3deg);
         top: -120px;
         z-index: 1;
+ 
     }
 }
 
@@ -140,7 +141,10 @@
  @include skew;
     &:before {
       background: white;  
-        
+      @include media-query($on-palm) {
+                height: 90px;
+                top: -40px;
+            }  
     }
 }
 
@@ -151,7 +155,11 @@
 }
 
 .padding-14 {
-        padding: 10em 0 10em 0;
+    padding: 10em 0;
+        @include media-query($on-palm) {
+            padding: 4em 0;
+        }
+
 }
 
 .bg {
@@ -181,8 +189,24 @@
 .footer-links {
     list-style: none;
     text-align: center;
-    li {
+    font-size: $small-fs;
 
+    @include media-query($on-palm) {
+        text-align: left;
+        margin-bottom: 2em;
+       
+    }    
+    
+    li {
+        margin: 0;
+        padding: 0;
+        
+        @include media-query($on-palm) {
+            margin: 0;
+            padding: 0;
+        }
+        
+        
         &:before {
             content: "";
         }
@@ -191,6 +215,9 @@
             text-decoration: none;
             color: white;
             border: none;
+            &:hover {
+                opacity: 0.9;
+            }
         }
     }
     
