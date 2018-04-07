@@ -153,6 +153,10 @@ apps:
       cta: "View Site"
       url: "https://www.govbuddy.com"
 
+blogs:
+    title: >
+        Read about Django, Python, Postgres, Pandas and more.
+
 footer_links:
   - text: "Our Books"
     url: "http://books.agiliq.com"

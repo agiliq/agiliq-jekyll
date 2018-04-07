@@ -1,10 +1,10 @@
 {% if site.doks.footer.content.logo.image or site.doks.footer.content.logo.text or site.doks.footer.content.copyright or site.doks.footer.social_list %}
-	<footer class="site-footer">
+	<footer class="site-footer dark-bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					{% if site.doks.footer.content.logo.text %}
-						<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}/" class="site-footer__logo">{{ site.doks.footer.content.logo.text }}</a>
+						<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}/" class="site-footer__logo text-white">{{ site.doks.footer.content.logo.text }}</a>
 					{% elsif site.doks.footer.content.logo.image %}
 						<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}/" class="site-footer__logo">
 							<img src="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}/doks-theme/assets/images/layout/logo-footer.png">
@@ -12,11 +12,21 @@
 					{% endif %}
 					{% if site.doks.footer.content.copyright %}
 						<hr>
-						<p class="site-footer__copyright">{{ site.doks.footer.content.copyright }}</p>
+						<p class="site-footer__copyright text-white">{{ site.doks.footer.content.copyright }}</p>
 					{% endif %}
 				</div><!-- /.col -->
+				
+				<div class="col-sm-4">
+				    <ul class="footer-links">
+						    <li><a href="">About US</a></li>
+						    <li><a href="">Blog</a></li>
+						    <li><a href="">Books</a></li>
+						    <li><a href="">Newsletter</a></li>
+						</ul>
+				</div>
+				
 				{% if site.doks.footer.social_list %}
-					<div class="col-sm-6 align-right">
+					<div class="col-sm-4 align-right">
 						<ul class="social-list">
 							{% for item in site.doks.footer.social_list %}
 								<li>
@@ -26,6 +36,7 @@
 								</li>
 							{% endfor %}
 						</ul><!-- /.social-list -->
+						
 					</div><!-- /.col -->
 				{% endif %}
 			</div><!-- /.row -->

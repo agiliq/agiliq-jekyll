@@ -7,8 +7,8 @@ Things to do
 //- Add intro text to each set of blocks.
 //- Fix design of clients testimonial blocks.
 //- Fix design of books blocks.
-- Footer: Add footer links. Add contact details.
-- Add a contact us at the end.
+//- Footer: Add footer links. Add contact details.
+//- Add a CTA at the end.
 - Make only cta block cliackable (excepting the grid naviagation).
 - Try using a stock image for index header
 

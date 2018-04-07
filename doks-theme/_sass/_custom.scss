@@ -67,8 +67,7 @@
 }
 
 .books {
-    padding: 4rem 0;
-    background-color: lighten($brand-color, 30%);
+    
 }
 
 .clients {
@@ -119,4 +118,91 @@
     width: 150px;
 /*     margin: 0 auto;
     margin-top: 1.5em; */
+}
+
+@mixin skew {
+     position: relative;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        -webkit-transform: skewY(-3deg);
+        -ms-transform: skewY(-3deg);
+        transform: skewY(-3deg);
+        top: -120px;
+        z-index: 1;
+    }
+}
+
+.skew {
+ @include skew;
+    &:before {
+      background: white;  
+        
+    }
+}
+
+
+
+.section-nav {
+    margin-bottom: 6em;
+}
+
+.padding-14 {
+        padding: 10em 0 10em 0;
+}
+
+.bg {
+    background-color: lighten($brand-color, 30%);
+}
+.bg-2 {
+    background-color: darken($brand-color, 5%);
+}
+
+.dark-bg {
+    background-color: darken($brand-color, 30%);
+}
+
+.site-footer {
+
+    
+    hr {
+        border-color: white;
+    }
+    
+    .social-list__item {
+        color: white;
+    }
+
+}
+
+.footer-links {
+    list-style: none;
+    text-align: center;
+    li {
+
+        &:before {
+            content: "";
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+            border: none;
+        }
+    }
+    
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.btn-big {
+    width: 100%;
+    text-align: center;
+    line-height: 2em;
+    font-size: 2em;
 }
