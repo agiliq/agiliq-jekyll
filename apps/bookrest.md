@@ -1,6 +1,7 @@
 ---
 layout: default
 title:  "Bookrest"
+permalink: /apps/bookrest/
 ---
 
 ### Bookrest - The easiest way to add rest API to an arbitrary DB
