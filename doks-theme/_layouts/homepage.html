@@ -61,7 +61,7 @@
 			</div><!-- /.container -->
 		</div><!-- /.hero-subheader -->
 		{% if page.grid_navigation %}
-			<div class="section section--darker-theme-color-bg">
+			<div class="section section-nav">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
@@ -69,7 +69,8 @@
 								<div class="row">
 									{% for item in page.grid_navigation %}
 										<div class="col-sm-6 col-lg-4">
-											<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="nav-grid__item">
+											<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="card border gap">
+										
 												<div class="nav-grid__content" data-mh>
 													<h2 class="nav-grid__title">{{ item.title }}</h2>
 													<p>{{ item.excerpt }}</p>
@@ -78,7 +79,7 @@
 													{{ item.cta }}
 													<i class="icon icon--arrow-right"></i>
 												</p>
-											</a><!-- /.nav-grid__item -->
+												</a><!-- /.nav-grid__item -->
 										</div><!-- /.col -->
 									{% endfor %}
 								</div><!-- /.row -->
@@ -90,16 +91,16 @@
 		{% endif %}
 
 		{% if page.books %}
-			<div class="section books section--darker-theme-color-bg">
+			<div class="section books skew padding-14 bg">
 				<div class="container">
 					<div class="row">
-					<div class="col-md-8 col-md-offset-2"><h2 class="section-header">{{page.books_title}}</h2></div>
+					<div class="col-md-8 col-md-offset-2"><h2 class="section-header text-white">{{page.books_title}}</h2></div>
 						<div class="col-md-12">
 							<div class="nav-grid">
 								<div class="row">
 									{% for item in page.books %}
 										<div class="col-sm-6 col-lg-4">
-											<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="nav-grid__item">
+											<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="card gap">
 												<div class="" data-mh>
 												<img src="{{ item.cover_image }}" class="media-object" />
                                                     <div class="card-description">
@@ -123,7 +124,7 @@
 		{% endif %}
 
 		{% if page.clients %}
-			<div class="section section--darker-theme-color-bg">
+			<div class="section clients skew padding-14">
 				<div class="container">
 					<div class="row">
 					<div class="col-md-8 col-md-offset-2"><h2 class="section-header">{{page.clients_text}}</h2></div>
@@ -132,20 +133,22 @@
 								<div class="row">
 									{% for item in page.clients %}
 										<div class="col-sm-6 col-lg-4">
-											<a target="_blank" href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="nav-grid__item">
-												<div class="" data-mh>
+											<a target="_blank" href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="card border gap">
+												<div class="clients-card" data-mh>
 												<!-- <img src="{{ item.logo }}" class="media-object" width="100%" /> -->
+                                                 <div class="card-description">
+                                                  <p>{{ item.testimonial | truncate: 300 }}</p>
+                                                  <div class="client-footer">
                                                    {% if item.logo %}
                                                     <div class="logo-holder">
 												        <div class="client-logo" style="background-image: url({{item.logo}})"></div>
 												    </div>
 												    {% endif %}
-												    <div class="card-description">
-													<h2 class="nav-grid__title">{{ item.name }}</h2>
+													<h5 class="">{{ item.name }}</h5>
 													<h6>{{ item.company_name }}</h6>
-													<p>{{ item.testimonial | truncate: 150 }}</p>
-													</div>	
 													
+													</div>	
+													</div>
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">
 													Visit The Website
@@ -163,23 +166,24 @@
 		{% endif %}
 
 		{% if page.apps %}
-			<div class="section">
-				<div class="container">
-					<div class="row">
-					<div class="col-md-8 col-md-offset-2"><h2 class="section-header">{{ page.apps.title }}</h2></div>
-					</div>
-				</div>
-			</div>
+<!-- 			<div class="section">
+			    <div class="container">
+			        <div class="row">
+			        <div class="col-md-8 col-md-offset-2"><h2 class="section-header">{{ page.apps.title }}</h2></div>
+			        </div>
+			    </div>
+			</div> -->
 
-			<div class="section ">
+			<div class="section skew padding-14 bg-2">
 				<div class="container">
 					<div class="row">
+					<div class="col-md-8 col-md-offset-2"><h2 class="section-header text-white">{{ page.apps.title }}</h2></div>
 						<div class="col-md-12">
-							<div class="nav-grid nav-grid--out">
+							<div class="nav-grid">
 								<div class="row">
 									{% for item in page.apps.apps_list %}
 										<div class="col-sm-6">
-											<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="nav-grid__item">
+											<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="card gap">
 												<div class="" data-mh>
 												<img src="{{ item.screenshot }}" class="media-object" />
 												<div class="card-description">
@@ -207,11 +211,12 @@
 		{% endif %}
 
 
-			<div class="section section--darker-theme-color-bg">
+			<div class="section skew padding-14">
 				<div class="container">
 					<div class="row">
+					<div class="col-md-8 col-md-offset-2"><h2 class="section-header">{{ page.blogs.title }}</h2></div>
 						<div class="col-md-12">
-							<div class="nav-grid nav-grid--out">
+							<div class="nav-grid">
 								<div class="row">
 									{% assign post_count = '0' %}
 									{% for post in site.posts %}
@@ -219,7 +224,7 @@
 								          {% capture post_count %}{{ post_count | plus: '1' }}{% endcapture %}
 								          {% if post_count == '1' or post_count == '2' or post_count == '3' %}
 											<div class="col-sm-4">
-												<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ post.url }}" class="nav-grid__item">
+												<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ post.url }}" class="card border gap">
 													<div class="nav-grid__content" data-mh>
 														<h2 class="nav-grid__title">{{ post.title }}</h2>
 														<p>{{ post.featured_excerpt }}</p>
@@ -239,7 +244,21 @@
 					</div><!-- /.row -->
 				</div><!-- /.container -->
 			</div><!-- /.section -->
-
+       
+       
+       
+        <div class="section pt-0">
+            <div class="container">
+					<div class="row">
+                      {% for button in page.buttons limit: 1 %}
+                       <div class="col-md-8 col-md-offset-2"><a href="/contact/" class="btn btn-grad btn--dark btn--rounded btn-big">{{button.content}}</a></div>
+                       {% endfor %}
+                </div>
+            </div>
+        </div> 
+        
+        
+        
 		{% include site-footer.html %}
 	</body>
 </html>

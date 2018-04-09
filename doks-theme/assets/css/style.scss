@@ -2,6 +2,25 @@
 # This ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
 ---
+$base-fs:  1em;
+$small-fs: $base-fs * 0.9;
+$brand-color: #1641cc;
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
 
 /**
  * Style (style.scss)
@@ -9,6 +28,7 @@
 
 /* ----- Charset ----- */
 @charset 'utf-8';
+
 
 /* ----- Variables ----- */
 @import 'variables';
@@ -51,6 +71,8 @@
 @import 'components/site-header';
 @import 'components/social-list';
 @import 'components/title-anchor-link';
+
+
 
 /* ----- Themes ----- */
 @import 'themes/green';
