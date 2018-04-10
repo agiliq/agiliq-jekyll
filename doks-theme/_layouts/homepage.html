@@ -24,7 +24,7 @@
 									</a>
 									{% else %}
 									<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ button.url }}" class="btn btn-grad btn--dark btn--rounded btn--w-icon">
-										
+
 										{{ button.content }}
 								    <span class="icon ic-envelope"></span>
 									</a>
@@ -70,7 +70,7 @@
 									{% for item in page.grid_navigation %}
 										<div class="col-sm-6 col-lg-4">
 											<a href="{% if jekyll.environment == 'production' %}{{ site.doks.baseurl }}{% endif %}{{ item.url }}" class="card border gap">
-										
+
 												<div class="nav-grid__content" data-mh>
 													<h2 class="nav-grid__title">{{ item.title }}</h2>
 													<p>{{ item.excerpt }}</p>
@@ -91,7 +91,7 @@
 		{% endif %}
 
 		{% if page.books %}
-			<div class="section books skew padding-14 bg">
+			<div class="section books skew padding-14 bg" id="books-section">
 				<div class="container">
 					<div class="row">
 					<div class="col-md-8 col-md-offset-2"><h2 class="section-header text-white">{{page.books_title}}</h2></div>
@@ -106,7 +106,7 @@
                                                     <div class="card-description">
                                                         <h5 class="book-title">{{ item.title | truncate: 30}}</h5>
                                                         <p>{{ item.description | truncate: 90 }}</p>
-                                                    </div>	
+                                                    </div>
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">
 													{{ item.cta }}
@@ -124,7 +124,7 @@
 		{% endif %}
 
 		{% if page.clients %}
-			<div class="section clients skew padding-14">
+			<div class="section clients skew padding-14"  id="clients-section">
 				<div class="container">
 					<div class="row">
 					<div class="col-md-8 col-md-offset-2"><h2 class="section-header">{{page.clients_text}}</h2></div>
@@ -146,8 +146,8 @@
 												    {% endif %}
 													<h5 class="">{{ item.name }}</h5>
 													<h6>{{ item.company_name }}</h6>
-													
-													</div>	
+
+													</div>
 													</div>
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">
@@ -174,7 +174,7 @@
 			    </div>
 			</div> -->
 
-			<div class="section skew padding-14 bg-2">
+			<div class="section skew padding-14 bg-2" id="apps-section">
 				<div class="container">
 					<div class="row">
 					<div class="col-md-8 col-md-offset-2"><h2 class="section-header text-white">{{ page.apps.title }}</h2></div>
@@ -189,10 +189,10 @@
 												<div class="card-description">
                                                         <h5 class="book-title">{{ item.name | truncate: 30}}</h5>
                                                         <p>{{ item.description | truncate: 150 }}</p>
-                                                    </div>	
+                                                    </div>
 													<!-- <h2 class="nav-grid__title">{{ item.name }}</h2>
 													<p>{{ item.description }}</p> -->
-													
+
 												</div><!-- /.nav-grid__content -->
 												<p class="nav-grid__btn">
 													{{ item.cta }}
@@ -211,7 +211,7 @@
 		{% endif %}
 
 
-			<div class="section skew padding-14">
+			<div class="section skew padding-14"  id="blogs-section">
 				<div class="container">
 					<div class="row">
 					<div class="col-md-8 col-md-offset-2"><h2 class="section-header">{{ page.blogs.title }}</h2></div>
@@ -244,9 +244,9 @@
 					</div><!-- /.row -->
 				</div><!-- /.container -->
 			</div><!-- /.section -->
-       
-       
-       
+
+
+
         <div class="section pt-0">
             <div class="container">
 					<div class="row">
@@ -255,10 +255,10 @@
                        {% endfor %}
                 </div>
             </div>
-        </div> 
-        
-        
-        
+        </div>
+
+
+
 		{% include site-footer.html %}
 	</body>
 </html>
