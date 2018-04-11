@@ -132,6 +132,16 @@ clients:
       Shabda and his team at Agiliq have worked with us to produce the Multi Me version 2 platform. Development spanned over 10 months. Working with Aqiliq has been a real pleasure; communication and response time has been excellent, problem solving has been really good. Agiliq felt like part of our team and we intend to work with them in the future for new phases of development. Quality software development and speedy delivery does not have to cost the earth - I cannot recommend these guys enough!!!
     url: https://www.multime.com/
     logo: "/assets/images/multime-logo.png"
+
+  - company_name: Sugersnap
+    name: Subbu Arumugam
+    testimonial: >
+      "In the startup world, we’re seeing a dearth of technical co-founders in an environment where proving traction is required to raise capital and recruit talent. For non-technical founders, this presents an interesting conundrum. We need technical help to build our web and mobile technology products - but we can't find technical people.
+      Enter Shabda and his crack crew of amazing developers. I strongly recommend that you hire him and his team to be your technical arm if you're a non-technical founder. He has helped us build our most successful app."
+    logo: "/assets/images/sufo-logo.svg"
+    url: https://www.sufo.com/
+
+
 apps:
  # old title: > "We love working with smart people to build wonderful things. Some of these have been built for clients, and some are open sourced."
   title: >
