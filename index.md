@@ -119,6 +119,13 @@ clients:
     head_shot:
     url: "https://lanecampbell.com/"
 
+  - company_name: Buttey, Inc
+    name: "Gaurav Mehta"
+    testimonial: >
+      I have worked with Shabda and his team at Agiliq a few times now and couldn't have been more satisfied with the work. We used them for Python/Django requirements - they were thoroughly professional, hard working, responsive and very easy to communicate. I have already recommended Agiliq to others and will continue to work them in the future.
+    url: https://www.butteryapp.com/
+    logo: "/assets/images/buttery-logo.PNG"
+
 apps:
  # old title: > "We love working with smart people to build wonderful things. Some of these have been built for clients, and some are open sourced."
   title: >
