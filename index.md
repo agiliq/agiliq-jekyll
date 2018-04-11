@@ -124,8 +124,14 @@ clients:
     testimonial: >
       I have worked with Shabda and his team at Agiliq a few times now and couldn't have been more satisfied with the work. We used them for Python/Django requirements - they were thoroughly professional, hard working, responsive and very easy to communicate. I have already recommended Agiliq to others and will continue to work them in the future.
     url: https://www.butteryapp.com/
-    logo: "/assets/images/buttery-logo.PNG"
+    logo: "/assets/images/buttery-logo.png"
 
+  - company_name: Multime
+    name: Charlie Levinson
+    testimonial: >
+      Shabda and his team at Agiliq have worked with us to produce the Multi Me version 2 platform. Development spanned over 10 months. Working with Aqiliq has been a real pleasure; communication and response time has been excellent, problem solving has been really good. Agiliq felt like part of our team and we intend to work with them in the future for new phases of development. Quality software development and speedy delivery does not have to cost the earth - I cannot recommend these guys enough!!!
+    url: https://www.multime.com/
+    logo: "/assets/images/multime-logo.png"
 apps:
  # old title: > "We love working with smart people to build wonderful things. Some of these have been built for clients, and some are open sourced."
   title: >
