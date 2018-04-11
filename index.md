@@ -141,6 +141,13 @@ clients:
     logo: "/assets/images/sufo-logo.svg"
     url: https://www.sufo.com/
 
+  - company_name: Asset House
+    name: Franz Calice
+    testimonial: >
+      "In the startup world, we’re seeing a dearth of technical co-founders in an environment where proving traction is required to raise capital and recruit talent. For non-technical founders, this presents an interesting conundrum. We need technical help to build our web and mobile technology products - but we can't find technical people.
+      Enter Shabda and his crack crew of amazing developers. I strongly recommend that you hire him and his team to be your technical arm if you're a non-technical founder. He has helped us build our most successful app."
+    logo: "/assets/images/assethouse-logo.svg"
+    url: "http://www.asset-house.co.uk/"
 
 apps:
  # old title: > "We love working with smart people to build wonderful things. Some of these have been built for clients, and some are open sourced."
