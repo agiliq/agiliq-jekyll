@@ -242,3 +242,28 @@
         opacity: 0.9;
     }
 }
+.hero-subheader.bg-image {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.shadow {
+    background-color: #00000045;
+    border-radius: 4px;
+}
+
+.author-page {
+    .author-name {
+        text-transform: capitalize;
+    }
+    
+    ul {
+        
+        li {
+            list-style: none;
+            a {
+                line-height: 2;
+            }
+        }
+    }
+}

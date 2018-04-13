@@ -4,6 +4,4 @@ _site/
 .DS_Store
 gems
 .sass-cache
-Gemfile
-Gemfile.lock
 todo.txt
