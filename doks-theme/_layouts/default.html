@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,9 +6,9 @@
 	</head>
 	<body class="{{ site.doks.color_theme }}" data-spy="scroll" data-target=".js-scrollspy">
 		{% include site-header.html %}
-		<div class="hero-subheader">
+		<div class="hero-subheader {% if page.image %} bg-image {% endif %}" {% if page.image %}style="background-image: url(/assets/images/{{page.image}}){% endif %}">
 			<div class="container">
-				<div class="row">
+				<div class="row {% if page.image %}shadow{% endif %}">
 					<div class="col-md-7">
 						<div class="align-container" data-mh>
 							<div class="align-inner">
@@ -64,16 +65,19 @@
 		<div class="section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-7">
+					<div class="col-md-{% if page.width == 'full' %}12{% else %}7{% endif %}">
 						<div class="content">
 							{{ content }}
 						</div><!-- /.content -->
 					</div><!-- /.col -->
+					{% if page.width == 'full' %}
+					{% else %}
 					<div class="col-md-4 col-md-offset-1">
 						<div class="sections-list-wrapper">
 							<div class="sections-list js-sections js-affix js-scrollspy hidden-xs hidden-sm"></div><!-- /.sections-list -->
 						</div>
 					</div><!-- /.col -->
+					{% endif %}
 				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</div><!-- /.section -->
