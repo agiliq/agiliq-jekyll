@@ -5,6 +5,8 @@ title:  "Finding a prime number whose binary representation is a giraffe (or a T
 date:   2018-01-21 19:41:32+05:30
 categories: [python, fun]
 author: shabda
+image: code.jpg
+width: full
 ---
 ![Odd Number Theorists](https://raw.githubusercontent.com/shabda/experiments/master/prime_dinos/odd-number-theorists.jpg)
 
