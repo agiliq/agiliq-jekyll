@@ -96,5 +96,4 @@ sass:
 layouts_dir: ./doks-theme/_layouts
 includes_dir: ./doks-theme/_includes
 exclude: [ 'README.md', 'CHANGELOG.md', 'todo.txt']
-# permalink: /blog/:year/:month/:title/
-permalink: /blog/:categories/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:title/
