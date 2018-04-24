@@ -40,7 +40,6 @@ kramdown:
   syntax_highlighter: rouge
 
 
-
 jekyll-archives:
   enabled: "all"
   layout: 'default'
