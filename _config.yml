@@ -39,7 +39,6 @@ kramdown:
   auto_ids: true
   syntax_highlighter: rouge
 
-
 jekyll-archives:
   enabled: "all"
   layout: 'default'
