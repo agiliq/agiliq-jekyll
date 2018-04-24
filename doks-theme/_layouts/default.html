@@ -85,9 +85,11 @@
 			<div class="section section--grey">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-7">
+					
+						<div class="col-md-{% if page.width == 'full' %}12{% else %}7{% endif %}">
 							{% include comments.html %}
 						</div><!-- /.col -->
+						
 					</div><!-- /.row -->
 				</div><!-- /.container -->
 			</div><!-- /.section -->
