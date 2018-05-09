@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Upgrading django older versions to django latest version"
+title:  "Upgrading django apps from older versions to latest Django version"
 date:   2018-04-12
 categories: [python, django, version-upgrade]
 author: Anjaneyulu
@@ -9,6 +9,8 @@ author: Anjaneyulu
 ### Why to upgrade Django to a newer version ?
 
 We can get several benefits from the newer version of the django. Upgrading to the newer version might be a complex process. But, It's always recommended to upgrade the Django applications to newer versions.
+
+I recently upgraded a Django app we had on Django 1.6 to Django 1.11. We coudn't upgrade to Django 2.0, as there some dependencies with Python 2.7. Here are the things I found.
 
 ### Benefits with Django version upgrade
 * Bugs are fixed

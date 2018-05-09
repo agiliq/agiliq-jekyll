@@ -13,13 +13,13 @@ Things to do
 - Try using a stock image for index header
 
 Blog
- - Add author page
+// - Add author page
  - permalinks /blog/author/:author/
  - Add category page
  - permalinks /blog/tag/:category/
  - Add monthly archive page. Url shoudl be /blog/:year/:month/. Link from
     Written on [Dec 29, 2017](/blog/2017/12/). (Low priority)
- - Header image in blog_post
+// - Header image in blog_post
 
 
 
