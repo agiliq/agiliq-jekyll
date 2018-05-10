@@ -24,6 +24,6 @@ Blog
 
 
 Layout
-    - Add a single page layout, test with prime-number-binary-trex
+//    - Add a single page layout, test with prime-number-binary-trex
 
 
