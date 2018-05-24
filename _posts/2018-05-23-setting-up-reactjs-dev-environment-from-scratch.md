@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Setting up reactjs development environment from scratch"
 date:   2018-05-23
-categories: [javascript, reactjs, dev-environment]
+categories: [javascript, reactjs, dev-environment, from scratch]
 author: Anjaneyulu
 ---
 ### What is ReactJS ?
@@ -41,18 +41,17 @@ npm -v
 
 
 ### Basic Tools needed to work with ReactJS
-1. React: To work with react we need to install it's dependencies like react, react-dom, etc.
-2. Babel: ReactJS uses JSX syntax to speed up the development process. But the syntax is not understandable by browsers. So, we need a transcompiler (Babel) to convert JSX into a javascript code.
-3. Webpack: It is a javascript code bundler. In ReactJS we deal with the components so, every component is written in a seperate file to quickly navigate to the component and make changes. It will be difficult to add all these files to webpage. So, we use webpack to to bundle all these components.
+1. **React**: To work with react we need to install it's dependencies like react, react-dom, etc.
+2. **Babel**: ReactJS uses JSX syntax to speed up the development process. But the syntax is not understandable by browsers. So, we need a transcompiler (Babel) to convert JSX into a javascript code.
+3. **Webpack**: It is a javascript code bundler. In ReactJS we deal with the components so, every component is written in a seperate file to quickly navigate to the component and make changes. It will be difficult to add all these files to webpage. So, we use webpack to to bundle all these components.
 
-### Let's work on setting up dev environment for a simple app
+### setting up dev environment for a simple app
 
 1. create  and navigate to the directory "react_app"
 	```bash
 	mkdir react_app && cd react_app
 	```
-2. create a react package using command `npm init`. It will ask us some questions, just answer it. It will create a `package.json` file to manage the react app dependencies.
-`package.json` file look similar as
+2. create a react package using command `npm init`. It will ask some questions either answer or just press <Enter> key. It will create a file `package.json` file to manage the react app dependencies. `package.json` file looks similar to
 	```bash
 {
 	"name": "react_app",
@@ -67,8 +66,8 @@ npm -v
 }
 	```
 3. Now, install `webpack` and `webpack-dev-server`
-	* `webpack`: to generate a single javascript files out of all components and host it on the dev server.
-	* `webpack-dev-server`: it helps us to recompile the jsx every time we make changes to any component and loads the newly generated file onto the development server. Install it with the below command
+	* **webpack**: to generate a single javascript files out of all components and host it on the dev server.
+	* **webpack-dev-server**: it helps us to transcompile the jsx every time we make changes to any component and it loads the newly generated file onto the development server. Install it with the below command
 	```bash
 npm install webpack webpack-cli webpack-dev-server --save-dev
 	```
@@ -81,16 +80,38 @@ npm install --save-dev html-webpack-plugin
 echo '{ "presets": ["react", "env"] }' > .babelrc
 	```
 	* **babel-core**: It transforms ES6 code into ES5
-	* **babel-loader**: It is a webpack helper to transforms JavaScript dependencies with babel
+	* **babel-loader**: It is a webpack helper to transform the JavaScript dependencies with babel
 	* **babel-preset-env**: It determines the plugins to use and provides modern functionality on older browsers that do not natively support it.
-	* **babel-preset-react**: Babel preset for all React plugins, for example turning JSX into javascript functions
-	* **style-loader**: 
+	* **babel-preset-react**: Babel preset for all React plugins, for example, turning JSX into javascript functions
 	* **css-loader**: we import `css` files in JSX files, it helps to resolve them.
-	* **html-webpack-plugin**: It is needed to inject this into our DOM — adding a <style> tag into the <head> element of our HTML.
-5. Now, create a directory  
+	* **style-loader**: it collects all the styles and makes it a single file and injects it into DOM.
+	* **html-webpack-plugin**: It is needed to inject this into our DOM — adding a `<style>` tag into the `<head>` element of our HTML.
+5. We will going to create a directory structure as below for our application
+	```bash
+	    react_app
+	    ├── src
+	    │   ├── components
+	    │   │   └── HelloWorld
+	    │   │       ├── HelloWorld.css
+	    │   │       └── HelloWorld.js
+	    │   ├── index.html
+	    │   └── index.js
+	    ├── .babelrc
+	    ├── package.json
+	    └── webpack.config.js
+	```
+	* **react_app**: Root of project directory.
+	* **react_app/src**: It contains all our react app source code.
+	* **react_app/src/components**: It contains the components of react app.
+	* **react_app/src/index.html**: It it used by html webpack plugin to work with react. It contains the root element which react renderer will use. 
+	* **react_app/src/index.js**: It is the entry point where react starts rendering the components.
+	* **.babelrc**: It provide the options for babel-loader.
+	* **package.json**: It contains the package dependency information and startup scripts to be used.
+	* **webpack.config.js**: It contains the configuration information of webpack.
 
-6. Configure webpack to run using webpack-dev-server
-	create a `webpack.config.js` and add below code to it.
+	Now, we know why we use above files. Let's configure all these files.
+
+6. To configure webpack create `webpack.config.js` and add below code to it.
 	```bash
 	const HtmlWebPackPlugin = require("html-webpack-plugin");
 
@@ -132,3 +153,95 @@ echo '{ "presets": ["react", "env"] }' > .babelrc
 	  plugins: [htmlWebpackPlugin]
 	};
 	```
+	Note: we can also use other plugins like `scss-loader` to work with it.
+7. Now, open `package.json` and add below start scripts to it.
+	```json
+	"scripts": {
+	    "start": "webpack-dev-server --mode development --open --port 3000",
+	    "build": "webpack --mode production"
+	  }
+	```
+	These are aliases for lengthy commands. If run command `npm run start` then it will run command `webpack-dev-server --mode development --open --port 3000` which will opens a browser with dev host on port 3000 `http://localhost:3000`
+	For production, use command `npm run build`. After running the command it will creates a new directory named `dist` with bundled javascript, css and images.
+
+	After adding the above code `package.json` looks like below
+	```bash
+{
+  "name": "react_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --port 3000",
+    "build": "webpack --mode production"
+  },
+  "keywords": ["react from scratch"],
+  "author": "Agiliq",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
+}
+
+	```
+8. Let's see how other files looks like<br/>
+	**react_app/src/index.html**
+	```html
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	  <title>React App</title>
+	</head>
+	<body>
+	  <section id="main"></section>
+	</body>
+	</html>
+	```
+	**react_app/src/index.js**
+	```javascript
+	import React from "react";
+	import ReactDOM from "react-dom";
+	import Hello from "./components/HelloWorld/HelloWorld"
+
+	ReactDOM.render(<Hello />, document.getElementById("main"));
+	```
+	**react_app/src/components/HelloWorld.js**
+	```javascript
+	import React from "react";
+	import style from "./HelloWorld.css";
+
+	const HelloWorld = () => {
+	  return (<div className={style.Hello}>
+	           HelloWorld
+	         </div>)
+	}
+
+	module.exports = HelloWorld;
+	```
+	**react_app/src/components/HelloWorld.css**
+	```css
+	.Hello{
+		font-size: 100px;
+		color: green;
+	}
+	```
+
+Now, open your terminal and change directory to `react_app` and run the command `npm run start`. It will open browser with url `http://localhost:3000`. You can find text `Hello world` with font size `100px` with green color.
+When we run command `npm run start` or `webpack-dev-server --mode development --open --port 3000` webpack runs the dev server using the configuration file `webpack.config.js` and starts execution from file `index.js` because `index.js` pointed in `package.json`
+
+To test it let's change the text in `HelloWorld` component to "Hello Agiliq".
