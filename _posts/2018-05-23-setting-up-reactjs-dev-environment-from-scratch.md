@@ -244,4 +244,7 @@ echo '{ "presets": ["react", "env"] }' > .babelrc
 Now, open your terminal and change directory to `react_app` and run the command `npm run start`. It will open browser with url `http://localhost:3000`. You can find text `Hello world` with font size `100px` with green color.
 When we run command `npm run start` or `webpack-dev-server --mode development --open --port 3000` webpack runs the dev server using the configuration file `webpack.config.js` and starts execution from file `index.js` because `index.js` pointed in `package.json`
 
-To test it let's change the text in `HelloWorld` component to "Hello Agiliq".
+To test it let's change the text in `HelloWorld` component to `"Hello Agiliq"`.
+
+<br/>
+_Stay tuned for our next post "Understanding State and Props in React"_
