@@ -2,6 +2,8 @@
 layout: post
 comments: true
 title:  "Django Unit Testing"
+description: "Django unit testing is extreamly useful for bug killing. Testing a web app is complex task but django unit tests made it simple"
+keywords: "unit testing, django unit testing, django test cases"
 date:   2018-05-03
 categories: [python, django, unit-testing]
 author: Anjaneyulu
