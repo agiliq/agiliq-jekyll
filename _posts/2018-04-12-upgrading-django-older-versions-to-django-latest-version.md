@@ -2,6 +2,8 @@
 layout: post
 comments: true
 title:  "Upgrading django apps from older versions to latest Django version"
+description: "Upgrading to the newer version might be a complex process. But, It's always recommended to upgrade the Django applications to newer versions."
+keywords: "django upgrade, django old vertion to new version"
 date:   2018-04-12
 categories: [python, django, version-upgrade]
 author: Anjaneyulu

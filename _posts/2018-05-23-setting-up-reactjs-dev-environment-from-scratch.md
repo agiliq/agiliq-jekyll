@@ -2,6 +2,8 @@
 layout: post
 comments: true
 title:  "Setting up reactjs development environment from scratch"
+description: "Basic Tools needed to work with ReactJS are react, babel and webpack. Babel transcompiles JSX syntax into javascript syntax."
+keywords: "reactjs from scratch, setting up reactjs, reactjs dev environment"
 date:   2018-05-23
 categories: [javascript, reactjs, dev-environment, from scratch]
 author: Anjaneyulu
