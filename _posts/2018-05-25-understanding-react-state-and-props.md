@@ -154,11 +154,11 @@ module.exports = Profile;
 ### Types of ReactJS Components
 In ReactJS we have two different types of components.
   1. Stateless ReactJS Component
-  	* All function based components can be considered as stateless ReactJS components.
-  	* Stateless ReactJS Components are pure javascript functions so, we don't need to have state.
+  * All function based components can be considered as stateless ReactJS components.
+  * Stateless ReactJS Components are pure javascript functions so, we don't need to have state.
   2. Stateful ReactJS Component
-  	* All class based components can be considered as stateful ReactJS components.
-  	* Stateful ReactJS Components inherits the class `React.Component` so, `state` get's inherited.
+  * All class based components can be considered as stateful ReactJS components.
+  * Stateful ReactJS Components inherits the class `React.Component` so, `state` get's inherited.
 
 <br/>
-_Stay tuned for our next post "Understanding ReactJS Component Lifecycle"_
+_Stay tuned for our next post ["Understanding ReactJS Component Lifecycle"](/blog/2018/05/understanding-reactjs-component-lifecycle/)_
