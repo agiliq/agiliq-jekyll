@@ -46,3 +46,8 @@ layout: default
   {%- endif -%}
 
 </div>
+<!-- json+ld -->
+{% 
+  include structured_data/blog.html
+  link=page.permalink
+%}

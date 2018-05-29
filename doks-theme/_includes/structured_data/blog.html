@@ -1,0 +1,53 @@
+<script type="application/ld+json">
+{  
+   "@context":"http://schema.org",
+   "@type":"Blog",
+   "headline":"We love writing articles to share our experience and knowledge through our Agiliq Blog",
+   "genre":"Blog",
+   "keywords":"Agiliq Blog, Web Applicaiton Development, Mobile Applicaiton Development, Django Python Development",
+   "url":"https://www.agiliq.com{{ include.link }}",
+   "publisher":{  
+      "@type":"Organization",
+      "name":"Agiliq Info Solutions India Pvt Ltd",
+      "sameAs":[
+        "https://twitter.com/agiliqdotcom",
+        "https://github.com/agiliq",
+        "https://www.facebook.com/agiliq"
+      ],
+      "logo": {
+      "@type": "ImageObject",
+      "contentUrl": "https://www.agiliq.com/assets/images/logo.png",
+      "url": "https://www.agiliq.com/"
+    }
+   },
+   "mainEntityOfPage":{  
+      "@type":"WebPage",
+      "@id":"https://www.agiliq.com{{ include.link }}"
+   },
+   "description": "We love writing articles to share our experience and knowledge through our Agiliq Blog"
+}
+</script>
+<!-- bread crumbs -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://www.agiliq.com/",
+      "name": "Home",
+      "image": "https://www.agiliq.com/assets/images/logo.png"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://www.agiliq.com/blog/",
+      "name": "Blog",
+      "image": "https://www.agiliq.com/assets/images/logo.png"
+    }
+  }]
+}
+</script>
