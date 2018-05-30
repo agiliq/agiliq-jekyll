@@ -3,6 +3,8 @@ layout: default
 ---
 {{ content }}
 
+{% include social-share-icons.html %}
+
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 <div class="callout callout--success">
     Thank you for reading the Agiliq blog. This article was writen by {{ page.author }} on {{ page.date | date: date_format }} in
