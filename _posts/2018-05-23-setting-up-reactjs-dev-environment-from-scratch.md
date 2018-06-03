@@ -249,4 +249,4 @@ When we run command `npm run start` or `webpack-dev-server --mode development --
 To test it let's change the text in `HelloWorld` component to `"Hello Agiliq"`.
 
 <br/>
-_Stay tuned for our next post "Understanding State and Props in React"_
+_Stay tuned for our next post ["Understanding State and Props in ReactJS"](/blog/2018/05/understanding-react-state-and-props/)_

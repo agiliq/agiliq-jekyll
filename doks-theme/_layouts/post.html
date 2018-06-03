@@ -13,4 +13,16 @@ layout: default
     <br />
     You can <a href="/feed.xml" class="btn">subscribe ⚛</a>, <a href="https://books.agiliq.com/">read our books 📖</a> or <a href="/contact/">contact us ✉</a>
 </div>
-
+<!-- json+ld -->
+{% 
+  include structured_data/post.html
+  headline=page.title
+  genre=page.main_category
+  keywords=page.keywords
+  content=page.content
+  link=page.permalink
+  date=page.date
+  author=page.author
+  description=page.description
+  image_url=page.image_url
+%}

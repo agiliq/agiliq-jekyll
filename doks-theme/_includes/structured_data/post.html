@@ -1,0 +1,75 @@
+<script type="application/ld+json">
+{  
+   "@context":"http://schema.org",
+   "@type":"TechArticle",
+   "headline":"{{ include.headline }}",
+   "genre":"{{ include.genre }}",
+   "keywords":"{{ include.keywords }}",
+   "url":"https://www.agiliq.com{{ include.link }}",
+   "datePublished":"{{ include.date | | date: '%Y-%m-%d' }}",
+   "dateModified":"{{ site.time | date: '%Y-%m-%d' }}",
+   "author":{  
+      "@type":"Person",
+      "name":"{{ include.author }}"
+   },
+   "publisher":{  
+      "@type":"Organization",
+      "name":"Agiliq Info Solutions India Pvt Ltd",
+      "sameAs":[  
+        "https://twitter.com/agiliqdotcom",
+        "https://github.com/agiliq",
+        "https://www.facebook.com/agiliq"
+      ],
+      "logo": {
+      "@type": "ImageObject",
+      "contentUrl": "https://www.agiliq.com/assets/images/logo.png",
+      "url": "https://www.agiliq.com/"
+    }
+   },
+   "image":{  
+      "@type":"ImageObject",
+      "contentUrl": {% if include.image_url %}"{{include.image_url}}"{% else %}"https://www.agiliq.com/assets/images/logo.png"{% endif %},
+      "url":"https://www.agiliq.com",
+      "width":"450",
+      "height":"300"
+   },
+   "mainEntityOfPage":{  
+      "@type":"WebPage",
+      "@id":"https://www.agiliq.com{{ include.link }}"
+   },
+   "articleBody":"{{ include.content | strip_html | xml_escape | normalize_whitepace | strip_newlines | strip }}",
+   "description": "{{ include.description }}"
+}
+</script>
+<!-- bread crumbs -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://www.agiliq.com/",
+      "name": "Home",
+      "image": "https://www.agiliq.com/assets/images/logo.png"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://www.agiliq.com/blog/",
+      "name": "Blog",
+      "image": "https://www.agiliq.com/assets/images/logo.png"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://www.agiliq.com{{ include.link }}",
+      "name": "{{ include.genre }}",
+      "image": {% if include.image_url %}"{{include.image_url}}"{% else %}"https://www.agiliq.com/assets/images/logo.png"{% endif %}
+    }
+  }]
+}
+</script>
