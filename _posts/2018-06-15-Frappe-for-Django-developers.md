@@ -79,4 +79,4 @@ You can install app `meeting` on site `my.second` using:
 
 Since Django is a single site setup, so we don't have to add the app to the site.
 
-Our next post in this series would focus on creating the <a href="https://docs.djangoproject.com/en/2.0/intro/tutorial01/" target="_blank'>Django poll application</a> using Frappe.
+Our next post in this series would focus on creating the [Django poll application](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) using Frappe.
