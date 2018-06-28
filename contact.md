@@ -4,8 +4,12 @@ title: Contact
 permalink: /contact/
 redirect_from: "/contactus/"
 ---
-
-Email us: <strong><a href="mailto:hello@agiliq.com">hello@agiliq.com</a></strong>
-
-Phone us: <strong><a href="tel:+919949997612">+919949997612</a></strong>
+<div class="row">
+	<p>
+		Email us: <a href="mailto:hello@agiliq.com"><h3>hello@agiliq.com</h3></a>
+	</p>
+	<p>
+		Phone us: <a href="tel:+919949997612"><h3>+91 9949997612</h3></a>
+	</p>
+</div>
 

@@ -60,6 +60,8 @@ doks:
         nav:
             - item_name: Blog
               item_url: '/blog/'
+            - item_name: Books
+              item_url: 'https://books.agiliq.com/en/latest/'
             - item_name: About Us
               item_url: '/about/'
             - item_name: Contact
