@@ -145,6 +145,10 @@ Infact you can send it as an arg and not as a kwarg.
 
     In [66]: user = frappe.db.get_value("User", "Administrator")
 
+There is even a shorter way of achieving the above result. If you want all the fields of the document and are filtering by name, then you don't need to use `get_value()`. You can use `get()` in such cases.
+
+    In [67]: user = frappe.db.get("User", "Administrator")
+
 ### Raw query
 
 You can run raw sql queries too with frappe.
