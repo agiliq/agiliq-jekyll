@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Django Production Deployment on Kubernetes"
+title:  "Django Production Deployment on GCP with Kubernetes"
 description: "How to deploy a Django Application on kubernetes in production mode - Best Practices"
 keywords: "Kubernetes, Django, Python, PostgreSQL, Docker"
 date:   2018-07-18
