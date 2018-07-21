@@ -376,7 +376,10 @@ kubectl create -f pollsapi.yml
 ```
 ![](/assets/images/django-on-k8s/creating_api.png)
 
-`Note that the service type is NodePort for our application, which means that we'll be able to access our application once we expose it using an Ingress.`
+`Note: `
+1. Usually, we run the server using `python manage.py runserver`. This is `NOT RECOMMENDED` for production purposes because of security concerns and extra memory usage. More on this can be found [here](https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/gunicorn/) Keeping that in mind, this tutorial uses `gunicorn` server to run the application.
+
+2. The service type is NodePort for our application, which means that we'll be able to access our application once we expose it using an Ingress.
 
 ### Exposing our Application
 

@@ -5,7 +5,7 @@ title:  "Frappe Database api"
 description: "How to use Frappe database api"
 keywords: "Frappe, ERPNext, Python"
 date:   2018-07-15
-categories: [python, django, frappe]
+categories: [python, erpnext, frappe]
 author: Akshar
 ---
 

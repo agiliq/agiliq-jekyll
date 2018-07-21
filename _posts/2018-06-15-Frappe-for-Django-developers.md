@@ -5,7 +5,7 @@ title:  "Frappe for Django developers"
 description: "Comparing Frappe commands to Django - A Frappe tutorial for Django devs"
 keywords: "Frappe, Django, Python"
 date:   2018-06-15
-categories: [python, django, frappe]
+categories: [python, django, frappe, erpnext]
 author: Akshar
 ---
 
