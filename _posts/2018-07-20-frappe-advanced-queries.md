@@ -5,7 +5,7 @@ title:  "Advanced Database queries in Frappe"
 description: "Frappe queries involving joins, group by and order"
 keywords: "Frappe, ERPNext, Python"
 date:   2018-07-22
-categories: [python, frappe]
+categories: [python, erpnext, frappe]
 author: Akshar
 ---
 
