@@ -72,15 +72,39 @@ So if you access `localhost:8000` in windows, this is what you see.
 
 Beautiful.
 
-
-Installing VSCode in Windows
----------------------------------------
-
-
-
 Sharing code between Windows and Linux
 -----------------------------------------
+
+Our code runs in WSL, but we want to edit it from Windows. So we need to share code between WSL and Windows.
+
+The window filesystem is available inside WSL at `/mnt/`. The `C:\` drive is mapped to `/mnt/c/`.
+
+To simplify our work, I will create a symbolic link. 
+
+    ln -s /mnt/c/Users/shabda/repos ~/repos
+
+and move the Django folder to `~/repos`. I can now edit it in Windows at `C:\users\shabda\repos`.
+
+
+Installing and using VSCode in Windows
+---------------------------------------
+
+Download and install VSCode the regular way. There is nothing special about VSCode, 
+but it offers an easy way to switch the builtin terminal to WSL bash, so we will use it.
+
+Go to your VSCode settings using Ctrl+Shift+P) and choosing Preferences: Open User Settings. 
+Then change the JSON to include:
+
+   "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe"
+
+Now when you start a new integrated terminal, the WSL bash will start.
 
 
 Conclusion
 ----------------
+
+With this setup, we can run ANY non-GUI linux applications and edit 
+and work with them using GUI editors/IDEs from windows. 
+
+I had started evaluating WSL without very high hopes, 
+but was pleasantly surprised by how seamless everything was.
