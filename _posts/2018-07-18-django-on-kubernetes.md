@@ -402,6 +402,6 @@ Navigate to the ingress address generated i.e. http://35.241.42.232/ in order to
 ### Documentation for Polls API
 ![](/assets/images/django-on-k8s/api_docs.png)
 
-```
-For any queries, please create an issue.
-```
+
+For any queries, please create a new issue [here](https://www.github.com/yvsssantosh/django-on-k8s/issues/new)
+
