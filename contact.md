@@ -27,7 +27,7 @@ redirect_from: "/contactus/"
 			<tr>
 				<td>Email</td>
 				<td>
-				<input type="email" id="email" name="email" placeholder="email">
+				<input type="email" id="email" name="email" placeholder="Email">
 				</td>
 			</tr>
 			<tr>
