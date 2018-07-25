@@ -39,9 +39,8 @@ redirect_from: "/contactus/"
 			<tr>
 				<td colspan="2" align="center">
 					<input type="submit" name="Submit" 
-						class="btn btn--dark btn--rounded">
-						Send Message
-					</input>
+						value="Send Message"
+						class="btn btn--dark btn--rounded" />
 				</td>
 			</tr>
 			</table>
