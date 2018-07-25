@@ -4,7 +4,7 @@ comments: true
 title:  "Python and Django development on Windows with WSL"
 description: "Django on Windows with WSL"
 keywords: "python, django, wsl, windows"
-date:   2018-07-22
+date:   2018-07-25
 categories: [python, django, wsl]
 author: Shabda
 ---
