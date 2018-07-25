@@ -38,14 +38,49 @@ As you can see, I have got `16.04 LTS`
 Installing Python, Postgres, Django and other CLI tools inside WSL
 ------------------------------------------------------------------
 
+Now that we have a linux environment, we can install any command line tool. 
+I was able to install Redis, Postgres, Python, Virtualenv and more with zero issues. 
+
+We will not go in details about installing, but they could be as simple as
+
+    apt-get install postgresql-server
+
+Follow any appropriate tutorial to install the CLI tools. 
+Becuase we have full Linux environment (Except for the GUI), any Linux specific tutorial will work.
+
+![WSL Ubuntu with Django](/assets/images/wsl-ubuntu-with-django.png)
+
+Now you can run `python manage.py startproject` 
+and then `python manage.py runserver` to get the default Django page.
+
+    (django-test2) ~$ django-admin startproject hello
+    (django-test2) ~$ cd hello
+    (django-test2) ~/hello$ python manage.py runserver
+    Performing system checks...
+
+Port forwarding
+-------------------
+
+When you run `manage.py runserver`, which starts on port 8000, inside of WSL, 
+the same servers are also available in windows on same port.
+
+This mapping is automatic, no port forwarding is explicitly required.
+
+So if you access `localhost:8000` in windows, this is what you see.
+
+![WSL Ubuntu with Django](/assets/images/wsl-django-quickstart.png)
+
+Beautiful.
+
+
 Installing VSCode in Windows
 ---------------------------------------
+
+
 
 Sharing code between Windows and Linux
 -----------------------------------------
 
-Port forwarding
--------------------
 
 Conclusion
 ----------------
