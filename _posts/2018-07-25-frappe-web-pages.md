@@ -11,7 +11,7 @@ author: Akshar
 
 #### A little background
 
-This post assumes that you have **bench** initialized and you are able to add a site to it.
+This post assumes that you have bench initialized and you are able to add a site to it.
 
 Any erpnext installation has two user environments. They are:
 
@@ -32,10 +32,10 @@ Landing pages, homepages, and featured pages are good candidates for web view.
 
 There are several ways in which web views can be created.
 
-* Adding code in an app's www/ or templates/ folder.
+* Adding code in an app's `www/` or `templates/` folder.
 * Using `hooks.website_route_rules`.
 * Setting `Has web view` as True for a doctype.
-* Using Printview and Listview for a doctype.
+* Using `printview` and `listview` for a doctype.
 
 In this post we will discuss the first alternative which is "adding code in an app's www/ folder". We will discuss the other alternatives in our later posts.
 
@@ -64,7 +64,7 @@ Navigate to `http://my.fourth:8003/featured`. You should see a page which looks 
 
 ![](/assets/images/frappe-web-pages/basic-page.png)
 
-As you should be able to figure out, basic bootstrap styling was added to your page. Frappe takes care of adding basic bootstrap styling if your html file only contains content and if it doesn't have `<body>` tag. Details on exact logic followed by Frappe templates later.
+As you should be able to figure out, basic bootstrap styling was added to your page. Frappe takes care of adding basic bootstrap styling if your html file only contains content and if it doesn't have `<body>` tag.
 
 If you don't want any default frappe styling, then you can add your html content to have `<body>` tag.
 
@@ -73,6 +73,8 @@ If you don't want any default frappe styling, then you can add your html content
               Hub featured page
           </body>
     <html>
+
+Clear cache(cache can be cleared using `bench --site my.fourth clear-cache`) and reload your page. Default bootstrap styling should have disappeared.
 
 Let's just keep the html content and let Frappe provide basic styling. Change content of featured.html back to:
 
@@ -90,7 +92,7 @@ Modify `featured.html` to look like:
     Hub featured page<br/>
     {{custom_content}}
 
-Clear cache(cache can be cleared using `bench --site my.fourth clear-cache`) and reload your page. It should start looking like:
+Clear cache and reload your page. It should start looking like:
 
 ![](/assets/images/frappe-web-pages/page-with-context.png)
 
@@ -116,12 +118,10 @@ Modify featured.html to look like:
 
 Clear cache and reload your page and you should be able to see name of users.
 
-You would have realized the extensibility of frappe templates by now. You can do anything allowed in Python in your `get_context()` and that would be available in your corresponding template.
-
 If you also wanted to show names of all `Hub Item` in your featured page, you could change featured.py to:
 
     def get_context(context):
         context['users'] = frappe.get_all('User')
         context['hub_items'] = frappe.get_all('Hub Item')
 
-Frappe web template use a look of hooks which you can use.
+You would have realized the extensibility of frappe templates by now. You can write any valid Python in your `get_context()` and that would be available in your corresponding template.
