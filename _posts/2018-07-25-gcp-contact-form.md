@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Recieve emails from Contact Form using GCP"
+title:  "Contact Form for static sites using GCP"
 description: "How to get emails when a user provides their details in a contact form in our website - Best Practices"
 keywords: "Google Cloud Functions, Python, Mailgun API, Google Cloud Datastore"
 date:   2018-07-25
@@ -9,11 +9,14 @@ categories: [python, google cloud functions, mailgun, google cloud datastore]
 author: Santosh
 ---
 
-Having a separate server just for handling contact forms is sure a headache. Why not just write a cloud function which will just do our small task without the pain of installing and maintaining servers!!? 
+If you run a static site, you probably want a contact form on it so people can contact you. 
+
+Having a separate server just for handling contact forms sure is a headache. Why not just write a cloud function which will just do our small task without the pain of installing and maintaining servers? 
 
 Then, let's get started.
 
-In this tutorial we'll be setting up a simple contact form using Google Cloud Functions.
+In this tutorial we'll be setting up a simple contact form using Google Cloud Functions. 
+Mailgun will be used to send mail. We will also write the data to Cloud Datastore so we can review the records if mail sending fails.
 
 ### Setup Backend
 
@@ -106,7 +109,7 @@ def save_user_data(FROM_NAME, FROM_EMAIL, body):
 
 def send_confirmation_email(FROM_EMAIL, TO_ADDRESS):
     """
-    Send a confirmation email to the user saying we're recieved their email.
+    Send a confirmation email to the user saying we're received their email.
     """
     CONFIRMATION_EMAIL_TO_ADDRESS = FROM_EMAIL
     CONFIRMATION_EMAIL_FROM_ADDRESS = TO_ADDRESS
@@ -143,7 +146,7 @@ def send_email(FROM_EMAIL, FROM_NAME, SUBJECT, BODY, TO_ADDRESS):
     return response.status_code
 ```
 
-* The script is fairly self explainatory where we're writing a google cloud function, and calling `send_email()` method which takes in params FROM_EMAIL, FROM_NAME, SUBJECT, BODY, TO_ADDRESS. This will send the email to the Organization where a user has submitted the contact form.
+* The script is fairly self explanatory where we're writing a google cloud function, and calling `send_email()` method which takes in params FROM_EMAIL, FROM_NAME, SUBJECT, BODY, TO_ADDRESS. This will send the email to the Organization where a user has submitted the contact form.
 
 * Also, if a user contacts an organization, a good practice would be sending a confirmation email to the user. This is handled by the method `send_confirmation_email()` where we'll be sending the variables FROM_EMAIL and TO_ADDRESS and load the remaining constants from environment.
 
