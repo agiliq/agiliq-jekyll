@@ -58,6 +58,7 @@ cat test-gcp-*.json | base64
 * Lets navigate to our CI & CD settings in our project at https://gitlab.com/GITLAB_USERNAME/PROJECT_NAME/settings/ci_cd
 
 * Create two new variables with following keys & values
+
 ```
 KEY = GCLOUD_SERVICE_KEY
 VALUE = ENCODED_KEY_GENERATED_FROM_JSON
