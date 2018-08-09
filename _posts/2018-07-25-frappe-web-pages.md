@@ -13,7 +13,7 @@ author: Akshar
 
 This post assumes that you have bench initialized and you are able to add a site to it.
 
-Any erpnext installation has two user environments. They are:
+Any frappe installation has two user environments. They are:
 
 * Desk View
 * Web View
