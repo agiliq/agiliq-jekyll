@@ -67,7 +67,7 @@ You can point `home_page` hook to a web view too. Assume we have a web view at `
 
 Content of meeting/www/custom-homepage.html could be:
 
-    \{\{body\}\}
+    {{body}}
 
 Content of meeting/www/custom_homepage.py could be:
 
