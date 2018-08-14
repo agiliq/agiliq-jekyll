@@ -65,9 +65,7 @@ Clear cache and load the homepage, i.e `foo.bar:8002`. It should show content of
 
 You can point `home_page` hook to a web view too. Assume we have a web view at `meeting/www/custom-homepage.html` with associated controller at `meeting/www/custom_homepage.py`. Read our [last post](https://www.agiliq.com/blog/2018/07/frappe-web-pages/) to understand web view in detail.
 
-Content of meeting/www/custom-homepage.html could be:
-
-    {{body}}
+Content of meeting/www/custom-homepage.html could be *\{\{body\}\}*:
 
 Content of meeting/www/custom_homepage.py could be:
 
