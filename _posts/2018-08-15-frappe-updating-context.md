@@ -30,7 +30,7 @@ Let's create an app so that we have a hooks.py where we can do any needed modify
 
 Let's add a web view which should respond at "/custom-homepage" and ensure that the web view is browsable. Refer to our [earlier post](https://www.agiliq.com/blog/2018/07/frappe-web-pages/) to understand web views in detail.
 
-Content of meeting/www/custom-homepage.html is `{{body}}`.
+Content of meeting/www/custom-homepage.html is `\{\{body\}\}`.
 
 Content of meeting/www/custom_homepage.py:
 
@@ -72,8 +72,8 @@ Add a dictionary `website_context` to your site's site_config.json. Example
 You should be able to use any key of dictionary website_context in your webpages after this. Modify custom_homepage.html to:
 
     Adding some site_config context variable too.<br/>
-    {{body}}<br/>
-    {{site_config_context_variable}}<br/>
+    \{\{body\}\}<br/>
+    \{\{site_config_context_variable\}\}<br/>
 
 Refresh your page and it should look like:
 
