@@ -45,7 +45,7 @@ Ensure that you are able to navigate to '/custom-homepage'.
 
 #### Hookpoints
 
-You can add extra context apart from the default ones and controller addes ones by using the ollowing hook points:
+You can add extra context apart from the default ones and controller added ones by using the following hook points:
 
 * site_config.website_context
 * hooks.website_context
