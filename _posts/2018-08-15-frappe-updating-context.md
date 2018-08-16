@@ -71,9 +71,11 @@ Add a dictionary `website_context` to your site's site_config.json. Example
 
 You should be able to use any key of dictionary website_context in your webpages after this. Modify custom_homepage.html to:
 
+    {% raw %}
     Adding some site_config context variable too.<br/>
-    \{\{body\}\}<br/>
-    \{\{site_config_context_variable\}\}<br/>
+    {{body}}<br/>
+    {{site_config_context_variable}}<br/>
+    {% endraw %}
 
 Refresh your page and it should look like:
 
