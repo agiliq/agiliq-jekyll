@@ -30,7 +30,11 @@ Let's create an app so that we have a hooks.py where we can do any needed modify
 
 Let's add a web view which should respond at "/custom-homepage" and ensure that the web view is browsable. Refer to our [earlier post](https://www.agiliq.com/blog/2018/07/frappe-web-pages/) to understand web views in detail.
 
-Content of meeting/www/custom-homepage.html is `\{\{body\}\}`.
+Content of meeting/www/custom-homepage.html:
+
+    {% raw %}
+    {{body}}
+    {% endraw %}
 
 Content of meeting/www/custom_homepage.py:
 
@@ -122,10 +126,12 @@ Add a function called add_users_to_context() in meeting/www/custom_homepage.py
 
 Modify custom-homepage.html to have following 
 
+    {% raw %}
     {{body}}<br/>
     {% for user in users %}
           <p>{{user.name}}</p>
     {% endfor %}
+    {% endraw %}
 
 Clear cache and reload the page.
 
