@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Web pages using Frappe"
-description: "How to add a web page in a Frappe or Erpnext project"
+title:  "Dyamic web views using Frappe"
+description: "How to add a dynamic web page in a Frappe or Erpnext project"
 keywords: "Frappe, Erpnext, Python"
 date:   2018-07-25
 categories: [python, frappe, erpnext]
@@ -34,12 +34,13 @@ There are several ways in which web views can be created.
 
 * Adding code in an app's `www/` or `templates/` folder.
 * Using `hooks.website_route_rules`.
+* Adding a 'Web Page' from desk.
 * Setting `Has web view` as True for a doctype.
 * Using `printview` and `listview` for a doctype.
 
 In this post we will discuss the first alternative which is "adding code in an app's www/ folder".
 
-You can read about website_route_rules in our [other post](https://www.agiliq.com/blog/2018/08/frappe-website-rules/). We will discuss the other two alternatives in our later posts.
+You can read about website_route_rules in our [other post](https://www.agiliq.com/blog/2018/08/frappe-website-rules/). We will discuss the other alternatives in our later posts.
 
 #### Setup
 
