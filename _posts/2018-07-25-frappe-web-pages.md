@@ -37,7 +37,9 @@ There are several ways in which web views can be created.
 * Setting `Has web view` as True for a doctype.
 * Using `printview` and `listview` for a doctype.
 
-In this post we will discuss the first alternative which is "adding code in an app's www/ folder". We will discuss the other alternatives in our later posts.
+In this post we will discuss the first alternative which is "adding code in an app's www/ folder".
+
+You can read about website_route_rules in our [other post](https://www.agiliq.com/blog/2018/08/frappe-website-rules/). We will discuss the other two alternatives in our later posts.
 
 #### Setup
 
