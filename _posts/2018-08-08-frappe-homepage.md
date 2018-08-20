@@ -75,7 +75,7 @@ You can set `what-we-do` as homepage of your application in the following way:
 
 ![](/assets/images/frappe/set-what-we-do-as-homepage.png)
 
-Clear cache and reload the homepage, and your about page content should show on homepage.
+Clear cache and reload the homepage, and your `what-we-do` page should show on homepage.
 
 ![](/assets/images/frappe/what-we-do-as-homepage.png)
 
