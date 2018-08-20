@@ -11,13 +11,13 @@ author: Akshar
 
 #### Goal
 
-This post explains how we can add and customize homepage for a erpnext/frappe installation. By homepage, I mean the page which shows up when "foo.bar/" is accessed.
+This post explains how we can set homepage in a erpnext/frappe installation.
 
-Default frappe installation doesn't provide a homepage. You might want to show a homepage for visitors of your frappe powered website. You can achieve it in several ways as described below:
+Default frappe installation doesn't provide a homepage. You can create and set a homepage in several ways as described below:
 
 #### Setup
 
-This post assumes that you have bench initialized and you are able to add a site to your frappe installation.
+This post assumes that you have a Frappe project initialized and you are able to add a site to your frappe installation.
 
 Let's add a site
 
@@ -30,66 +30,95 @@ Let's create an app and install it in the site foo.bar.
 
 #### Default behaviour
 
-If you are logged in as an administrator and access `foo.bar:8002`, you would be redirected to the desk environment.
+If you are logged in as an administrator and access the homepage i.e `foo.bar:8002`, you would be redirected to the desk environment.
 
 ![](/assets/images/frappe-homepage/admin-homepage.png)
 
-But if you aren't logged in as administrator, i.e for a Guest visitor, accessing `foo.bar` redirects to login page. We want to change this behaviour and instead of redirecting to login page we want to show some content.
+If you aren't logged in as administrator, i.e for a Guest visitor, accessing homepage redirects to login page.
 
 ![](/assets/images/frappe-homepage/guest-login.png)
 
-There are several hook points provided by frappe to add a homepage. They are:
+We want to change this behaviour and instead of redirecting to login page we want to show some content.
 
-* Using `home_page` attribute of hooks.py
+There are several alternatives provided by frappe to add a homepage. They are:
+
 * Using `Website Settings`
+* Using `home_page` attribute of hooks.py
 * Using `get_website_user_home_page` attribute of hooks.py
 * Using `role_home_page` attribute of hooks.py
 
-#### Using **home_page** attribute
+#### Using **Website Settings**
 
-Frappe provides a basic `About Us` page by default which can be accessed at `/about`.
+Homepage can be set using `Home Page` field of `Website Settings`.
 
-![](/assets/images/frappe-homepage/about.png)
+You can set it to any valid route of your project. There are some routes provided by default in any Frappe installation. eg: `about` and `contact`.
 
-Frappe allows customizing this page which we will see later. For now, this basic page would suffice.
+Access path `/about` and you should be able to see a page.
 
-Suppose you don't want to spend too much time setting up the homepage and just want to show the about page when someone accesses homepage.
+![](/assets/images/frappe/default-about.png)
 
-Edit `meeting/hooks.py` and add module level attribute `home_page`.
+You can set `about` as homepage of your application in the following way:
 
-    home_page = "about"
+![](/assets/images/frappe/set-about-as-homepage.png)
 
-Clear cache and load the homepage, i.e `foo.bar:8002`. It should show content of about page on homepage now.
+Clear cache and reload the homepage, and your about page content should show on homepage.
 
-![](/assets/images/frappe-homepage/guest-homepage.png)
+![](/assets/images/frappe/about-as-homepage.png)
 
-You can point `home_page` hook to a web view too. Assume we have a web view at `meeting/www/custom-homepage.html` with associated controller at `meeting/www/custom_homepage.py`. Read our [last post](https://www.agiliq.com/blog/2018/07/frappe-web-pages/) to understand web view in detail.
+You can create a Web Page from the desk and set it as the homepage instead. You can learn about creating Web Pages from our [other post](https://www.agiliq.com/blog/2018/08/frappe-static-webpages/).
 
-Content of meeting/www/custom-homepage.html could be *\{\{body\}\}*:
+Assuming you have created a Webpage with route `what-we-do` which looks like:
+
+![](/assets/images/frappe/webpage-what-we-do.png)
+
+You can set `what-we-do` as homepage of your application in the following way:
+
+![](/assets/images/frappe/set-what-we-do-as-homepage.png)
+
+Clear cache and reload the homepage, and your about page content should show on homepage.
+
+![](/assets/images/frappe/what-we-do-as-homepage.png)
+
+You can set a custom webview added in www/ as your homepage too.
+
+Assume we have a web view at `meeting/www/custom-homepage.html` with associated controller at `meeting/www/custom_homepage.py`. Read our [last post](https://www.agiliq.com/blog/2018/07/frappe-web-pages/) to understand web view in detail.
+
+Content of meeting/www/custom-homepage.html could be:
+
+    {% raw %}
+    {{body}}
+    {% endraw %}
 
 Content of meeting/www/custom_homepage.py could be:
 
     def get_context(context):
         context['body'] = 'This is a custom homepage'
 
+Set `Home Page` of `Website Settings` to `custom-homepage`.
+
+Clear cache and reload the homepage. It should show content of web view `custom-homepage`.
+
+![](/assets/images/frappe-homepage/custom-homepage.png)
+
+#### Using **home_page** attribute
+
+You can set homepage using `home_page` variable of hooks. This takes precedence over Website Settings homepage.
+
+Edit `meeting/hooks.py` and add module level attribute `home_page`.
+
+    home_page = "about"
+
+Clear cache and load the homepage. It should show content of about page on homepage now.
+
+![](/assets/images/frappe-homepage/guest-homepage.png)
+
+As with `Website Settings` `Home Page`, you can point `home_page` hook to a www/ webview too.
+
 Edit `home_page` attribute of `meeting/hooks.py` to point to this web view route.
 
     home_page = "custom-homepage"
 
-Clear cache and load the homepage, i.e `foo.bar:8002`. It should show content of web view `custom-homepage`.
+Clear cache and load the homepage. It should show content of web view `custom-homepage`.
 
 ![](/assets/images/frappe-homepage/custom-homepage.png)
 
-#### Using **Website Settings**
-
-Homepage can be set using `Home Page` field of `Website Settings` too. Comment `home_page` of hooks.py so that it's not in effect anymore. Add Home Page in Website Settings.
-
-![](/assets/images/frappe-homepage/website-settings.png)
-
-Load the homepage.
-
-Remove `custom-homepage` from website settings and instead use `about`.
-
-![](/assets/images/frappe-homepage/website-settings-about.png)
-
-Reload the homepage and content of about us page should show up on homepage.
