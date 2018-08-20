@@ -13,7 +13,9 @@ author: Akshar
 
 Very often a company need pages like "What we do", "Who we are", "Our branches", "Our past clients" etc.
 
-In this post we will see how these pages could be added to a Frappe or erpnext powered site. We will add these pages using Frappe Desk.
+In this post we will see how these pages could be added to a Frappe or erpnext powered site. We will add these pages using `Web Page` doctype available on desk.
+
+We will be using Desk environment and not www/ approach which requires making code level changes.
 
 #### Setup
 
