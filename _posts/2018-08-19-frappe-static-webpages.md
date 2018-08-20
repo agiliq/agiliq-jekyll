@@ -1,9 +1,9 @@
 ---
 layout: post
 comments: true
-title:  "Adding static webpages to Erpnext or Frappe"
-description: "Creating static webpages for a Erpnext installation"
-keywords: "Frappe, Erpnext, Python"
+title:  "Adding static webpages to ERPNext or Frappe"
+description: "Creating static webpages for a ERPNext installation"
+keywords: "Frappe, ERPNext, Python"
 date: 2018-08-19
 categories: [python, erpnext, frappe]
 author: Akshar
@@ -208,5 +208,17 @@ If you want something else to add between Home and What we do, let's say "About"
 Your page should start looking like:
 
 ![](/assets/images/frappe/breadcrumbs-2.png)
+
+##### Adding custom style to page
+
+You can add custom style by editing `CSS` of `STYLE` section.
+
+Suppose we want to make the background-color as #fafbfc for navbar and footer.
+
+![](/assets/images/frappe/style-css.png)
+
+Navbar provided by Frappe webpages have class navbar-main, and footer has class web-footer. We exploited this knowledge to add custom css to our page.
+
+You can inspect different elements on page to find out their classes and add appropriate styling.
 
 If you want to know about any other customizations in your webpage, leave a comment and I can add it to the post.

@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Frappe website catch all"
 description: "Adding fallback page in frappe"
-keywords: "Frappe, Erpnext, Python"
+keywords: "Frappe, ERPNext, Python"
 date: 2018-08-14
 categories: [python, frappe, erpnext]
 author: Akshar

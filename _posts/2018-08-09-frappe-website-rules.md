@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Frappe website route rules"
 description: "Adding website routes in frappe"
-keywords: "Frappe, Erpnext, Python"
+keywords: "Frappe, ERPNext, Python"
 date: 2018-08-08
 categories: [python, frappe, erpnext]
 author: Akshar

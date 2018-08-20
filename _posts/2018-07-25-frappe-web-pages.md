@@ -2,8 +2,8 @@
 layout: post
 comments: true
 title:  "Dyamic web views using Frappe"
-description: "How to add a dynamic web page in a Frappe or Erpnext project"
-keywords: "Frappe, Erpnext, Python"
+description: "How to add a dynamic web page in a Frappe or ERPNext project"
+keywords: "Frappe, ERPNext, Python"
 date:   2018-07-25
 categories: [python, frappe, erpnext]
 author: Akshar

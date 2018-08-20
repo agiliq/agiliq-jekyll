@@ -1,9 +1,9 @@
 ---
 layout: post
 comments: true
-title:  "Frappe and Erpnext homepage"
+title:  "Frappe and ERPNext homepage"
 description: "Customizing frappe/erpnext homepage"
-keywords: "Frappe, Erpnext, Python"
+keywords: "Frappe, ERPNext, Python"
 date: 2018-08-08
 categories: [python, frappe, erpnext]
 author: Akshar
