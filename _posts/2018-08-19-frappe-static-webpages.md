@@ -42,20 +42,6 @@ Navigate to `/what-we-do` and you should be able to see the page.
 
 ![](/assets/images/frappe/what-we-do.png)
 
-##### Change brand
-
-You might want to put your company name in place of `Home` in top left. You can add that from Tools > Website > Website Settings
-
-Expand `Brand` on Website Settings and add your company name.
-
-![](/assets/images/frappe/brand-html.png)
-
-Clear cache and reload the page, and your company name should show up in top left.
-
-![](/assets/images/frappe/with-brand-html.png)
-
-Keep in mind that `Website Settings` are applied across all pages and wouldn't only be applied to the `What we do` page.
-
 ##### Hide login
 
 You might want to hide the `Login` button which shows up on top right.
@@ -84,9 +70,23 @@ You can read about updating context variables in our [earlier post](https://www.
 
 Currently there isn't a way to disable the `Login` button using `Website Settings` and you need to do it using website_context. Allowing it from Website Settings would be a good idea, and we will work on it.
 
+##### Change brand
+
+You might want to put your company name in place of `Home` in top left. You can add that from Tools > Website > Website Settings
+
+Expand `Brand` under Website Settings and add your company name to `Brand HTML`.
+
+![](/assets/images/frappe/brand-html.png)
+
+Clear cache and reload the page, and your company name should show up in top left.
+
+![](/assets/images/frappe/with-brand-html.png)
+
+Keep in mind that `Website Settings` are applied across all pages and wouldn't only be applied to the `What we do` page.
+
 ##### Hide title
 
-You might not want the title of the page, i.e What we do, to show up in the html body. You can achieve it by unchecking `Show title` from the desk.
+You might not want the title of the page, i.e What we do, to show up in the html body. You can achieve it by unchecking `Show Title` from the desk.
 
 ![](/assets/images/frappe/uncheck-show-title.png)
 
@@ -98,7 +98,7 @@ Clear cache and reload the page, and your html content should start from 'We dev
 
 A banner appears above the header.
 
-Suppose you want to add a banner to your website, you can do it by editing `Banner HTML`.
+Suppose you want to add a banner to your website, you can do it by editing `Banner HTML` under `Banner`.
 
 ![](/assets/images/frappe/add-banner-html.png)
 
