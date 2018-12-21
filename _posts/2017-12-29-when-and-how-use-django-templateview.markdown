@@ -71,6 +71,6 @@ TemplateView has a better separation of defining context variables and defining 
 Essentially a TemplateView helps you avoid boilerplate code like:
 
 * providing a GET() implementation.
-* creating a returning a HttpResponse() or a subclass of HttpResponse() object.
+* creating and returning a HttpResponse() or a subclass of HttpResponse() object.
 
 
