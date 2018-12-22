@@ -106,7 +106,7 @@ You can add ordering to your queryset by adding `ordering` attribute on View. Su
 		model = Book
 		context_object_name = 'books'
 		paginate_by = 10
-		ordering = [-created']
+		ordering = ['-created']
 
 Since ordering is a list, so you can order by multiple attributes.
 
@@ -116,7 +116,7 @@ In case you want to filter the queryset differently for different web requests, 
 		template_name = 'book-list.html'
 		context_object_name = 'books'
 		paginate_by = 10
-		ordering = [-created']
+		ordering = ['-created']
 
 	    def get_queryset(self):
 	        return Book.objects.filter(created_by=self.request.user)
