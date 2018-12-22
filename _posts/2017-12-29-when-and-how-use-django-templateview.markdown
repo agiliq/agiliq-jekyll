@@ -12,14 +12,14 @@ Django provides several class based generic views to accomplish common tasks. Si
 
 TemplateView **should be used** when you want to present some information in a html page.
 
-TemplateView **shouldn't be used** when your page has forms and does creation or update of objects.
+TemplateView **shouldn't be used** when your page has forms and does creation or update of objects. In such cases FormView, CreateView or UpdateView is a better option.
 
 TemplateView is most suitable in following cases:
 
 * Showing 'about us' like pages which are static and hardly needs any context. Though it is easy to use context variables with TemplateView.
 * Showing pages which work with GET requests and don't have forms in it.
 
-Let's write a view using base view **View** and then modify it to use TemplateView. TemplateView would help us avoid several lines of code.
+Let's write a view using base class view **View** and then modify it to use TemplateView. TemplateView would help us avoid several lines of code.
 
 #### Vanilla view
 
@@ -43,7 +43,7 @@ The same functionality can be achieved with **TemplateView** in following way:
 	class AboutUs(TemplateView):
 		template_name = 'about-us.html'
 
-As you can notice, we didn't have to provide a get() implementation while using TemplateView. TemplateView has it's own get(). TemplateView.get() also encapsulates the creation of HttpResponse object and returning it.
+As you can notice, we didn't have to provide a get() implementation while using TemplateView. TemplateView has it's own get(). TemplateView.get() also encapsulates the creation of HttpResponse/TemplateResponse object and returning the response object.
 
 We only had to specify the template_name while using TemplateView.
 
@@ -72,5 +72,7 @@ Essentially a TemplateView helps you avoid boilerplate code like:
 
 * providing a GET() implementation.
 * creating and returning a HttpResponse() or a subclass of HttpResponse() object.
+
+A `template_name` attribute **must be** supplied while using TemplateView.
 
 
