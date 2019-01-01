@@ -152,3 +152,8 @@ Essentially a ListView helps you avoid boilerplate code like:
 * creating and returning a HttpResponse() or a subclass of HttpResponse() object.
 
 The **must** requirement for a ListView is, it must be provided with a `model` or `queryset` or a `get_queryset()` implementation. Every other piece has a sane default.
+
+### Our other posts on generic class views
+
+* <a href="" target="_blank">TemplateView</a>
+* <a href="" target="_blank">DetailView</a>

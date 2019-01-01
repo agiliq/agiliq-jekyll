@@ -76,3 +76,7 @@ Essentially a TemplateView helps you avoid boilerplate code like:
 A `template_name` attribute **must be** supplied while using TemplateView.
 
 
+### Our other posts on generic class views
+
+* <a href="" target="_blank">ListView</a>
+* <a href="" target="_blank">DetailView</a>
