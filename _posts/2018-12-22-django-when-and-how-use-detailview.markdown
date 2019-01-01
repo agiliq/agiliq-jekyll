@@ -56,7 +56,7 @@ Vanilla view looks like:
 books/book_detail.html looks like the following:
 
     <h3>Book detail</h3>
-    <p>{{book.title}}</p>
+    <p>{% raw %}{{book.title}}{% endraw %}</p>
     <p>{{book.isbn}}</p>
 
 You should be seeing book detail at `http://localhost:8000/books/1/`.
@@ -79,7 +79,7 @@ DetailView helped us avoid the following boilerplace code
 
 ### Filter queryset before showing detail page
 
-You might want to only show detail pages for Books which have been marked as published. It assumes that there is a BooleanField called `is_published` on Book.
+You might only detail pages for `published` Books to be accessible and unpublished books should give 404. This scenario assumes that there is a BooleanField called `is_published` on Book.
 
     class Book(models.Model):
         title = models.CharField(max_length=100)
@@ -107,7 +107,7 @@ Notice that we removed the `model` attribute on the view and instead provided a 
 
 ### Restrict users to only see books created by them
 
-Let's think of a hypothetical weird requirement. A user should only be allowed to view a book which has been written by them. This assumes that there is a `user` Foreign Key on Book.
+Let's think of a hypothetical strange requirement. A user should only be allowed to view a book which has been written by them. This assumes that there is a `user` Foreign Key on Book.
 
     In [3]: u = User.objects.latest('pk')
 
