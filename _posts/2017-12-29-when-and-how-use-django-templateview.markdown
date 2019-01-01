@@ -78,5 +78,5 @@ A `template_name` attribute **must be** supplied while using TemplateView.
 
 ### Our other posts on generic class views
 
-* <a href="" target="_blank">ListView</a>
-* <a href="" target="_blank">DetailView</a>
+* <a href="https://www.agiliq.com/blog/2017/12/when-and-how-use-django-listview/" target="_blank">ListView</a>
+* <a href="https://www.agiliq.com/blog/2019/01/django-when-and-how-use-detailview/" target="_blank">DetailView</a>
