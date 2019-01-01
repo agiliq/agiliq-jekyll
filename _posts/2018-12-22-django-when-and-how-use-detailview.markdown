@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "When and how to use Django DetaiView"
+title:  "When and how to use Django DetailView"
 date:   2019-01-01 14:30:39+05:30
 categories: django
 author: akshar
