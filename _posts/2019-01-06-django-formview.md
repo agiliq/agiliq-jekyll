@@ -55,7 +55,9 @@ Template looks like:
     <!--<app>/templates/contact-us.html-->
 
     <form action="." method="POST">
+    {% raw %}
     {% csrf_token %}
+    {% endraw %}
     <table>
     {{form.as_table}}
     </table>
