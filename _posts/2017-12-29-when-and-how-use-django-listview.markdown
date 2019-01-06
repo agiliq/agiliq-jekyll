@@ -157,3 +157,4 @@ The **must** requirement for a ListView is, it must be provided with a `model` o
 
 * <a href="https://www.agiliq.com/blog/2017/12/when-and-how-use-django-templateview/" target="_blank">TemplateView</a>
 * <a href="https://www.agiliq.com/blog/2019/01/django-when-and-how-use-detailview/" target="_blank">DetailView</a>
+* <a href="https://www.agiliq.com/blog/2019/01/django-formview/" target="_blank">FormView</a>
