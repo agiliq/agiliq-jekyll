@@ -239,3 +239,4 @@ This code has better separation of concern with smaller methods instead of huge 
 * <a href="https://www.agiliq.com/blog/2017/12/when-and-how-use-django-templateview/" target="_blank">TemplateView</a>
 * <a href="https://www.agiliq.com/blog/2017/12/when-and-how-use-django-listview/" target="_blank">ListView</a>
 * <a href="https://www.agiliq.com/blog/2019/01/django-when-and-how-use-detailview/" target="_blank">DetailView</a>
+* <a href="https://www.agiliq.com/blog/2019/01/django-createview/" target="_blank">CreateView</a>
