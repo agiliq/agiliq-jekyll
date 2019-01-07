@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "When and how to use Django CreateView"
-date:   2019-01-07 15:30:39+05:30
+date:   2019-01-07 12:30:39+05:30
 categories: django
 author: akshar
 ---
