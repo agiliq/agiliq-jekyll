@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Basics of Node.js"
 date:   2019-01-17 11:30:27+05:30
-categories: node
+categories: nodejs
 author: akshar
 ---
 
