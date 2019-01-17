@@ -2,8 +2,8 @@
 layout: post
 comments: true
 title:  "Basics of Node.js"
-date:   2019-01-18 11:30:27+05:30
-categories: django
+date:   2019-01-17 11:30:27+05:30
+categories: node
 author: akshar
 ---
 
