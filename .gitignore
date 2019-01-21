@@ -5,3 +5,4 @@ _site/
 gems
 .sass-cache
 todo.txt
+.hypothesis/
