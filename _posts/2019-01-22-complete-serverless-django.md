@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Complete Serverless in Django"
+title: "Deploying completely serverless Django with Zappa and Aurora Serverless"
 description: "Make django completely serverless using Lambda & Aurora-Serverless"
 keywords: "serverless, lambda, auroraSQl serverless, aws, django, zappa, mysql"
 date: 2019-01-21 11:30:27+05:30
@@ -11,11 +11,13 @@ author: Anmol Akhilesh
 
 ## Deploying Serverless Django
 
-We will see how to deploy a django application onto AWS Lambda using Zappa.
+We will see how to _deploy_ a Django application onto **_AWS Lambda_** using **_Zappa_** and use **_AWS Aurora-Serverless_** as the DB.
 
-[AWS Lambda](https://aws.amazon.com/lambda/) is a serverless computing platform by amazon, which is completely event driven and it automatically manages the computing resources. It scales automatically when needed, depending upon the requests the application gets.
+**[AWS Lambda](https://aws.amazon.com/lambda/)** is a serverless computing platform by amazon, which is completely event driven and it automatically manages the computing resources. It scales automatically when needed, depending upon the requests the application gets.
 
-And [Zappa](https://www.zappa.io/) is a python framework used for deploying python applications onto AWS-Lambda. Zappa handles all of the configuration and deployment automatically for us.
+**[Zappa](https://www.zappa.io/)** is a python framework used for deploying python applications onto AWS-Lambda. Zappa handles all of the configuration and deployment automatically for us.
+
+And **[Aurora Serverless](https://aws.amazon.com/rds/aurora/serverless/)** is an on-demand, auto-scaling Relational Database System by Amazon AWS(presently compatible with only MySQL). It automatically starts up & shuts down the DB depending on the requirement.
 
 ### Install and Configure the Environment
 
@@ -26,7 +28,7 @@ First, before using AWS, we have to make sure we have a valid AWS account and ha
 then, create a folder at the root level
 
 ```sh
- mkdir .aws
+ $ mkdir .aws
 ```
 
 Now, create a file called credentials and store the `aws_access_key_id` and `aws_secret_access_key`. To find these access credentials
@@ -169,6 +171,7 @@ $ zappa deploy dev
 which will show us
 
 ```sh
+$ zappa deploy dev
 
 Calling deploy for stage dev..
 Downloading and installing dependencies..
@@ -290,7 +293,7 @@ and do
 $ zappa update dev
 ```
 
-and after updating zappa, refresh the page which will be
+and after updating zappa, let us check by refreshing the page
 
 ![](/assets/images/zappa/drf.png)
 
@@ -337,7 +340,7 @@ We will use the _VPC_, _Subnet Ids_ and the _security-group_ later.
 
 Now our MySQL db is created, we have to link it to our app.
 
-We use `mysqlclient` since the db is MySQL, now let us install it
+We use `mysqlclient` to connect django to the MySQl Database Server.
 
 ```sh
 $ pip install mysqlclient
@@ -380,6 +383,8 @@ select the same VPC as in Aurora DB
 
 **As Aurora Serverless DB clusters do not have publically accessible endpoints, our MyClusterName RDS can only be accessed from within the same VPC.**
 
+![](/assets/images/zappa/lambda-vpc.png)
+
 Then in **Subnets** select all the subnets as in Aurora DB
 
 and for **Security groups** select a different security group than the one on Aurora DB.
@@ -390,7 +395,7 @@ Now we have to update the security group Inbound endpoint.
 
 In the RDS console, go to databases section and click on our DB name, which will take us to
 
-![](/assets/images/zappa/rds-4.png)
+![](/assets/images/zappa/rds-sg-1.png)
 
 Now click on the security group and we will be taken to the Security Group page
 
@@ -507,4 +512,6 @@ Now let us check by logging in the admin page
 
 ![](/assets/images/zappa/admin.png)
 
-NOW OUR DJANGO APP IS COMPLETELY SERVERLESS !!
+**_NOW OUR DJANGO APP IS COMPLETELY SERVERLESS !!_**
+
+We can check the lambda logs by `zappa dev tail`
