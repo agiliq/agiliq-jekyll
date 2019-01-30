@@ -15,7 +15,7 @@ Traditionally, dependency managers weren't used for managing client side librari
 
 ### Confusion which we will address
 
-One frequently ocurring confusion is how npm which resonates with Node.js can be used for managing client side libraries.
+One frequently ocurring confusion is how npm which is a package manager for Node.js can be used for managing client side libraries.
 
 npm makes sense in context of Node.js. Node.js is a server development environment. How could a package manager for server environment manage dependencies for frontend.
 
