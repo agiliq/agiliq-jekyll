@@ -29,7 +29,7 @@ Install it:
 
 It is meant for Node.js environment. Try using it on Node.js repl.
 
-   ╰─$ node
+    ╰─$ node
     > var colors = require('colors');
     undefined
     > console.log('hello'.green);
