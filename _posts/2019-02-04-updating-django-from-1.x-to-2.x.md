@@ -75,7 +75,7 @@ Updating the software application to latest releases is very important. Because 
 
 * <a href="https://docs.djangoproject.com/en/dev/releases/1.11/" target="__blank">Django 1.11</a> features & deprecations
     * The Django 1.11.x series is the last to support Python 2. The next major release, Django 2.0, will only support Python 3.4+
-    * Database table indexs available in model meta class (i.e  `Meta.indexes`).
+    * Database table indexes available in model meta class (i.e  `Meta.indexes`).
     * Template-based widget rendering support added.
     * Added support for Subquery expressions
 ```python
@@ -87,7 +87,7 @@ Comment.objects.filter(post__in=Subquery(posts.values('pk')))
 * <a href="https://docs.djangoproject.com/en/dev/releases/2.0/" target="__blank">Django 2.0</a> features & deprecations
     * It only support's Python3.4+. It dropped support for Python<3.
     * It simplified the url routing syntax by introducing the <a href="https://docs.djangoproject.com/en/2.1/topics/http/urls/#registering-custom-path-converters" target="__blank">path converters</a>.
-    * Responsive user interace feature for django admin.
+    * Responsive user interface feature for django admin.
 
 
 ### Check list to update projects from Django1.x to Django2.x?
@@ -95,7 +95,7 @@ Comment.objects.filter(post__in=Subquery(posts.values('pk')))
 * It's recommended to update the current version to it's next version (i.e django 1.x to django 1.x+1).
 * Before updating the django version first we have to read it's release notes for what are the features deprecated and what are the features introduced.
 * Find replacements for deprecated features.
-* In complex django peojects we use many third party packages. So, we have to take care of them too.
+* In most django projects we use many third party packages. So, we have to take care of them too.
 * If any third party package is deprecated then first we have to check for alternatives to it. If any alternative is available then use it.
 * If no alternative found then update the existing package and use it.
 * Remove all unused third party packages.
