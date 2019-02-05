@@ -4,7 +4,7 @@ comments: true
 title:  "Updating Django from 1.x to 2.x"
 description: "Updating the software application to latest releases is very important. Because latest releases always includes new features which boosts development process and resolves potential problems."
 keywords: "Django version update, Django version upgrade"
-date:   2019-01-22
+date:   2019-02-04
 categories: [django, version update, software update]
 main_category: django
 author: Anjaneyulu
@@ -91,8 +91,17 @@ Comment.objects.filter(post__in=Subquery(posts.values('pk')))
 
 
 ### Check list to update projects from Django1.x to Django2.x?
-
-    * Check-out the version of the django on which the project is running.
-    * It's recommended to update the current version to it's next version (i.e django 1.x to django 1.x+1).
-    * Before updating the django version first we have to read it's release notes for what are the features deprecated and what are the features introduced.
-    * 
+* Check-out the version of the django on which the project is running.
+* It's recommended to update the current version to it's next version (i.e django 1.x to django 1.x+1).
+* Before updating the django version first we have to read it's release notes for what are the features deprecated and what are the features introduced.
+* Find replacements for deprecated features.
+* In complex django peojects we use many third party packages. So, we have to take care of them too.
+* If any third party package is deprecated then first we have to check for alternatives to it. If any alternative is available then use it.
+* If no alternative found then update the existing package and use it.
+* Remove all unused third party packages.
+* After satisfying the requirements(i.e system softwares and pip packages) run the tests.
+* If any failures while running tests then fix them.
+* Try to remove all unused code(i.e you can use <a href="https://pypi.org/project/coveralls/" target="__blank">test coverage</a>)
+* Try to optimize the existing code by replacing it with new features wherever it's required to speedup the application.
+* Try to optimize the existing ORM queries with new features of ORM to speedup the query execution.
+* Try to use `path` and `path converters` to make urls more readable.
