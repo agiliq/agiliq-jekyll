@@ -5,7 +5,7 @@ layout: default
 
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 <div class="callout callout--success">
-    <p>Thank you for reading the Agiliq blog. This article was writen by {{ page.author }} on {{ page.date | date: date_format }} in
+    <p>Thank you for reading the Agiliq blog. This article was written by {{ page.author }} on {{ page.date | date: date_format }} in
         {% for category in page.categories %}
           <a href="{{ site.baseurl}}/categories/#{{category|slugize}}" rel="nofollow">{{category}}</a>
       {% unless forloop.last %},&nbsp;{% endunless %}
