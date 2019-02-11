@@ -136,3 +136,11 @@ This approach doesn't need dependencies to be part of version control. The direc
 Only `index.html` and `package.json` would be part of version control.
 
 When a new developer clones the repository, he/she would run `npm install`. This would ensure that a `node_modules` is created and bootstrap and jquery are installed inside node_modules.
+
+### Creating package.json automatically
+
+In last section, we explicity created a package.json with `dependencies` key.
+
+Instead package.json could be created by running `npm init` on the console. This would ask some question and would add sensible defaults if you don't provide any answer.
+
+Doing `npm install jquery` would automatically create a `dependencies` key in package.json then and would add jquery as a dependency.
