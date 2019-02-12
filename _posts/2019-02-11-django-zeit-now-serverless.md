@@ -329,6 +329,16 @@ Now let us login to our admin
 
 Now our Django app is linked to postgres and deployed using Zeit Now.
 
+----
+
+This is part 2 of **Serverless Deployments for Django**,
+
+Check out part 1 [Deploying completely serverless Django with Zappa and Aurora Serverless](https://www.agiliq.com/blog/2019/01/complete-serverless-django/) 
+
+and
+Stay tuned for part 3 and 4.
+
+----
 
 
 

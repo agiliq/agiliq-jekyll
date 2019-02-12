@@ -515,3 +515,15 @@ Now let us check by logging in the admin page
 **_NOW OUR DJANGO APP IS COMPLETELY SERVERLESS !!_**
 
 We can check the lambda logs by `zappa dev tail`
+
+
+----
+
+This is part 1 of **Serverless Deployments for Django**,
+
+Check out part 2 [Deploying Serverless Django with Zeit and RDS Postgres](https://www.agiliq.com/blog/2019/02/django-zeit-now-serverless/) 
+
+and
+Stay tuned for part 3 and 4.
+
+----
