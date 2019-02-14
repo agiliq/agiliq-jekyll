@@ -245,6 +245,10 @@ $ up logs
 
 Now the error is stating that the app could not listen to the port!
 
+  We tried to take the help of Apex-Up Slack group and they were really helpfull, _TJ Holowaychuk(founder of apex)_ reproduced the problem and the tried to look into the error.
+
+  But at present the Apex-up is still not ready for Django-apps. But in future updates there will be more for the django python community.
+
 
 
 
