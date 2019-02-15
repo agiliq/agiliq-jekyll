@@ -46,9 +46,9 @@ $ up --help
 
 #### Go to Django app
 
-**First we have to note that _Apex-UP_ currently supports only Node.js lambda environment**, but we can use python 2.7 and 3.4 in it.
+**Note** : **_Apex-UP_ currently supports only Node.js lambda environment**, but we can use python 2.7 and 3.4 in it.
 
-**Note** : **We have to use Django 2.0 as it is the only latest version which supports python3.4**
+ **We have to use Django 2.0 as it is the only latest version which supports python3.4**
 
 
 We will use  _Pollsapi_ ([https://github.com/agiliq/building-api-django](https://github.com/agiliq/building-api-django)) as the django project.
@@ -226,9 +226,9 @@ We have to add the migrate command to the `proxy.command` in the _up.json_ file.
 
 
 
-##### Troubleshooting
+### Troubleshooting
 
-**We have to also note that we cannot see the django error messages in the url(even if we have DEBUG=True), we can see them in the apex-up logs**
+**We should note that we cannot see the django error messages in the url(even if we have DEBUG=True), we can see them in the apex-up logs**
 
 We can check for the errors by
 
