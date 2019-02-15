@@ -77,7 +77,24 @@ which will show us
 create a `requirements.txt` file and mention the Django version in it
 
 ```sh
-$ echo "Django>2.0.3"> requirements.txt
+$ echo "Django>2.0.13"> requirements.txt
+```
+
+and in `polls/settings.py` comment the databases part
+
+```py
+...
+...
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+...
+...
 ```
 
 Now create a file in the same level as the `app.py` file named **`up.json`** and add the following lines
