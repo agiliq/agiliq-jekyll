@@ -256,4 +256,15 @@ $ up stack delete   # delete the deployment
 **We have to note that we have only python 2.7 and python 3.4 versions available at present in Apex-Up**
 
 
+----
 
+This is part 3 of **Serverless Deployments for Django**,
+
+Check out part 1 [Deploying completely serverless Django with Zappa and Aurora Serverless](https://www.agiliq.com/blog/2019/01/complete-serverless-django/)
+
+Check out part 2 [Deploying Serverless Django with Zeit and RDS Postgres](https://www.agiliq.com/blog/2019/02/django-zeit-now-serverless/)
+
+and
+Stay tuned for part 4.
+
+----

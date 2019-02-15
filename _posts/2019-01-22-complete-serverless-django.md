@@ -523,7 +523,9 @@ This is part 1 of **Serverless Deployments for Django**,
 
 Check out part 2 [Deploying Serverless Django with Zeit and RDS Postgres](https://www.agiliq.com/blog/2019/02/django-zeit-now-serverless/) 
 
+Check out part 3 [Deploying completely serverless Django with Apex Up and Aurora Serverless](https://www.agiliq.com/blog/2019/02/django-apex-up-serverless/)
+
 and
-Stay tuned for part 3 and 4.
+Stay tuned for part 4.
 
 ----

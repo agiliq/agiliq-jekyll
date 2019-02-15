@@ -335,9 +335,10 @@ This is part 2 of **Serverless Deployments for Django**,
 
 Check out part 1 [Deploying completely serverless Django with Zappa and Aurora Serverless](https://www.agiliq.com/blog/2019/01/complete-serverless-django/) 
 
-and
-Stay tuned for part 3 and 4.
+Check out part 3 [Deploying completely serverless Django with Apex Up and Aurora Serverless](https://www.agiliq.com/blog/2019/02/django-apex-up-serverless/)
 
+and
+Stay tuned for part 4.
 ----
 
 
