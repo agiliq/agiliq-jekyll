@@ -19,6 +19,13 @@ We will try to deploy a basic django app onto  **_AWS Lambda_** using **_Apex Up
 **[Apex Up](https://up.docs.apex.sh/)** is a Open Source framework used for deploying serverless applications onto AWS-Lambda. Up currently supports Node.js, Golang, Python, Java, Crystal, and static sites out of the box. Up is platform-agnostic, supporting AWS Lambda and API Gateway.
 
 
+**Note** : 
+
+  + **_Apex-UP_ currently supports only Node.js lambda environment**, but we can use python 2.7 and 3.4 in it.
+
+  + **We have to use Django 2.0 as it is the only latest version which supports python3.4**
+
+
 ### Install and Configure the Environment
 
 First configure the AWS credentials [https://www.agiliq.com/blog/2019/01/complete-serverless-django/#configure-aws-credentials](https://www.agiliq.com/blog/2019/01/complete-serverless-django/#configure-aws-credentials)
@@ -46,12 +53,10 @@ $ up --help
 
 #### Go to Django app
 
-**Note** : **_Apex-UP_ currently supports only Node.js lambda environment**, but we can use python 2.7 and 3.4 in it.
-
- **We have to use Django 2.0 as it is the only latest version which supports python3.4**
-
-
 We will use  _Pollsapi_ ([https://github.com/agiliq/building-api-django](https://github.com/agiliq/building-api-django)) as the django project.
+
+  **Note**: **We cannot see the django error messages in the url(even if we have DEBUG=True), we can see them in the   apex-up logs only**
+
 Now go inside the _pollsapi_ app in this repo.
 
 Next create a virtualenv with python34 and install `requirements.txt`
