@@ -374,7 +374,7 @@ Now again push the container image to ECR by following the `Push Commands`.
 
 ![](/assets/images/aws-fargate/ecs-image-2.png)
 
-
+With Fargate, our containers are always started with the latest ECS image and Docker version.
 
 Now we can see that we can login and that our Database connection is established fine and we can login.
 
