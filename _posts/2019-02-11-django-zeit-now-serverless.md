@@ -337,8 +337,7 @@ Check out part 1 [Deploying completely serverless Django with Zappa and Aurora S
 
 Check out part 3 [Deploying completely serverless Django with Apex Up and Aurora Serverless](https://www.agiliq.com/blog/2019/02/django-apex-up-serverless/)
 
-and
-Stay tuned for part 4.
+Check out part 4 [Deploying Django in AWS Fargate and using Aurora Serverless as the database](https://www.agiliq.com/blog/2019/02/django-aws-fargate-aurora-serverless/)
 ----
 
 
