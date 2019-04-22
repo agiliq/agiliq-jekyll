@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Building a RESTful API with Django-rest-framework"
 date:   2014-12-04 21:26:02+05:30
-categories: API, django
+categories: [API, django]
 author: Rakesh
 ---
 
