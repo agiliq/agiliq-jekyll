@@ -197,8 +197,8 @@ Let's keep the urlpattern as:
 
 Let's make a POST request.
 
-![](/assets/images/drf/question-multiple.png)
+![](/assets/images/drf/questions-multiple.png)
 
 The status code 201 suggests that our questions and choices were correctly created. You response should look like:
 
-![](/assets/images/drf/question-multiple-response.png)
+![](/assets/images/drf/questions-multiple-response.png)
