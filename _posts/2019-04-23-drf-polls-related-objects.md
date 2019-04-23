@@ -202,3 +202,5 @@ Let's make a POST request.
 The status code 201 suggests that our questions and choices were correctly created. You response should look like:
 
 ![](/assets/images/drf/questions-multiple-response.png)
+
+Stay tuned for next post of the series.
