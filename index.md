@@ -111,10 +111,10 @@ clients:
     url: "http://www.colbypalmer.com/"
 
 
-  - company_name: Humble Advisors
+  - company_name: CTO @ Activated Capital
     name: "Lane Campbell"
     testimonial: >
-      Shabda has been a reliable provider for Django programming since our first project with this language. I would recommend Agiliq for any size project; Shabda has assembled a team unlike any other in the industry.
+      Shabda and his team are not only reliable but have demonstrable expertise with Django and Python unlike any other team I have worked with.  Shabda is also quite personable and wonderful to work with.
     logo: "/assets/images/lane-campbell.PNG"
     head_shot:
     url: "https://lanecampbell.com/"
