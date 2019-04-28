@@ -11,13 +11,12 @@ author: Akshar
 
 ## Agenda
 
-This post assumes that you have followed the first post of this series at <a href="" target="_blank">https://www.agiliq.com/blog/2019/04/drf-polls/</a>
+This post assumes that you have followed our <a href="https://www.agiliq.com/blog/2019/04/drf-polls/" target="_blank">first post</a> of this series.
 
 We will be creating the following apis in this post.
 
-- An api to create a choice while creating a Question
-- An api to create multiple choices while creating a Question
-- Api to create multiple questions
+- An api to create an associated choice along with a Question
+- An api to create multiple associated choices along with a Question
 - Api to create multiple questions, each question with multiple choices
 
 ## Apis
@@ -39,7 +38,7 @@ Till now we used QuestionListPageSerializer for creating question, seralizer loo
         def create(self, validated_data):
             return Question.objects.create(**validated_data)
 
-POST handler for view looked like. You can see full code <a href="here" target="_blank"></a>
+POST handler for view looked like.
 
     elif request.method == 'POST':
         serializer = QuestionListPageSerializer(data=request.data)
@@ -48,9 +47,13 @@ POST handler for view looked like. You can see full code <a href="here" target="
             return Response(QuestionDetailPageSerializer(question).data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+You can see full code <a href="here" target="_blank">https://www.agiliq.com/blog/2019/04/drf-polls/#final-code</a>
+
 We now want to create a choice along with question. Add following attribute to QuestionListPageSerializer:
 
     choice = ChoiceSerializer(write_only=True)
+
+A DRF `Serializer` is a subclass of DRF `Field`. Similar to how a serializer can have a `Field` as an attribute, it can also have another `Serializer` as an attribute.
 
 Modify `create()` of QuestionListPageSerializer to following:
 
@@ -68,6 +71,8 @@ Try to POST a question without a choice and the code would raise a 400 Bad Reque
 POST a question with valid choice data and the api call would succeed.
 
 ![](/assets/images/drf/question-with-choice.png)
+
+Since QuestionListPageSerializer has a field ChoiceSerializer so a ChoiceSerializer representation needs to be sent as `choice` key in the POSTed data. Remember how we POSTed choice in the <a href="https://www.agiliq.com/blog/2019/04/drf-polls/#post-a-question-choice">last post.</a> We used a similar datastructure, i.e a dictionary containing `choice_text`.
 
 Verify that the correct question and choice were created. Also verify that the choice was associated with the question.
 
@@ -119,9 +124,19 @@ We will also need to adjust `create()` to deal with situation when `choice` isn'
 
 We want the POST questions api to allow creation of multiple choices along with the question.
 
-It would need modifying QuestionListPageSerializer.choice to:
+We will remove field `choice` from QuestionListPageSerializer and instead add a `choices` field which looks like:
 
     choices = ChoiceSerializer(many=True, write_only=True)
+
+We will need to adjust `create()` code of QuestionListPageSerializer too.
+
+    def create(self, validated_data):
+        choices = validated_data.pop('choices', [])
+        question = Question.objects.create(**validated_data)
+        for choice_dict in choices:
+            choice_dict['question'] = question
+            Choice.objects.create(**choice_dict)
+        return question
 
 Entire serializer would look like:
 
@@ -140,21 +155,11 @@ Entire serializer would look like:
                 Choice.objects.create(**choice_dict)
             return question
 
-We will need to adjust `create()` code of QuestionListPageSerializer too.
-
-    def create(self, validated_data):
-        choices = validated_data.pop('choices', [])
-        question = Question.objects.create(**validated_data)
-        for choice_dict in choices:
-            choice_dict['question'] = question
-            Choice.objects.create(**choice_dict)
-        return question
-
 Let's try POSTing a Question with two choices.
 
 ![](/assets/images/drf/question-post-with-two-choices.png)
 
-You should have notices `Status: 201 Created` which suggests that the Question and Choices should have been created.
+You should have noticed `Status: 201 Created` which suggests that the Question and Choices should have been created.
 
 The response of this call should be looking like the following:
 
