@@ -208,4 +208,6 @@ The status code 201 suggests that our questions and choices were correctly creat
 
 ![](/assets/images/drf/questions-multiple-response.png)
 
+You can see the <a href="https://github.com/akshar-raaj/drf-polls-api/tree/v2.0" target="_blank">full code on GitHub</a>
+
 Stay tuned for next post of the series.
