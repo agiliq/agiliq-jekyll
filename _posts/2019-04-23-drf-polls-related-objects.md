@@ -27,7 +27,7 @@ Let's start writing our apis.
 
 The api for creating question is `POST /api/polls/questions/`.
 
-Till now we used QuestionListPageSerializer for creating question, seralizer looked like:
+Till now we used QuestionListPageSerializer for creating question, serializer looked like:
 
     class QuestionListPageSerializer(serializers.Serializer):
         id = serializers.IntegerField(read_only=True)
