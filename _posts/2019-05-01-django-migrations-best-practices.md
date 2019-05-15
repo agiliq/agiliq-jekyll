@@ -5,7 +5,7 @@ title:  "Opinionated guide to Django Migrations"
 description: "Opinionated guide to Django Migrations"
 keywords: "DB, Migration, Django, Python, API"
 date: 2019-05-01
-categories: [API, django, drf]
+categories: [django]
 author: Shabda
 ---
 
