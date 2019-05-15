@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Django polls api using ModelSerializer"
-description: "Progressing to DRF ModelSerializer after using Serializer"
+description: "Converting DRF Serializer code to ModelSerializer"
 keywords: "Django REST Framework, DRF, Django, Python, API"
 date: 2019-05-02
 categories: [API, django, drf]
