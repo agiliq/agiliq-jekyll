@@ -4,7 +4,7 @@ comments: true
 title: "Django REST Framework ListCreateAPIView"
 description: "Understanding Django REST Framework ListCreateAPIView"
 keywords: "Django REST Framework, DRF, Django, Python, API"
-date: 2019-04-22
+date: 2019-05-15
 categories: [API, django, drf]
 author: Akshar
 ---
