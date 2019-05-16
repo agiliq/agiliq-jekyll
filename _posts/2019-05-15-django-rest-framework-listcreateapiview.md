@@ -74,6 +74,8 @@ The api call to list questions looks like:
 
 ![](/assets/images/drf/listcreate-get.png)
 
+Side Note: Read our detailed post on adding an <a href="https://www.agiliq.com/blog/2019/04/drf-polls/" target="_blank">api layer to Django polls app.</a>
+
 ## ListCreateAPIView
 
 Our view has a very commonly occuring pattern where we want to create an instance of a model and want to provide representation of all instances of a model. We had to provide a `get()` and `post()` implementation to achieve this.
