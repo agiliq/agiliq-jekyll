@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Django REST Framework ListCreateAPIView"
+title: "Django REST Framework RetrieveUpdateDestroyAPIView"
 description: "Understanding Django REST Framework RetrieveUpdateDestroyAPIView"
 keywords: "Django REST Framework, DRF, Django, Python, API"
 date: 2019-05-16
