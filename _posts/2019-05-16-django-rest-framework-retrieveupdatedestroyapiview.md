@@ -113,7 +113,7 @@ Suppose we only want the detail view of questions published in last two days to 
             last_two_days = now() - timedelta(days=2)
             return Question.objects.filter(pub_date__gt=last_two_days)
 
-If you want to use different serializers for different methods, you will have to override `get_serializer_class`. Our <a href="https://www.agiliq.com/blog/2019/05/django-rest-framework-listcreateapiview/#listcreateapiview">post on ListCreateAPIView</a> discusses overriding `get_serializer_class`.
+If you want to use different serializers for different methods, you will have to override `get_serializer_class`. Our <a href="https://www.agiliq.com/blog/2019/05/django-rest-framework-listcreateapiview/#listcreateapiview" target="_blank">post on ListCreateAPIView</a> discusses overriding `get_serializer_class`.
 
 Suppose we want to use question_text in url instead of id. We will change our urlpattern to:
 
