@@ -76,9 +76,9 @@ Side Note: Read our detailed post on adding an <a href="https://www.agiliq.com/b
 
 ## RetrieveUpdateDestroyAPIView
 
-Our view has a very commonly occuring pattern where we want to see detail of a model instance, want to edit a model instance and delete a model instance. We had to provide a `get()` and `patch()` and `delete()` implementation to achieve this.
+Our view has a very commonly occuring pattern where we want to see detail of a model instance, want to edit a model instance and delete a model instance. We had to provide a `get()`, `patch()` and `delete()` implementation to achieve this.
 
-RetrieveUpdateDestroyAPIView provides a default implementation of `get()` and `patch()` and `delete()`. It requires two mandatory attributes which are `serializer_class` and `queryset`. There is another optional attribute called `lookup_url_kwarg` which might be needed depending on your url pattern.
+RetrieveUpdateDestroyAPIView provides a default implementation of `get()`, `patch()` and `delete()`. RetrieveUpdateDestroyAPIView requires two mandatory attributes which are `serializer_class` and `queryset`. There is another optional attribute called `lookup_url_kwarg` which might be needed depending on your url pattern.
 
 Let's modify the `QuestionDetailView` to use `RetrieveUpdateDestroyAPIView`.
 
@@ -88,9 +88,18 @@ Let's modify the `QuestionDetailView` to use `RetrieveUpdateDestroyAPIView`.
         lookup_url_kwarg = 'question_id'
         queryset = Question.objects.all()
 
+We had to add `lookup_url_kwarg` because our url pattern uses `question_id` as a url keywork argument.
+
+Had our url been `path('questions/<int:id>/', apiviews.QuestionDetailView.as_view(), name='question_detail_view')`, i.e used keyword argument `id` instead of `question_id` then there was no need to specify `lookup_url_kwarg` on QuestionDetailView. In such case, QuestionDetailView would change to:
+
+    class QuestionDetailView(RetrieveUpdateDestroyAPIView):
+
+        serializer_class = QuestionDetailPageSerializer
+        queryset = Question.objects.all()
+
 GET, PATCH and DELTE api request will keep working as they were working with APIView. Notice how we were able to avoid `get()`, `patch()` and `delete()` on QuestionDetailView.
 
-Suppose we only want the detail view of questions published in last two days to be visible. We will have to override `get_queryset()` in that case.
+Suppose we only want the detail view of questions published in last two days to be visible. We want a 404 to be raised if the question hasn't been published in last two days. We will have to override `get_queryset()` in that case.
 
     from django.utils.timezone import now
     from datetime import timedelta
@@ -104,7 +113,7 @@ Suppose we only want the detail view of questions published in last two days to 
             last_two_days = now() - timedelta(days=2)
             return Question.objects.filter(pub_date__gt=last_two_days)
 
-If you want to use different serializers for different methods, you will have to override `get_serializer_class`.
+If you want to use different serializers for different methods, you will have to override `get_serializer_class`. Our <a href="https://www.agiliq.com/blog/2019/05/django-rest-framework-listcreateapiview/#listcreateapiview">post on ListCreateAPIView</a> discusses overriding `get_serializer_class`.
 
 Suppose we want to use question_text in url instead of id. We will change our urlpattern to:
 
@@ -121,3 +130,5 @@ We will need to use `lookup_field` attribute of RetrieveUpdateDestroyAPIView in 
         def get_queryset(self):
             last_two_days = now() - timedelta(days=2)
             return Question.objects.filter(pub_date__gt=last_two_days)
+
+Stay tuned for our next post of the series which is on DRF Viewset.
