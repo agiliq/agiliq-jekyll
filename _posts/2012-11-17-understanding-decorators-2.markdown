@@ -4,7 +4,7 @@ comments: true
 title:  "Understanding decorators"
 date:   2012-11-17 14:43:53+05:30
 categories: Function as objects
-author: akshar
+author: Akshar
 ---
 Understanding decorators in Python
 

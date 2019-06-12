@@ -4,7 +4,7 @@ comments: true
 title:  "Getting started with Celery and Redis"
 date:   2015-07-06 10:54:44+05:30
 categories: redis
-author: akshar
+author: Akshar
 ---
 ### Agenda
 

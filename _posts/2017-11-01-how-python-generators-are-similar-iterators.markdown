@@ -4,7 +4,7 @@ comments: true
 title:  "How Python generators are similar to iterators"
 date:   2017-11-01 11:29:47+05:30
 categories: python
-author: akshar
+author: Akshar
 ---
 This post assumes you have a solid understanding of iterables, iterators, \_\_iter\_\_(), next() and built in iter(). If not, read our <a href="http://agiliq.com/blog/2017/10/iterators-and-iterables/" target="_blank">previous post</a>
 

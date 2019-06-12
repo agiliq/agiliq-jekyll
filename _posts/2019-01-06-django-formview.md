@@ -4,7 +4,7 @@ comments: true
 title: "When and how to use Django FormView"
 date:   2019-01-06 15:30:39+05:30
 categories: django
-author: akshar
+author: Akshar
 ---
 
 ### When to use FormView?

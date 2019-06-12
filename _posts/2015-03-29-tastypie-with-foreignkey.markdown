@@ -4,7 +4,7 @@ comments: true
 title:  "Tastypie with ForeignKey"
 date:   2015-03-29 13:06:51+05:30
 categories: django-tastypie
-author: akshar
+author: Akshar
 ---
 ## Tastypie with ForeignKeys
 

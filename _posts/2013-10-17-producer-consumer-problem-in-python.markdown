@@ -4,7 +4,7 @@ comments: true
 title:  "Producer-consumer problem in Python"
 date:   2013-10-17 10:46:37+05:30
 categories: [threads, python]
-author: akshar
+author: Akshar
 ---
 We will solve Producer Consumer problem in Python using Python threads. This problem is nowhere as hard as they make it sound in colleges.
 

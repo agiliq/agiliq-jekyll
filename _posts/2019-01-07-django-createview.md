@@ -4,7 +4,7 @@ comments: true
 title: "When and how to use Django CreateView"
 date:   2019-01-07 12:30:39+05:30
 categories: django
-author: akshar
+author: Akshar
 ---
 
 ### When to use CreateView?

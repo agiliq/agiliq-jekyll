@@ -4,7 +4,7 @@ comments: true
 title:  "Serving static files in Django"
 date:   2013-03-21 10:30:01+05:30
 categories: [django, static]
-author: akshar
+author: Akshar
 ---
 Serving static files, especially during development, is frequently a pain point. In this post, we will discuss the various settings and directory structure and how they interact with each other. Let's start with development when you have DEBUG = True.
 

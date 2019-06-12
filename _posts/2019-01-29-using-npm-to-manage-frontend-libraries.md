@@ -4,7 +4,7 @@ comments: true
 title: "Using npm to manage frontend dependencies"
 date: 2019-01-29 11:30:27+05:30
 categories: npm, frontend
-author: akshar
+author: Akshar
 ---
 
 ### Agenda

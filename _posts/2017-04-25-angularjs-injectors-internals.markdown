@@ -4,7 +4,7 @@ comments: true
 title:  "AngularJS injectors internals"
 date:   2017-04-25 20:34:49+05:30
 categories: angularjs
-author: akshar
+author: Akshar
 ---
 In this post we will try to answer the following questions.
 

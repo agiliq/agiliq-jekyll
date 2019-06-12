@@ -4,7 +4,7 @@ comments: true
 title:  "Profiling Django Middlewares"
 date:   2015-07-17 15:19:47+05:30
 categories: middlewares
-author: akshar
+author: Akshar
 ---
 I assume you have a basic understanding of Profiling, what it means and why we use it.
 

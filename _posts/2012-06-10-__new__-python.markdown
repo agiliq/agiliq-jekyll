@@ -4,7 +4,7 @@ comments: true
 title:  "__new__() in python"
 date:   2012-06-10 10:30:02+05:30
 categories: __new__
-author: akshar
+author: Akshar
 ---
 Lately I started looking into Django code and wish to write about internals of Django. I started with Django models and will be writing about it soon.
 For understanding how Django models work, I had to understand what metaclasses are and how metaclasses work. Metaclasses use method "\_\_new\_\_" and so I looked at what "\_\_new\_\_" does.

@@ -4,7 +4,7 @@ comments: true
 title:  "Supervisor with Django and Gunicorn"
 date:   2014-05-09 10:40:13+05:30
 categories: supervisor
-author: akshar
+author: Akshar
 ---
 Supervisor with Django: A starter guide
 

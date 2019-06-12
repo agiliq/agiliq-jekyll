@@ -4,7 +4,7 @@ comments: true
 title:  "Understanding '*', '*args', '**' and '**kwargs'"
 date:   2012-06-03 10:30:02+05:30
 categories: [kwargs, python, tutorial]
-author: akshar
+author: Akshar
 featured: true
 featured_excerpt: args, kwargs, * and ** are frequently confusing. This post does a deep dive into this topic.
 ---

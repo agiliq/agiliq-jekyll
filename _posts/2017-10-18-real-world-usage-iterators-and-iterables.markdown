@@ -4,7 +4,7 @@ comments: true
 title:  "Real world usage of __iter__ and next"
 date:   2017-10-18 10:53:28+05:30
 categories: python
-author: akshar
+author: Akshar
 ---
 This post assumes that you have a basic understanding of the iterator protocol. If not read our <a href="http://agiliq.com/blog/2017/10/iterators-and-iterables/" target="_blank">last post.</a>
 

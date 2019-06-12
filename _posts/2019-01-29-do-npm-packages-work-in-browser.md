@@ -4,7 +4,7 @@ comments: true
 title: "Do npm packages work in browser or only in Node.js"
 date: 2019-01-29 13:30:27+05:30
 categories: npm, frontend, nodejs
-author: akshar
+author: Akshar
 ---
 
 Some npm packages work in browser environment while others don't. It depends on how the package is written.

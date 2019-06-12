@@ -4,7 +4,7 @@ comments: true
 title: "Using bower to manage frontend dependencies"
 date: 2019-01-29 12:30:27+05:30
 categories: bower, frontend
-author: akshar
+author: Akshar
 ---
 
 ### Agenda

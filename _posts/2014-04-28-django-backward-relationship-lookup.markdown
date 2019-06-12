@@ -4,7 +4,7 @@ comments: true
 title:  "Django backward relationship lookup"
 date:   2014-04-28 10:30:01+05:30
 categories: django
-author: akshar
+author: Akshar
 ---
 I often limit the lookup to fields of the model and forget about backward relations.
 

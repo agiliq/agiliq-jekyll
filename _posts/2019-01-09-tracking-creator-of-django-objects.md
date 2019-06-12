@@ -6,7 +6,7 @@ description: "Using middleware and threading.local to track Django model object 
 keywords: "Django, Python"
 date: 2019-01-09
 categories: [python, django]
-author: akshar
+author: Akshar
 ---
 
 #### Agenda
