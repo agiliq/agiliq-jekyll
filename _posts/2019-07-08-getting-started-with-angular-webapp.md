@@ -19,7 +19,7 @@ Angular is a type script based web/mobile application framework. It is an openso
  - Due to it's modularity it can be maintained easily.
 
 # Install pre-requisites for angular
- 1. Install `Node.js` and `npm`
+ * Install `Node.js` and `npm`
  ```sh
 sudo apt-get install curl python-software-properties
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
@@ -29,19 +29,22 @@ node -v
 # Also, check the npm version
 npm -v 
  ```
- 2. Install Angluar CLI Globally
+ * Install Angluar CLI Globally
   ```
   sudo npm install -g @angular/cli
   ```
- 3. Create first application("my-app") with Angular-CLI 
+
+# Create first application("my-app") with Angular-CLI 
   ```
   ng new my-app
   ```
   It will ask some questions read it and answer accordingly.
-  4. Now, It's time to run the application. To do it just execute the below commands in terminal
-  ```sh
+  * Now, It's time to run the application. To do it just execute the below commands in terminal
+
+```sh
   cd my-app && ng serve --open
   ```
   ![Angular first app](/assets/images/angular/angular-first-app.png)  
   * It open's a screen like above in the web browser. Angular dev server runs on a port 4200. Hurray! Congrat's you have created your first app.
+
 Stay tuned for agiliq blog more tutorials on angular.
