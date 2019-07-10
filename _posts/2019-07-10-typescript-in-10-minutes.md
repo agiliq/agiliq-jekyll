@@ -5,7 +5,7 @@ title:  "TypeScript in 10 minutes"
 description: "A quick introduction to typescript and it's usage"
 keywords: "A quick introduction to typescript and it's usage"
 date:   2019-07-09
-categories: [typescript, microsoft, javascrpt]
+categories: [typescript, microsoft, javascript]
 author: Anjaneyulu
 ---
 `TypeScript` is object oriented programming language developed by `MicroSoft`. We can say that `TypeScript` is a superset of `javascript` because it supports all of it's functionality and provides more efficient ways to write less code to implement complex functionality.
@@ -13,7 +13,7 @@ File extension for `TypeScript` is `.ts`. We need a `TypeScript` compiler to con
 
 # Why TypeScript ?
   - TypeScript is opensource.
-  - It simplifies the `javascript` code and speedup the development and debugging.
+  - It simplifies the `javascript` code and speed-up the development and debugging.
   - TypeScript gives us all the benefits of ES6 (ECMAScript 6), plus more productivity.
   - TypeScript helps us to avoid painful bugs that developers commonly run into when writing JavaScript by type checking the code.
   - TypeScript is a superset of ES3, ES5, and ES6. Hence, it supports all ES3, ES5, and ES6 features.
@@ -60,7 +60,7 @@ console.log(msg);
     ```
 
 # A note about `let`
-  - The let keyword is a newer JavaScript construct that `TypeScript` makes available. `let` an alternative for javascript keyword `var`. In future releases of javscript `var` may completely replaced with `let`. So, it's recommended to use the keyword `let` instead `var`. 
+  - The let keyword is a newer JavaScript construct that `TypeScript` makes available. `let` an alternative for javascript keyword `var`. In future releases of javascript `var` may completely replaced with `let`. So, it's recommended to use the keyword `let` instead `var`. 
 
 # Data Types in TypeScript
   * **Boolean**: Used for boolean values like `true` or `false`
@@ -84,7 +84,7 @@ console.log(msg);
     console.log(concat);
     // output: Hello Agiliq , Hyderabad
     ```
-    - Note: use backtick "`" for string formatting only.
+    - Note: use backtick (&nbsp;`&nbsp;&nbsp;) for string formatting only.
   * **Array**: TypeScript, like JavaScript, allows you to work with arrays of values.
     - Homogeneous elements of array
     ```ts
@@ -133,24 +133,131 @@ console.log(msg);
   }
   ```
     - Note: `void` data type allows only `undefined` or `null` values for assignment.
+
   * **Never**: The never type represents the type of values that never occur.
-  ```ts
-  // Function returning never must have unreachable end point
-  function error(message: string): never {
-      throw new Error(message);
-  }
+    ```ts
+    // Function returning never must have unreachable end point
+    function error(message: string): never {
+        throw new Error(message);
+    }
 
-  // Inferred return type is never
-  function fail() {
-      return error("Something failed");
-  }
-  ```
+    // Inferred return type is never
+    function fail() {
+        return error("Something failed");
+    }
+    ```
     - It can be used for cases like above code.
+
   * **Object**: object is a type that represents the non-primitive type.
+    ```ts
+    let employee: Object = {name: "John", designation: "Developer"};
+    ```
+
+# using Classes
+  - Class allows developers to use object oriented concepts like inheritance, encapsulation, abstraction and polymorphism.
+  - keyword `extends` used to implement the inheritance concept in TypeScript.
+  - Let's take a look at a simple class
   ```ts
-  let employee: Object = {name: "John", designation: "Developer"};
+    class Person{
+        firstName = "";
+        lastName = "";
+        constructor(firstName: string, lastName: string){
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+        fullName(){
+          return `${this.firstName} ${this.lastName}`
+        }
+    }
+    let p = new Person("John", "Snow");
+    console.log("Name: ", p.fullName());
+    // output: Name:  John Snow
   ```
+  - **Inheritance**:
+    - Let’s take a look at an example:
+    ```ts
+      class Animal {
+          move(distanceInMeters: number = 0) {
+              console.log(`Animal moved ${distanceInMeters}m.`);
+          }
+      }
 
-# Interfaces
+      class Dog extends Animal {
+          bark() {
+              console.log('Woof! Woof!');
+          }
+      }
 
-# Decorators
+      class Human extends Animal {
+          talk() {
+              console.log('Hello World! I\'m Chitti!');
+          }
+      }
+
+      const dog = new Dog();
+      dog.move(10);
+      dog.bark();
+
+      const human = new Human();
+      human.move(100)
+      human.talk()
+    ```
+
+# using Interfaces
+  - An `interface` is a specification that defines a related set of methods and properties to be implemented by a class/function.
+  - Keyword `interface` to define an interface.
+  - Let’s take a look at simple examples:
+    ```ts
+    // class using an interface
+    interface ClockInterface {
+      currentTime: Date;
+      setTime(d: Date): void;
+    }
+    class Clock implements ClockInterface {
+      currentTime: Date = new Date();
+      setTime(d: Date) {
+          this.currentTime = d;
+      }
+      constructor(h: number, m: number) { }
+    }
+    // function using an interface
+    interface LabeledValue {
+      label: string;
+    }
+
+    function printLabel(labeledObj: LabeledValue) {
+        console.log(labeledObj.label);
+    }
+
+    let myObj = {size: 10, label: "Size 10 Object"};
+    printLabel(myObj);
+    ```
+
+# using Decorators
+  - A Decorator is a special kind of declaration that can be attached to a class declaration, method, accessor, property, or parameter.
+  - A Decorators may or may not receive arguments based it's declaration.
+  - Example:
+  ```ts
+    function course(target) {
+      Object.defineProperty(target.prototype, 'course', {value: () => "Angular"})
+    }
+
+    @course
+    class Person {
+        firstName;
+        lastName;
+
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+    }
+    let asim = new Person("Alex", "W");
+    console.log(asim.course());
+    //output: Angular
+  ```
+  - In above code `course` is a decorator which sets property `course` to the decorated class `Person` when it is initialized.
+
+We have covered basic concepts of `TypeScript`. You can refer below link for more information.
+
+*Reference: <a href="https://www.typescriptlang.org/docs/home.html" __target="blank">https://www.typescriptlang.org/docs/home.html</a>*
