@@ -35,6 +35,7 @@ When we create the Angular webapp it will create a bunch of files and folders. W
 # Application source files
   * All files at top level of `src/` support testing and running your application
   * All it's sub-folders contains application source code and specific configurations.
+  * `src/main.ts`: It is the main entry point for the app. It compiles the application with the `JIT` compiler and bootstraps the application's root module (`AppModule`) to run in the browser.
   * `src/app/`
     - It contains the component files.
     - `src/app/app.component.ts`: Defines the logic for the app's root component, named `AppComponent`. 
