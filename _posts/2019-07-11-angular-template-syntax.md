@@ -124,6 +124,116 @@ export class AppComponent {
   - In above example we have a property binding on checkbox that can be checked/un-checked dynamically based on the value of components property `status`.
   - If test the above code you can find that the checkbox initially un checked and after 500 milli seconds it will be checked and again after 2 seconds it will again unchecked because we are updating the component property dynamically using `setTimeout` function. 
 
-# One-Way event binding
+# Event binding with "()"
+  - We wrap-up the event type in in "()" and assign a text formatted component method.
+  - Let's see a simple example
+  - **template**
+{% raw %}
+```html
+<label> Username:
+  <input (keyup)="onChangeUserName($event)" [value]="username" />
+</label>
+<h1>Entered Text: {{username}}</h1>
+```
+{% endraw %}
+  - **component**
 
-# Two-Way event binding
+{% raw %}
+```ts
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  username = 'John Doe';
+  onChangeUserName($event: any){
+    console.log("onChangeUserName", $event)
+    this.username = $event.target.value;
+  }
+}
+```
+{% endraw %}
+  - In above code we have binded the event `keyup` to method `onChangeUserName`. We can also bind other event types like `change`, `mouseover`, `mouseenter`, `click`, etc.
+
+# Directives
+  - Angular has template directives which simplifies the common repititive functionality.
+  - Angular has two types of directives
+    1. Attribute Directives - `ngClass`, `ngStyle`
+    2. Structural Directives - `*ngIf`, `*ngFor`
+
+# Attribute Directives - `[ngClass]`, `[ngStyle]`
+  - `ngClass` directive allows us to set CSS class dynamically to the DOM element.
+    - Accepted data types `string`, `Array`, `Object`.
+    - If `Object` is passed then keys treated as class names and values are treated as truth values. If value is true then only the class is used.  
+    - Let's see some example code
+    {% raw %}
+    ```html
+    <button [ngClass]="'btn btn-success'"> Hello</button>
+    <button [ngClass]="['btn', 'btn-warning']"> Hello1</button>
+    <button [ngClass]="{'btn': true, 'btn-success': false, 'btn-danger': true}"> Hello2</button>
+    ```
+    {% endraw %}
+    - Inspect the DOM to check how `ngClass` works
+
+  - `ngStyle` directive allows us to set css styles dynamically to the DOM element.
+    - It takes an object that represents CSS style properties.
+    - Let's checkout some examples
+    {% raw %}
+    ```html
+      <p [ngStyle]="{'opacity': is_mail_sent ? '0.5' : '1' }">Email Sent</p>
+    ```
+    {% endraw %}
+
+# Structural Directives - `*ngIf`, `*ngFor`
+  - `*ngIf`: It's used if we need an element to b displayed based on a condition
+    - Example: 
+    {% raw %}
+    ```html
+      <div *ngIf="has_permission">
+        <button>Delete</button>
+        <button>Edit</button>
+      </div>
+      <!-- if else using *ngIf -->
+      <li *ngIf="bindEmail;then logout else login"></li>
+      <ng-template #logout><li><a routerLink="/logout">Logout</a></li></ng-template>
+      <ng-template #login><li><a routerLink="/login">Login</a></li></ng-template>
+    ```
+    {% endraw %}
+    - `<ng-template>` is an Angular element for rendering HTML. 
+  - `*ngFor`: It's a template directive similar to `for` loop.
+    - Example:
+    - **component**
+    {% raw %}
+    ```ts
+      import { Component } from '@angular/core';
+      @Component({
+        selector: 'app-root',
+        templateUrl: './app.component.html',
+        styleUrls: ['./app.component.css']
+      })
+      export class AppComponent {
+        users = [
+          {'name': 'John'},
+          {'name': 'Ram'},
+          {'name': 'Sara'},
+          {'name': 'Kit'},
+          {'name': 'Richard'},
+          {'name': 'David'},
+        ]
+      }
+    ```
+    {% endraw %}
+    - **template**
+    {% raw %}
+    ```html
+    <ol>
+      <li *ngFor="let user of users">{{user.name}}</li>
+    </ol>
+    ```
+    {% endraw %}
+    - Copy the above code and try it out with your app.
+
+That's it folks. Try out all above examples on your own.
+For more reference checkout official documentation: <a href="https://angular.io/guide/template-syntax" target="__blank" nofollow>https://angular.io/guide/template-syntax</a>
