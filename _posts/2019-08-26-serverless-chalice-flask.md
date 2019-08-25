@@ -163,5 +163,14 @@ password = 'blogadmin'
 port = 3306
 ...
 ...
+
+conn = None
+
+def get_conn():
+    global conn
+    if conn is None:
+        conn = Db.conn()
+    return conn
+
 ```
 
