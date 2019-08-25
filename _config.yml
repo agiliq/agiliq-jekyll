@@ -71,7 +71,7 @@ doks:
             logo:
                 text: Agiliq
                 image:
-            copyright: Building Amazing Apps. &copy; 2010-2018,  Agiliq <br>All rights reserved.
+            copyright: Building Amazing Apps. &copy; 2010-2019,  Agiliq <br>All rights reserved.
         social_list:
             - network_name: facebook
               profile_url: 'https://facebook.com/agiliq'
