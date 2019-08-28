@@ -14,14 +14,14 @@ author: Akshar
 We will write an api endpoint which will respond to graphql queries.
 
 - We will use `graphene` library to create our GraphQL service.
-- We will expose this GraphQL endpoint using Flask.
+- We will expose this GraphQL service using Flask.
 - We will consume the api from a browser or angular/react client.
 
-This post assumes that you have basic familiarity with <a href="https://graphql.org/" target="_blank">graphql</a>.
+This post assumes basic familiarity with <a href="https://graphql.org/" target="_blank">graphql</a>.
 
 ## Setup
 
-Let's assume our application works with `Person` entities. A Person has a `first_name`, `last_name` and `age`. The api will allow querying on `Person`.
+Let's assume our application works with `Person` entity. A Person has a `first_name`, `last_name` and `age`. Our graphql service will allow querying on `Person`.
 
 Our queries would look like:
 
@@ -30,9 +30,9 @@ Our queries would look like:
     http://localhost:5000/?search={ people {firstName lastName}} # Return firstName and lastName of all people in our system.
     http://localhost:5000/?search={ person(key: 1) {firstName lastName age}} # Return all attributes of a person identified by key 1.
 
-In a real world scenario, you would fetch `Person`s from a database table and would use an ORM to convert the database rows to Python classes. We want to focus on GraphQL in this post and avoid database operations. So let's create a `Person` `namedtuple` and create few instances of `Person`.
+In a real world application, we would fetch `Person`s from a database which would be converted to Python class by the ORM. We want to focus on GraphQL in this post and avoid database setup and interactions. So let's create a namedtuple called `Person` and create few instances of it.
 
-Let's write our code in a file called `hello_graphene.py`.
+Let's write our code in `hello_graphene.py`.
 
     import collections
 
@@ -66,13 +66,15 @@ After this you should be able to do `person.first_name`, `person.last_name` and 
 
 ## Creating schema
 
-Ensure that you have `graphene` installed.
+Ensure that `graphene` is installed.
 
     pip install graphene
 
-GraphQL expects a root type. And we want to make `person` field available on root type. That's why we will have to write a `Person` type and the root type. This should be in `hello_graphene.py`.
+GraphQL expects a root type. We want to make `person` field available on root type.
 
-    from graphene import ObjectType, String, Schema, Int, Field, List
+We will have to write a `Person` type and the root type to accomplish this. This should be in `hello_graphene.py`.
+
+    from graphene import ObjectType, String, Int, Field
 
     class PersonType(ObjectType):
         first_name = String()
@@ -94,18 +96,21 @@ GraphQL expects a root type. And we want to make `person` field available on roo
         def resolve_person(root, info):
             return data[1]
 
-Convention suggests that we call the root type as `Query`. Any GraphQL `type` we create must extend from `ObjectType`. <a href="https://graphql.org/learn/" target="_blank">GraphQL dictates</a> that there must be resolver function for each field on each type. That's whey we have `resolve_person` for `person`, `resolve_first_name` for `first_name` and so on.
+Convention suggests that we name the root type class as `Query`.
 
-For now we have hardcode the resolver for person to always return details for person with key 1 which in our case is `steve jobs`. We are fixing it soon, hang on.
+Any GraphQL `type` we create must extend from `graphene.ObjectType`. <a href="https://graphql.org/learn/" target="_blank">GraphQL dictates</a> that there must be a resolver function for each field on each type. That's whey we have `resolve_person` for `person`, `resolve_first_name` for `first_name` and so on.
 
-We need to tell to our GraphQL service that the root type is `Query`. The mechanism for doing that is to add a `Schema` instance.
+For now we have hardcoded the resolver for person to always return details for person with key 1. We are fixing it soon, hang on.
 
+We need to tell to GraphQL service that the root type is `Query`. The mechanism to do that is to add a `Schema` instance.
+
+    from graphene import Schema
     schema = Schema(query=Query)
 
 Our full `hello_graphene.py` looks like:
 
     import collections
-    from graphene import ObjectType, String, Schema, Int, Field, List
+    from graphene import ObjectType, String, Schema, Int, Field
 
     Person = collections.namedtuple("Person", ['first_name', 'last_name', 'age'])
 
@@ -157,7 +162,7 @@ Let's execute a GraphQL query from the shell.
                                ('lastName', 'jobs'),
                                ('age', 56)]))])
 
-Notice how our result datastructure has the same structure as the query.
+Notice how the result datastructure has the same structure as the query.
 
 Let's execute one more query to ensure that the service only returns the requested fields.
 
@@ -168,9 +173,9 @@ Let's execute one more query to ensure that the service only returns the request
     In [12]: result.data
     Out[12]: OrderedDict([('person', OrderedDict([('firstName', 'steve')]))])
 
-We want to expose the service on any endpoint now so that browser or any client can consume the api. Let's expose a Flask endpoint.
+We want to expose the service on an endpoint so that browser or any client can consume the service. Let's expose a Flask endpoint.
 
-Add the following code to a file flask_graphql.py
+    # flask_graphql.py
 
     import json
     from flask import Flask, request
@@ -195,7 +200,7 @@ Let's make a request to flask app with a GraphQL query.
 
 ![](/assets/images/graphql/person-first-name.png)
 
-Let's modify the GraphQL service to allow getting details of any person. Essentially we want to use <a href="https://graphql.org/learn/queries/#arguments" target="_blank">arguments</a> with our GraphQL api.
+Let's modify the GraphQL service to allow getting details of any person. This requires using GraphQL <a href="https://graphql.org/learn/queries/#arguments" target="_blank">arguments</a>.
 
 We need to allow arguments on `person` field. Modify `person` to look like:
 
@@ -220,20 +225,31 @@ Restart the shell and get data for `steve` and `bill`.
     In [5]: schema.execute(query).data
     Out[5]: OrderedDict([('person', OrderedDict([('firstName', 'bill')]))])
 
-Let's hit the api from browser and get data for `bill`.
+We could have named the argument anything. We could have named it `identifier` instead of `key`.
+
+    person = Field(PersonType, identifier=Int())
+
+    def resolve_person(root, info, identifier):
+        return data[identifier]
+
+Let's use the api from browser and get data for `bill`.
 
 ![](/assets/images/graphql/person-detail-details.png)
 
-Ideally you would use the api endpoint from an angular or react client or from a mobile app.
+Ideally the api would be consumed from a mobile client or from a single page application.
 
-If you are getting person from a database using SQLAlchemy, then the argument would probably be named `id` and the resolver would look something like:
+If person is retrieved from a database using SQLAlchemy, then the argument would probably be named `id` and the resolver would look something like:
 
     person = Field(PersonType, id=Int())
 
     def resolve_person(root, info, id):
         return Person.query.get(id)
 
+## Fetching a list of people
+
 We want our service to return details of all people in our system. Let's add a field called `people` on the root type.
+
+    from graphene import List
 
     class Query(ObjectType):
         person = Field(PersonType, key=Int())
@@ -245,7 +261,7 @@ We want our service to return details of all people in our system. Let's add a f
         def resolve_people(root, info):
             return data.values()
 
-Since `people` would be returning a list of people, so we set it's type as `graphene.List`. Each entry of the list would be a `PersonType`.
+Since `people` field provides a list of people, so we set it's type as `graphene.List`. Each entry of the list would be a `PersonType`.
 
     In [1]: from hello_graphene import schema
 
@@ -259,9 +275,11 @@ Since `people` would be returning a list of people, so we set it's type as `grap
                    OrderedDict([('firstName', 'ken'), ('age', 76)]),
                    OrderedDict([('firstName', 'guido'), ('age', 63)])])])
 
+We can get all people from a client by calling `localhost:5000/?query={ people {firstName lastName age} }`.
+
 ## Supporting defaults
 
-Currently you wouldn't be able to query on `person` without `key`. Let's try a query which would cause an exception.
+Currently we cannot query on `person` without `key`. Let's try a query which would cause an exception.
 
     In [6]: query = '{person {firstName} }'
 
@@ -274,7 +292,7 @@ Currently you wouldn't be able to query on `person` without `key`. Let's try a q
         return fn(*args, **kwargs)
     graphql.error.located_error.GraphQLLocatedError: resolve_person() missing 1 required positional argument: 'key'
 
-If person's key isn't provided, then we want to respond with `steve`'s details. We can accomplish this by setting a `default_value` on `people` and this default_value should contain `steve`'s key.
+If person's key isn't provided, then we want to respond with `steve`'s details. We can accomplish this by setting a `default_value` on `person` and this default_value should contain `steve`'s key.
 
     person = Field(PersonType, key=Int(default_value=1))
 
@@ -291,6 +309,5 @@ If we pass a `key` though, then corresponding person's details would be fetched.
 
     In [7]: schema.execute(query).data
     Out[7]: OrderedDict([('person', OrderedDict([('firstName', 'bill')]))])
-
 
 Hope this post was helpful. Stay tuned for more GraphQL posts.
