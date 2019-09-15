@@ -35,10 +35,6 @@ You must have a `polls` app in your project and the models `Question` and `Choic
         def __str__(self):
             return self.question_text
 
-        def was_published_recently(self):
-            now = timezone.now()
-            return now - datetime.timedelta(days=1) <= self.pub_date <= now
-
 
     class Choice(models.Model):
         question = models.ForeignKey(Question, on_delete=models.CASCADE)
@@ -300,7 +296,7 @@ Let's create one more question but only ask for `questionText` field once the mu
                                 OrderedDict([('questionText',
                                               'Do you like hobbits?')]))]))])
 
-## Create choice
+### Create choice
 
 Let's similarly add one more `Mutation` called `CreateChoice` and it on `MyMutations`.
 
