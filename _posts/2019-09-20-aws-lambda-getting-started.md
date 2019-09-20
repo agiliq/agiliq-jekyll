@@ -95,7 +95,7 @@ Do `Save`.
 
 From left panel, select `Stages`. Click on `Create`
 
-Follow following 7 steps.o
+Follow following 7 steps. https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-api-as-simple-proxy-for-lambda.html#api-gateway-create-api-as-simple-proxy-for-lambda-test
 
 You will get a url similar to https://do80fzbglf.execute-api.ap-south-1.amazonaws.com/prod.
 
