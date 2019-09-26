@@ -4,14 +4,14 @@ comments: true
 title:  "A serverless web application using Python, API Gateway and Lambda function"
 description: "Creating a REST application using AWS Chalice and Peewee"
 keywords: "AWS, Chalice, Peewee, Serverless"
-date: 2019-09-22
+date: 2019-09-26
 categories: [Serverless, AWS, Lambda]
 author: Akshar
 ---
 
 ## Agenda
 
-This post is inspired by Django polls app. We will build RESTful endpoints for a polls app using AWS Chalice.
+This post is inspired by Django polls app. We will build RESTful endpoints for a polls app using <a href="https://github.com/aws/chalice" target="_blank">AWS Chalice</a>.
 
 We will use a Postgres database. We want to avoid raw sql queries and hence will use peewee as our ORM.
 
