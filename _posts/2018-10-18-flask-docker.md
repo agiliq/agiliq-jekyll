@@ -159,3 +159,48 @@ Let's create a question using `requests`.
     Out[14]: b'{"id":4,"pub_date":"2019-10-20","question_text":"Ba ba blue sheep?"}\n'
 
 Making a GET request to http://localhost:8000/polls/questions/ should show this question.
+
+## Adding Docker compose
+
+Ideally docker-compose is used when an application has multiple services. But we can use it even if application has a single service.
+
+Let's modify the Dockerfile so it looks like:
+
+    FROM python:3
+
+    WORKDIR /srv
+
+    ADD ./requirements.txt /srv/requirements.txt
+
+    RUN pip install -r requirements.txt
+
+    ADD . /srv
+
+Let's create a file `docker-compose.yml` with following contents:
+
+    version: '3'
+    services:
+        flask:
+            build: .
+            command: flask run --host=0.0.0.0 --port=8000
+            ports:
+                - 8000:8000
+            environment:
+                - FLASK_APP=app.py
+            env_file:
+                - env.list
+
+The current docker-compose version is 3.
+
+We have added one service called `flask`. You could name it anything. We did several additional things:
+
+- Provided a `build` key to `flask` service. This is where docker daemon looks for Dockerfile and this decides the build context.
+- Provided a `command` key to `flask` service. This is similar to `CMD` you have in Dockerfile.
+- Exposed a port and mapped it to a port on host.
+- Added some env variables using `environment` and `env_file`.
+
+Start the service:
+
+    docker-compose up
+
+Navigate to `http://localhost:8000/polls/questions/`. Things should keep working as earlier.
