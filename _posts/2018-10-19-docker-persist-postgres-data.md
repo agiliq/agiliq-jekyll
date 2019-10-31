@@ -75,3 +75,9 @@ Flask app would be connecting to this database now so we need to edit env.list f
     DB_PASSWORD=hearmeroar
 
 We used `volumes` to persist our data.
+
+Start the services:
+
+    docker-compose up
+
+You should be able to create a question and list questions.
