@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Using Docker postgres image with flask app"
-description: "Persist docker postgres data"
+title:  "Using Docker postgres image with flask"
+description: "Writing a docker-compose which uses Flask and Postgres"
 keywords: "Flask, Python, API, Peewee"
 date: 2018-10-18
 categories: [Flask, Docker]
@@ -13,7 +13,11 @@ author: Akshar
 
 This is a follow up from our <a href="https://www.agiliq.com/blog/2018/10/flask-docker/" target="_blank">last post</a> which created a Flask polls app.
 
-In last post, the flask app connected to a postgres server running on the host. In this post we will use a postgres docker image. This has an advantage that you don't need to have postgres setup on the host machine. At the same time we want the postgres data to persist even after the containers are destroyed.
+In last post, the flask app connected to a postgres server running on the host. Our application had a single Docker container.
+
+In this post we will run Postgres on a Docker container too.
+
+This has an advantage that developers don't need to have postgres installed on the host machine. Simultaneously we want the postgres data to persist even after the containers are destroyed.
 
 Our code would remain unchanged in this post. Check the <a href="https://www.agiliq.com/blog/2018/10/flask-docker/" target="_blank">last post</a> to get code familiarity.
 
@@ -66,13 +70,15 @@ Service `web` is largely unchanged from last post.
 
 We used official `postgres` image provided by Docker. We set some environment variables to set database name and credentials.
 
-Flask app would be connecting to this database now so we need to edit env.list file to make it look like:
+Flask app would be connecting to this database now so we need to edit env.list accordingly:
 
     DB_HOST=db
     DB_PORT=5432
     DB_NAME=polls_db
     DB_USER=polls
     DB_PASSWORD=hearmeroar
+
+Notice how we changed `DB_HOST` from `localhost` to `db`. We named it `db` because of service name is `db` in docker-compose.yml.
 
 We used `volumes` to persist our data.
 
