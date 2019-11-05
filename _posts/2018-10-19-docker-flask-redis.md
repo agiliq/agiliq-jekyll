@@ -4,9 +4,10 @@ comments: true
 title:  "Using Docker redis image with flask"
 description: "Writing a docker-compose which uses Flask, Postgres and Redis"
 keywords: "Flask, Python, Docker"
-date: 2018-10-18
+date: 2018-10-20
 categories: [Flask, Docker]
 author: Akshar
+---
 
 ## Agenda
 
