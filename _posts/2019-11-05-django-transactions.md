@@ -49,6 +49,6 @@ Modify the above code to following:
     class LikeView(APIView):
 
         def patch(self, request, *args, **kwargs):
-            Post.objects.filter(pk=kwargs['pk']).update(votes=F('votes') + 1)
+            Post.objects.filter(pk=kwargs['pk']).select_for_update(votes=F('votes') + 1)
 
-We used ORM `update()` which runs underlying database's `update`. As the db update runs in a transaction so each process/thread would correctly increment the value of `likes`.
+We used ORM `select_for_update()` which runs underlying database's `select ... for update`. As the db update runs in a transaction so each process/thread would correctly increment the value of `likes`.
