@@ -11,15 +11,13 @@ author: Akshar
 
 ## Agenda
 
-I always wondered how to store relational data in redis. Once I figured it, I though it would be fun to write an ORM which can store this data in redis and retrieve from redis.
-
-The inspiration for this post is Django ORM.
+Let's write a simple and elegant ORM for Redis. The inspiration for this post is Django ORM.
 
 This post assumes that you have a basic understanding of Redis and the redis python library `redis-py`.
 
 ## Entities
 
-Let's assume we are working on a polls application. The application has `Question` and `Choice`. Each question can have multiple choice. Users have the ability to vote on any of the choices for a particular question.
+Let's assume we are working on a polls application. The application has `Question` and `Choice`. Each question can have multiple choice.
 
 We want the following abilities in our application.
 
@@ -29,11 +27,13 @@ We want the following abilities in our application.
 - Associate list of choices with a question
 - Disassociate a choice with a question
 - Retrieve all choices for a question
-- Track vote count on choice
+- Track vote count on a choice
+
+We want to use Redis as our database.
 
 ## Models
 
-Our models are `Question` and `Choice`. Since these two and any additional model will share some functionality, so let's create a base class called `Model`. `Question` and `Choice` would extend from `Model`.
+Our models are `Question` and `Choice`. Since these two and any additional model will have some similar functionality, so let's create a base class called `Model`. `Question` and `Choice` would extend from `Model`.
 
 ### Base model
 
