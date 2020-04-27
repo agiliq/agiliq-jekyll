@@ -6,7 +6,7 @@ description: "How to get emails when a user provides their details in a contact 
 keywords: "Google Cloud Functions, Python, Mailgun API, Google Cloud Datastore"
 date:   2018-07-25
 categories: [python, google cloud functions, mailgun, google cloud datastore]
-author: Santosh
+author: yvsssantosh
 ---
 
 If you run a static site, you probably want a contact form on it so people can contact you. 
