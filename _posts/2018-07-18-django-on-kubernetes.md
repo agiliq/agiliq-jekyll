@@ -6,7 +6,7 @@ description: "How to deploy a Django Application on kubernetes in production mod
 keywords: "Kubernetes, Django, Python, PostgreSQL, Docker"
 date:   2018-07-18
 categories: [python, django, kubernetes, postgresql, docker]
-author: Santosh
+author: yvsssantosh
 ---
 
 This tutorial should help to deploy a django application on a Kubernetes Cluster. Before starting this tutorial, the user is expected to have basic knowledge of GKE, Django, PostgreSQL and Docker

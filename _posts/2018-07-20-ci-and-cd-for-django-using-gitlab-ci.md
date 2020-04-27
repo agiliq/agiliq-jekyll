@@ -6,7 +6,7 @@ description: "Writing CI & CD for a django application on Kubernetes - Best Prac
 keywords: "Kubernetes, Django, Python, PostgreSQL, Docker, Gitlab, Continous Integration, Continous Delivery"
 date:   2018-07-20
 categories: [python, django, kubernetes, postgresql, docker, continous integration, continous delivery]
-author: Santosh
+author: yvsssantosh
 ---
 
 This tutorial explains how to setup continuous integration and continuous delivery for a Django project hosted on kubernetes using Gitlab CI

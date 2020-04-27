@@ -6,7 +6,7 @@ description: "Why is there a need for hypothesis in testing django applications?
 keywords: "Python, Django, Hypothesis, Testing, DRF, Polls API, Django Rest Framework"
 date:   2019-01-19
 categories: [python, django, hypothesis, testing, django rest framework, drf, polls api]
-author: Santosh
+author: yvsssantosh
 ---
 
 ### What is hypothesis?
