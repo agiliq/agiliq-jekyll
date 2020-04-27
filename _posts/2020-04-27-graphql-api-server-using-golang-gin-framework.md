@@ -481,4 +481,10 @@ It will give us the JSON response like below.
 
 You can check-out the source code at <a href="https://github.com/AnjaneyuluBatta505/gin-graphql-postgres/"> Github - gin-graphql-postgres</a>
 
-That's it folks, we can do more with **GraphQL**. Let's do that in the up coming articles. Have a good day!!
+That's it folks, we can do more with **GraphQL**. You can read more in these GraphQL tutorials we have written.
+
+- [Getting started with Python graphene: How to write GraphQL compliant apis with Python](https://www.agiliq.com/blog/2019/08/getting-started-with-python-graphene/)
+- [Using python graphene with Django: How to write GraphQL compliant apis with Django]()https://www.agiliq.com/blog/2019/09/python-graphene-with-django/
+
+
+
