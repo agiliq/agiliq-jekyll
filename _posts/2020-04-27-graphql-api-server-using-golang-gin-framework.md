@@ -5,7 +5,7 @@ title:  "GraphQL api server using golang Gin framework"
 description: "GraphQL api server using golang Gin framework"
 keywords: "GraphQL"
 date: 2020-04-27
-categories: [Golang]
+categories: [Golang, GraphQL]
 author: Anjaneyulu Batta
 ---
 
