@@ -372,7 +372,7 @@ Output:
 Whoa! Yes, we got the question details with all of the choices.
 
 
-## Vote a for a choice
+## Vote for a choice
 
 ### Graphql mutation query to update the choice
 
