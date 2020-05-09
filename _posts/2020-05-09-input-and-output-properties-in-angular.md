@@ -143,6 +143,7 @@ What does this template contain -
 
 - An unordered list to list down the recipes.
 - `(recipeItemEvent)="addNewRecipe($event)"` - binds the custom event of the child component `recipeItemEvent` to the parent component method `addNewRecipe`.
+In other words, when a button in the child component is clicked, it raises a custom event `recipeItemEvent` and the Angular tells the parent component that, hey! some custom event is triggered and may be you are interested in. Parent component listens to that event and binds it to its own method `addNewRecipe`.
 - $event contains the data emitted from the child component.
 
 I hope you found this post useful, in case if you have any queries or suggestions, please feel free to comment down below.
