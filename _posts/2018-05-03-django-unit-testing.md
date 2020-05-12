@@ -6,7 +6,7 @@ description: "Django unit testing is extreamly useful for bug killing. Testing a
 keywords: "unit testing, django unit testing, django test cases"
 date:   2018-05-03
 categories: [python, django, unit-testing]
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 ### Why testing is important ?
 Testing is very important to any web appication. Because the application may contain errors that are not inteded and it may cause some serious problems. So, we need to test everything to make sure that it's working as intended.

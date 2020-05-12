@@ -6,7 +6,7 @@ description: "React controls the data flow in the components with state and prop
 keywords: "reactjs state and props, state and props in react"
 date:   2018-05-25
 categories: [javascript, reactjs, state and props]
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 
 ReactJS is component based. We devide the complex UI into basic components. After developing the basic components we again adds all these components to create a complex UI which also called as complex component. React controls the data flow in the components with state and props. The data in states and props are used to render the Component with dynamic data.

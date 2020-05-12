@@ -6,7 +6,7 @@ description: "Basic environment setup for first angular web applcation"
 keywords: "angular first app, angularjs webapp, first angular app"
 date:   2019-07-08
 categories: [angular, typescript]
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 Angular is a type script based web/mobile application framework. It is an opensource web/mobile framework developed by Google. It has a great community support.
 

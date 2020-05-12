@@ -6,7 +6,7 @@ description: "A quick introduction to angular template syntax and component's da
 keywords: "angular template, angular template syntax, template syntax"
 date:   2019-07-09
 categories: [angular, templates, components]
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 Angular provides a simplified approach to work with templates. It got a super cool syntax to speed-up the development.
 
