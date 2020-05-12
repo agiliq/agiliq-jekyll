@@ -6,7 +6,7 @@ description: "A quick introduction to typescript and it's usage"
 keywords: "A quick introduction to typescript and it's usage"
 date:   2019-07-09
 categories: [typescript, microsoft, javascript]
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 `TypeScript` is object oriented programming language developed by `MicroSoft`. We can say that `TypeScript` is a superset of `javascript` because it supports all of it's functionality and provides more efficient ways to write less code to implement complex functionality.
 File extension for `TypeScript` is `.ts`. We need a `TypeScript` compiler to convert the `.ts` files into a `JavaScript` code.

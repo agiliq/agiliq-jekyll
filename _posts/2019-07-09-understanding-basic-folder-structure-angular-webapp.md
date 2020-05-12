@@ -6,7 +6,7 @@ description: "Angular creates a bunch of files when we create a new angular weba
 keywords: "angular folder structure, angular first webapp, first angular app"
 date:   2019-07-09
 categories: [angular, basic folder structure]
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 When we create the Angular webapp it will create a bunch of files and folders. We need to have a basic understanding of what these files and folders do. So, why to wait, let's jump in.
 

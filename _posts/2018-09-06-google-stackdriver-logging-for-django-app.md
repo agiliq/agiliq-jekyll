@@ -5,7 +5,7 @@ title:  "How to seup Google Stackdriver Logging for Django App with Gunicorn"
 description: "Setting up google stackdriver logging with django + gunicorn is simple. though google official documentation doesn't explained it."
 date:   2018-09-06
 categories: [google-cloud, stackdriver, logging]
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 
 Setting up google stackdriver logging with django + gunicorn is simple. Google's stackdriver logging official documentation only explained about python. It did not explain about how to setup the stackdriver logging for Django Application.

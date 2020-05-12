@@ -7,7 +7,7 @@ keywords: "Django version update, Django version upgrade"
 date:   2019-02-04
 categories: [django, version update, software update]
 main_category: django
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 
 Updating the software application to latest releases is very important. Because latest releases always includes new features which boosts development process and resolves potential problems.

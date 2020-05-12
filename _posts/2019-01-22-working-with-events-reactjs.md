@@ -7,7 +7,7 @@ keywords: "events in ReactJS, event binding react"
 date:   2019-01-22
 categories: [javascript, reactjs, handling events]
 main_category: reactjs
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 
 ### Handling events in ReactJS

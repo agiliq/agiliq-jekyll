@@ -6,7 +6,7 @@ description: "Basic Tools needed to work with ReactJS are react, babel and webpa
 keywords: "reactjs from scratch, setting up reactjs, reactjs dev environment"
 date:   2018-05-23
 categories: [javascript, reactjs, dev-environment, from scratch]
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 ### What is ReactJS ?
 ReactJS is a javascript library. It is used to build web user interfaces. It is mostly used to develop single page web applications. We can also develop mobile applications using library ReactJS. To develop mobile applications we use library ReactNative.

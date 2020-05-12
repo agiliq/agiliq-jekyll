@@ -6,7 +6,7 @@ description: "Upgrading to the newer version might be a complex process. But, It
 keywords: "django upgrade, django old vertion to new version"
 date:   2018-04-12
 categories: [python, django, version-upgrade]
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 ### Why to upgrade Django to a newer version ?
 

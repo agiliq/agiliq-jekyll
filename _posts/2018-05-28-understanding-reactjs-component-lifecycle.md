@@ -6,7 +6,7 @@ description: "React component has 7 lifecycle methods.They are categorized to (1
 keywords: "component lifecycle methods, react lifecycle methods"
 date:   2018-05-25
 categories: [javascript, reactjs, component lifecycle methods, react lifecycle methods]
-author: Anjaneyulu
+author: Anjaneyulu Batta
 ---
 
 We know that ReactJS is a component based javascript library. In every ReactJS application components are rendered onto virtual DOM. Before/After rendering onto the virtual DOM every component goes through some of the methods. We call these methods as ReacjJS Component Lifecycle Methods. We can categorize these methods into three based on component initialization, updation and destruction. They are (1) Mounting Methods(initialization) (2) Updating Methods (updation) (3) Unmounting Methods (destruction)
