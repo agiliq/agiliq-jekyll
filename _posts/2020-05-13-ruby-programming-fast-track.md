@@ -13,7 +13,7 @@ author: Anjaneyulu Batta
 
 * Ruby is an object oriented programming language
 * Ruby was created by Yukihiro Matsumoto, or "Matz", in Japan in the mid 1990's.
-* 
+* Ruby has good community support
 
 ## Ruby Installation in Ubuntu
 
@@ -404,7 +404,7 @@ Output:
 {1 => "one"}
 ```
 
-### How to update an eement in a Hash ?
+### How to update an element in a Hash ?
 
 We can do that like below
 
@@ -484,25 +484,297 @@ Enter student cgpa:
 Not eligible for Gift
 ```
 
+Example2: string comparison with if else
+
+```ruby
+def str_cmp(s1, s2)
+  if s1 > s2
+    return 1
+  elsif s1 == s2
+    return 0
+  else
+    return -1
+  end
+end
+
+s1 = "hi"
+s2 = "hello"
+
+out = str_cmp(s1, s2)
+puts out
+```
+
+Output: 
+
+```
+1
+```
+
+## Building Calculator with If/Else
+
+Let's implement the basic calulator with if else conditions.
+
+```ruby
+def calculate(a, op, b)
+  if op == "+"
+    return a + b
+  elsif op == "-"
+    return a - b
+  elsif op == "/"
+    return a / b
+  elsif op == "*"
+    return a * b
+  else
+    return "Invalid operator"
+  end
+end
 
 
-## Building a Better Calculator with If/Else
+puts "Enter num1: "
+num1 = gets.chomp().to_f
+puts "Enter operator one of + - * /  : "
+op = gets.chomp()
+puts "Enter num2: "
+num2 = gets.chomp().to_f
 
-## Case Expressions
+out = calculate(num1, op, num2)
+
+puts out
+```
+
+Output:
+
+```
+Enter num1:
+10
+Enter operator one of + - * /  : 
++
+Enter num2: 
+20
+
+30.0
+```
+
+## Case Expressions in Ruby
+
+Case expression are shorter forms of the `if/else` conditions.
+
+Let's re-modify the above calculator with the case expressions
+
+```ruby
+def calculate(a, op, b)
+  case op
+  when "+"
+    return a + b
+  when "-"
+    return a - b
+  when "/"
+    return a / b
+  when "*"
+    return a * b
+  else
+    return "Invalid operator"
+  end
+end
+
+puts "Enter num1: "
+num1 = gets.chomp().to_f
+puts "Enter operator one of + - * /  : "
+op = gets.chomp()
+puts "Enter num2: "
+num2 = gets.chomp().to_f
+
+out = calculate(num1, op, num2)
+
+puts out
+```
+
+In the above code we have replaced the if/else conditions with the `case`. We can see that it's shorter than the if/else statements.
 
 ## While Loops
 
+while loop is used to iterate the a block of statements until some condition is met. Let's write a simple while loop that can print the numbers from `1` to `10`.
+
+
+```ruby
+num = 1
+
+while num <= 10
+  puts num
+  num += 1
+end
+```
+
+Output:
+
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
 ## Building a Guessing Game
 
-## For Loops
+Let's build a guessing game with the `while` loop. User has to guess the number within 3 attempts. Let's code it
+
+```
+guess = 3
+attempts = 3
+
+success = fase
+while !success and attempts > 0
+  num = gets.chomp().to_i
+  if num == guess
+    sucess = true
+  end
+end
+
+if success:
+  puts "You guessed correctly within 3 attempts"
+else
+  puts "Invalid guess"
+```
+
+Output:
+
+```
+Enter your guess number:
+10
+Enter your guess number:
+20
+Enter your guess number:
+3
+You guessed correctly within 3 attempts
+```
+
+## For Loop
+
+For loop is mostly used to iterate elements in arrays or hashes.
+
+Example1:
+
+```ruby
+names = ["David", "Anna", "Shera", "John"]
+
+for name in names
+  puts name
+end
+```
+
+Example2:
+
+```ruby
+names = ["David", "Anna", "Shera", "John"]
+
+names.each do |name|
+  puts name
+end
+```
 
 ## Comments
 
+We can write comments in two ways
+
+### Single line comment
+
+```ruby
+# this is single line comment
+```
+
+### Multiline comment
+
+```ruby
+=begin
+this
+is
+multiline
+comment
+=>
+```
+
 ## Reading Files
+
+While reading and writing files we have to provide the file full path or realative path and the file mode. We have the following file modes.
+
+* reading : `r`
+* write : `w`
+* append : `a`
+
+Example1:
+
+```ruby
+File.open("test.txt", "r") do |file|
+  puts file.read()
+end
+```
+
+Example2:
+
+```ruby
+file = File.open("test.txt", "r")
+for line in file.readlines()
+  puts line
+end
+file.close()
+```
 
 ## Writing Files
 
-## Handling Errors / Exceptions
+We can write to files using the write mode `w`. If we open file with `a` then we can read from the file and write to the file.
+
+```ruby
+File.open("test.txt", "w") do |file|
+  file.write("line1\n")
+  file.write("line2\n")
+  file.write("line3\n")
+end
+```
+
+## Raising Exception
+
+We can raise exceptions using the keyword `raise`.
+
+Example:
+
+```ruby
+def div(n1, n2)
+  if n2 == 0
+    raise ZeroDevisionError
+  end
+  return n1/n2
+end
+```
+
+## Handling Exception
+
+We may get errors on run time then we can handle it with `rescue` keyword.
+
+Example:
+
+```ruby
+def div(n1, n2)
+  if n2 == 0
+    raise ZeroDevisionError
+  end
+  return n1/n2
+end
+
+
+begin
+  puts div(10, 0)
+rescue ZeroDevisionError
+  puts "Error occured"
+end
+```
+
+* We can use multiple rescue statements based on the error type
 
 ## Classes & Objects
 
