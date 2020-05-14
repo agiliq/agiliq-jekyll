@@ -11,6 +11,7 @@ author: Anjaneyulu Batta
 
 ## Introduction to Ruby
 
+* Ruby is popular
 * Ruby is an object oriented programming language
 * Ruby was created by Yukihiro Matsumoto, or "Matz", in Japan in the mid 1990's.
 * Ruby has good community support
@@ -55,7 +56,7 @@ Variables can hold the data types like string, boolean, integers, floating point
 
 Let's declare declare the variables in the below code.
 
-```
+```ruby
 number = 150
 pi = 3.141
 name = "Agiliq info solutions"
@@ -176,12 +177,13 @@ Hello Google
 
 `print` doesn't include the new line character but `puts` does. It's the only difference.
 
-## Arrays in Ruby
+## Array data structure in Ruby
 
 * Array are containers which holds the ruby objects which includes numbers, strings, booleans, etc.
 * It holds the objects in an order
 * We can access array elements with indexes and index always starts with `0`
 * We can also access array elements with negative indexes and negative index starts with `-1`
+* Negative indexes works in reverse order. `-1` index returns the last value of the array.
 
 ### How to create array ?
 
@@ -591,7 +593,7 @@ puts out
 
 In the above code we have replaced the if/else conditions with the `case`. We can see that it's shorter than the if/else statements.
 
-## While Loops
+## While Loop in Ruby
 
 while loop is used to iterate the a block of statements until some condition is met. Let's write a simple while loop that can print the numbers from `1` to `10`.
 
@@ -624,7 +626,7 @@ Output:
 
 Let's build a guessing game with the `while` loop. User has to guess the number within 3 attempts. Let's code it
 
-```
+```ruby
 guess = 3
 attempts = 3
 
@@ -654,7 +656,7 @@ Enter your guess number:
 You guessed correctly within 3 attempts
 ```
 
-## For Loop
+## For Loop in Ruby
 
 For loop is mostly used to iterate elements in arrays or hashes.
 
@@ -678,7 +680,7 @@ names.each do |name|
 end
 ```
 
-## Comments
+## How to write Comments in Ruby ?
 
 We can write comments in two ways
 
@@ -699,7 +701,7 @@ comment
 =>
 ```
 
-## Reading Files
+## Reading Files in Ruby
 
 While reading and writing files we have to provide the file full path or realative path and the file mode. We have the following file modes.
 
@@ -725,7 +727,7 @@ end
 file.close()
 ```
 
-## Writing Files
+## Writing data to Files in Ruby
 
 We can write to files using the write mode `w`. If we open file with `a` then we can read from the file and write to the file.
 
@@ -737,7 +739,7 @@ File.open("test.txt", "w") do |file|
 end
 ```
 
-## Raising Exception
+## Raising Exception in Ruby
 
 We can raise exceptions using the keyword `raise`.
 
@@ -752,7 +754,7 @@ def div(n1, n2)
 end
 ```
 
-## Handling Exception
+## Handling Exception in Ruby
 
 We may get errors on run time then we can handle it with `rescue` keyword.
 
@@ -776,17 +778,180 @@ end
 
 * We can use multiple rescue statements based on the error type
 
-## Classes & Objects
+## Classes & Objects in Ruby
+
+Everything is an object in ruby. A class is a blue print for an object. A class can have attributes or methods or both.s
+
+### Class Example
+
+```ruby
+class Book
+  attr_accessor :title, :author, :pages
+end
+
+obj = Book.new()
+
+obj.title = "Harry Potter"
+obj.author = "J. K. Rowling"
+obj.pages = 223
+
+puts obj.title
+```
+
+### Variables in Ruby Class
+
+* **Local Variables**: Local variables are the variables that are defined in a method. Local variables are not available outside the method. 
+* **Instance Variables**: instance varialbes availabe to use once the object is created. These always starts with `@`
+* **Class variables**: Can be accessable across different objects. These always starts with `@@`.
+* **Global Variables**: These varibles available across the classes and always start with `$`
 
 ## Initialize Method
 
-## Object Methods
+It will difficult for us to update the data for an object every time when we create an object. So, to make it simplify we use a method `initialize`. It always called when an object is created. Let's re-write the above book class with `initialize method`.
 
-## Building a Quiz
+```ruby
+class Book
+  attr_accessor :title, :author, :pages
 
-## Inheritance
+  def initialize(title, author, pages)
+    @title = title
+    @author = author
+    @pages = pages
+  end
+end
 
-## Ruby Modules
+obj = Book.new("Harry Potter", "J. K. Rowling", 223)
+
+puts obj.title
+```
+
+We can see that it's very easy compare to the above approach
+
+## Class & Methods in Ruby 
+
+We can have multiple methods on a class. Let's see an example for Circle
+
+```ruby
+class Circle
+  attr_accessor :radius
+
+  def initialize(radius)
+    @radius = radius
+  end
+
+  def area
+    return 3.14 * @radius * @radius
+  end
+
+  def perimeter
+    return 2 * 3.14 * @radius
+  end
+end
+
+obj = Circle.new(5)
+
+puts obj.area # output: 78.5
+puts obj.perimeter  # output: 31.400000000000002
+```
+In above code, we have written a class for `Circe`. Circle takes radius and creates an object and calculates it's perimeter, area.
+We can have multiple objects for the same class.
+
+## Inheritance in Ruby 
+
+We use the inheritance oncept in Ruby. But we can only have single parent. Ruby doesn't allow multiple inheritance(i.e class A cannot have both parent classes B, C). But we can achieve that kind of functionality with modules.
+Let's see an example for the class.
+
+```ruby
+class Animal
+  attr_accessor :name, :color
+
+  def initialize(name, color)
+    @name = name
+    @color = color
+  end
+
+  def speak
+    puts "Huuuu"
+  end
+
+end
+
+class Cat < Animal
+
+  def walk
+    puts "I can walk with my four legs"
+  end
+
+end
+
+obj = Cat.new("Sammy", "white")
+
+puts obj.name  # Out: Sammy
+puts obj.speak # Out: Huuuu
+puts obj.walk  # I can walk with my four legs
+```
+
+We use `<` symbol to inherit the class. We can implement the additional methods and can override the existing methods of parent classs by re-defining the method in the child class.
+
+## working with Ruby Modules
+
+By usng modules we can group the methods, classes and constants. It will allow us to group the related functionality into a single unit. We can import and use the module in other ruby programs
+
+### Module Usage
+
+file: math.rb
+
+```ruby
+module MyMath
+  PI = 3.14
+
+  def Circle_area(r)
+    return PI * r * r
+  end
+end
+```
+
+file: util.rb
+
+```ruby
+require "./math.rb"
+include MyMath
+
+puts MyMath::PI               # Out: 3.14
+puts MyMath.circle_area(5)    # Out: 78.5
+```
+
+### Using modules as mixins in Ruby classes
+
+```ruby
+module Introspect
+  def kind
+    puts "This object is a #{self.class.name}"
+  end
+end
+
+class Animal
+  include Introspect
+  def initialize(name)
+    @name = name
+  end
+end
+
+class Car
+  include Introspect
+  def initialize(model)
+    @model = model
+  end
+end
+
+c = Car.new("Ferrari")
+d = Animal.new("Cat")
+
+c.kind  # Out: This object is a Car
+d.kind  # Out: This object is a Animal
+```
+
+We can make use of mixins like above in ruby programming. Modules are one of the finest features in ruby.
 
 ## Interactive Ruby (irb)
 
