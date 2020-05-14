@@ -116,7 +116,7 @@ from database import Base
 class Question(Base):
 	__tablename__ = "question"
 	id = Column(Integer, primary_key=True)
-	question_text = Column(String)
+	question_text = Column(String(200))
 	pub_date = Column(DateTime)
 
 	choices = relationship('Choice', back_populates="question")
@@ -125,8 +125,8 @@ class Question(Base):
 class Choice(Base):
 	__tablename__ = "choice"
 	id = Column(Integer, primary_key=True)
-	question_id = Column(Integer, ForeignKey('question.id'))
-	choice_text = Column(String())
+	question_id = Column(Integer, ForeignKey('question.id', ondelete='CASCADE'))
+	choice_text = Column(String(200))
 	votes = Column(Integer, default=0)
 
 	question = relationship("Question", back_populates="choices")
@@ -218,7 +218,7 @@ def get_all_questions(db: Session):
 def get_question(db:Session, qid):
 	return db.query(Question).filter(Question.id == qid).first()
 
-def edit_question(db: Session, qid, question: schema.QuestionInfo):
+def edit_question(db: Session, qid, question: schema.QuestionCreate):
 	obj = db.query(Question).filter(Question.id == qid).first()
 	obj.question_text = question.question_text
 	obj.pub_date = question.pub_date
@@ -300,7 +300,7 @@ def get_questions(db: Session = Depends(get_db)):
 ```
 notice the use of `List` in `response_model`, `crud.get_all_questions` returns a list of objects and not just an object so we should let our framework know that. Try removing the `List` and our application will throw an error.
 
-at this point when you visit `http://127.0.0.1:8000/docs`, you should see two sections - `POST /questions/` and `GET /questions/`, click on GET section and Try it out and you should a response something like below
+at this point when you visit `http://127.0.0.1:8000/docs`, you should see two sections - `POST /questions/` and `GET /questions/`, click on GET section and Try it out and you should see a response something like below
 ```json
 [
   {
@@ -312,28 +312,27 @@ at this point when you visit `http://127.0.0.1:8000/docs`, you should see two se
 ```
 ### Retrieve, Edit and Delete a poll question
 ```python
+def get_question_obj(db, qid):
+	obj = crud.get_question(db=db, qid=qid)
+	if obj is None:
+		raise HTTPException(status_code=404, detail="Question not found")
+	return obj
+
 @app.get("/questions/{qid}", response_model=schema.QuestionInfo)
 def get_question(qid: int, db: Session = Depends(get_db)):
-	q = crud.get_question(db=db, qid=qid)
-	if not q:
-		raise HTTPException(status_code=404, detail="Question not found")
-	return crud.get_question(db=db, qid=qid)
-
+	return get_question_obj(db=db, qid=qid)
+	
 @app.put("/questions/{qid}", response_model=schema.QuestionInfo)
 def edit_question(qid: int, question: schema.QuestionCreate, db: Session = Depends(get_db)):
-	q = crud.get_question(db=db, qid=qid)
-	if not q:
-		raise HTTPException(status_code=404, detail="Question not found")
+	get_question_obj(db=db, qid=qid)
 	obj = crud.edit_question(db=db, qid=qid, question=question)
 	return obj
 
-@app.delete("/questions/{qid}", response_model=schema.QuestionInfo)
+@app.delete("/questions/{qid}")
 def delete_question(qid: int, db: Session = Depends(get_db)):
-	q = crud.get_question(db=db, qid=qid)
-	if not q:
-		raise HTTPException(status_code=404, detail="Question not found")
+	get_question_obj(db=db, qid=qid)
 	crud.delete_question(db=db, qid=qid)
-	return q
+	return {"detail": "Question deleted", "status_code": 204}
 ```
 We have used different response_model for `get_questions` and `get_question`, this is because we wanted to show `choices` in the API response only in case of Question detail API and not for Question list API.
 
@@ -341,9 +340,7 @@ We have used different response_model for `get_questions` and `get_question`, th
 ```python
 @app.post("/questions/{qid}/choice", response_model=schema.ChoiceList)
 def create_choice(qid: int, choice: schema.ChoiceCreate, db: Session = Depends(get_db)):
-	question = crud.get_question(db=db, qid=qid)
-	if not question:
-		raise HTTPException(status_code=404, detail="Question not found")
+	get_question_obj(db=db, qid=qid)
 	return crud.create_choice(db=db, qid=qid, choice=choice)
 ```
 
