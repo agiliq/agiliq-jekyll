@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Learn Ruby Programming Fast Track"
+title:  "Learn ruby in 15 minutes"
 description: "A quick way to learn the ruby programming language with examples"
 keywords: "ruby, programming"
 date: 2020-05-13
