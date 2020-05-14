@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Re-Building Django Polls tutorial API with FastAPI"
+title:  "Getting started with FastAPI by re building the Django Polls Tutorial"
 description: ""
 keywords: "FastAPI, Python, SQLAlchemy, Pydantic"
 date: 2020-05-14
@@ -11,7 +11,7 @@ author: Manjunath Hugar
 
 In this blog post we are going to rebuild Django Polls tutorial API using FastAPI.
 
-## What is FastAPI?
+### What is FastAPI?
 FastAPI is a web framework for building APIs. As per its official page, `FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
 
 It is easy to learn, fast and said to be high performance, on par with `NodeJS` and `Go`.`
@@ -364,5 +364,4 @@ the following are the endpoints for Question and Choice
 - Create choice for a particular poll question - `POST http://127.0.0.1:8000/questions/{qid}/choice`
 - Update votes for a particular question - `PUT http://127.0.0.1:8000/choices/{choice_id}/vote`
 
-
-
+You can find a source code [here](https://github.com/manjunath24/Polls-API)
