@@ -4,7 +4,7 @@ comments: true
 title:  "Heroku Django S3 for serving Media files"
 date:   2014-06-05 08:17:35+05:30
 categories: heroku
-author: manjunath
+author: Manjunath Hugar
 ---
 ### Why should i store my media files on AWS S3?
 

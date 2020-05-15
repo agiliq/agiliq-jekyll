@@ -6,7 +6,7 @@ title: Authors
 
 
 <div class="author-page">  
-{% assign items_grouped = site.posts | group_by: 'author' %}
+{% assign items_grouped = site.posts | group_by_exp:"post", "post.author | downcase" %}
     {% for group in items_grouped %}
     <h3 class="author-name" id="{{group.name|slugize}}">{{group.name}}</h3>
        <ul>

@@ -4,7 +4,7 @@ comments: true
 title:  "Travis and coveralls for private repo"
 date:   2014-08-22 12:59:46+05:30
 categories: coveralls.io
-author: manjunath
+author: Manjunath Hugar
 ---
 Before we begin, i recommend you to read this first [Continous integration with travis and coveralls.io for Django apps](https://agiliq.com/blog/2014/05/continuous-integration-with-travis-and-coverallsio/).
 
