@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Custom atttibute directives in Angular"
+title:  "Custom attribute directives in Angular"
 description: "Building a simple attribute directive"
 keywords: "Angular, Angular9"
 date: 2020-05-18
