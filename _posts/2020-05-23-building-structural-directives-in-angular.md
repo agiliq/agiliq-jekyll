@@ -61,7 +61,7 @@ is translated to
 </ng-template>
 ```
 ### Creating structural directive
-Now that we know how `ngIf` works, we will create a custom structural directive which will be opposite to `ngIf`. That means, this directive will remove the element from the DOM if the conditiion if true.
+Now that we know how `ngIf` works, we will create a custom structural directive which will be opposite to `ngIf`. That means, this directive will remove the element from the DOM if the conditiion is true.
 
 create a file named `customcondition.directive.ts` and add the following code
 ```js
