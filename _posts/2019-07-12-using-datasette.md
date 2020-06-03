@@ -6,7 +6,7 @@ description: "Datasette is a tool for exploring and visualizing data. It helps p
 keywords: "datasette, sqlite, python, data visualization"
 date:   2019-07-12
 categories: [datasette, sqlite, python, api]
-author: Anmol
+author: Anmol Akhilesh
 ---
 
 ## What is Datasette

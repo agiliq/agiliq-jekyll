@@ -4,7 +4,7 @@ comments: true
 title:  "Google diff match patch library"
 date:   2014-05-09 16:29:34+05:30
 categories: google
-author: manjunath
+author: Manjunath Hugar
 ---
 
 Diff match patch library is useful to compare the differences between the two texts.It compares the texts and displays what is added, removed or unchanged.

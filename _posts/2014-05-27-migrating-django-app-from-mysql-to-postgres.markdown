@@ -4,7 +4,7 @@ comments: true
 title:  "Migrating django app from MySQL to Postgres"
 date:   2014-05-27 13:28:50+05:30
 categories: mysqltopostgres
-author: manjunath
+author: Manjunath Hugar
 ---
 In this tutorial, we will take a django app backed by MySQL and will convert MySQL database to postgres database.
 This is useful if we are deploying our app to `Heroku` because `Heroku` uses standard `Postgres`
