@@ -111,7 +111,7 @@ clients:
     url: "http://www.colbypalmer.com/"
 
 
-  - company_name: CTO @ Activated Capital
+  - company_name: CTO @ ACCEW Group
     name: "Lane Campbell"
     testimonial: >
       Shabda and his team are not only reliable but have demonstrable expertise with Django and Python unlike any other team I have worked with.  Shabda is also quite personable and wonderful to work with.
