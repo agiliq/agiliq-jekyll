@@ -64,7 +64,7 @@ clients:
   - company_name: "Screener"
     name: "Pratyush Mittal"
     testimonial: >
-      Shabda and his team at AgilIQ are fabulous Django developers and consultants. They are skilled and they spend a dedicated time on your project. They provide constant communication and feedback which keeps your project on track. Would highly recommend them.
+      Shabda and his team at Agiliq are fabulous Django developers and consultants. They are skilled and they spend a dedicated time on your project. They provide constant communication and feedback which keeps your project on track. Would highly recommend them.
     logo: "/assets/images/screener.svg"
     head_shot:
     url: "https://www.screener.in/"
