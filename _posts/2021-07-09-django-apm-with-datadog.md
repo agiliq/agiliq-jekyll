@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Django application monitoring with datadog"
-description: "Django application monitoring allows us to analyse the pitfalls of the application so that we can fix it and improve the application."
+description: "Django application monitoring allows us to analyze the pitfalls of the application so that we can fix it and improve the application."
 keywords: "django, performance, datadog"
 date: 2021-07-09
 categories: [Django, Performance, Monitoring]
@@ -11,7 +11,7 @@ author: Anjaneyulu Batta
 
 ## Application performance monitoring
 
-Application performance monitoring (i.e APM) is a way to anaylyse the each transaction of an application and find the pitfalls of it.
+Application performance monitoring (i.e APM) is a way to analyze the each transaction of an application and find the pitfalls of it.
 
 APM allow us to find
 
@@ -21,7 +21,7 @@ APM allow us to find
 - How frequently an url is being requested?
 - Application availability
 
-With above information we can fix the issues and improve the application before it affects the business.
+With the above information, we can fix the issues and improve the application before it affects the business.
 
 ## Datadog and it's features
 
@@ -29,10 +29,10 @@ Datadog is a monitoring service for cloud-scale applications, providing monitori
 
 Features
 
-- Allows developer to analyse each request in depth so that developer can see what part of the application is taking more time.
-- It gives the insights on how freequently an API or web page is failing or accessing
+- Allows developer to analyze each request in depth, so that developer can see what part of the application is taking more time.
+- It gives the insights on how frequently an API or web page is failing or accessing
 - It allows to set the *alerts* so that developers can be notified if anything goes wrong.
-- It allows clear insights on database queries so that dev's can analyse the issue and fix/improve the DB/Query performance.
+- It allows clear insights on database queries so that dev's can analyze the issue and fix/improve the DB/Query performance.
 - It allows to create the dashboards for different application events and create alerts based on the events. so that people will know before it impact the business.
 - It supports different languages and their frameworks also.
 
@@ -123,6 +123,6 @@ Restart the agent with below command
 sudo service datadog-agent restart
 ```
 
-Wait for 5 min, We should be able see PostgreSQL performance metrics in datadog dashboard.
+Wait for 5 min, We should be able to see PostgreSQL performance metrics in datadog dashboard.
 
 That's it folks. You can check their official docs at https://docs.datadoghq.com/
